@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="SSAS_BISolution"
+  DTS:DTSID="{F459BAE4-E8D6-4858-9B2D-B4536EF2033C}"
+  DTS:CreationName="MSOLAP100">
+  <DTS:PropertyExpression
+    DTS:Name="InitialCatalog">@[$Project::BI_SOLUTION]</DTS:PropertyExpression>
+  <DTS:PropertyExpression
+    DTS:Name="ServerName">@[$Project::ServerName]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="0"
+      DTS:ConnectRetryInterval="0"
+      DTS:ConnectionString="Data Source=10.0.0.252;User ID=artcrafts\powerbi02;Initial Catalog=SSAS_BI_Solution_2024;Provider=MSOLAP.8;Persist Security Info=False;Impersonation Level=Impersonate;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAZZKm1vN0UEWANNeK4GX60AAAAAACAAAAAAADZgAAwAAAABAAAAC0tdUlTWIKR4e+qh/XuUgLAAAAAASAAACgAAAAEAAAAO5vPKfEdzV6M5Xf+VdcgfCAAAAAmnutf1QyXHkLMdlHdR8DVDN6OKuwyHFr3DkBItzOfO1KBBgxE6hRPtxNq+Bx0KeWVxGg8L1Fnfu1qfdOn7DPYhk9rffVpQ5W5Q4QbM4PQplOmmry1BXtutwqCKbFGJ5yFKXch0Gry6XMvyUdrGWsTUT+0QKx2yRP7XqyTytEAwQUAAAAZMu/KBtq9LmwSVH+DpzeXWOeb8A=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

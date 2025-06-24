@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Navision"
+  DTS:DTSID="{E25AF2F8-92B3-4003-9D30-6834C337E57F}"
+  DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="InitialCatalog">@[$Project::NavisionDB]</DTS:PropertyExpression>
+  <DTS:PropertyExpression
+    DTS:Name="Password">@[$Project::NavisionPassword]</DTS:PropertyExpression>
+  <DTS:PropertyExpression
+    DTS:Name="ServerName">@[$Project::NavisionServerName]</DTS:PropertyExpression>
+  <DTS:PropertyExpression
+    DTS:Name="UserName">@[$Project::NavisionUserName]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=10.0.0.5;User ID=BI_reader;Initial Catalog=ARTCRAFTS;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-{E25AF2F8-92B3-4003-9D30-6834C337E57F}Demo Database NAV  10-0;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKydSQoSePEeUBfDRCwlyWQAAAAACAAAAAAADZgAAwAAAABAAAADPEaXXpV2t0Y3zVOuSYjBfAAAAAASAAACgAAAAEAAAAHPhaZ15XCrdrLc+eX+oyy94AAAAJRalVUBx4DuxOI5fV694SepZ+fFqkUavp4ykIrBsRK3z0kBbDlwkmOb2noT2VjmPYOvyELOMoOE5Ed0L2Q/GNhdZFDZNVROwG/VtyoZ0GK5iyFQCigOFyjVQd2dAYvf3Js+Eix0cpR9sJTYJoXhmlH6v6X4bdS2MFAAAADrXoSgptJEiH0StKyj+eM8jFaSC</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

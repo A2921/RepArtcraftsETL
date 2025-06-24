@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/5/2022 12:35:23 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SRVPOWERBI"
+  DTS:CreatorName="ARTCRAFTS\powerbi02"
+  DTS:DTSID="{A094E4DD-2E99-4606-BF50-8EF99ECE953B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.166"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionGUID="{A3E8F76A-94EE-4D81-BF29-8E879171755B}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables />
+</DTS:Executable>

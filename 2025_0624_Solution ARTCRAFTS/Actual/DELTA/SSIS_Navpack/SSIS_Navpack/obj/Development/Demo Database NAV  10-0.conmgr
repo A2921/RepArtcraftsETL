@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Demo Database NAV  10-0"
+  DTS:DTSID="{E25AF2F8-92B3-4003-9D30-6834C337E57F}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=10.0.0.5;User ID=BI_reader;Initial Catalog=ARTCRAFTS;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-{E25AF2F8-92B3-4003-9D30-6834C337E57F}Demo Database NAV  10-0;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKydSQoSePEeUBfDRCwlyWQAAAAACAAAAAAADZgAAwAAAABAAAAC5NYSofrW3197SeNcRGzsYAAAAAASAAACgAAAAEAAAAFbqawuEKc2lYX7CojRFcP54AAAA+yT8uR+LBxd8O+hi+VZZTrc8ZHoT0pNhkY+/UT/E9ZWC5bYp6KqfVf1vxOQEWwYzIEkg84tHQfTPAoy5kcXIwDozA2QotuM0DIHdREPmDeuvKggCqEOhMqAhs8vGuKWfXXoYuDr9gpWRzZFENi28iRMufdEGR7jYFAAAAF0syxbsqBAo/pA5qJ16i6HSLjXT</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "ETL_DELTA", "SSIS_Navpack\ETL_DELTA.dtproj", "{6C1D411C-9904-45B7-89F0-9C328552DA0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		ActualDev|Default = ActualDev|Default
+		ActualProd|Default = ActualProd|Default
+		HistDev|Default = HistDev|Default
+		HistProd|Default = HistProd|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C1D411C-9904-45B7-89F0-9C328552DA0A}.ActualDev|Default.ActiveCfg = Development
+		{6C1D411C-9904-45B7-89F0-9C328552DA0A}.ActualDev|Default.Build.0 = Development
+		{6C1D411C-9904-45B7-89F0-9C328552DA0A}.ActualProd|Default.ActiveCfg = ActualProd
+		{6C1D411C-9904-45B7-89F0-9C328552DA0A}.ActualProd|Default.Build.0 = ActualProd
+		{6C1D411C-9904-45B7-89F0-9C328552DA0A}.HistDev|Default.ActiveCfg = HistDev
+		{6C1D411C-9904-45B7-89F0-9C328552DA0A}.HistDev|Default.Build.0 = HistDev
+		{6C1D411C-9904-45B7-89F0-9C328552DA0A}.HistProd|Default.ActiveCfg = HistProd
+		{6C1D411C-9904-45B7-89F0-9C328552DA0A}.HistProd|Default.Build.0 = HistProd
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45BE73F6-7B1B-4CB1-869B-5EB15CEA3FE0}
+	EndGlobalSection
+EndGlobal

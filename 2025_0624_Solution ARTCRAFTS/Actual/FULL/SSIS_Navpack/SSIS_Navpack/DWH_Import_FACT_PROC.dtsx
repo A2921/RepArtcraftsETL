@@ -1,0 +1,2406 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/20/2024 4:38:38 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SRVPOWERBITEST"
+  DTS:CreatorName="ARTCRAFTS\powerbi01"
+  DTS:DTSID="{B5883727-8616-41D9-9320-17118D75D5C3}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="DWH_Import_FACT_PROC"
+  DTS:PackageType="5"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{0C81021E-436B-4DF7-8A71-DAFBC45F8640}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\ACTUAL_MAIN_FACT_001"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Attività Esegui SQL"
+      DTS:DTSID="{FD31A2DF-F913-4E5C-8232-0EEDFA9A7306}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ACTUAL_MAIN_FACT_001"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+          SQLTask:SqlStatementSource="EXECUTE  [dbo].[ACTUAL_MAIN_FACT_001] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\ACTUAL_MAIN_FACT_002"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Attività Esegui SQL"
+      DTS:DTSID="{ac2b5b8d-67a4-4313-9e8e-3591ad9fc3a0}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ACTUAL_MAIN_FACT_002"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+          SQLTask:SqlStatementSource="EXECUTE  [dbo].[ACTUAL_MAIN_FACT_002] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\ACTUAL_MAIN_FACT_003"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Attività Esegui SQL"
+      DTS:DTSID="{7e1a82ce-25f2-459e-a71c-11a7dc43badd}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ACTUAL_MAIN_FACT_003"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+          SQLTask:SqlStatementSource="EXECUTE  [dbo].[ACTUAL_MAIN_FACT_003] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\ACTUAL_MAIN_FINE_ELAB"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Attività Esegui SQL"
+      DTS:DTSID="{ebc6ca4a-9e8a-4eaf-ae98-15a66bb751c5}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ACTUAL_MAIN_FINE_ELAB"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+          SQLTask:SqlStatementSource="EXECUTE  [dbo].[ACTUAL_MAIN_FINE_ELAB] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\FactSpedizioniNUOVO2"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{b93f4bb7-1dd9-4f38-9301-dd10e5fa82e2}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FactSpedizioniNUOVO2">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{a5ca9ab8-f2c0-4cd6-8429-d2e8103d1e53}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Populate FactSpedizioniNUOVO2"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="Destinazione OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;4"
+                  description="Destinazione OLE DB"
+                  name="FactSpedizioniNUOVO2"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                      name="OpenRowset">[dbo].[FactSpedizioni_NUOVO2]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="Comando SQL da eseguire."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la modalità utilizzata per accedere al database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indica se i valori specificati per le colonne Identity verranno copiati nella destinazione. Se false, i valori delle colonne Identity verranno generati automaticamente nella destinazione. Applicabile solo se è abilitato il caricamento rapido."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indica se per le colonne con valori Null, tali valori verranno inseriti nella destinazione. Se false, per le colonne con valori Null verranno inseriti i valori predefiniti corrispondenti nella destinazione. Applicabile solo se è attivato il caricamento rapido."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifica le opzioni da utilizzare con il caricamento rapido. Applicabile solo se è attivato il caricamento rapido."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica se vengono eseguiti commit durante l'inserimento dei dati. Il valore 0 indica che verrà eseguito un solo commit al termine dell'inserimento dei dati. Applicabile solo se è attivato il caricamento rapido."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Connections[OleDbConnection]"
+                      connectionManagerID="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[DWH]"
+                      description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB]"
+                      errorOrTruncationOperation="Inserimento"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="Input destinazione OLE DB">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[ArticoloKey]"
+                          cachedDataType="wstr"
+                          cachedLength="26"
+                          cachedName="ArticoloKey"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[ArticoloKey]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[ArticoloKey]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[MagazzinoKey]"
+                          cachedDataType="wstr"
+                          cachedLength="16"
+                          cachedName="MagazzinoKey"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[MagazzinoKey]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[MagazzinoKey]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[M_Quantità]"
+                          cachedDataType="i4"
+                          cachedName="M_Quantità"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[M_Quantità]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[M_Quantità]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[Importo Lordo In Valuta]"
+                          cachedDataType="numeric"
+                          cachedName="Importo Lordo In Valuta"
+                          cachedPrecision="20"
+                          cachedScale="6"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo Lordo In Valuta]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Lordo In Valuta]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[Importo Sconto In Valuta]"
+                          cachedDataType="numeric"
+                          cachedName="Importo Sconto In Valuta"
+                          cachedPrecision="20"
+                          cachedScale="6"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo Sconto In Valuta]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Sconto In Valuta]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[Importo IVA In Valuta]"
+                          cachedDataType="numeric"
+                          cachedName="Importo IVA In Valuta"
+                          cachedPrecision="20"
+                          cachedScale="6"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo IVA In Valuta]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo IVA In Valuta]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[Importo Lordo Euro]"
+                          cachedDataType="numeric"
+                          cachedName="Importo Lordo Euro"
+                          cachedPrecision="38"
+                          cachedScale="6"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo Lordo Euro]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Lordo Euro]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[Importo Sconto Euro]"
+                          cachedDataType="numeric"
+                          cachedName="Importo Sconto Euro"
+                          cachedPrecision="38"
+                          cachedScale="6"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo Sconto Euro]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Sconto Euro]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[Importo IVA Euro]"
+                          cachedDataType="numeric"
+                          cachedName="Importo IVA Euro"
+                          cachedPrecision="38"
+                          cachedScale="6"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo IVA Euro]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo IVA Euro]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[AgenteKey]"
+                          cachedDataType="wstr"
+                          cachedLength="26"
+                          cachedName="AgenteKey"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[AgenteKey]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[AgenteKey]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[ClienteKey]"
+                          cachedDataType="wstr"
+                          cachedLength="26"
+                          cachedName="ClienteKey"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[ClienteKey]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[ClienteKey]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[SpedizioniKey]"
+                          cachedDataType="wstr"
+                          cachedLength="57"
+                          cachedName="SpedizioniKey"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[SpedizioniKey]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[SpedizioniKey]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[ValutaKey]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="ValutaKey"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[ValutaKey]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[ValutaKey]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[CodiceCategoriaArticolo]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="CodiceCategoriaArticolo"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[CodiceCategoriaArticolo]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[CodiceCategoriaArticolo]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[NumeroSpedizione]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="NumeroSpedizione"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[NumeroSpedizione]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NumeroSpedizione]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[NumeroRigaSpedizione]"
+                          cachedDataType="i4"
+                          cachedName="NumeroRigaSpedizione"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[NumeroRigaSpedizione]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NumeroRigaSpedizione]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[NumeroOrdine]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="NumeroOrdine"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[NumeroOrdine]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NumeroOrdine]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[NumeroRigaOrdine]"
+                          cachedDataType="i4"
+                          cachedName="NumeroRigaOrdine"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[NumeroRigaOrdine]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NumeroRigaOrdine]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[NumeroOrdineAcquisto]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="NumeroOrdineAcquisto"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[NumeroOrdineAcquisto]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NumeroOrdineAcquisto]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[NumeroRigaOrdineAcquisto]"
+                          cachedDataType="i4"
+                          cachedName="NumeroRigaOrdineAcquisto"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[NumeroRigaOrdineAcquisto]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NumeroRigaOrdineAcquisto]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[Tipo]"
+                          cachedDataType="i4"
+                          cachedName="Tipo"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Tipo]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Tipo]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[DataOrdine]"
+                          cachedDataType="dbDate"
+                          cachedName="DataOrdine"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[DataOrdine]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataOrdine]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[DataSpedizione]"
+                          cachedDataType="dbDate"
+                          cachedName="DataSpedizione"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[DataSpedizione]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataSpedizione]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[DataScadenza]"
+                          cachedDataType="dbDate"
+                          cachedName="DataScadenza"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[DataScadenza]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataScadenza]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[DataPublicazione]"
+                          cachedDataType="dbDate"
+                          cachedName="DataPublicazione"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[DataPublicazione]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataPublicazione]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[DataPianificataConsegna]"
+                          cachedDataType="dbDate"
+                          cachedName="DataPianificataConsegna"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[DataPianificataConsegna]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataPianificataConsegna]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[DataPianificataSpedizione]"
+                          cachedDataType="dbDate"
+                          cachedName="DataPianificataSpedizione"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[DataPianificataSpedizione]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataPianificataSpedizione]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[DataRichiestaConsegna]"
+                          cachedDataType="dbDate"
+                          cachedName="DataRichiestaConsegna"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[DataRichiestaConsegna]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataRichiestaConsegna]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[CompanyKey]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="5"
+                          cachedName="CompanyKey"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[CompanyKey]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[CompanyKey]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[Marchio]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="Marchio"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Marchio]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Marchio]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[StagioneKey]"
+                          cachedDataType="wstr"
+                          cachedLength="26"
+                          cachedName="StagioneKey"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[StagioneKey]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[StagioneKey]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[CanaleKey]"
+                          cachedDataType="wstr"
+                          cachedLength="58"
+                          cachedName="CanaleKey"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[CanaleKey]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[CanaleKey]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[SubcaneleKey]"
+                          cachedDataType="wstr"
+                          cachedLength="61"
+                          cachedName="SubcaneleKey"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[SubcaneleKey]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[SubcaneleKey]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[Tasso di Cambio]"
+                          cachedDataType="numeric"
+                          cachedName="Tasso di Cambio"
+                          cachedPrecision="18"
+                          cachedScale="4"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Tasso di Cambio]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Tasso di Cambio]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[DescrizioneTipoOrdine]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="DescrizioneTipoOrdine"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[DescrizioneTipoOrdine]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DescrizioneTipoOrdine]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[NomeClienteSpedizione]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="NomeClienteSpedizione"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[NomeClienteSpedizione]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NomeClienteSpedizione]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[IndirizzoSpedizione]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="IndirizzoSpedizione"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[IndirizzoSpedizione]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[IndirizzoSpedizione]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[CittàSpedizione]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="CittàSpedizione"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[CittàSpedizione]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[CittàSpedizione]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[CodiceTipoOrdineKey]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="CodiceTipoOrdineKey"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[CodiceTipoOrdineKey]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[CodiceTipoOrdineKey]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[Zonakey]"
+                          cachedDataType="wstr"
+                          cachedLength="4000"
+                          cachedName="Zonakey"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Zonakey]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Zonakey]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[CodiceStatoVendita]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="CodiceStatoVendita"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[CodiceStatoVendita]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[CodiceStatoVendita]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[M_Quantità_SpeditaNonFatturata]"
+                          cachedDataType="i4"
+                          cachedName="M_Quantità_SpeditaNonFatturata"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[M_Quantità_SpeditaNonFatturata]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[M_Quantità_SpeditaNonFatturata]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[M_Quantità_Fatturata]"
+                          cachedDataType="i4"
+                          cachedName="M_Quantità_Fatturata"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[M_Quantità_Fatturata]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[M_Quantità_Fatturata]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[Importo Lordo In Valuta_speditoNonFaturato]"
+                          cachedDataType="numeric"
+                          cachedName="Importo Lordo In Valuta_speditoNonFaturato"
+                          cachedPrecision="18"
+                          cachedScale="6"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo Lordo In Valuta_speditoNonFaturato]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Lordo In Valuta_speditoNonFaturato]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[Importo Sconto In Valuta_speditoNonFaturato]"
+                          cachedDataType="numeric"
+                          cachedName="Importo Sconto In Valuta_speditoNonFaturato"
+                          cachedPrecision="18"
+                          cachedScale="6"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo Sconto In Valuta_speditoNonFaturato]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Sconto In Valuta_speditoNonFaturato]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[Importo IVA In Valuta_speditoNonFaturato]"
+                          cachedDataType="numeric"
+                          cachedName="Importo IVA In Valuta_speditoNonFaturato"
+                          cachedPrecision="18"
+                          cachedScale="6"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo IVA In Valuta_speditoNonFaturato]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo IVA In Valuta_speditoNonFaturato]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[Importo Lordo In euro_speditoNonFaturato]"
+                          cachedDataType="numeric"
+                          cachedName="Importo Lordo In euro_speditoNonFaturato"
+                          cachedPrecision="18"
+                          cachedScale="6"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo Lordo In euro_speditoNonFaturato]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Lordo In euro_speditoNonFaturato]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[Importo Sconto In euro_speditoNonFaturato]"
+                          cachedDataType="numeric"
+                          cachedName="Importo Sconto In euro_speditoNonFaturato"
+                          cachedPrecision="18"
+                          cachedScale="6"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo Sconto In euro_speditoNonFaturato]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Sconto In euro_speditoNonFaturato]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[Importo IVA In euro_speditoNonFaturato]"
+                          cachedDataType="numeric"
+                          cachedName="Importo IVA In euro_speditoNonFaturato"
+                          cachedPrecision="18"
+                          cachedScale="6"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo IVA In euro_speditoNonFaturato]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo IVA In euro_speditoNonFaturato]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[FilialeKey]"
+                          cachedDataType="wstr"
+                          cachedLength="37"
+                          cachedName="FilialeKey"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[FilialeKey]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[FilialeKey]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[LocationKey_CLIENTE]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="LocationKey_CLIENTE"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[LocationKey_CLIENTE]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[LocationKey_CLIENTE]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[Rif Ordine Cliente]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="Rif Ordine Cliente"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Rif Ordine Cliente]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Rif Ordine Cliente]" />
+                        <inputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].Columns[Tipo Operazione CDV]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Tipo Operazione CDV"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Tipo Operazione CDV]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Tipo Operazione CDV]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[ArticoloKey]"
+                          dataType="wstr"
+                          length="26"
+                          name="ArticoloKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[MagazzinoKey]"
+                          dataType="wstr"
+                          length="16"
+                          name="MagazzinoKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[M_Quantità]"
+                          dataType="i4"
+                          name="M_Quantità" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo Lordo In Valuta]"
+                          dataType="numeric"
+                          name="Importo Lordo In Valuta"
+                          precision="20"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo Sconto In Valuta]"
+                          dataType="numeric"
+                          name="Importo Sconto In Valuta"
+                          precision="20"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo IVA In Valuta]"
+                          dataType="numeric"
+                          name="Importo IVA In Valuta"
+                          precision="20"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo Lordo Euro]"
+                          dataType="numeric"
+                          name="Importo Lordo Euro"
+                          precision="38"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo Sconto Euro]"
+                          dataType="numeric"
+                          name="Importo Sconto Euro"
+                          precision="38"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo IVA Euro]"
+                          dataType="numeric"
+                          name="Importo IVA Euro"
+                          precision="38"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[AgenteKey]"
+                          dataType="wstr"
+                          length="26"
+                          name="AgenteKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[ClienteKey]"
+                          dataType="wstr"
+                          length="26"
+                          name="ClienteKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[SpedizioniKey]"
+                          dataType="wstr"
+                          length="57"
+                          name="SpedizioniKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[ValutaKey]"
+                          dataType="wstr"
+                          length="10"
+                          name="ValutaKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[CodiceCategoriaArticolo]"
+                          dataType="wstr"
+                          length="20"
+                          name="CodiceCategoriaArticolo" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[NumeroSpedizione]"
+                          dataType="wstr"
+                          length="20"
+                          name="NumeroSpedizione" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[NumeroRigaSpedizione]"
+                          dataType="i4"
+                          name="NumeroRigaSpedizione" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[NumeroOrdine]"
+                          dataType="wstr"
+                          length="20"
+                          name="NumeroOrdine" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[NumeroRigaOrdine]"
+                          dataType="i4"
+                          name="NumeroRigaOrdine" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[NumeroOrdineAcquisto]"
+                          dataType="wstr"
+                          length="20"
+                          name="NumeroOrdineAcquisto" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[NumeroRigaOrdineAcquisto]"
+                          dataType="i4"
+                          name="NumeroRigaOrdineAcquisto" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Tipo]"
+                          dataType="i4"
+                          name="Tipo" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[DataOrdine]"
+                          dataType="dbDate"
+                          name="DataOrdine" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[DataSpedizione]"
+                          dataType="dbDate"
+                          name="DataSpedizione" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[DataScadenza]"
+                          dataType="dbDate"
+                          name="DataScadenza" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[DataPublicazione]"
+                          dataType="dbDate"
+                          name="DataPublicazione" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[DataPianificataConsegna]"
+                          dataType="dbDate"
+                          name="DataPianificataConsegna" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[DataPianificataSpedizione]"
+                          dataType="dbDate"
+                          name="DataPianificataSpedizione" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[DataRichiestaConsegna]"
+                          dataType="dbDate"
+                          name="DataRichiestaConsegna" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[CompanyKey]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="CompanyKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Marchio]"
+                          dataType="wstr"
+                          length="20"
+                          name="Marchio" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[StagioneKey]"
+                          dataType="wstr"
+                          length="26"
+                          name="StagioneKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[CanaleKey]"
+                          dataType="wstr"
+                          length="58"
+                          name="CanaleKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[SubcaneleKey]"
+                          dataType="wstr"
+                          length="61"
+                          name="SubcaneleKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Tasso di Cambio]"
+                          dataType="numeric"
+                          name="Tasso di Cambio"
+                          precision="18"
+                          scale="4" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[DescrizioneTipoOrdine]"
+                          dataType="wstr"
+                          length="50"
+                          name="DescrizioneTipoOrdine" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[NomeClienteSpedizione]"
+                          dataType="wstr"
+                          length="50"
+                          name="NomeClienteSpedizione" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[IndirizzoSpedizione]"
+                          dataType="wstr"
+                          length="50"
+                          name="IndirizzoSpedizione" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[CittàSpedizione]"
+                          dataType="wstr"
+                          length="30"
+                          name="CittàSpedizione" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[CodiceTipoOrdineKey]"
+                          dataType="wstr"
+                          length="10"
+                          name="CodiceTipoOrdineKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Zonakey]"
+                          dataType="wstr"
+                          length="4000"
+                          name="Zonakey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[CodiceStatoVendita]"
+                          dataType="wstr"
+                          length="10"
+                          name="CodiceStatoVendita" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[M_Quantità_SpeditaNonFatturata]"
+                          dataType="i4"
+                          name="M_Quantità_SpeditaNonFatturata" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[M_Quantità_Fatturata]"
+                          dataType="i4"
+                          name="M_Quantità_Fatturata" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo Lordo In Valuta_speditoNonFaturato]"
+                          dataType="numeric"
+                          name="Importo Lordo In Valuta_speditoNonFaturato"
+                          precision="18"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo Sconto In Valuta_speditoNonFaturato]"
+                          dataType="numeric"
+                          name="Importo Sconto In Valuta_speditoNonFaturato"
+                          precision="18"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo IVA In Valuta_speditoNonFaturato]"
+                          dataType="numeric"
+                          name="Importo IVA In Valuta_speditoNonFaturato"
+                          precision="18"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo Lordo In euro_speditoNonFaturato]"
+                          dataType="numeric"
+                          name="Importo Lordo In euro_speditoNonFaturato"
+                          precision="18"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo Sconto In euro_speditoNonFaturato]"
+                          dataType="numeric"
+                          name="Importo Sconto In euro_speditoNonFaturato"
+                          precision="18"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Importo IVA In euro_speditoNonFaturato]"
+                          dataType="numeric"
+                          name="Importo IVA In euro_speditoNonFaturato"
+                          precision="18"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[FilialeKey]"
+                          dataType="wstr"
+                          length="37"
+                          name="FilialeKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[LocationKey_CLIENTE]"
+                          dataType="wstr"
+                          length="10"
+                          name="LocationKey_CLIENTE" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Rif Ordine Cliente]"
+                          dataType="wstr"
+                          length="20"
+                          name="Rif Ordine Cliente" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[Tipo Operazione CDV]"
+                          dataType="wstr"
+                          length="50"
+                          name="Tipo Operazione CDV" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB].ExternalColumns[SpedizioniKeyId]"
+                          dataType="i4"
+                          name="SpedizioniKeyId" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Outputs[Output errori destinazione OLE DB]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Output errori destinazione OLE DB"
+                      synchronousInputId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="vFactSpedizioniNUOVO2"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[stg].[vFactSpedizioni_NUOVO2]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Connections[OleDbConnection]"
+                      connectionManagerID="{EBDC3EEE-A910-457C-95AF-2952194294D6}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[Stage]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[ArticoloKey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[ArticoloKey]"
+                          length="26"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[ArticoloKey]"
+                          name="ArticoloKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[MagazzinoKey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[MagazzinoKey]"
+                          length="16"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[MagazzinoKey]"
+                          name="MagazzinoKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[M_Quantità]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[M_Quantità]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[M_Quantità]"
+                          name="M_Quantità"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Lordo In Valuta]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo Lordo In Valuta]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Lordo In Valuta]"
+                          name="Importo Lordo In Valuta"
+                          precision="20"
+                          scale="6"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Sconto In Valuta]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo Sconto In Valuta]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Sconto In Valuta]"
+                          name="Importo Sconto In Valuta"
+                          precision="20"
+                          scale="6"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo IVA In Valuta]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo IVA In Valuta]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo IVA In Valuta]"
+                          name="Importo IVA In Valuta"
+                          precision="20"
+                          scale="6"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Lordo Euro]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo Lordo Euro]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Lordo Euro]"
+                          name="Importo Lordo Euro"
+                          precision="38"
+                          scale="6"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Sconto Euro]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo Sconto Euro]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Sconto Euro]"
+                          name="Importo Sconto Euro"
+                          precision="38"
+                          scale="6"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo IVA Euro]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo IVA Euro]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo IVA Euro]"
+                          name="Importo IVA Euro"
+                          precision="38"
+                          scale="6"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[AgenteKey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[AgenteKey]"
+                          length="26"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[AgenteKey]"
+                          name="AgenteKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[ClienteKey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[ClienteKey]"
+                          length="26"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[ClienteKey]"
+                          name="ClienteKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[SpedizioniKey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[SpedizioniKey]"
+                          length="57"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[SpedizioniKey]"
+                          name="SpedizioniKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[ValutaKey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[ValutaKey]"
+                          length="10"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[ValutaKey]"
+                          name="ValutaKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[CodiceCategoriaArticolo]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[CodiceCategoriaArticolo]"
+                          length="20"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[CodiceCategoriaArticolo]"
+                          name="CodiceCategoriaArticolo"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NumeroSpedizione]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[NumeroSpedizione]"
+                          length="20"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NumeroSpedizione]"
+                          name="NumeroSpedizione"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NumeroRigaSpedizione]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[NumeroRigaSpedizione]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NumeroRigaSpedizione]"
+                          name="NumeroRigaSpedizione"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NumeroOrdine]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[NumeroOrdine]"
+                          length="20"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NumeroOrdine]"
+                          name="NumeroOrdine"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NumeroRigaOrdine]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[NumeroRigaOrdine]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NumeroRigaOrdine]"
+                          name="NumeroRigaOrdine"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NumeroOrdineAcquisto]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[NumeroOrdineAcquisto]"
+                          length="20"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NumeroOrdineAcquisto]"
+                          name="NumeroOrdineAcquisto"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NumeroRigaOrdineAcquisto]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[NumeroRigaOrdineAcquisto]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NumeroRigaOrdineAcquisto]"
+                          name="NumeroRigaOrdineAcquisto"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Tipo]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Tipo]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Tipo]"
+                          name="Tipo"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataOrdine]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[DataOrdine]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataOrdine]"
+                          name="DataOrdine"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataSpedizione]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[DataSpedizione]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataSpedizione]"
+                          name="DataSpedizione"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataScadenza]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[DataScadenza]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataScadenza]"
+                          name="DataScadenza"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataPublicazione]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[DataPublicazione]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataPublicazione]"
+                          name="DataPublicazione"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataPianificataConsegna]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[DataPianificataConsegna]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataPianificataConsegna]"
+                          name="DataPianificataConsegna"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataPianificataSpedizione]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[DataPianificataSpedizione]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataPianificataSpedizione]"
+                          name="DataPianificataSpedizione"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataRichiestaConsegna]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[DataRichiestaConsegna]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DataRichiestaConsegna]"
+                          name="DataRichiestaConsegna"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[CompanyKey]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[CompanyKey]"
+                          length="5"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[CompanyKey]"
+                          name="CompanyKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Marchio]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Marchio]"
+                          length="20"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Marchio]"
+                          name="Marchio"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[StagioneKey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[StagioneKey]"
+                          length="26"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[StagioneKey]"
+                          name="StagioneKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[CanaleKey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[CanaleKey]"
+                          length="58"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[CanaleKey]"
+                          name="CanaleKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[SubcaneleKey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[SubcaneleKey]"
+                          length="61"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[SubcaneleKey]"
+                          name="SubcaneleKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Tasso di Cambio]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Tasso di Cambio]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Tasso di Cambio]"
+                          name="Tasso di Cambio"
+                          precision="18"
+                          scale="4"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DescrizioneTipoOrdine]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[DescrizioneTipoOrdine]"
+                          length="50"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[DescrizioneTipoOrdine]"
+                          name="DescrizioneTipoOrdine"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NomeClienteSpedizione]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[NomeClienteSpedizione]"
+                          length="50"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[NomeClienteSpedizione]"
+                          name="NomeClienteSpedizione"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[IndirizzoSpedizione]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[IndirizzoSpedizione]"
+                          length="50"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[IndirizzoSpedizione]"
+                          name="IndirizzoSpedizione"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[CittàSpedizione]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[CittàSpedizione]"
+                          length="30"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[CittàSpedizione]"
+                          name="CittàSpedizione"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[CodiceTipoOrdineKey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[CodiceTipoOrdineKey]"
+                          length="10"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[CodiceTipoOrdineKey]"
+                          name="CodiceTipoOrdineKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Zonakey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Zonakey]"
+                          length="4000"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Zonakey]"
+                          name="Zonakey"
+                          truncationRowDisposition="IgnoreFailure" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[CodiceStatoVendita]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[CodiceStatoVendita]"
+                          length="10"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[CodiceStatoVendita]"
+                          name="CodiceStatoVendita"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[M_Quantità_SpeditaNonFatturata]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[M_Quantità_SpeditaNonFatturata]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[M_Quantità_SpeditaNonFatturata]"
+                          name="M_Quantità_SpeditaNonFatturata"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[M_Quantità_Fatturata]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[M_Quantità_Fatturata]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[M_Quantità_Fatturata]"
+                          name="M_Quantità_Fatturata"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Lordo In Valuta_speditoNonFaturato]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo Lordo In Valuta_speditoNonFaturato]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Lordo In Valuta_speditoNonFaturato]"
+                          name="Importo Lordo In Valuta_speditoNonFaturato"
+                          precision="18"
+                          scale="6"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Sconto In Valuta_speditoNonFaturato]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo Sconto In Valuta_speditoNonFaturato]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Sconto In Valuta_speditoNonFaturato]"
+                          name="Importo Sconto In Valuta_speditoNonFaturato"
+                          precision="18"
+                          scale="6"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo IVA In Valuta_speditoNonFaturato]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo IVA In Valuta_speditoNonFaturato]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo IVA In Valuta_speditoNonFaturato]"
+                          name="Importo IVA In Valuta_speditoNonFaturato"
+                          precision="18"
+                          scale="6"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Lordo In euro_speditoNonFaturato]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo Lordo In euro_speditoNonFaturato]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Lordo In euro_speditoNonFaturato]"
+                          name="Importo Lordo In euro_speditoNonFaturato"
+                          precision="18"
+                          scale="6"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Sconto In euro_speditoNonFaturato]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo Sconto In euro_speditoNonFaturato]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo Sconto In euro_speditoNonFaturato]"
+                          name="Importo Sconto In euro_speditoNonFaturato"
+                          precision="18"
+                          scale="6"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo IVA In euro_speditoNonFaturato]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo IVA In euro_speditoNonFaturato]"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Importo IVA In euro_speditoNonFaturato]"
+                          name="Importo IVA In euro_speditoNonFaturato"
+                          precision="18"
+                          scale="6"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[FilialeKey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[FilialeKey]"
+                          length="37"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[FilialeKey]"
+                          name="FilialeKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[LocationKey_CLIENTE]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[LocationKey_CLIENTE]"
+                          length="10"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[LocationKey_CLIENTE]"
+                          name="LocationKey_CLIENTE"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Rif Ordine Cliente]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Rif Ordine Cliente]"
+                          length="20"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Rif Ordine Cliente]"
+                          name="Rif Ordine Cliente"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Tipo Operazione CDV]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Tipo Operazione CDV]"
+                          length="50"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[Tipo Operazione CDV]"
+                          name="Tipo Operazione CDV"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[TIMESTAMP]"
+                          dataType="bytes"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[TIMESTAMP]"
+                          length="8"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].Columns[TIMESTAMP]"
+                          name="TIMESTAMP"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[ArticoloKey]"
+                          dataType="wstr"
+                          length="26"
+                          name="ArticoloKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[MagazzinoKey]"
+                          dataType="wstr"
+                          length="16"
+                          name="MagazzinoKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[M_Quantità]"
+                          dataType="i4"
+                          name="M_Quantità" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo Lordo In Valuta]"
+                          dataType="numeric"
+                          name="Importo Lordo In Valuta"
+                          precision="20"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo Sconto In Valuta]"
+                          dataType="numeric"
+                          name="Importo Sconto In Valuta"
+                          precision="20"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo IVA In Valuta]"
+                          dataType="numeric"
+                          name="Importo IVA In Valuta"
+                          precision="20"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo Lordo Euro]"
+                          dataType="numeric"
+                          name="Importo Lordo Euro"
+                          precision="38"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo Sconto Euro]"
+                          dataType="numeric"
+                          name="Importo Sconto Euro"
+                          precision="38"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo IVA Euro]"
+                          dataType="numeric"
+                          name="Importo IVA Euro"
+                          precision="38"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[AgenteKey]"
+                          dataType="wstr"
+                          length="26"
+                          name="AgenteKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[ClienteKey]"
+                          dataType="wstr"
+                          length="26"
+                          name="ClienteKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[SpedizioniKey]"
+                          dataType="wstr"
+                          length="57"
+                          name="SpedizioniKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[ValutaKey]"
+                          dataType="wstr"
+                          length="10"
+                          name="ValutaKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[CodiceCategoriaArticolo]"
+                          dataType="wstr"
+                          length="20"
+                          name="CodiceCategoriaArticolo" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[NumeroSpedizione]"
+                          dataType="wstr"
+                          length="20"
+                          name="NumeroSpedizione" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[NumeroRigaSpedizione]"
+                          dataType="i4"
+                          name="NumeroRigaSpedizione" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[NumeroOrdine]"
+                          dataType="wstr"
+                          length="20"
+                          name="NumeroOrdine" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[NumeroRigaOrdine]"
+                          dataType="i4"
+                          name="NumeroRigaOrdine" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[NumeroOrdineAcquisto]"
+                          dataType="wstr"
+                          length="20"
+                          name="NumeroOrdineAcquisto" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[NumeroRigaOrdineAcquisto]"
+                          dataType="i4"
+                          name="NumeroRigaOrdineAcquisto" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Tipo]"
+                          dataType="i4"
+                          name="Tipo" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[DataOrdine]"
+                          dataType="dbDate"
+                          name="DataOrdine" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[DataSpedizione]"
+                          dataType="dbDate"
+                          name="DataSpedizione" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[DataScadenza]"
+                          dataType="dbDate"
+                          name="DataScadenza" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[DataPublicazione]"
+                          dataType="dbDate"
+                          name="DataPublicazione" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[DataPianificataConsegna]"
+                          dataType="dbDate"
+                          name="DataPianificataConsegna" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[DataPianificataSpedizione]"
+                          dataType="dbDate"
+                          name="DataPianificataSpedizione" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[DataRichiestaConsegna]"
+                          dataType="dbDate"
+                          name="DataRichiestaConsegna" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[CompanyKey]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="CompanyKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Marchio]"
+                          dataType="wstr"
+                          length="20"
+                          name="Marchio" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[StagioneKey]"
+                          dataType="wstr"
+                          length="26"
+                          name="StagioneKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[CanaleKey]"
+                          dataType="wstr"
+                          length="58"
+                          name="CanaleKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[SubcaneleKey]"
+                          dataType="wstr"
+                          length="61"
+                          name="SubcaneleKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Tasso di Cambio]"
+                          dataType="numeric"
+                          name="Tasso di Cambio"
+                          precision="18"
+                          scale="4" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[DescrizioneTipoOrdine]"
+                          dataType="wstr"
+                          length="50"
+                          name="DescrizioneTipoOrdine" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[NomeClienteSpedizione]"
+                          dataType="wstr"
+                          length="50"
+                          name="NomeClienteSpedizione" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[IndirizzoSpedizione]"
+                          dataType="wstr"
+                          length="50"
+                          name="IndirizzoSpedizione" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[CittàSpedizione]"
+                          dataType="wstr"
+                          length="30"
+                          name="CittàSpedizione" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[CodiceTipoOrdineKey]"
+                          dataType="wstr"
+                          length="10"
+                          name="CodiceTipoOrdineKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Zonakey]"
+                          dataType="wstr"
+                          length="4000"
+                          name="Zonakey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[CodiceStatoVendita]"
+                          dataType="wstr"
+                          length="10"
+                          name="CodiceStatoVendita" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[M_Quantità_SpeditaNonFatturata]"
+                          dataType="i4"
+                          name="M_Quantità_SpeditaNonFatturata" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[M_Quantità_Fatturata]"
+                          dataType="i4"
+                          name="M_Quantità_Fatturata" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo Lordo In Valuta_speditoNonFaturato]"
+                          dataType="numeric"
+                          name="Importo Lordo In Valuta_speditoNonFaturato"
+                          precision="18"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo Sconto In Valuta_speditoNonFaturato]"
+                          dataType="numeric"
+                          name="Importo Sconto In Valuta_speditoNonFaturato"
+                          precision="18"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo IVA In Valuta_speditoNonFaturato]"
+                          dataType="numeric"
+                          name="Importo IVA In Valuta_speditoNonFaturato"
+                          precision="18"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo Lordo In euro_speditoNonFaturato]"
+                          dataType="numeric"
+                          name="Importo Lordo In euro_speditoNonFaturato"
+                          precision="18"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo Sconto In euro_speditoNonFaturato]"
+                          dataType="numeric"
+                          name="Importo Sconto In euro_speditoNonFaturato"
+                          precision="18"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Importo IVA In euro_speditoNonFaturato]"
+                          dataType="numeric"
+                          name="Importo IVA In euro_speditoNonFaturato"
+                          precision="18"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[FilialeKey]"
+                          dataType="wstr"
+                          length="37"
+                          name="FilialeKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[LocationKey_CLIENTE]"
+                          dataType="wstr"
+                          length="10"
+                          name="LocationKey_CLIENTE" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Rif Ordine Cliente]"
+                          dataType="wstr"
+                          length="20"
+                          name="Rif Ordine Cliente" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[Tipo Operazione CDV]"
+                          dataType="wstr"
+                          length="50"
+                          name="Tipo Operazione CDV" />
+                        <externalMetadataColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output].ExternalColumns[TIMESTAMP]"
+                          dataType="bytes"
+                          length="8"
+                          name="TIMESTAMP" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[TIMESTAMP]"
+                          dataType="bytes"
+                          length="8"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[TIMESTAMP]"
+                          name="TIMESTAMP" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[SpedizioniKey]"
+                          dataType="wstr"
+                          length="57"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[SpedizioniKey]"
+                          name="SpedizioniKey" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Rif Ordine Cliente]"
+                          dataType="wstr"
+                          length="20"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Rif Ordine Cliente]"
+                          name="Rif Ordine Cliente" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[CompanyKey]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[CompanyKey]"
+                          name="CompanyKey" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[ValutaKey]"
+                          dataType="wstr"
+                          length="10"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[ValutaKey]"
+                          name="ValutaKey" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[ArticoloKey]"
+                          dataType="wstr"
+                          length="26"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[ArticoloKey]"
+                          name="ArticoloKey" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[AgenteKey]"
+                          dataType="wstr"
+                          length="26"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[AgenteKey]"
+                          name="AgenteKey" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[ClienteKey]"
+                          dataType="wstr"
+                          length="26"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[ClienteKey]"
+                          name="ClienteKey" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[MagazzinoKey]"
+                          dataType="wstr"
+                          length="16"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[MagazzinoKey]"
+                          name="MagazzinoKey" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[StagioneKey]"
+                          dataType="wstr"
+                          length="26"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[StagioneKey]"
+                          name="StagioneKey" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[FilialeKey]"
+                          dataType="wstr"
+                          length="37"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[FilialeKey]"
+                          name="FilialeKey" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Zonakey]"
+                          dataType="wstr"
+                          length="4000"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Zonakey]"
+                          name="Zonakey" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[CanaleKey]"
+                          dataType="wstr"
+                          length="58"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[CanaleKey]"
+                          name="CanaleKey" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[SubcaneleKey]"
+                          dataType="wstr"
+                          length="61"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[SubcaneleKey]"
+                          name="SubcaneleKey" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Marchio]"
+                          dataType="wstr"
+                          length="20"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Marchio]"
+                          name="Marchio" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[CodiceStatoVendita]"
+                          dataType="wstr"
+                          length="10"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[CodiceStatoVendita]"
+                          name="CodiceStatoVendita" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[CodiceCategoriaArticolo]"
+                          dataType="wstr"
+                          length="20"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[CodiceCategoriaArticolo]"
+                          name="CodiceCategoriaArticolo" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[NumeroSpedizione]"
+                          dataType="wstr"
+                          length="20"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[NumeroSpedizione]"
+                          name="NumeroSpedizione" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[NumeroRigaSpedizione]"
+                          dataType="i4"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[NumeroRigaSpedizione]"
+                          name="NumeroRigaSpedizione" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[NumeroOrdine]"
+                          dataType="wstr"
+                          length="20"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[NumeroOrdine]"
+                          name="NumeroOrdine" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[NumeroRigaOrdine]"
+                          dataType="i4"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[NumeroRigaOrdine]"
+                          name="NumeroRigaOrdine" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[NumeroOrdineAcquisto]"
+                          dataType="wstr"
+                          length="20"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[NumeroOrdineAcquisto]"
+                          name="NumeroOrdineAcquisto" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[NumeroRigaOrdineAcquisto]"
+                          dataType="i4"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[NumeroRigaOrdineAcquisto]"
+                          name="NumeroRigaOrdineAcquisto" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Tipo]"
+                          dataType="i4"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Tipo]"
+                          name="Tipo" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[CodiceTipoOrdineKey]"
+                          dataType="wstr"
+                          length="10"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[CodiceTipoOrdineKey]"
+                          name="CodiceTipoOrdineKey" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[DescrizioneTipoOrdine]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[DescrizioneTipoOrdine]"
+                          name="DescrizioneTipoOrdine" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[DataOrdine]"
+                          dataType="dbDate"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[DataOrdine]"
+                          name="DataOrdine" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[DataSpedizione]"
+                          dataType="dbDate"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[DataSpedizione]"
+                          name="DataSpedizione" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[DataScadenza]"
+                          dataType="dbDate"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[DataScadenza]"
+                          name="DataScadenza" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[DataPublicazione]"
+                          dataType="dbDate"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[DataPublicazione]"
+                          name="DataPublicazione" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[DataPianificataConsegna]"
+                          dataType="dbDate"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[DataPianificataConsegna]"
+                          name="DataPianificataConsegna" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[DataPianificataSpedizione]"
+                          dataType="dbDate"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[DataPianificataSpedizione]"
+                          name="DataPianificataSpedizione" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[DataRichiestaConsegna]"
+                          dataType="dbDate"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[DataRichiestaConsegna]"
+                          name="DataRichiestaConsegna" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[NomeClienteSpedizione]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[NomeClienteSpedizione]"
+                          name="NomeClienteSpedizione" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[IndirizzoSpedizione]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[IndirizzoSpedizione]"
+                          name="IndirizzoSpedizione" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[CittàSpedizione]"
+                          dataType="wstr"
+                          length="30"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[CittàSpedizione]"
+                          name="CittàSpedizione" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo Lordo In Valuta]"
+                          dataType="numeric"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo Lordo In Valuta]"
+                          name="Importo Lordo In Valuta"
+                          precision="20"
+                          scale="6" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo Sconto In Valuta]"
+                          dataType="numeric"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo Sconto In Valuta]"
+                          name="Importo Sconto In Valuta"
+                          precision="20"
+                          scale="6" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo IVA In Valuta]"
+                          dataType="numeric"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo IVA In Valuta]"
+                          name="Importo IVA In Valuta"
+                          precision="20"
+                          scale="6" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[M_Quantità]"
+                          dataType="i4"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[M_Quantità]"
+                          name="M_Quantità" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo Lordo Euro]"
+                          dataType="numeric"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo Lordo Euro]"
+                          name="Importo Lordo Euro"
+                          precision="38"
+                          scale="6" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo Sconto Euro]"
+                          dataType="numeric"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo Sconto Euro]"
+                          name="Importo Sconto Euro"
+                          precision="38"
+                          scale="6" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo IVA Euro]"
+                          dataType="numeric"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo IVA Euro]"
+                          name="Importo IVA Euro"
+                          precision="38"
+                          scale="6" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Tasso di Cambio]"
+                          dataType="numeric"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Tasso di Cambio]"
+                          name="Tasso di Cambio"
+                          precision="18"
+                          scale="4" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[M_Quantità_SpeditaNonFatturata]"
+                          dataType="i4"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[M_Quantità_SpeditaNonFatturata]"
+                          name="M_Quantità_SpeditaNonFatturata" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[M_Quantità_Fatturata]"
+                          dataType="i4"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[M_Quantità_Fatturata]"
+                          name="M_Quantità_Fatturata" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo Lordo In Valuta_speditoNonFaturato]"
+                          dataType="numeric"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo Lordo In Valuta_speditoNonFaturato]"
+                          name="Importo Lordo In Valuta_speditoNonFaturato"
+                          precision="18"
+                          scale="6" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo Sconto In Valuta_speditoNonFaturato]"
+                          dataType="numeric"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo Sconto In Valuta_speditoNonFaturato]"
+                          name="Importo Sconto In Valuta_speditoNonFaturato"
+                          precision="18"
+                          scale="6" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo IVA In Valuta_speditoNonFaturato]"
+                          dataType="numeric"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo IVA In Valuta_speditoNonFaturato]"
+                          name="Importo IVA In Valuta_speditoNonFaturato"
+                          precision="18"
+                          scale="6" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo Lordo In euro_speditoNonFaturato]"
+                          dataType="numeric"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo Lordo In euro_speditoNonFaturato]"
+                          name="Importo Lordo In euro_speditoNonFaturato"
+                          precision="18"
+                          scale="6" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo Sconto In euro_speditoNonFaturato]"
+                          dataType="numeric"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo Sconto In euro_speditoNonFaturato]"
+                          name="Importo Sconto In euro_speditoNonFaturato"
+                          precision="18"
+                          scale="6" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo IVA In euro_speditoNonFaturato]"
+                          dataType="numeric"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Importo IVA In euro_speditoNonFaturato]"
+                          name="Importo IVA In euro_speditoNonFaturato"
+                          precision="18"
+                          scale="6" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[LocationKey_CLIENTE]"
+                          dataType="wstr"
+                          length="10"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[LocationKey_CLIENTE]"
+                          name="LocationKey_CLIENTE" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Tipo Operazione CDV]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[Tipo Operazione CDV]"
+                          name="Tipo Operazione CDV" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2.Paths[OLE DB Source Output]"
+                  endId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2.Inputs[Input destinazione OLE DB]"
+                  name="OLE DB Source Output"
+                  startId="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2.Outputs[OLE DB Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\FactSpedizioniNUOVO2\Truncate FactSpedizioniNUOVO2"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{0c798320-ad6b-441c-a8cc-5d23c7f721ab}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate FactSpedizioniNUOVO2"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+              SQLTask:SqlStatementSource="Truncate Table dbo.FactSpedizioni_NUOVO2" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\FactSpedizioniNUOVO2.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{1864bb6a-3221-49ca-95b7-5ff84559ff87}"
+          DTS:From="Package\FactSpedizioniNUOVO2\Truncate FactSpedizioniNUOVO2"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\TRUNCATE ALL"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Attività Esegui SQL"
+      DTS:DTSID="{9EB5D389-D553-475F-8D4D-0D4BF89904D7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TRUNCATE ALL"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+          SQLTask:SqlStatementSource="EXECUTE [dbo].[SP_TRUNCATE_ALL_TABLE] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Vincolo]"
+      DTS:CreationName=""
+      DTS:DTSID="{972C8995-7A46-4931-84FB-683FB9D8A890}"
+      DTS:From="Package\TRUNCATE ALL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Vincolo"
+      DTS:To="Package\ACTUAL_MAIN_FACT_001" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Vincolo 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{A94A89D1-9ADF-4F54-867B-8437BD703CB6}"
+      DTS:From="Package\ACTUAL_MAIN_FACT_001"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Vincolo 1"
+      DTS:To="Package\FactSpedizioniNUOVO2" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Vincolo 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{91377FA7-12C6-45FE-8F7B-2FF0DB9DE9F6}"
+      DTS:From="Package\ACTUAL_MAIN_FACT_002"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Vincolo 2"
+      DTS:To="Package\ACTUAL_MAIN_FACT_003" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Vincolo 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{5B006FAD-507B-4C51-A1F5-5EA930F39385}"
+      DTS:From="Package\ACTUAL_MAIN_FACT_003"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Vincolo 3"
+      DTS:To="Package\ACTUAL_MAIN_FINE_ELAB" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Vincolo 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{A3EFF47F-BFEC-441C-A3BB-E3507E0DEFFD}"
+      DTS:From="Package\FactSpedizioniNUOVO2"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Vincolo 4"
+      DTS:To="Package\ACTUAL_MAIN_FACT_002" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="202.666666666667,42.6666666666667"
+          Id="Package\ACTUAL_MAIN_FACT_001"
+          TopLeft="21.0416669367503,109.466666643421" />
+        <NodeLayout
+          Size="202.666666666667,42.6666666666667"
+          Id="Package\ACTUAL_MAIN_FACT_002"
+          TopLeft="34.1666667411725,519.48333332171" />
+        <NodeLayout
+          Size="202.666666666667,42.6666666666667"
+          Id="Package\ACTUAL_MAIN_FACT_003"
+          TopLeft="39.1666666666668,621.5" />
+        <NodeLayout
+          Size="206.666666666667,42.6666666666667"
+          Id="Package\ACTUAL_MAIN_FINE_ELAB"
+          TopLeft="35.9166666852933,727.416666608552" />
+        <NodeLayout
+          Size="232,42.6666666666667"
+          Id="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2"
+          TopLeft="6.16666666666669,108.166666666667" />
+        <NodeLayout
+          Size="233.333333333334,42.6666666666667"
+          Id="Package\FactSpedizioniNUOVO2\Truncate FactSpedizioniNUOVO2"
+          TopLeft="5.50000000000001,5.50000000000004" />
+        <EdgeLayout
+          Id="Package\FactSpedizioniNUOVO2.PrecedenceConstraints[Constraint]"
+          TopLeft="122.166666666667,48.1666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="244.666666666667,206"
+          Size="244.666666666667,248.666666666667"
+          Id="Package\FactSpedizioniNUOVO2"
+          TopLeft="5.50000000000006,210.166666666667" />
+        <NodeLayout
+          Size="152,42.6666666666667"
+          Id="Package\TRUNCATE ALL"
+          TopLeft="51.8333333333333,5.49999999999993" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Vincolo]"
+          TopLeft="125.104166801708,48.1666666666666">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61.2999999767546"
+              Start="0,0"
+              End="0,53.7999999767546">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.7999999767546" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Vincolo 1]"
+          TopLeft="125.104166801709,152.133333310088">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.0333333565794"
+              Start="0,0"
+              End="0,50.5333333565794">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5333333565794" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Vincolo 2]"
+          TopLeft="138.000000037253,562.149999988377">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.3500000116233"
+              Start="0,0"
+              End="0,51.8500000116233">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.8500000116233" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Vincolo 3]"
+          TopLeft="139.875000009313,664.166666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.2499999418858"
+              Start="0,0"
+              End="0,55.7499999418858">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.7499999418858" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Vincolo 4]"
+          TopLeft="131.66666670392,458.833333333334">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.6499999883763"
+              Start="0,0"
+              End="0,53.1499999883763">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.1499999883763" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="188,42.6666666666667"
+          Id="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2"
+          TopLeft="8.16666666666669,108.166666666667" />
+        <NodeLayout
+          Size="193.333333333334,42.6666666666667"
+          Id="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\vFactSpedizioniNUOVO2"
+          TopLeft="5.50000000000001,5.50000000000004" />
+        <EdgeLayout
+          Id="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2.Paths[OLE DB Source Output]"
+          TopLeft="102.166666666667,48.1666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\FactSpedizioniNUOVO2\Populate FactSpedizioniNUOVO2\FactSpedizioniNUOVO2">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

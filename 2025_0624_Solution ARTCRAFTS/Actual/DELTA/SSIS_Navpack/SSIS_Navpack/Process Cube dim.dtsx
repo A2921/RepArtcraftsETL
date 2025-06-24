@@ -1,0 +1,72 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/6/2021 11:09:01 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LIT004005"
+  DTS:CreatorName="CORP\FBARBACA"
+  DTS:DTSID="{6DB0CB59-47E4-4259-82AD-12533145B090}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="Process Cube dim"
+  DTS:PackageType="5"
+  DTS:VersionBuild="111"
+  DTS:VersionGUID="{2CE1E1D5-3390-44C6-A55E-14CFB20B7509}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost]"
+      DTS:CreationName="MSOLAP100"
+      DTS:DTSID="{132FF311-F1E2-48FA-A3B4-04AB13933F52}"
+      DTS:ObjectName="localhost">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Data Source=localhost;Provider=MSOLAP.8;Impersonation Level=Impersonate;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Attività Esegui DDL Analysis Services"
+      DTS:CreationName="Microsoft.ASExecuteDDLTask"
+      DTS:Description="Attività Esegui DDL Analysis Services"
+      DTS:DTSID="{3E270FBB-AB83-4CC0-B3D7-E093C7E83E34}"
+      DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Attività Esegui DDL Analysis Services"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ASDdlData
+          ConnectionName="localhost"
+          SourceType="DirectInput"
+          Source="{&#xA;&quot;refresh&quot;: {&#xA;&quot;type&quot;: &quot;full&quot;,&#xA;&quot;objects&quot;: [&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Agente&quot;&#xA;},&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Data Consegna Richiesta&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Data Ordine Web&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Data Pianificata Disponibilità&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Data Selezione Utente&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Data Ultimo Aggiornamento&quot;&#xA;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Articolo&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Articolo Modello&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Articolo ModelloColore&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;ArticoloListino&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Assortimento&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Canale&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Cliente&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Company&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Conto&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Costi Accessori TipoCosto&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Data&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Filiale&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Fornitore&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Listino&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Magazzino&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Marchio&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Negozio&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;PCCDC&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Profit Center&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Rif Ordine Cliente&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Stagione&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Stagione Listino&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Stato Vendita&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Subcanale&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Tipo Operazione CDV&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Tipo Ordine&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Unità Di Misura&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Zona&quot;&#xA;} ,&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB vArticoloListinoModelloColore&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB vArticoloModelloColore&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Taglie&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Tipo Documento&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TipoCostoAccessorio_distinct&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TipologiaSpesaMC&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Zona Agente&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB Misura&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;Stagione Confronto&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;DimCollezione&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;DimMacrozona&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;DimUltimaStagioneDisponibile&quot;&#xA;      }&#xA;]&#xA;}&#xA;}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="252,42.6666666666667"
+          Id="Package\Attività Esegui DDL Analysis Services"
+          TopLeft="5.5,5.50000000000004" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

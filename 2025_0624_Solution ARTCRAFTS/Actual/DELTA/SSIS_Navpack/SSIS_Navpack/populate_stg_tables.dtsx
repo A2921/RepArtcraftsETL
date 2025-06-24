@@ -1,0 +1,77 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/28/2022 9:35:59 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SRVPOWERBI"
+  DTS:CreatorName="ARTCRAFTS\powerbi02"
+  DTS:DTSID="{00C0092F-1E49-4A7C-A194-B5551E26AE7E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="populate_stg_tables"
+  DTS:PackageType="5"
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{A0BB2B97-FCB6-44B5-887E-EAF38011D35D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8C6F7AF7-EE9A-464C-969A-EC17E9CDF638}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="QUERY">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\stg tables"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Attività Esegui SQL"
+      DTS:DTSID="{D9A4B344-9A3D-4373-B353-B813ECB2C330}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="stg tables"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+          SQLTask:SqlStatementSource="&#xA;TRUNCATE TABLE [BI_Model_Stage].[dbo].[ClientiAffiliati];&#xA;insert into [BI_Model_Stage].[dbo].[ClientiAffiliati]&#xA;select * from [SRVPOWERBI].[BI_Model_Stage].[dbo].[ClientiAffiliati];&#xA;&#xA;TRUNCATE TABLE [BI_Model_Stage].[dbo].[Buoni Retail];&#xA;insert into [BI_Model_Stage].[dbo].[Buoni Retail]&#xA;select * from [SRVPOWERBI].[BI_Model_Stage].[dbo].[Buoni Retail];&#xA;&#xA;&#xA;TRUNCATE TABLE [BI_Model_Stage].[dbo].[CostiMktg];&#xA;insert into [BI_Model_Stage].[dbo].[CostiMktg]&#xA;select * from [SRVPOWERBI].[BI_Model_Stage].[dbo].[CostiMktg];&#xA;&#xA;TRUNCATE TABLE [BI_Model_Stage].[dbo].[CostiMktgSettimanali];&#xA;insert into [BI_Model_Stage].[dbo].[CostiMktgSettimanali]&#xA;select * from [SRVPOWERBI].[BI_Model_Stage].[dbo].[CostiMktgSettimanali];&#xA;&#xA;&#xA;TRUNCATE TABLE [BI_Model_Stage].[dbo].[CanaleAffiliati];&#xA;insert into [BI_Model_Stage].[dbo].[CanaleAffiliati]&#xA;select * from [SRVPOWERBI].[BI_Model_Stage].[dbo].[CanaleAffiliati];&#xA;&#xA;&#xA;TRUNCATE TABLE [BI_Model_Stage].[dbo].[Causale Reso];&#xA;insert into [BI_Model_Stage].[dbo].[Causale Reso]&#xA;select * from [SRVPOWERBI].[BI_Model_Stage].[dbo].[Causale Reso];&#xA;&#xA;&#xA;TRUNCATE TABLE [BI_Model_Stage].[dbo].[CrocsWeekNumber];&#xA;insert into [BI_Model_Stage].[dbo].[CrocsWeekNumber] ([Week_Number], [Year], [Start_Date], [End_Date], [Dates_In_Week])&#xA;SELECT [Week_Number], [Year], [Start_Date], [End_Date], [Dates_In_Week]&#xA;FROM [SRVPOWERBI].[BI_Model_Stage].[dbo].[CrocsWeekNumber];&#xA;&#xA;&#xA;TRUNCATE TABLE [BI_Model_Stage].[dbo].[GiacenzaScontrinoWeekly];&#xA;insert into [BI_Model_Stage].[dbo].[GiacenzaScontrinoWeekly]&#xA;select * from [SRVPOWERBI].[BI_Model_Stage].[dbo].[GiacenzaScontrinoWeekly];&#xA;&#xA;&#xA;TRUNCATE TABLE [BI_Model_Stage].[dbo].[MargineCliente];&#xA;insert into [BI_Model_Stage].[dbo].[MargineCliente]&#xA;select * from [SRVPOWERBI].[BI_Model_Stage].[dbo].[MargineCliente];&#xA;&#xA;&#xA;TRUNCATE TABLE [BI_Model_Stage].[dbo].[Scontrino];&#xA;insert into [BI_Model_Stage].[dbo].[Scontrino]&#xA;select * from [SRVPOWERBI].[BI_Model_Stage].[dbo].[Scontrino];&#xA;&#xA;&#xA;TRUNCATE TABLE [BI_Model_Stage].[dbo].[Store Crocs];&#xA;insert into [BI_Model_Stage].[dbo].[Store Crocs] ([Codice Negozio Arianna], [Codice Cliente Nav], [Store Code Cros], [Store Name])&#xA;SELECT [Codice Negozio Arianna], [Codice Cliente Nav], [Store Code Cros], [Store Name]&#xA;FROM [SRVPOWERBI].[BI_Model_DWH].[dbo].[Store Crocs];&#xA;&#xA;&#xA;TRUNCATE TABLE [BI_Model_Stage].[dbo].[Subcanale];&#xA;insert into [BI_Model_Stage].[dbo].[Subcanale]&#xA;select * from [SRVPOWERBI].[BI_Model_Stage].[dbo].[Subcanale];&#xA;&#xA;TRUNCATE TABLE [BI_Model_Stage].[dbo].[TRAFFIC_CROCS];&#xA;insert into [BI_Model_Stage].[dbo].[TRAFFIC_CROCS]&#xA;select * from [SRVPOWERBI].[BI_Model_Stage].[dbo].[TRAFFIC_CROCS];&#xA;&#xA;&#xA;TRUNCATE TABLE [BI_Model_DWH].[cfg].[Subcanale];&#xA;insert into [BI_Model_DWH].[cfg].[Subcanale]&#xA;select * from [SRVPOWERBI].[BI_Model_DWH].[cfg].[Subcanale];&#xA;&#xA;&#xA;TRUNCATE TABLE [BI_Model_DWH].[cfg].[Stagione];&#xA;insert into [BI_Model_DWH].[cfg].[Stagione]&#xA;select * from [SRVPOWERBI].[BI_Model_DWH].[cfg].[Stagione];&#xA;&#xA;&#xA;TRUNCATE TABLE [BI_Model_DWH].[dbo].[CampagnaVenditaOrdiniIncompleti];&#xA;insert into [BI_Model_DWH].[dbo].[CampagnaVenditaOrdiniIncompleti]&#xA;select * from [SRVPOWERBI].[BI_Model_DWH].[dbo].[CampagnaVenditaOrdiniIncompleti];&#xA;&#xA;TRUNCATE TABLE [BI_Model_DWH].[dbo].[CalendarioCrocs];&#xA;insert into [BI_Model_DWH].[dbo].[CalendarioCrocs]&#xA;select * from [SRVPOWERBI].[BI_Model_DWH].[dbo].[CalendarioCrocs];&#xA;&#xA;&#xA;TRUNCATE TABLE [BI_Model_DWH].[dbo].[ArticoliContoDaIncludere];&#xA;insert into [BI_Model_DWH].[dbo].[ArticoliContoDaIncludere]&#xA;select * from [SRVPOWERBI].[BI_Model_DWH].[dbo].[ArticoliContoDaIncludere];&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="125.333333333334,42.6666666666667"
+          Id="Package\stg tables"
+          TopLeft="271.666664136229,148.36962792003" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

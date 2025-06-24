@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="HIST"
+  DTS:DTSID="{CF7C5D77-8095-4874-A417-37A23D590321}"
+  DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="InitialCatalog">@[$Project::HIST]</DTS:PropertyExpression>
+  <DTS:PropertyExpression
+    DTS:Name="ServerName">@[$Project::ServerName]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=10.0.0.6;Initial Catalog=BI_Model_HIST;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-ETL_FULL_ACTUAL-{CF7C5D77-8095-4874-A417-37A23D590321}10.0.0.6.BI_Model_HIST;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

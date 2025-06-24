@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/6/2021 11:09:01 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LIT004005"
+  DTS:CreatorName="CORP\FBARBACA"
+  DTS:DTSID="{05F941B3-01DA-454A-B7B2-243B8C3B53E1}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.166"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="Process Cube"
+  DTS:PackageType="5"
+  DTS:VersionBuild="53"
+  DTS:VersionGUID="{F74C8AA3-3D5B-446C-A1C7-9C461C4966D9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Dim - Process Full"
+      DTS:CreationName="Microsoft.ASExecuteDDLTask"
+      DTS:Description="Analysis Services Execute DDL Task"
+      DTS:DTSID="{8E0119CA-5379-4B6B-842B-AA10127B46A7}"
+      DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Dim - Process Full"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ASDdlData
+          ConnectionName="SSAS_BISolution"
+          SourceType="DirectInput"
+          Source="{&#xA;  &quot;refresh&quot;: {&#xA;    &quot;type&quot;: &quot;full&quot;,&#xA;    &quot;objects&quot;: [&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Agente&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Articolo&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Cliente&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Company&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Fornitore&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Magazzino&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Data&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Unità Di Misura&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Canale&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Stagione&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Subcanale&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Stagione Confronto&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Zona&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Assortimento&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Testata Ordine Vendita&quot;&#xA;      },&#xA;&#x9;        {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Testata Spedizione&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Profit Center&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Negozio&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Tipo Ordine&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Ora&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Data Ordine Web&quot;&#xA;      },&#xA;&#x9;  {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Data Consegna Richiesta&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Stagione Listino&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Data Pianificata Disponibilità&quot;&#xA;      },&#xA;&#x9;  {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Tipo Documento&quot;&#xA;      }&#xA;    ]&#xA;  }&#xA;}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Fact - Process Full"
+      DTS:CreationName="Microsoft.ASExecuteDDLTask"
+      DTS:Description="Analysis Services Execute DDL Task"
+      DTS:DTSID="{3A6FA582-B481-4E00-87BA-D29BEFD06FC4}"
+      DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Fact - Process Full"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ASDdlData
+          ConnectionName="SSAS_BISolution"
+          SourceType="DirectInput"
+          Source="{&#xA;  &quot;refresh&quot;: {&#xA;    &quot;type&quot;: &quot;full&quot;,&#xA;    &quot;objects&quot;: [&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Dettaglio Fattura Vendita&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Dettaglio Movimenti Magazzino&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Dettaglio Ordine Vendita&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Dettaglio Spedizioni&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Dettaglio Costo Preventivo&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Dettaglio DDT&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Dettaglio Google Analytics&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Dettaglio Movimenti Magazzino Assortimento&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Dettaglio Ordine Acquisto&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Dettaglio Ordine Acquisto Assortimento&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Dettaglio Ordine Vendita Assortimento&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Dettaglio Scontrino&quot;&#xA;      },&#xA;&#x9;  {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Dettaglio Scontrino Crocs&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Dettaglio Spedizioni Storico&quot;&#xA;      },&#xA;&#x9;  {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Articolo ModelloColore&quot;&#xA;      },&#xA;&#x9;  {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Articolo Ultima Stagione&quot;&#xA;      },&#xA;&#x9;  {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Dettaglio Spedito Non Fatturato&quot;&#xA;      },&#xA;&#x9;  {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;CampagnaVenditaNuoviClienti&quot;&#xA;      },&#xA;&#x9;  {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;CampagnaVenditaPersiClienti&quot;&#xA;      }&#xA;    ]&#xA;  }&#xA;}&#xA;" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Process Data Ultimo Aggiornamento"
+      DTS:CreationName="Microsoft.ASExecuteDDLTask"
+      DTS:Description="Analysis Services Execute DDL Task"
+      DTS:DTSID="{764E6C9E-BB8F-4B7D-9BD5-07169FD5EC60}"
+      DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Process Data Ultimo Aggiornamento"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ASDdlData
+          ConnectionName="SSAS_BISolution"
+          SourceType="DirectInput"
+          Source="{&#xA;  &quot;refresh&quot;: {&#xA;    &quot;type&quot;: &quot;full&quot;,&#xA;    &quot;objects&quot;: [&#xA;      &#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution&quot;,&#xA;        &quot;table&quot;: &quot;Data Ultimo Aggiornamento&quot;&#xA;      }&#xA;    ]&#xA;  }&#xA;}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Vincolo]"
+      DTS:CreationName=""
+      DTS:DTSID="{4508C64F-FC43-468D-AA8F-70493188600E}"
+      DTS:From="Package\Dim - Process Full"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Vincolo"
+      DTS:To="Package\Fact - Process Full" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Vincolo 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{58B01B4F-49BA-400A-B3AF-E69CE2662280}"
+      DTS:From="Package\Fact - Process Full"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Vincolo 1"
+      DTS:To="Package\Process Data Ultimo Aggiornamento" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="162.666666666667,42"
+          Id="Package\Dim - Process Full"
+          TopLeft="250.624996265397,120.89999783814" />
+        <NodeLayout
+          Size="165.333333333334,42.6666666666667"
+          Id="Package\Fact - Process Full"
+          TopLeft="250.624996265397,223.566664504807" />
+        <NodeLayout
+          Size="249.333333333334,42.6666666666667"
+          Id="Package\Process Data Ultimo Aggiornamento"
+          TopLeft="257.499996162951,314.599994374514" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Vincolo]"
+          TopLeft="332.624996265397,162.89999783814">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.666666666667"
+              Start="0,0"
+              End="0,53.166666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.166666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Vincolo 1]"
+          TopLeft="333.291662932064,266.233331171474">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="48.874999897554,48.3666632030403"
+              Start="0,0"
+              End="48.874999897554,40.8666632030403">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.1833316015202" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.1833316015202"
+                    Point2="0,24.1833316015202"
+                    Point3="4,24.1833316015202" />
+                  <mssgle:LineSegment
+                    End="44.874999897554,24.1833316015202" />
+                  <mssgle:CubicBezierSegment
+                    Point1="44.874999897554,24.1833316015202"
+                    Point2="48.874999897554,24.1833316015202"
+                    Point3="48.874999897554,28.1833316015202" />
+                  <mssgle:LineSegment
+                    End="48.874999897554,40.8666632030403" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,1989 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/31/2021 10:42:17 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LIT004005"
+  DTS:CreatorName="CORP\FBARBACA"
+  DTS:DTSID="{E92FB2DA-C906-440B-A23B-6A1F7E3A5BC9}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="DWH - Import Dim"
+  DTS:PackageType="5"
+  DTS:VersionBuild="89"
+  DTS:VersionGUID="{9C7C213A-7C74-4A4C-90C0-B42657FDB02A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DimTipoCosto"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{b4b0ccad-a640-4e5b-996c-df20e20ced98}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DimTipoCosto">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\DimTipoCosto\Populate"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{f6c1b3b2-3631-4d68-80fa-a2b54658dff6}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Populate"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\DimTipoCosto\Populate\Destinazione OLE DB"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="Destinazione OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;4"
+                  description="Destinazione OLE DB"
+                  name="Destinazione OLE DB"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                      name="OpenRowset">[dbo].[Dim_Costi_Accessori_TipoCosto]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="Comando SQL da eseguire."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la modalità utilizzata per accedere al database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indica se i valori specificati per le colonne Identity verranno copiati nella destinazione. Se false, i valori delle colonne Identity verranno generati automaticamente nella destinazione. Applicabile solo se è abilitato il caricamento rapido."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indica se per le colonne con valori Null, tali valori verranno inseriti nella destinazione. Se false, per le colonne con valori Null verranno inseriti i valori predefiniti corrispondenti nella destinazione. Applicabile solo se è attivato il caricamento rapido."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifica le opzioni da utilizzare con il caricamento rapido. Applicabile solo se è attivato il caricamento rapido."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica se vengono eseguiti commit durante l'inserimento dei dati. Il valore 0 indica che verrà eseguito un solo commit al termine dell'inserimento dei dati. Applicabile solo se è attivato il caricamento rapido."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\DimTipoCosto\Populate\Destinazione OLE DB.Connections[OleDbConnection]"
+                      connectionManagerID="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[DWH]"
+                      description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\DimTipoCosto\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB]"
+                      errorOrTruncationOperation="Inserimento"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="Input destinazione OLE DB">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\DimTipoCosto\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Tipo Costo]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="Tipo Costo"
+                          externalMetadataColumnId="Package\DimTipoCosto\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Tipo Costo]"
+                          lineageId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Output].Columns[Tipo Costo]" />
+                        <inputColumn
+                          refId="Package\DimTipoCosto\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Company]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="5"
+                          cachedName="Company"
+                          externalMetadataColumnId="Package\DimTipoCosto\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Company]"
+                          lineageId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Output].Columns[Company]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\DimTipoCosto\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Tipo Costo]"
+                          dataType="wstr"
+                          length="20"
+                          name="Tipo Costo" />
+                        <externalMetadataColumn
+                          refId="Package\DimTipoCosto\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Company]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="Company" />
+                        <externalMetadataColumn
+                          refId="Package\DimTipoCosto\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[TipoCostoKeyId]"
+                          dataType="i4"
+                          name="TipoCostoKeyId" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\DimTipoCosto\Populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Output errori destinazione OLE DB"
+                      synchronousInputId="Package\DimTipoCosto\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\DimTipoCosto\Populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\DimTipoCosto\Populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\DimTipoCosto\Populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\DimTipoCosto\Populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\DimTipoCosto\Populate\Source"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="Source"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[stg].[vDim_Costi_Accessori_TipoCosto]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\DimTipoCosto\Populate\Source.Connections[OleDbConnection]"
+                      connectionManagerID="{EBDC3EEE-A910-457C-95AF-2952194294D6}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[Stage]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Output].Columns[Tipo Costo]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Tipo Costo]"
+                          length="20"
+                          lineageId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Output].Columns[Tipo Costo]"
+                          name="Tipo Costo"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Output].Columns[Company]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Company]"
+                          length="5"
+                          lineageId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Output].Columns[Company]"
+                          name="Company"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Tipo Costo]"
+                          dataType="wstr"
+                          length="20"
+                          name="Tipo Costo" />
+                        <externalMetadataColumn
+                          refId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Company]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="Company" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Tipo Costo]"
+                          dataType="wstr"
+                          length="20"
+                          lineageId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Tipo Costo]"
+                          name="Tipo Costo" />
+                        <outputColumn
+                          refId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                        <outputColumn
+                          refId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Company]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          lineageId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Company]"
+                          name="Company" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\DimTipoCosto\Populate.Paths[OLE DB Source Output]"
+                  endId="Package\DimTipoCosto\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB]"
+                  name="OLE DB Source Output"
+                  startId="Package\DimTipoCosto\Populate\Source.Outputs[OLE DB Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\DimTipoCosto\truncate"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{0bb8350b-ec97-4b55-9fc0-c64246ef58ff}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="truncate"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+              SQLTask:SqlStatementSource="Truncate Table dbo.Dim_Costi_Accessori_TipoCosto" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\DimTipoCosto.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{47bb4fa9-ef53-4100-a27f-e515b1afd1af}"
+          DTS:From="Package\DimTipoCosto\truncate"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\DimTipoCosto\Populate" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\FactAcquisto_Costi_Accessori_preventivi"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{5C132A0B-EDD8-4E03-ADC2-A29F9BE69061}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FactAcquisto_Costi_Accessori_preventivi">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{CE969DEC-72DD-4A21-8385-C35C154DD150}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Populate"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="Destinazione OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;4"
+                  description="Destinazione OLE DB"
+                  name="Destinazione OLE DB"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                      name="OpenRowset">[dbo].[FactAcquisto_Costi_Accessori_preventivi]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="Comando SQL da eseguire."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la modalità utilizzata per accedere al database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indica se i valori specificati per le colonne Identity verranno copiati nella destinazione. Se false, i valori delle colonne Identity verranno generati automaticamente nella destinazione. Applicabile solo se è abilitato il caricamento rapido."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indica se per le colonne con valori Null, tali valori verranno inseriti nella destinazione. Se false, per le colonne con valori Null verranno inseriti i valori predefiniti corrispondenti nella destinazione. Applicabile solo se è attivato il caricamento rapido."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifica le opzioni da utilizzare con il caricamento rapido. Applicabile solo se è attivato il caricamento rapido."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica se vengono eseguiti commit durante l'inserimento dei dati. Il valore 0 indica che verrà eseguito un solo commit al termine dell'inserimento dei dati. Applicabile solo se è attivato il caricamento rapido."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Connections[OleDbConnection]"
+                      connectionManagerID="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[DWH]"
+                      description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB]"
+                      errorOrTruncationOperation="Inserimento"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="Input destinazione OLE DB">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Tipo Costo]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="Tipo Costo"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Tipo Costo]"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Tipo Costo]" />
+                        <inputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Season Code]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="Season Code"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Season Code]"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Season Code]" />
+                        <inputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Currency Code]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="Currency Code"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Currency Code]"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Currency Code]" />
+                        <inputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Country_Region Code]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="Country_Region Code"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Country_Region Code]"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Country_Region Code]" />
+                        <inputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Exchange Rate Amount]"
+                          cachedDataType="numeric"
+                          cachedName="Exchange Rate Amount"
+                          cachedPrecision="38"
+                          cachedScale="20"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Exchange Rate Amount]"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Exchange Rate Amount]" />
+                        <inputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Costo Unitario Euro]"
+                          cachedDataType="numeric"
+                          cachedName="Costo Unitario Euro"
+                          cachedPrecision="8"
+                          cachedScale="2"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Costo Unitario Euro]"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Costo Unitario Euro]" />
+                        <inputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Costo Unitario in Valuta]"
+                          cachedDataType="numeric"
+                          cachedName="Costo Unitario in Valuta"
+                          cachedPrecision="8"
+                          cachedScale="2"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Costo Unitario in Valuta]"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Costo Unitario in Valuta]" />
+                        <inputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Marchio]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="Marchio"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Marchio]"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Marchio]" />
+                        <inputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Company]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="5"
+                          cachedName="Company"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Company]"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Company]" />
+                        <inputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[model item no_]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="model item no_"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[model item no_]"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[model item no_]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Tipo Costo]"
+                          dataType="wstr"
+                          length="20"
+                          name="Tipo Costo" />
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Season Code]"
+                          dataType="wstr"
+                          length="10"
+                          name="Season Code" />
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Currency Code]"
+                          dataType="wstr"
+                          length="10"
+                          name="Currency Code" />
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Country_Region Code]"
+                          dataType="wstr"
+                          length="10"
+                          name="Country_Region Code" />
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Exchange Rate Amount]"
+                          dataType="numeric"
+                          name="Exchange Rate Amount"
+                          precision="38"
+                          scale="20" />
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Costo Unitario Euro]"
+                          dataType="numeric"
+                          name="Costo Unitario Euro"
+                          precision="8"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Costo Unitario in Valuta]"
+                          dataType="numeric"
+                          name="Costo Unitario in Valuta"
+                          precision="8"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Marchio]"
+                          dataType="wstr"
+                          length="10"
+                          name="Marchio" />
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Company]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="Company" />
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[model item no_]"
+                          dataType="wstr"
+                          length="20"
+                          name="model item no_" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Output errori destinazione OLE DB"
+                      synchronousInputId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="Source"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[stg].[vFactAcquisto_Costi_Accessori_preventivi]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Connections[OleDbConnection]"
+                      connectionManagerID="{EBDC3EEE-A910-457C-95AF-2952194294D6}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[Stage]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Tipo Costo]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Tipo Costo]"
+                          length="20"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Tipo Costo]"
+                          name="Tipo Costo"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Season Code]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Season Code]"
+                          length="10"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Season Code]"
+                          name="Season Code"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Currency Code]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Currency Code]"
+                          length="10"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Currency Code]"
+                          name="Currency Code"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Country_Region Code]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Country_Region Code]"
+                          length="10"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Country_Region Code]"
+                          name="Country_Region Code"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Exchange Rate Amount]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Exchange Rate Amount]"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Exchange Rate Amount]"
+                          name="Exchange Rate Amount"
+                          precision="38"
+                          scale="20"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Costo Unitario Euro]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Costo Unitario Euro]"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Costo Unitario Euro]"
+                          name="Costo Unitario Euro"
+                          precision="8"
+                          scale="2"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Costo Unitario in Valuta]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Costo Unitario in Valuta]"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Costo Unitario in Valuta]"
+                          name="Costo Unitario in Valuta"
+                          precision="8"
+                          scale="2"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Marchio]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Marchio]"
+                          length="10"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Marchio]"
+                          name="Marchio"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Company]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Company]"
+                          length="5"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[Company]"
+                          name="Company"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[model item no_]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[model item no_]"
+                          length="20"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].Columns[model item no_]"
+                          name="model item no_"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Tipo Costo]"
+                          dataType="wstr"
+                          length="20"
+                          name="Tipo Costo" />
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Season Code]"
+                          dataType="wstr"
+                          length="10"
+                          name="Season Code" />
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Currency Code]"
+                          dataType="wstr"
+                          length="10"
+                          name="Currency Code" />
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Country_Region Code]"
+                          dataType="wstr"
+                          length="10"
+                          name="Country_Region Code" />
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Exchange Rate Amount]"
+                          dataType="numeric"
+                          name="Exchange Rate Amount"
+                          precision="38"
+                          scale="20" />
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Costo Unitario Euro]"
+                          dataType="numeric"
+                          name="Costo Unitario Euro"
+                          precision="8"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Costo Unitario in Valuta]"
+                          dataType="numeric"
+                          name="Costo Unitario in Valuta"
+                          precision="8"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Marchio]"
+                          dataType="wstr"
+                          length="10"
+                          name="Marchio" />
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[Company]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="Company" />
+                        <externalMetadataColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output].ExternalColumns[model item no_]"
+                          dataType="wstr"
+                          length="20"
+                          name="model item no_" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Tipo Costo]"
+                          dataType="wstr"
+                          length="20"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Tipo Costo]"
+                          name="Tipo Costo" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Season Code]"
+                          dataType="wstr"
+                          length="10"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Season Code]"
+                          name="Season Code" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Currency Code]"
+                          dataType="wstr"
+                          length="10"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Currency Code]"
+                          name="Currency Code" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Country_Region Code]"
+                          dataType="wstr"
+                          length="10"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Country_Region Code]"
+                          name="Country_Region Code" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[model item no_]"
+                          dataType="wstr"
+                          length="20"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[model item no_]"
+                          name="model item no_" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Exchange Rate Amount]"
+                          dataType="numeric"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Exchange Rate Amount]"
+                          name="Exchange Rate Amount"
+                          precision="38"
+                          scale="20" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Costo Unitario Euro]"
+                          dataType="numeric"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Costo Unitario Euro]"
+                          name="Costo Unitario Euro"
+                          precision="8"
+                          scale="2" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Costo Unitario in Valuta]"
+                          dataType="numeric"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Costo Unitario in Valuta]"
+                          name="Costo Unitario in Valuta"
+                          precision="8"
+                          scale="2" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Marchio]"
+                          dataType="wstr"
+                          length="10"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Marchio]"
+                          name="Marchio" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Company]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[Company]"
+                          name="Company" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate.Paths[OLE DB Source Output]"
+                  endId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB]"
+                  name="OLE DB Source Output"
+                  startId="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source.Outputs[OLE DB Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\FactAcquisto_Costi_Accessori_preventivi\truncate"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{8FC50271-84B5-475C-83DA-9BD336D3F46E}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="truncate"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+              SQLTask:SqlStatementSource="Truncate Table dbo.FactAcquisto_Costi_Accessori_preventivi" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\FactAcquisto_Costi_Accessori_preventivi.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{10B40061-1B93-4283-8A5F-6E7F97750D95}"
+          DTS:From="Package\FactAcquisto_Costi_Accessori_preventivi\truncate"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\FactAcquisto_Costi_Accessori_preventivi\Populate" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{BDD0184C-2D92-4C16-8050-A1CE88A01A5B}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FactFatturaAcquisto_Costi_Accessori_consuntivi">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{E4FC8D83-EDC6-4024-B18A-B4240B6F264A}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="populate"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="Destinazione OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;4"
+                  description="Destinazione OLE DB"
+                  name="Destinazione OLE DB"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                      name="OpenRowset">[dbo].[FactFatturaAcquisto_Costi_Accessori_consuntivi]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="Comando SQL da eseguire."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la modalità utilizzata per accedere al database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indica se i valori specificati per le colonne Identity verranno copiati nella destinazione. Se false, i valori delle colonne Identity verranno generati automaticamente nella destinazione. Applicabile solo se è abilitato il caricamento rapido."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indica se per le colonne con valori Null, tali valori verranno inseriti nella destinazione. Se false, per le colonne con valori Null verranno inseriti i valori predefiniti corrispondenti nella destinazione. Applicabile solo se è attivato il caricamento rapido."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifica le opzioni da utilizzare con il caricamento rapido. Applicabile solo se è attivato il caricamento rapido."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica se vengono eseguiti commit durante l'inserimento dei dati. Il valore 0 indica che verrà eseguito un solo commit al termine dell'inserimento dei dati. Applicabile solo se è attivato il caricamento rapido."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Connections[OleDbConnection]"
+                      connectionManagerID="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[DWH]"
+                      description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB]"
+                      errorOrTruncationOperation="Inserimento"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="Input destinazione OLE DB">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[valutakey]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="valutakey"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[valutakey]"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[valutakey]" />
+                        <inputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[fornitorekey]"
+                          cachedDataType="wstr"
+                          cachedLength="26"
+                          cachedName="fornitorekey"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[fornitorekey]"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[fornitorekey]" />
+                        <inputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Tipo Costo]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="Tipo Costo"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Tipo Costo]"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[Tipo Costo]" />
+                        <inputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[marchio]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="marchio"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[marchio]"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[marchio]" />
+                        <inputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[MagazzinoKey]"
+                          cachedDataType="wstr"
+                          cachedLength="16"
+                          cachedName="MagazzinoKey"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[MagazzinoKey]"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[MagazzinoKey]" />
+                        <inputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Stagione]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="Stagione"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Stagione]"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[Stagione]" />
+                        <inputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[CompanyKey]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="5"
+                          cachedName="CompanyKey"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[CompanyKey]"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[CompanyKey]" />
+                        <inputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Costo Unitario Diretto IVA Esclusa Euro]"
+                          cachedDataType="numeric"
+                          cachedName="Costo Unitario Diretto IVA Esclusa Euro"
+                          cachedPrecision="38"
+                          cachedScale="2"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Costo Unitario Diretto IVA Esclusa Euro]"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[Costo Unitario Diretto IVA Esclusa Euro]" />
+                        <inputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Costo Unitario Diretto IVA Esclusa in Valuta]"
+                          cachedDataType="numeric"
+                          cachedName="Costo Unitario Diretto IVA Esclusa in Valuta"
+                          cachedPrecision="38"
+                          cachedScale="2"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Costo Unitario Diretto IVA Esclusa in Valuta]"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[Costo Unitario Diretto IVA Esclusa in Valuta]" />
+                        <inputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Qty]"
+                          cachedDataType="i4"
+                          cachedName="Qty"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Qty]"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[Qty]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[valutakey]"
+                          dataType="wstr"
+                          length="10"
+                          name="valutakey" />
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[fornitorekey]"
+                          dataType="wstr"
+                          length="26"
+                          name="fornitorekey" />
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Tipo Costo]"
+                          dataType="wstr"
+                          length="20"
+                          name="Tipo Costo" />
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[marchio]"
+                          dataType="wstr"
+                          length="20"
+                          name="marchio" />
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[MagazzinoKey]"
+                          dataType="wstr"
+                          length="16"
+                          name="MagazzinoKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Stagione]"
+                          dataType="wstr"
+                          length="20"
+                          name="Stagione" />
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[CompanyKey]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="CompanyKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Costo Unitario Diretto IVA Esclusa Euro]"
+                          dataType="numeric"
+                          name="Costo Unitario Diretto IVA Esclusa Euro"
+                          precision="38"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Costo Unitario Diretto IVA Esclusa in Valuta]"
+                          dataType="numeric"
+                          name="Costo Unitario Diretto IVA Esclusa in Valuta"
+                          precision="38"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Qty]"
+                          dataType="i4"
+                          name="Qty" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Output errori destinazione OLE DB"
+                      synchronousInputId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="source"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[stg].[vFactFatturaAcquisto_Costi_Accessori_consuntivi]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Connections[OleDbConnection]"
+                      connectionManagerID="{EBDC3EEE-A910-457C-95AF-2952194294D6}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[Stage]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[valutakey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[valutakey]"
+                          length="10"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[valutakey]"
+                          name="valutakey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[fornitorekey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[fornitorekey]"
+                          length="26"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[fornitorekey]"
+                          name="fornitorekey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[Tipo Costo]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[Tipo Costo]"
+                          length="20"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[Tipo Costo]"
+                          name="Tipo Costo"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[marchio]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[marchio]"
+                          length="20"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[marchio]"
+                          name="marchio"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[MagazzinoKey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[MagazzinoKey]"
+                          length="16"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[MagazzinoKey]"
+                          name="MagazzinoKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[Stagione]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[Stagione]"
+                          length="20"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[Stagione]"
+                          name="Stagione"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[CompanyKey]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[CompanyKey]"
+                          length="5"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[CompanyKey]"
+                          name="CompanyKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[Costo Unitario Diretto IVA Esclusa Euro]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[Costo Unitario Diretto IVA Esclusa Euro]"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[Costo Unitario Diretto IVA Esclusa Euro]"
+                          name="Costo Unitario Diretto IVA Esclusa Euro"
+                          precision="38"
+                          scale="2"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[Costo Unitario Diretto IVA Esclusa in Valuta]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[Costo Unitario Diretto IVA Esclusa in Valuta]"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[Costo Unitario Diretto IVA Esclusa in Valuta]"
+                          name="Costo Unitario Diretto IVA Esclusa in Valuta"
+                          precision="38"
+                          scale="2"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[Qty]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[Qty]"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[Qty]"
+                          name="Qty"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[timestamp]"
+                          dataType="bytes"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[timestamp]"
+                          length="8"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].Columns[timestamp]"
+                          name="timestamp"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[valutakey]"
+                          dataType="wstr"
+                          length="10"
+                          name="valutakey" />
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[fornitorekey]"
+                          dataType="wstr"
+                          length="26"
+                          name="fornitorekey" />
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[Tipo Costo]"
+                          dataType="wstr"
+                          length="20"
+                          name="Tipo Costo" />
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[marchio]"
+                          dataType="wstr"
+                          length="20"
+                          name="marchio" />
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[MagazzinoKey]"
+                          dataType="wstr"
+                          length="16"
+                          name="MagazzinoKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[Stagione]"
+                          dataType="wstr"
+                          length="20"
+                          name="Stagione" />
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[CompanyKey]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="CompanyKey" />
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[Costo Unitario Diretto IVA Esclusa Euro]"
+                          dataType="numeric"
+                          name="Costo Unitario Diretto IVA Esclusa Euro"
+                          precision="38"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[Costo Unitario Diretto IVA Esclusa in Valuta]"
+                          dataType="numeric"
+                          name="Costo Unitario Diretto IVA Esclusa in Valuta"
+                          precision="38"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[Qty]"
+                          dataType="i4"
+                          name="Qty" />
+                        <externalMetadataColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output].ExternalColumns[timestamp]"
+                          dataType="bytes"
+                          length="8"
+                          name="timestamp" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[timestamp]"
+                          dataType="bytes"
+                          length="8"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[timestamp]"
+                          name="timestamp" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[valutakey]"
+                          dataType="wstr"
+                          length="10"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[valutakey]"
+                          name="valutakey" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[fornitorekey]"
+                          dataType="wstr"
+                          length="26"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[fornitorekey]"
+                          name="fornitorekey" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[Tipo Costo]"
+                          dataType="wstr"
+                          length="20"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[Tipo Costo]"
+                          name="Tipo Costo" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[marchio]"
+                          dataType="wstr"
+                          length="20"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[marchio]"
+                          name="marchio" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[MagazzinoKey]"
+                          dataType="wstr"
+                          length="16"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[MagazzinoKey]"
+                          name="MagazzinoKey" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[Stagione]"
+                          dataType="wstr"
+                          length="20"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[Stagione]"
+                          name="Stagione" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[CompanyKey]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[CompanyKey]"
+                          name="CompanyKey" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[Costo Unitario Diretto IVA Esclusa Euro]"
+                          dataType="numeric"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[Costo Unitario Diretto IVA Esclusa Euro]"
+                          name="Costo Unitario Diretto IVA Esclusa Euro"
+                          precision="38"
+                          scale="2" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[Costo Unitario Diretto IVA Esclusa in Valuta]"
+                          dataType="numeric"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[Costo Unitario Diretto IVA Esclusa in Valuta]"
+                          name="Costo Unitario Diretto IVA Esclusa in Valuta"
+                          precision="38"
+                          scale="2" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[Qty]"
+                          dataType="i4"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[Qty]"
+                          name="Qty" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate.Paths[OLE DB Source Output]"
+                  endId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB]"
+                  name="OLE DB Source Output"
+                  startId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source.Outputs[OLE DB Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\truncate"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{F827D155-5DFD-4F24-A338-2252EADBE6AA}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="truncate"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+              SQLTask:SqlStatementSource="Truncate Table [dbo].[FactFatturaAcquisto_Costi_Accessori_consuntivi]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{8EA22A2D-2582-4A6C-8EB0-B802401DE5DE}"
+          DTS:From="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\truncate"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Vincolo]"
+      DTS:CreationName=""
+      DTS:DTSID="{B2DA48D0-C44D-4C05-85EC-17082C9C13C4}"
+      DTS:From="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Vincolo"
+      DTS:To="Package\FactAcquisto_Costi_Accessori_preventivi" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Vincolo 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{1A633117-DE4A-446B-99A9-62A22AA4CE5F}"
+      DTS:From="Package\FactAcquisto_Costi_Accessori_preventivi"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Vincolo 1"
+      DTS:To="Package\DimTipoCosto" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="120,42.6666666666667"
+          Id="Package\DimTipoCosto\Populate"
+          TopLeft="5.50000000000001,108.166666666667" />
+        <NodeLayout
+          Size="118.666666666667,42.6666666666667"
+          Id="Package\DimTipoCosto\truncate"
+          TopLeft="6.16666666666668,5.50000000000004" />
+        <EdgeLayout
+          Id="Package\DimTipoCosto.PrecedenceConstraints[Constraint]"
+          TopLeft="65.5,48.1666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="150,206"
+          Size="130.666666666667,248.666666666667"
+          Id="Package\DimTipoCosto"
+          TopLeft="5.50000000000011,622.833333333333" />
+        <NodeLayout
+          Size="120,42.6666666666667"
+          Id="Package\FactAcquisto_Costi_Accessori_preventivi\Populate"
+          TopLeft="5.50000000000001,108.166666666667" />
+        <NodeLayout
+          Size="118.666666666667,42.6666666666667"
+          Id="Package\FactAcquisto_Costi_Accessori_preventivi\truncate"
+          TopLeft="6.16666666666668,5.50000000000004" />
+        <EdgeLayout
+          Id="Package\FactAcquisto_Costi_Accessori_preventivi.PrecedenceConstraints[Constraint]"
+          TopLeft="65.5,48.1666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="150,206"
+          Size="130.666666666667,248.666666666667"
+          Id="Package\FactAcquisto_Costi_Accessori_preventivi"
+          TopLeft="5.50000000000007,314.166666666667" />
+        <NodeLayout
+          Size="120,42.6666666666667"
+          Id="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate"
+          TopLeft="5.50000000000001,108.166666666667" />
+        <NodeLayout
+          Size="118.666666666667,42.6666666666667"
+          Id="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\truncate"
+          TopLeft="6.16666666666668,5.50000000000004" />
+        <EdgeLayout
+          Id="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi.PrecedenceConstraints[Constraint]"
+          TopLeft="65.5,48.1666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="150,206"
+          Size="130.666666666667,248.666666666667"
+          Id="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi"
+          TopLeft="5.50000000000003,5.49999999999993" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Vincolo]"
+          TopLeft="70.8333333333334,254.166666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Vincolo 1]"
+          TopLeft="70.8333333333334,562.833333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DimTipoCosto\Populate">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="169.333333333334,42.6666666666667"
+          Id="Package\DimTipoCosto\Populate\Source"
+          TopLeft="213.999996796251,101.399998186827" />
+        <NodeLayout
+          Size="178.666666666667,42.6666666666667"
+          Id="Package\DimTipoCosto\Populate\Destinazione OLE DB"
+          TopLeft="394.999994114041,219.049996083081" />
+        <EdgeLayout
+          Id="Package\DimTipoCosto\Populate.Paths[OLE DB Source Output]"
+          TopLeft="298.666663462917,144.066664853494">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="185.666663984458,74.983331229587"
+              Start="0,0"
+              End="185.666663984458,67.483331229587">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.4916656147935" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.4916656147935"
+                    Point2="0,37.4916656147935"
+                    Point3="4,37.4916656147935" />
+                  <mssgle:LineSegment
+                    End="181.666663984458,37.4916656147935" />
+                  <mssgle:CubicBezierSegment
+                    Point1="181.666663984458,37.4916656147935"
+                    Point2="185.666663984458,37.4916656147935"
+                    Point3="185.666663984458,41.4916656147935" />
+                  <mssgle:LineSegment
+                    End="185.666663984458,67.483331229587" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DimTipoCosto\Populate\Destinazione OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DimTipoCosto\Populate\Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\FactAcquisto_Costi_Accessori_preventivi\Populate">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="169.333333333334,42.6666666666667"
+          Id="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source"
+          TopLeft="212.749996814877,100.74999819845" />
+        <NodeLayout
+          Size="178.666666666667,42.6666666666667"
+          Id="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB"
+          TopLeft="429.999993592501,272.349995130003" />
+        <EdgeLayout
+          Id="Package\FactAcquisto_Costi_Accessori_preventivi\Populate.Paths[OLE DB Source Output]"
+          TopLeft="297.416663481544,143.416664865117">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="221.91666344429,128.933330264886"
+              Start="0,0"
+              End="221.91666344429,121.433330264886">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,60.4666651324429" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,60.4666651324429"
+                    Point2="0,64.4666651324429"
+                    Point3="4,64.4666651324429" />
+                  <mssgle:LineSegment
+                    End="217.91666344429,64.4666651324429" />
+                  <mssgle:CubicBezierSegment
+                    Point1="217.91666344429,64.4666651324429"
+                    Point2="221.91666344429,64.4666651324429"
+                    Point3="221.91666344429,68.4666651324429" />
+                  <mssgle:LineSegment
+                    End="221.91666344429,121.433330264886" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Destinazione OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FactAcquisto_Costi_Accessori_preventivi\Populate\Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="166.666666666667,42.6666666666667"
+          Id="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source"
+          TopLeft="215.624996786937,102.049998175204" />
+        <NodeLayout
+          Size="178.666666666667,42.6666666666667"
+          Id="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB"
+          TopLeft="451.249993275851,282.749994944036" />
+        <EdgeLayout
+          Id="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate.Paths[OLE DB Source Output]"
+          TopLeft="298.958330120271,144.716664841871">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="241.624996488914,138.033330102165"
+              Start="0,0"
+              End="241.624996488914,130.533330102165">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.0166650510826" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,65.0166650510826"
+                    Point2="0,69.0166650510826"
+                    Point3="4,69.0166650510826" />
+                  <mssgle:LineSegment
+                    End="237.624996488914,69.0166650510826" />
+                  <mssgle:CubicBezierSegment
+                    Point1="237.624996488914,69.0166650510826"
+                    Point2="241.624996488914,69.0166650510826"
+                    Point3="241.624996488914,73.0166650510826" />
+                  <mssgle:LineSegment
+                    End="241.624996488914,130.533330102165" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

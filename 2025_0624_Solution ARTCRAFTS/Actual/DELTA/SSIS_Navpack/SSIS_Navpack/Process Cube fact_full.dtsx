@@ -1,0 +1,139 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/6/2021 11:09:01 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LIT004005"
+  DTS:CreatorName="CORP\FBARBACA"
+  DTS:DTSID="{84F83BEC-1315-4E72-9128-2CBC23F491B6}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="Process Cube fact_full"
+  DTS:PackageType="5"
+  DTS:VersionBuild="125"
+  DTS:VersionGUID="{9654DA45-02ED-43F3-8BD5-49EFDEC1FDF3}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost]"
+      DTS:CreationName="MSOLAP100"
+      DTS:DTSID="{0D7A18FB-19BF-4EA6-9E24-61D729A47E0E}"
+      DTS:ObjectName="localhost">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Data Source=localhost;Provider=MSOLAP.8;Impersonation Level=Impersonate;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DDL SSAS PARLALLELO 1 Step1"
+      DTS:CreationName="Microsoft.ASExecuteDDLTask"
+      DTS:Description="Attività Esegui DDL Analysis Services"
+      DTS:DTSID="{E21678BD-DCAF-48B9-A695-7FCC23AD764C}"
+      DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DDL SSAS PARLALLELO 1 Step1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ASDdlData
+          ConnectionName="localhost"
+          SourceType="DirectInput"
+          Source="&#xA;{&#xA;&quot;refresh&quot;: {&#xA;&quot;type&quot;: &quot;full&quot;,&#xA;&quot;objects&quot;: [&#xA;  &#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;BudgetContabilità&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;CampagnaVenditaNuoviClienti&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;CampagnaVenditaPersiClienti&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;ContabilitàCliente&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;ContabilitàGenerale&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Costi Accessori Consuntivi&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Costi Accessori Preventivi Fattura Acquisto&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Assortimento&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Bolla Acquisto&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Costo Preventivo&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio DDT&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Fattura Acquisto&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Fattura Vendita&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Movimenti Magazzino&quot;&#xA;}&#xA;]&#xA;}&#xA;}&#xA;&#xA;  &#xA;&#x9;&#xA;" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DDL SSAS PARLALLELO 1 Step2"
+      DTS:CreationName="Microsoft.ASExecuteDDLTask"
+      DTS:Description="Attività Esegui DDL Analysis Services"
+      DTS:DTSID="{A8B90950-B251-4FE1-8FFA-D872B1824BB2}"
+      DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DDL SSAS PARLALLELO 1 Step2"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ASDdlData
+          ConnectionName="localhost"
+          SourceType="DirectInput"
+          Source="{&#xA;&quot;refresh&quot;: {&#xA;&quot;type&quot;: &quot;full&quot;,&#xA;&quot;objects&quot;: [&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;MARGINE_FATTURATO_SPEDIZIONI&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB vTestataFatturaVendita&quot;&#xA;}&#xA;]&#xA;}&#xA;}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DDL SSAS PARLALLELO 2  Step1"
+      DTS:CreationName="Microsoft.ASExecuteDDLTask"
+      DTS:Description="Attività Esegui DDL Analysis Services"
+      DTS:DTSID="{A10DB145-BF59-4B42-BC63-AD7C2C67FE44}"
+      DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DDL SSAS PARLALLELO 2  Step1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ASDdlData
+          ConnectionName="localhost"
+          SourceType="DirectInput"
+          Source="{&#xA;&#xA;&quot;refresh&quot;: {&#xA;&#xA;&quot;type&quot;: &quot;full&quot;,&#xA;&#xA;&quot;objects&quot;: [&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Ordine Acquisto&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Ordine Vendita&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Precarico&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Resi&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Scontrino&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Spedizioni&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;DettaglioBollaAcquisto_perc_Consegnato&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;DettaglioGiacenzaArianna&quot;&#xA;&#xA;}&#xA;&#xA;]&#xA;&#xA;}&#xA;&#xA;}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DDL SSAS PARLALLELO 2  Step2"
+      DTS:CreationName="Microsoft.ASExecuteDDLTask"
+      DTS:Description="Attività Esegui DDL Analysis Services"
+      DTS:DTSID="{BEAE24C1-E45D-4643-B277-0492572ACA06}"
+      DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DDL SSAS PARLALLELO 2  Step2"
+      DTS:ThreadHint="3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ASDdlData
+          ConnectionName="localhost"
+          SourceType="DirectInput"
+          Source="&#xA;{&#xA;&quot;refresh&quot;: {&#xA;&quot;type&quot;: &quot;full&quot;,&#xA;&quot;objects&quot;: [&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;MovExtraContabili&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB AffidamentoClienti&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB ArticoloCrocs&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;MargineClienteFV&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;MargineClienteOV&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;MargineClienteSPEDIZIONI&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;MARGINE_FATTURATO_FATTURE&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB CalendarioCrocs&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB DettaglioScontrinoCrocs_NEW&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB GiacenzaCrocs&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB StoreCrocs&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB TrafficCrocs&quot;&#xA;},{&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;        &quot;table&quot;: &quot;TAB vCostiMktg&quot;&#xA;      },{&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;        &quot;table&quot;: &quot;TAB vCostiMktgSettimanali&quot;&#xA;      }&#xA;]&#xA;}&#xA;}&#xA;" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="229.333333333334,42.6666666666667"
+          Id="Package\DDL SSAS PARLALLELO 1 Step1"
+          TopLeft="40.1666662196319,21.0999997210503" />
+        <NodeLayout
+          Size="229.333333333334,42.6666666666667"
+          Id="Package\DDL SSAS PARLALLELO 1 Step2"
+          TopLeft="43.2916661730657,191.333333682021" />
+        <NodeLayout
+          Size="233.333333333334,42.6666666666667"
+          Id="Package\DDL SSAS PARLALLELO 2  Step1"
+          TopLeft="353.291661553706,24.3166681660218" />
+        <NodeLayout
+          Size="233.333333333334,42.6666666666667"
+          Id="Package\DDL SSAS PARLALLELO 2  Step2"
+          TopLeft="358.624994738028,186.750002266466" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <ConnectionManager
+    design-time-name="Package.ConnectionManagers[localhost]">
+    <ProjectReferenceName></ProjectReferenceName>
+  </ConnectionManager>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

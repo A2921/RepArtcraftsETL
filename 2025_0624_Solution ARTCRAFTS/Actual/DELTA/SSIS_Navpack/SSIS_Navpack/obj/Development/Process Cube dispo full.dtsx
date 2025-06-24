@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/6/2021 11:09:01 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LIT004005"
+  DTS:CreatorName="CORP\FBARBACA"
+  DTS:DTSID="{953E5A8F-E431-4BD4-A407-B237948AED76}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="Process Cube dispo full"
+  DTS:PackageType="5"
+  DTS:VersionBuild="104"
+  DTS:VersionGUID="{7ED8C205-C2E9-466C-A736-45C8F610D018}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost]"
+      DTS:CreationName="MSOLAP100"
+      DTS:DTSID="{125A300B-2D32-41E9-A2B2-37C5CF3EE4CF}"
+      DTS:ObjectName="localhost">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Data Source=localhost;Provider=MSOLAP.8;Impersonation Level=Impersonate;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Attività Esegui DDL Analysis Services"
+      DTS:CreationName="Microsoft.ASExecuteDDLTask"
+      DTS:Description="Attività Esegui DDL Analysis Services"
+      DTS:DTSID="{EF3D63A3-61DE-41B6-A5D6-28540D717EA4}"
+      DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Attività Esegui DDL Analysis Services"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ASDdlData
+          ConnectionName="localhost"
+          SourceType="DirectInput"
+          Source="{&#xA;  &quot;refresh&quot;: {&#xA;    &quot;type&quot;: &quot;full&quot;,&#xA;    &quot;objects&quot;: [&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;        &quot;table&quot;: &quot;Disp_Selection&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;        &quot;table&quot;: &quot;DISPO_DDT&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;        &quot;table&quot;: &quot;DISPO_DDT_Assortimenti&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;        &quot;table&quot;: &quot;DISPO_DDT_AssortimentiSFUSI&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;        &quot;table&quot;: &quot;DISPO_Giacenza&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;        &quot;table&quot;: &quot;DISPO_GiacenzaAssortimento&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;        &quot;table&quot;: &quot;DISPO_GiacenzaAssortimento_SFUSI&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;        &quot;table&quot;: &quot;DISPO_GiacenzaAssortimentoSFUSI&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;        &quot;table&quot;: &quot;DISPO_OA&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;        &quot;table&quot;: &quot;DISPO_OA_Assortimenti&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;        &quot;table&quot;: &quot;DISPO_OA_AssortimentiSFUSI&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;        &quot;table&quot;: &quot;DISPO_OV&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;        &quot;table&quot;: &quot;DISPO_OV_Assortimenti&quot;&#xA;      },&#xA;      {&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;        &quot;table&quot;: &quot;DISPO_OV_AssortimentiSFUSI&quot;&#xA;      }&#xA;    ]&#xA;  }&#xA;}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="252,42.6666666666667"
+          Id="Package\Attività Esegui DDL Analysis Services"
+          TopLeft="5.5,5.50000000000004" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <ConnectionManager
+    design-time-name="Package.ConnectionManagers[localhost]">
+    <ProjectReferenceName></ProjectReferenceName>
+  </ConnectionManager>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

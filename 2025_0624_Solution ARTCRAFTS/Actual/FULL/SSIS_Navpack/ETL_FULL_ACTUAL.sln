@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "ETL_FULL_ACTUAL", "SSIS_Navpack\ETL_FULL_ACTUAL.dtproj", "{6C1D411C-9904-45B7-89F0-9C328552DA0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		ActualDEV|Default = ActualDEV|Default
+		ActualPROD|Default = ActualPROD|Default
+		HistDEV|Default = HistDEV|Default
+		HISTPROD|Default = HISTPROD|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C1D411C-9904-45B7-89F0-9C328552DA0A}.ActualDEV|Default.ActiveCfg = ActualDEV
+		{6C1D411C-9904-45B7-89F0-9C328552DA0A}.ActualPROD|Default.ActiveCfg = ActualPROD
+		{6C1D411C-9904-45B7-89F0-9C328552DA0A}.HistDEV|Default.ActiveCfg = HistDEV
+		{6C1D411C-9904-45B7-89F0-9C328552DA0A}.HISTPROD|Default.ActiveCfg = HISTPROD
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45BE73F6-7B1B-4CB1-869B-5EB15CEA3FE0}
+	EndGlobalSection
+EndGlobal

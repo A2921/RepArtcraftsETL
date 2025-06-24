@@ -1,0 +1,77 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/28/2022 9:35:59 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SRVPOWERBI"
+  DTS:CreatorName="ARTCRAFTS\powerbi02"
+  DTS:DTSID="{22AA3145-0342-4C25-9C8C-297EDC6D9361}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="test_MaxTimestamp"
+  DTS:PackageType="5"
+  DTS:VersionBuild="35"
+  DTS:VersionGUID="{00680762-A4BA-4061-A91A-ED4579E5CA40}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{872D17F5-7D08-4702-B8D1-69F708525E5B}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="QUERY">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\maxtimestamp"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Attività Esegui SQL"
+      DTS:DTSID="{418DCF14-CAA8-4FA4-96B5-84166A776253}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="maxtimestamp"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EBDC3EEE-A910-457C-95AF-2952194294D6}"
+          SQLTask:SqlStatementSource="with cte as  (SELECT max([timestamp]) x from NAV.[Accessories Costs Model Item] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Hist_ Location Item Avg Cost] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Purch_ Logistic Line] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Sales Shipment Header] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Assortment Quantity] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Assortment Ledger Entry Item] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Sales Price Model Item] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Dimension Value] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Reason Code] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[DDT_Picking Header] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Return Shipment Line] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[DDT_Picking Line] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Return Shipment Header] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Item Ledger Entry] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Purch_ Rcpt_Header] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Value Entry] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Purch_ Rcpt_ Line] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Return Reason] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Location] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Return Receipt Header] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Return Receipt Line] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Order Type] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[DDT_Picking Header] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Assortment] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Sales_Purchase Status] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Dimension Set Entry] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Ship-to Address] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Sales Header] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Post Code] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Country_Region] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[vSales Line] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Customer] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Item] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Purchase Header] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Purchase Line] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Assortment Ledger Entry] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Season] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Cust_ Ledger Entry] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Detailed Cust_ Ledg_ Entry] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Salesperson_Purchaser] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Vendor Ledger Entry] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Detailed Vendor Ledg_ Entry] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[G_L Entry] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[G_L Entry EAM] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Fields for Chart of Accounts] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Gen_ Journal Line Maint_ EAM] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[G_L Budget Name] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[G_L Budget Entry] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Vendor] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Line] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Unit of Measure] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Variable Code] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Item Category] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Collection] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Item Cross Reference] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Commission Calculation Setup] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Generic Tables] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[G_L Account] &#xA;                  &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Sales Cr_Memo Line] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Sales Invoice Header] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Hist_ Country Item Avg Cost] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Sales Invoice Line] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Hist_ Country Season Avg Cost] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Sales Shipment Line] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Sales Cr_Memo Header] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Hist_ Location Season Avg Cost] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Item Discount Group] &#xA;             --      UNION ALL SELECT max([timestamp]) x from NAV.[Location_old] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Sales Price] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Purch_ Inv_ Header] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[SalesLineDISPO] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Purch_ Inv_ Line] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Trademark] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Purch_ Cr_ Memo Hdr_] &#xA;                   UNION ALL SELECT max([timestamp]) x from NAV.[Purch_ Cr_ Memo Line] &#xA;  &#x9; UNION ALL SELECT max([timestamp]) x from [NAV].[Accessories Costs Model Item]&#xA;                      )&#xA;&#x9;&#x9;&#x9;&#x9;   ,&#xA;cte2 as (&#xA;&#x9;&#x9;&#x9;&#x9;   &#xA;select max(x) x from cte&#xA;),&#xA;&#xA;cte3 as (select x, GETDATE()  data_timestamp from cte2)&#xA; &#xA;&#xA;insert into [cfg].[Config_Delta] ([MaxTimestamp],[Data_timestamp])&#xA; &#xA;select * from cte3&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="149.333333333334,42.6666666666667"
+          Id="Package\maxtimestamp"
+          TopLeft="5.5,5.50000000000004" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
