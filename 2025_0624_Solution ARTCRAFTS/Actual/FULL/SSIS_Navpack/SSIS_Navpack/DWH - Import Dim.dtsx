@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="DWH - Import Dim"
   DTS:PackageType="5"
-  DTS:VersionBuild="153"
-  DTS:VersionGUID="{786E835A-3FCD-475B-A590-49197AE81331}">
+  DTS:VersionBuild="157"
+  DTS:VersionGUID="{61E6E8A8-0000-4B72-9896-B91633A65C03}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -21,12 +21,13 @@
       DTS:refId="Package\ACTUAL_DimTestataOrdineVendita"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Attività Esegui SQL"
+      DTS:Disabled="True"
       DTS:DTSID="{d2c5bed2-c5f3-4e72-9b34-04171ebff353}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="ACTUAL_DimTestataOrdineVendita"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -1875,7 +1876,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimFornitore"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="15">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2332,7 +2333,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="16">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2371,12 +2372,29 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimArticolo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
               SQLTask:SqlStatementSource="EXECUTE [dbo].[ACTUAL_DIM_DimArticolo] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimMarchio"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Attività Esegui SQL"
+          DTS:DTSID="{83137b23-3307-496a-9961-24f95104ec55}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="ACTUAL_DIM_DimMarchio"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="2">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+              SQLTask:SqlStatementSource="EXECUTE [dbo].[ACTUAL_DIM_DimMarchio] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -2388,7 +2406,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="DimCollezione"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3008,7 +3026,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate DimConto"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
+              DTS:ThreadHint="2">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -3028,308 +3046,16 @@
               DTS:To="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto" />
           </DTS:PrecedenceConstraints>
         </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Dim Articolo Marchio Collezione\dimMarchio"
-          DTS:CreationName="STOCK:SEQUENCE"
-          DTS:Description="Sequence Container"
-          DTS:DTSID="{8d24fb42-93bf-4b70-a5cc-46f4b99a424b}"
-          DTS:ExecutableType="STOCK:SEQUENCE"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="dimMarchio">
-          <DTS:Variables />
-          <DTS:Executables>
-            <DTS:Executable
-              DTS:refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio"
-              DTS:CreationName="Microsoft.Pipeline"
-              DTS:Description="Data Flow Task"
-              DTS:DTSID="{3cfaa6ea-ef88-4215-b33f-8cbd18b0bc0d}"
-              DTS:ExecutableType="Microsoft.Pipeline"
-              DTS:LocaleID="-1"
-              DTS:ObjectName="Populate DimMarchio"
-              DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-              <DTS:Variables />
-              <DTS:ObjectData>
-                <pipeline
-                  version="1">
-                  <components>
-                    <component
-                      refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\Destinazione OLE DB"
-                      componentClassID="Microsoft.OLEDBDestination"
-                      contactInfo="Destinazione OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;4"
-                      description="Destinazione OLE DB"
-                      name="Destinazione OLE DB"
-                      usesDispositions="true"
-                      version="4">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
-                          name="CommandTimeout">0</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
-                          name="OpenRowset">[dbo].[DimMarchio]</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
-                          name="OpenRowsetVariable"></property>
-                        <property
-                          dataType="System.String"
-                          description="Comando SQL da eseguire."
-                          name="SqlCommand"
-                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
-                          name="DefaultCodePage">1252</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
-                          name="AlwaysUseDefaultCodePage">false</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifica la modalità utilizzata per accedere al database."
-                          name="AccessMode"
-                          typeConverter="AccessMode">3</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se i valori specificati per le colonne Identity verranno copiati nella destinazione. Se false, i valori delle colonne Identity verranno generati automaticamente nella destinazione. Applicabile solo se è abilitato il caricamento rapido."
-                          name="FastLoadKeepIdentity">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se per le colonne con valori Null, tali valori verranno inseriti nella destinazione. Se false, per le colonne con valori Null verranno inseriti i valori predefiniti corrispondenti nella destinazione. Applicabile solo se è attivato il caricamento rapido."
-                          name="FastLoadKeepNulls">false</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifica le opzioni da utilizzare con il caricamento rapido. Applicabile solo se è attivato il caricamento rapido."
-                          name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifica se vengono eseguiti commit durante l'inserimento dei dati. Il valore 0 indica che verrà eseguito un solo commit al termine dell'inserimento dei dati. Applicabile solo se è attivato il caricamento rapido."
-                          name="FastLoadMaxInsertCommitSize">2147483647</property>
-                      </properties>
-                      <connections>
-                        <connection
-                          refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\Destinazione OLE DB.Connections[OleDbConnection]"
-                          connectionManagerID="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}:external"
-                          connectionManagerRefId="Project.ConnectionManagers[DWH]"
-                          description="Connessione di run-time OLE DB utilizzata per accedere al database."
-                          name="OleDbConnection" />
-                      </connections>
-                      <inputs>
-                        <input
-                          refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\Destinazione OLE DB.Inputs[Input destinazione OLE DB]"
-                          errorOrTruncationOperation="Inserimento"
-                          errorRowDisposition="FailComponent"
-                          hasSideEffects="true"
-                          name="Input destinazione OLE DB">
-                          <inputColumns>
-                            <inputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[marchio]"
-                              cachedDataType="wstr"
-                              cachedLength="20"
-                              cachedName="marchio"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[marchio]"
-                              lineageId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\DimArticolo Source.Outputs[OLE DB Source Output].Columns[marchio]" />
-                          </inputColumns>
-                          <externalMetadataColumns
-                            isUsed="True">
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[marchio]"
-                              dataType="wstr"
-                              length="20"
-                              name="marchio" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[MarchioKeyId]"
-                              dataType="i4"
-                              name="MarchioKeyId" />
-                          </externalMetadataColumns>
-                        </input>
-                      </inputs>
-                      <outputs>
-                        <output
-                          refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB]"
-                          exclusionGroup="1"
-                          isErrorOut="true"
-                          name="Output errori destinazione OLE DB"
-                          synchronousInputId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\Destinazione OLE DB.Inputs[Input destinazione OLE DB]">
-                          <outputColumns>
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
-                              dataType="i4"
-                              lineageId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
-                              name="ErrorCode"
-                              specialFlags="1" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
-                              dataType="i4"
-                              lineageId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
-                              name="ErrorColumn"
-                              specialFlags="2" />
-                          </outputColumns>
-                          <externalMetadataColumns />
-                        </output>
-                      </outputs>
-                    </component>
-                    <component
-                      refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\DimArticolo Source"
-                      componentClassID="Microsoft.OLEDBSource"
-                      contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-                      description="OLE DB Source"
-                      name="DimArticolo Source"
-                      usesDispositions="true"
-                      version="7">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                          name="CommandTimeout">0</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the name of the database object used to open a rowset."
-                          name="OpenRowset">[stg].[vDimMarchio]</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the variable that contains the name of the database object used to open a rowset."
-                          name="OpenRowsetVariable"></property>
-                        <property
-                          dataType="System.String"
-                          description="The SQL command to be executed."
-                          name="SqlCommand"
-                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                        <property
-                          dataType="System.String"
-                          description="The variable that contains the SQL command to be executed."
-                          name="SqlCommandVariable"></property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the column code page to use when code page information is unavailable from the data source."
-                          name="DefaultCodePage">1252</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Forces the use of the DefaultCodePage property value when describing character data."
-                          name="AlwaysUseDefaultCodePage">false</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the mode used to access the database."
-                          name="AccessMode"
-                          typeConverter="AccessMode">0</property>
-                        <property
-                          dataType="System.String"
-                          description="The mappings between the parameters in the SQL command and variables."
-                          name="ParameterMapping"></property>
-                      </properties>
-                      <connections>
-                        <connection
-                          refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\DimArticolo Source.Connections[OleDbConnection]"
-                          connectionManagerID="{EBDC3EEE-A910-457C-95AF-2952194294D6}:external"
-                          connectionManagerRefId="Project.ConnectionManagers[Stage]"
-                          description="The OLE DB runtime connection used to access the database."
-                          name="OleDbConnection" />
-                      </connections>
-                      <outputs>
-                        <output
-                          refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\DimArticolo Source.Outputs[OLE DB Source Output]"
-                          name="OLE DB Source Output">
-                          <outputColumns>
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\DimArticolo Source.Outputs[OLE DB Source Output].Columns[marchio]"
-                              dataType="wstr"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\DimArticolo Source.Outputs[OLE DB Source Output].ExternalColumns[marchio]"
-                              length="20"
-                              lineageId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\DimArticolo Source.Outputs[OLE DB Source Output].Columns[marchio]"
-                              name="marchio"
-                              truncationRowDisposition="FailComponent" />
-                          </outputColumns>
-                          <externalMetadataColumns
-                            isUsed="True">
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\DimArticolo Source.Outputs[OLE DB Source Output].ExternalColumns[marchio]"
-                              dataType="wstr"
-                              length="20"
-                              name="marchio" />
-                          </externalMetadataColumns>
-                        </output>
-                        <output
-                          refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\DimArticolo Source.Outputs[OLE DB Source Error Output]"
-                          isErrorOut="true"
-                          name="OLE DB Source Error Output">
-                          <outputColumns>
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\DimArticolo Source.Outputs[OLE DB Source Error Output].Columns[marchio]"
-                              dataType="wstr"
-                              length="20"
-                              lineageId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\DimArticolo Source.Outputs[OLE DB Source Error Output].Columns[marchio]"
-                              name="marchio" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\DimArticolo Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                              dataType="i4"
-                              lineageId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\DimArticolo Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                              name="ErrorCode"
-                              specialFlags="1" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\DimArticolo Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                              dataType="i4"
-                              lineageId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\DimArticolo Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                              name="ErrorColumn"
-                              specialFlags="2" />
-                          </outputColumns>
-                          <externalMetadataColumns />
-                        </output>
-                      </outputs>
-                    </component>
-                  </components>
-                  <paths>
-                    <path
-                      refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio.Paths[OLE DB Source Output]"
-                      endId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\Destinazione OLE DB.Inputs[Input destinazione OLE DB]"
-                      name="OLE DB Source Output"
-                      startId="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\DimArticolo Source.Outputs[OLE DB Source Output]" />
-                  </paths>
-                </pipeline>
-              </DTS:ObjectData>
-            </DTS:Executable>
-            <DTS:Executable
-              DTS:refId="Package\Dim Articolo Marchio Collezione\dimMarchio\Truncate"
-              DTS:CreationName="Microsoft.ExecuteSQLTask"
-              DTS:Description="Execute SQL Task"
-              DTS:DTSID="{a814bed8-1e51-4f1f-80e5-071eb5458a21}"
-              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-              DTS:LocaleID="-1"
-              DTS:ObjectName="Truncate"
-              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
-              <DTS:Variables />
-              <DTS:ObjectData>
-                <SQLTask:SqlTaskData
-                  SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-                  SQLTask:SqlStatementSource="Truncate Table dbo.DimMarchio" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-              </DTS:ObjectData>
-            </DTS:Executable>
-          </DTS:Executables>
-          <DTS:PrecedenceConstraints>
-            <DTS:PrecedenceConstraint
-              DTS:refId="Package\Dim Articolo Marchio Collezione\dimMarchio.PrecedenceConstraints[Constraint]"
-              DTS:CreationName=""
-              DTS:DTSID="{6164e397-623d-4beb-b44a-bc7186234daa}"
-              DTS:From="Package\Dim Articolo Marchio Collezione\dimMarchio\Truncate"
-              DTS:LogicalAnd="True"
-              DTS:ObjectName="Constraint"
-              DTS:To="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio" />
-          </DTS:PrecedenceConstraints>
-        </DTS:Executable>
       </DTS:Executables>
       <DTS:PrecedenceConstraints>
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo]"
           DTS:CreationName=""
-          DTS:DTSID="{04763728-2BF6-4CE9-A8BD-32D511027EB5}"
+          DTS:DTSID="{68F656A5-EC57-4306-9D78-3443246F7E7A}"
           DTS:From="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimArticolo"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Vincolo"
-          DTS:To="Package\Dim Articolo Marchio Collezione\dimMarchio" />
+          DTS:To="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimMarchio" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo 1]"
           DTS:CreationName=""
@@ -3341,8 +3067,8 @@
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo 2]"
           DTS:CreationName=""
-          DTS:DTSID="{F15AFC63-2DAF-47FF-96AD-F96447B8DB0E}"
-          DTS:From="Package\Dim Articolo Marchio Collezione\dimMarchio"
+          DTS:DTSID="{A084F5B7-0C8B-4C37-AF70-85F1257497AF}"
+          DTS:From="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimMarchio"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Vincolo 2"
           DTS:To="Package\Dim Articolo Marchio Collezione\DimCollezione" />
@@ -3367,7 +3093,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimStagione"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3384,7 +3110,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimUltimaStagione"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3726,7 +3452,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate DimArticoloListino"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
+              DTS:ThreadHint="2">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -4206,7 +3932,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate DimListino"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
+              DTS:ThreadHint="2">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -4593,7 +4319,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate DimArticoloListino"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
+              DTS:ThreadHint="2">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -5157,7 +4883,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimAgente"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5622,7 +5348,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5661,7 +5387,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="populate DimAssortimentoArticoloModello"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5678,7 +5404,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate DimAssortimentoArticoloModello"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -6041,7 +5767,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCanale"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -6978,7 +6704,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="10">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -7341,7 +7067,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCompany"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="8">
+          DTS:ThreadHint="11">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -8967,7 +8693,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="9">
+          DTS:ThreadHint="12">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10267,7 +9993,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="10">
+          DTS:ThreadHint="13">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11506,7 +11232,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimFornitore"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="11">
+          DTS:ThreadHint="14">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11987,7 +11713,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="12">
+          DTS:ThreadHint="15">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12797,7 +12523,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="17">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13503,7 +13229,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimNegozio"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="18">
+          DTS:ThreadHint="16">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13795,7 +13521,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimOV"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="19">
+          DTS:ThreadHint="17">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14186,7 +13912,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="20">
+          DTS:ThreadHint="22">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14582,7 +14308,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimProfitCenter"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="21">
+          DTS:ThreadHint="23">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15060,7 +14786,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate Dimqty"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="22">
+          DTS:ThreadHint="18">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15381,7 +15107,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimStatoVendita"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="19">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15744,7 +15470,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimSubcanale"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="13">
+          DTS:ThreadHint="20">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15783,7 +15509,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="populate DimTipologiaMktg"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="14">
+          DTS:ThreadHint="21">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15800,7 +15526,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate DimTipologiaMktg"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="14">
+          DTS:ThreadHint="21">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -16092,7 +15818,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="23">
+          DTS:ThreadHint="24">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -16417,7 +16143,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimTipoOrdine"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="24">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -16775,7 +16501,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimUnitàDiMisura"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="25">
+          DTS:ThreadHint="29">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -17275,7 +17001,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimZona"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="26">
+          DTS:ThreadHint="25">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -17629,7 +17355,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimZonaAgente"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="27">
+          DTS:ThreadHint="26">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -17925,7 +17651,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCompany"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="28">
+          DTS:ThreadHint="27">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -18217,7 +17943,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimConto"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="29">
+          DTS:ThreadHint="28">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -18347,92 +18073,9 @@
           Id="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimArticolo"
           TopLeft="36.8333323275049,90.2166644931832" />
         <NodeLayout
-          Size="180.666666666667,42.6666666666667"
+          Size="145.333333333334,42.6666666666667"
           Id="Package\Dim Articolo Marchio Collezione\DimCollezione"
-          TopLeft="46.7500025518233,256.233333379825" />
-        <NodeLayout
-          Size="177.333333333334,42.6666666666667"
-          Id="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio"
-          TopLeft="5.54166667597988,108.166666666667" />
-        <NodeLayout
-          Size="178.666666666667,42.6666666666667"
-          Id="Package\Dim Articolo Marchio Collezione\dimMarchio\Truncate"
-          TopLeft="5.50000000000001,5.50000000000004" />
-        <EdgeLayout
-          Id="Package\Dim Articolo Marchio Collezione\dimMarchio.PrecedenceConstraints[Constraint]"
-          TopLeft="94.52083333799,48.1666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000003"
-              Start="0,0"
-              End="0,52.5000000000003">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5000000000003" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="False"
-          PanelSize="189.333333333334,206.666666666667"
-          Size="180.666666666667,42.6666666666667"
-          Id="Package\Dim Articolo Marchio Collezione\dimMarchio"
-          TopLeft="42.874999077991,170.998682208198" />
-        <EdgeLayout
-          Id="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo]"
-          TopLeft="135.687499036081,132.88333115985">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38.1153510483483"
-              Start="0,0"
-              End="0,30.6153510483483">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.6153510483483" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo 2]"
-          TopLeft="135.14583414824,213.665348874865">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,42.5679845049601"
-              Start="0,0"
-              End="0,35.0679845049601">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.0679845049601" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="64.250002291053,280.933332938155" />
         <NodeLayout
           Size="170,42"
           Id="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto"
@@ -18494,11 +18137,59 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="204,42.6666666666667"
+          Id="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimMarchio"
+          TopLeft="40.5833322716256,175.083330369492" />
+        <EdgeLayout
+          Id="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo]"
+          TopLeft="140.374998966232,132.88333115985">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.1999992096426"
+              Start="0,0"
+              End="0,34.6999992096426">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.6999992096426" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo 2]"
+          TopLeft="139.750000614673,217.749997036159">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.1833359019956"
+              Start="0,0"
+              End="0,55.6833359019956">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.6833359019956" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="317.333333333334,426.666666666667"
-          Size="317.333333333334,470"
+          PanelSize="317.333333333334,475.333333333334"
+          Size="317.333333333334,518.666666666667"
           Id="Package\Dim Articolo Marchio Collezione"
           TopLeft="31.9583328769854,110.699998163581" />
         <NodeLayout
@@ -19773,18 +19464,30 @@
           TopLeft="968.593735566828,951.115337682" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Vincolo]"
-          TopLeft="349.291666210319,346.743749530725">
+          TopLeft="349.291666210319,370.033331496914">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="62.1145776592504,0"
+              EndConnector="62.1145776592504,-22.2458305990448"
               Start="0,0"
-              End="54.6145776592504,0">
+              End="54.6145776592504,-22.2458305990448">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="54.6145776592504,0" />
+                    End="27.0572888296252,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27.0572888296252,0"
+                    Point2="31.0572888296252,0"
+                    Point3="31.0572888296252,-4" />
+                  <mssgle:LineSegment
+                    End="31.0572888296252,-18.2458305990448" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.0572888296252,-18.2458305990448"
+                    Point2="31.0572888296252,-22.2458305990448"
+                    Point3="35.0572888296252,-22.2458305990448" />
+                  <mssgle:LineSegment
+                    End="54.6145776592504,-22.2458305990448" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -19800,7 +19503,7 @@
     design-time-name="Package\affidamentoClienti\Populate DimFornitore">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="197.333333333334,42.6666666666667"
           Id="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination"
@@ -19828,7 +19531,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -19939,44 +19644,44 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio">
+    design-time-name="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="178.666666666667,42.6666666666667"
-          Id="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\Destinazione OLE DB"
-          TopLeft="650,429" />
+          Size="178,42"
+          Id="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB"
+          TopLeft="370.000009801653,213.652179449853" />
         <NodeLayout
-          Size="169.333333333334,42.6666666666667"
-          Id="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\DimArticolo Source"
-          TopLeft="214.749996814877,103.74999819845" />
+          Size="161.333333333334,42"
+          Id="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source"
+          TopLeft="213.749996814877,100.74999819845" />
         <EdgeLayout
-          Id="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio.Paths[OLE DB Source Output]"
-          TopLeft="299.416663481544,146.416664865117">
+          Id="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto.Paths[OLE DB Source Output]"
+          TopLeft="294.321425386306,143.035712484164">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="439.91666985179,282.583335134883"
+              EndConnector="164.821441558204,70.6164669656888"
               Start="0,0"
-              End="439.91666985179,275.083335134883">
+              End="164.821441558204,63.1164669656888">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,137.291667567442" />
+                    End="0,31.3082334828444" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,137.291667567442"
-                    Point2="0,141.291667567442"
-                    Point3="4,141.291667567442" />
+                    Point1="0,31.3082334828444"
+                    Point2="0,35.3082334828444"
+                    Point3="4,35.3082334828444" />
                   <mssgle:LineSegment
-                    End="435.91666985179,141.291667567442" />
+                    End="160.821441558204,35.3082334828444" />
                   <mssgle:CubicBezierSegment
-                    Point1="435.91666985179,141.291667567442"
-                    Point2="439.91666985179,141.291667567442"
-                    Point3="439.91666985179,145.291667567442" />
+                    Point1="160.821441558204,35.3082334828444"
+                    Point2="164.821441558204,35.3082334828444"
+                    Point3="164.821441558204,39.3082334828444" />
                   <mssgle:LineSegment
-                    End="439.91666985179,275.083335134883" />
+                    End="164.821441558204,63.1164669656888" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -19991,7 +19696,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\Destinazione OLE DB">
+    design-time-name="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -20004,7 +19709,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Dim Articolo Marchio Collezione\dimMarchio\Populate DimMarchio\DimArticolo Source">
+    design-time-name="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -20098,7 +19803,7 @@
     design-time-name="Package\Dim Stagione - Listino - Ultima Stagione\DimListino\Populate DimListino">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="164,42.6666666666667"
           Id="Package\Dim Stagione - Listino - Ultima Stagione\DimListino\Populate DimListino\DimListino Source"
@@ -20126,7 +19831,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -20579,84 +20286,6 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DimCompany\Populate DimCompany\DimCompany Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">View</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="178,42"
-          Id="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB"
-          TopLeft="370.000009801653,213.652179449853" />
-        <NodeLayout
-          Size="161.333333333334,42"
-          Id="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source"
-          TopLeft="213.749996814877,100.74999819845" />
-        <EdgeLayout
-          Id="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto.Paths[OLE DB Source Output]"
-          TopLeft="294.321425386306,143.035712484164">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="164.821441558204,70.6164669656888"
-              Start="0,0"
-              End="164.821441558204,63.1164669656888">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.3082334828444" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.3082334828444"
-                    Point2="0,35.3082334828444"
-                    Point3="4,35.3082334828444" />
-                  <mssgle:LineSegment
-                    End="160.821441558204,35.3082334828444" />
-                  <mssgle:CubicBezierSegment
-                    Point1="160.821441558204,35.3082334828444"
-                    Point2="164.821441558204,35.3082334828444"
-                    Point3="164.821441558204,39.3082334828444" />
-                  <mssgle:LineSegment
-                    End="164.821441558204,63.1164669656888" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
