@@ -11,28 +11,27 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="DWH - Import Dim"
   DTS:PackageType="5"
-  DTS:VersionBuild="156"
-  DTS:VersionGUID="{DFD580E5-4CAE-4E9B-B015-6531B4245DE3}">
+  DTS:VersionBuild="159"
+  DTS:VersionGUID="{D06E870F-A4A6-4887-9EA6-3EA847C45601}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\ACTUAL_DimTestataOrdineVendita"
+      DTS:refId="Package\ACTUAL_DIM_Macrosubcanale"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Attività Esegui SQL"
-      DTS:Disabled="True"
       DTS:DTSID="{d2c5bed2-c5f3-4e72-9b34-04171ebff353}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="ACTUAL_DimTestataOrdineVendita"
+      DTS:ObjectName="ACTUAL_DIM_Macrosubcanale"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-          SQLTask:SqlStatementSource="EXECUTE [dbo].[ACTUAL_DimTestataOrdineVendita]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="EXECUTE [dbo].[ACTUAL_DIM_Macrosubcanale] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1876,7 +1875,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimFornitore"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2333,7 +2332,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -4883,7 +4882,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimAgente"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="9">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5348,7 +5347,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5387,7 +5386,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="populate DimAssortimentoArticoloModello"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5404,7 +5403,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate DimAssortimentoArticoloModello"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5767,7 +5766,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCanale"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -6704,7 +6703,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="8">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -8693,7 +8692,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="12">
+          DTS:ThreadHint="11">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -9993,7 +9992,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="13">
+          DTS:ThreadHint="12">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11232,7 +11231,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimFornitore"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="14">
+          DTS:ThreadHint="13">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11713,7 +11712,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="15">
+          DTS:ThreadHint="14">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12523,7 +12522,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="16">
+          DTS:ThreadHint="15">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13229,7 +13228,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimNegozio"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="17">
+          DTS:ThreadHint="16">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13521,7 +13520,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimOV"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13912,7 +13911,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="18">
+          DTS:ThreadHint="17">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14308,7 +14307,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimProfitCenter"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="11">
+          DTS:ThreadHint="18">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14786,7 +14785,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate Dimqty"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="22">
+          DTS:ThreadHint="19">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15107,7 +15106,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimStatoVendita"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="23">
+          DTS:ThreadHint="20">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15226,14 +15225,14 @@
                         <inputColumn
                           refId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Destination.Inputs[OLE DB Destination Input].Columns[CanaleKey]"
                           cachedDataType="wstr"
-                          cachedLength="47"
+                          cachedLength="50"
                           cachedName="CanaleKey"
                           externalMetadataColumnId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Destination.Inputs[OLE DB Destination Input].ExternalColumns[CanaleKey]"
                           lineageId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source.Outputs[OLE DB Source Output].Columns[CanaleKey]" />
                         <inputColumn
                           refId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Destination.Inputs[OLE DB Destination Input].Columns[Canale]"
                           cachedDataType="wstr"
-                          cachedLength="20"
+                          cachedLength="50"
                           cachedName="Canale"
                           externalMetadataColumnId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Destination.Inputs[OLE DB Destination Input].ExternalColumns[Canale]"
                           lineageId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source.Outputs[OLE DB Source Output].Columns[Canale]" />
@@ -15241,7 +15240,7 @@
                           refId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Destination.Inputs[OLE DB Destination Input].Columns[Company]"
                           cachedCodepage="1252"
                           cachedDataType="str"
-                          cachedLength="5"
+                          cachedLength="50"
                           cachedName="Company"
                           externalMetadataColumnId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Destination.Inputs[OLE DB Destination Input].ExternalColumns[Company]"
                           lineageId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source.Outputs[OLE DB Source Output].Columns[Company]" />
@@ -15363,7 +15362,7 @@
                           errorOrTruncationOperation="Conversione"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source.Outputs[OLE DB Source Output].ExternalColumns[CanaleKey]"
-                          length="47"
+                          length="50"
                           lineageId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source.Outputs[OLE DB Source Output].Columns[CanaleKey]"
                           name="CanaleKey"
                           truncationRowDisposition="FailComponent" />
@@ -15373,7 +15372,7 @@
                           errorOrTruncationOperation="Conversione"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source.Outputs[OLE DB Source Output].ExternalColumns[Canale]"
-                          length="20"
+                          length="50"
                           lineageId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source.Outputs[OLE DB Source Output].Columns[Canale]"
                           name="Canale"
                           truncationRowDisposition="FailComponent" />
@@ -15384,7 +15383,7 @@
                           errorOrTruncationOperation="Conversione"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source.Outputs[OLE DB Source Output].ExternalColumns[Company]"
-                          length="5"
+                          length="50"
                           lineageId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source.Outputs[OLE DB Source Output].Columns[Company]"
                           name="Company"
                           truncationRowDisposition="FailComponent" />
@@ -15394,18 +15393,18 @@
                         <externalMetadataColumn
                           refId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source.Outputs[OLE DB Source Output].ExternalColumns[CanaleKey]"
                           dataType="wstr"
-                          length="47"
+                          length="50"
                           name="CanaleKey" />
                         <externalMetadataColumn
                           refId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source.Outputs[OLE DB Source Output].ExternalColumns[Canale]"
                           dataType="wstr"
-                          length="20"
+                          length="50"
                           name="Canale" />
                         <externalMetadataColumn
                           refId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source.Outputs[OLE DB Source Output].ExternalColumns[Company]"
                           codePage="1252"
                           dataType="str"
-                          length="5"
+                          length="50"
                           name="Company" />
                       </externalMetadataColumns>
                     </output>
@@ -15417,20 +15416,20 @@
                         <outputColumn
                           refId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source.Outputs[OLE DB Source Error Output].Columns[CanaleKey]"
                           dataType="wstr"
-                          length="47"
+                          length="50"
                           lineageId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source.Outputs[OLE DB Source Error Output].Columns[CanaleKey]"
                           name="CanaleKey" />
                         <outputColumn
                           refId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source.Outputs[OLE DB Source Error Output].Columns[Canale]"
                           dataType="wstr"
-                          length="20"
+                          length="50"
                           lineageId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source.Outputs[OLE DB Source Error Output].Columns[Canale]"
                           name="Canale" />
                         <outputColumn
                           refId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source.Outputs[OLE DB Source Error Output].Columns[Company]"
                           codePage="1252"
                           dataType="str"
-                          length="5"
+                          length="50"
                           lineageId="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source.Outputs[OLE DB Source Error Output].Columns[Company]"
                           name="Company" />
                         <outputColumn
@@ -15470,7 +15469,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimSubcanale"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="24">
+          DTS:ThreadHint="21">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15509,7 +15508,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="populate DimTipologiaMktg"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="25">
+          DTS:ThreadHint="22">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15526,7 +15525,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate DimTipologiaMktg"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="25">
+          DTS:ThreadHint="22">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15818,7 +15817,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="26">
+          DTS:ThreadHint="23">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -16143,7 +16142,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimTipoOrdine"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="27">
+          DTS:ThreadHint="24">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -16501,7 +16500,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimUnitàDiMisura"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="28">
+          DTS:ThreadHint="25">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -17001,7 +17000,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimZona"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="19">
+          DTS:ThreadHint="26">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -17355,7 +17354,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimZonaAgente"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="20">
+          DTS:ThreadHint="27">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -17651,7 +17650,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCompany"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="21">
+          DTS:ThreadHint="28">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -17987,8 +17986,8 @@
       <GraphLayout
         Capacity="256" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="244,42.6666666666667"
-          Id="Package\ACTUAL_DimTestataOrdineVendita"
+          Size="224,42.6666666666667"
+          Id="Package\ACTUAL_DIM_Macrosubcanale"
           TopLeft="31.9583328769854,1337.36102526098" />
         <NodeLayout
           Size="185.333333333334,42.6666666666667"
@@ -18073,6 +18072,10 @@
           Id="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimArticolo"
           TopLeft="36.8333323275049,90.2166644931832" />
         <NodeLayout
+          Size="204,42.6666666666667"
+          Id="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimMarchio"
+          TopLeft="40.5833322716256,175.083330369492" />
+        <NodeLayout
           Size="145.333333333334,42.6666666666667"
           Id="Package\Dim Articolo Marchio Collezione\DimCollezione"
           TopLeft="64.250002291053,280.933332938155" />
@@ -18116,32 +18119,6 @@
           Id="Package\Dim Articolo Marchio Collezione\DimConto"
           TopLeft="63.4861375359541,16.1659392951563" />
         <EdgeLayout
-          Id="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo 1]"
-          TopLeft="138.15973493173,58.8326059618229">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.3840585313603"
-              Start="0,0"
-              End="0,23.8840585313603">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.8840585313603" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="204,42.6666666666667"
-          Id="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimMarchio"
-          TopLeft="40.5833322716256,175.083330369492" />
-        <EdgeLayout
           Id="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo]"
           TopLeft="140.374998966232,132.88333115985">
           <EdgeLayout.Curve>
@@ -18155,6 +18132,28 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,34.6999992096426" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo 1]"
+          TopLeft="138.15973493173,58.8326059618229">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.3840585313603"
+              Start="0,0"
+              End="0,23.8840585313603">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.8840585313603" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18188,7 +18187,7 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="317.333333333334,475.333333333334"
+          PanelSize="317.333333333334,476"
           Size="317.333333333334,518.666666666667"
           Id="Package\Dim Articolo Marchio Collezione"
           TopLeft="31.9583328769854,110.699998163581" />
@@ -19126,16 +19125,14 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
-          IsExpanded="False"
+          IsExpanded="True"
           PanelSize="201.333333333334,205.333333333334"
-          Size="201.333333333334,42.6666666666667"
+          Size="201.333333333334,248"
           Id="Package\DimSubcanale"
           TopLeft="101.625008521601,723.68332710733" />
         <NodeLayout
@@ -21123,7 +21120,7 @@
     design-time-name="Package\DimSubcanale\Populate DimSubcanale">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="181.333333333334,42.6666666666667"
           Id="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source"
@@ -21151,9 +21148,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
