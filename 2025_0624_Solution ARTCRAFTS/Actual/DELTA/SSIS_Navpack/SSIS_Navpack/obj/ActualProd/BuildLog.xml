@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>ETL_DELTA</Name>
-    <LastWriteTime>2025-05-15T08:24:18.5955038Z</LastWriteTime>
+    <LastWriteTime>2025-09-05T09:59:46.098591Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -13,7 +13,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>TEST_IMPORT_DELTA 2.dtsx</Name>
-      <LastWriteTime>2025-06-26T07:57:47.2912892Z</LastWriteTime>
+      <LastWriteTime>2025-09-05T09:59:46.0185925Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -43,7 +43,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Process Cube dim.dtsx</Name>
-      <LastWriteTime>2025-06-30T09:20:26.0110855Z</LastWriteTime>
+      <LastWriteTime>2025-07-23T09:07:43.9606452Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
