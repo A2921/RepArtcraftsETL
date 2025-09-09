@@ -7,12 +7,12 @@
   DTS:CreatorName="ARTCRAFTS\powerbi02"
   DTS:DTSID="{B76536AE-7DED-48B1-86EB-ABD707064DE2}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
   DTS:LocaleID="1040"
   DTS:ObjectName="shrink db"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{BF7893B4-E59D-4D3F-9C8A-1058FCE7FF1A}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{2C98AC9C-A1D2-4F9D-9A0F-760D30431CE1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -21,12 +21,13 @@
       DTS:refId="Package\shrink dwh"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Attività Esegui SQL"
+      DTS:Disabled="True"
       DTS:DTSID="{B928B750-B26B-4813-B823-4837B5892AC2}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="shrink dwh"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -38,12 +39,13 @@
       DTS:refId="Package\shrink stage"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Attività Esegui SQL"
+      DTS:Disabled="True"
       DTS:DTSID="{E259589E-99FF-4459-9AD1-1E19DC425B74}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="shrink stage"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
