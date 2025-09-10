@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="DWH - Import Dim"
   DTS:PackageType="5"
-  DTS:VersionBuild="160"
-  DTS:VersionGUID="{3742026E-5909-4701-97FD-659D2788046A}">
+  DTS:VersionBuild="161"
+  DTS:VersionGUID="{5285284A-F660-41D8-BAEC-90DAFB539406}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -26,7 +26,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="ACTUAL_DIM_Macrosubcanale"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="14">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -1875,7 +1875,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimFornitore"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="15">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2332,7 +2332,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="16">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2371,12 +2371,29 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimArticolo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
               SQLTask:SqlStatementSource="EXECUTE [dbo].[ACTUAL_DIM_DimArticolo] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimConto"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Attività Esegui SQL"
+          DTS:DTSID="{ddaae692-4aed-4ac5-836e-0bc2195b3f7b}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="ACTUAL_DIM_DimConto"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="4">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+              SQLTask:SqlStatementSource="EXECUTE [dbo].[ACTUAL_DIM_DimConto] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -2388,7 +2405,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimMarchio"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2405,645 +2422,13 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="DimCollezione"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
               SQLTask:SqlStatementSource="EXECUTE [dbo].[SP_DimCollezione] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Dim Articolo Marchio Collezione\DimConto"
-          DTS:CreationName="STOCK:SEQUENCE"
-          DTS:Description="Sequence Container"
-          DTS:DTSID="{f098105a-5349-4b23-9af5-ed26c24bd215}"
-          DTS:ExecutableType="STOCK:SEQUENCE"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="DimConto">
-          <DTS:Variables />
-          <DTS:Executables>
-            <DTS:Executable
-              DTS:refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto"
-              DTS:CreationName="Microsoft.Pipeline"
-              DTS:Description="Data Flow Task"
-              DTS:DTSID="{ceb3ccfc-41be-4837-aeb6-d87ca9406ff7}"
-              DTS:ExecutableType="Microsoft.Pipeline"
-              DTS:LocaleID="-1"
-              DTS:ObjectName="Populate DimConto"
-              DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-              <DTS:Variables />
-              <DTS:ObjectData>
-                <pipeline
-                  version="1">
-                  <components>
-                    <component
-                      refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB"
-                      componentClassID="Microsoft.OLEDBDestination"
-                      contactInfo="Destinazione OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;4"
-                      description="Destinazione OLE DB"
-                      name="Destinazione OLE DB"
-                      usesDispositions="true"
-                      version="4">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
-                          name="CommandTimeout">0</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
-                          name="OpenRowset">[dbo].[DimConto]</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
-                          name="OpenRowsetVariable"></property>
-                        <property
-                          dataType="System.String"
-                          description="Comando SQL da eseguire."
-                          name="SqlCommand"
-                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
-                          name="DefaultCodePage">1252</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
-                          name="AlwaysUseDefaultCodePage">false</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifica la modalità utilizzata per accedere al database."
-                          name="AccessMode"
-                          typeConverter="AccessMode">3</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se i valori specificati per le colonne Identity verranno copiati nella destinazione. Se false, i valori delle colonne Identity verranno generati automaticamente nella destinazione. Applicabile solo se è abilitato il caricamento rapido."
-                          name="FastLoadKeepIdentity">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se per le colonne con valori Null, tali valori verranno inseriti nella destinazione. Se false, per le colonne con valori Null verranno inseriti i valori predefiniti corrispondenti nella destinazione. Applicabile solo se è attivato il caricamento rapido."
-                          name="FastLoadKeepNulls">false</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifica le opzioni da utilizzare con il caricamento rapido. Applicabile solo se è attivato il caricamento rapido."
-                          name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifica se vengono eseguiti commit durante l'inserimento dei dati. Il valore 0 indica che verrà eseguito un solo commit al termine dell'inserimento dei dati. Applicabile solo se è attivato il caricamento rapido."
-                          name="FastLoadMaxInsertCommitSize">2147483647</property>
-                      </properties>
-                      <connections>
-                        <connection
-                          refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Connections[OleDbConnection]"
-                          connectionManagerID="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}:external"
-                          connectionManagerRefId="Project.ConnectionManagers[DWH]"
-                          description="Connessione di run-time OLE DB utilizzata per accedere al database."
-                          name="OleDbConnection" />
-                      </connections>
-                      <inputs>
-                        <input
-                          refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB]"
-                          errorOrTruncationOperation="Inserimento"
-                          errorRowDisposition="FailComponent"
-                          hasSideEffects="true"
-                          name="Input destinazione OLE DB">
-                          <inputColumns>
-                            <inputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[ContoKey]"
-                              cachedDataType="wstr"
-                              cachedLength="26"
-                              cachedName="ContoKey"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[ContoKey]"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[ContoKey]" />
-                            <inputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[No_]"
-                              cachedDataType="wstr"
-                              cachedLength="20"
-                              cachedName="No_"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[No_]"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[No_]" />
-                            <inputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Name]"
-                              cachedDataType="wstr"
-                              cachedLength="50"
-                              cachedName="Name"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Name]"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Name]" />
-                            <inputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Search Name]"
-                              cachedDataType="wstr"
-                              cachedLength="50"
-                              cachedName="Search Name"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Search Name]"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Search Name]" />
-                            <inputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Account Type]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="13"
-                              cachedName="Account Type"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Account Type]"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Account Type]" />
-                            <inputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Account Category]"
-                              cachedDataType="i4"
-                              cachedName="Account Category"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Account Category]"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Account Category]" />
-                            <inputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Income_Balance]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="12"
-                              cachedName="Income_Balance"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Income_Balance]"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Income_Balance]" />
-                            <inputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Debit_Credit]"
-                              cachedDataType="i4"
-                              cachedName="Debit_Credit"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Debit_Credit]"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Debit_Credit]" />
-                            <inputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Blocked]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="8"
-                              cachedName="Blocked"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Blocked]"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Blocked]" />
-                            <inputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Company]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="5"
-                              cachedName="Company"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Company]"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Company]" />
-                            <inputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Marchio]"
-                              cachedDataType="wstr"
-                              cachedLength="20"
-                              cachedName="Marchio"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Marchio]"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Marchio]" />
-                          </inputColumns>
-                          <externalMetadataColumns
-                            isUsed="True">
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[ContoKey]"
-                              dataType="wstr"
-                              length="26"
-                              name="ContoKey" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[No_]"
-                              dataType="wstr"
-                              length="20"
-                              name="No_" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Name]"
-                              dataType="wstr"
-                              length="50"
-                              name="Name" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Search Name]"
-                              dataType="wstr"
-                              length="50"
-                              name="Search Name" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Account Type]"
-                              codePage="1252"
-                              dataType="str"
-                              length="13"
-                              name="Account Type" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Account Category]"
-                              dataType="i4"
-                              name="Account Category" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Income_Balance]"
-                              codePage="1252"
-                              dataType="str"
-                              length="12"
-                              name="Income_Balance" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Debit_Credit]"
-                              dataType="i4"
-                              name="Debit_Credit" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Blocked]"
-                              codePage="1252"
-                              dataType="str"
-                              length="8"
-                              name="Blocked" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Company]"
-                              codePage="1252"
-                              dataType="str"
-                              length="5"
-                              name="Company" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Marchio]"
-                              dataType="wstr"
-                              length="20"
-                              name="Marchio" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Id]"
-                              dataType="i4"
-                              name="Id" />
-                          </externalMetadataColumns>
-                        </input>
-                      </inputs>
-                      <outputs>
-                        <output
-                          refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB]"
-                          exclusionGroup="1"
-                          isErrorOut="true"
-                          name="Output errori destinazione OLE DB"
-                          synchronousInputId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB]">
-                          <outputColumns>
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
-                              dataType="i4"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
-                              name="ErrorCode"
-                              specialFlags="1" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
-                              dataType="i4"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
-                              name="ErrorColumn"
-                              specialFlags="2" />
-                          </outputColumns>
-                          <externalMetadataColumns />
-                        </output>
-                      </outputs>
-                    </component>
-                    <component
-                      refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source"
-                      componentClassID="Microsoft.OLEDBSource"
-                      contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-                      description="OLE DB Source"
-                      name="DimConto Source"
-                      usesDispositions="true"
-                      version="7">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                          name="CommandTimeout">0</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the name of the database object used to open a rowset."
-                          name="OpenRowset">[stg].[vDimConto]</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the variable that contains the name of the database object used to open a rowset."
-                          name="OpenRowsetVariable"></property>
-                        <property
-                          dataType="System.String"
-                          description="The SQL command to be executed."
-                          name="SqlCommand"
-                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                        <property
-                          dataType="System.String"
-                          description="The variable that contains the SQL command to be executed."
-                          name="SqlCommandVariable"></property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the column code page to use when code page information is unavailable from the data source."
-                          name="DefaultCodePage">1252</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Forces the use of the DefaultCodePage property value when describing character data."
-                          name="AlwaysUseDefaultCodePage">false</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the mode used to access the database."
-                          name="AccessMode"
-                          typeConverter="AccessMode">0</property>
-                        <property
-                          dataType="System.String"
-                          description="The mappings between the parameters in the SQL command and variables."
-                          name="ParameterMapping"></property>
-                      </properties>
-                      <connections>
-                        <connection
-                          refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Connections[OleDbConnection]"
-                          connectionManagerID="{EBDC3EEE-A910-457C-95AF-2952194294D6}:external"
-                          connectionManagerRefId="Project.ConnectionManagers[Stage]"
-                          description="The OLE DB runtime connection used to access the database."
-                          name="OleDbConnection" />
-                      </connections>
-                      <outputs>
-                        <output
-                          refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output]"
-                          name="OLE DB Source Output">
-                          <outputColumns>
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[ContoKey]"
-                              dataType="wstr"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[ContoKey]"
-                              length="26"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[ContoKey]"
-                              name="ContoKey"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[No_]"
-                              dataType="wstr"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[No_]"
-                              length="20"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[No_]"
-                              name="No_"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Name]"
-                              dataType="wstr"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[Name]"
-                              length="50"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Name]"
-                              name="Name"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Search Name]"
-                              dataType="wstr"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[Search Name]"
-                              length="50"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Search Name]"
-                              name="Search Name"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Account Type]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[Account Type]"
-                              length="13"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Account Type]"
-                              name="Account Type"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Account Category]"
-                              dataType="i4"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[Account Category]"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Account Category]"
-                              name="Account Category"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Income_Balance]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[Income_Balance]"
-                              length="12"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Income_Balance]"
-                              name="Income_Balance"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Debit_Credit]"
-                              dataType="i4"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[Debit_Credit]"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Debit_Credit]"
-                              name="Debit_Credit"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Blocked]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[Blocked]"
-                              length="8"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Blocked]"
-                              name="Blocked"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Company]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[Company]"
-                              length="5"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Company]"
-                              name="Company"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Marchio]"
-                              dataType="wstr"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[Marchio]"
-                              length="20"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].Columns[Marchio]"
-                              name="Marchio"
-                              truncationRowDisposition="FailComponent" />
-                          </outputColumns>
-                          <externalMetadataColumns
-                            isUsed="True">
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[ContoKey]"
-                              dataType="wstr"
-                              length="26"
-                              name="ContoKey" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[No_]"
-                              dataType="wstr"
-                              length="20"
-                              name="No_" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[Name]"
-                              dataType="wstr"
-                              length="50"
-                              name="Name" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[Search Name]"
-                              dataType="wstr"
-                              length="50"
-                              name="Search Name" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[Account Type]"
-                              codePage="1252"
-                              dataType="str"
-                              length="13"
-                              name="Account Type" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[Account Category]"
-                              dataType="i4"
-                              name="Account Category" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[Income_Balance]"
-                              codePage="1252"
-                              dataType="str"
-                              length="12"
-                              name="Income_Balance" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[Debit_Credit]"
-                              dataType="i4"
-                              name="Debit_Credit" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[Blocked]"
-                              codePage="1252"
-                              dataType="str"
-                              length="8"
-                              name="Blocked" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[Company]"
-                              codePage="1252"
-                              dataType="str"
-                              length="5"
-                              name="Company" />
-                            <externalMetadataColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output].ExternalColumns[Marchio]"
-                              dataType="wstr"
-                              length="20"
-                              name="Marchio" />
-                          </externalMetadataColumns>
-                        </output>
-                        <output
-                          refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output]"
-                          isErrorOut="true"
-                          name="OLE DB Source Error Output">
-                          <outputColumns>
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[ContoKey]"
-                              dataType="wstr"
-                              length="26"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[ContoKey]"
-                              name="ContoKey" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[No_]"
-                              dataType="wstr"
-                              length="20"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[No_]"
-                              name="No_" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[Name]"
-                              dataType="wstr"
-                              length="50"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[Name]"
-                              name="Name" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[Search Name]"
-                              dataType="wstr"
-                              length="50"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[Search Name]"
-                              name="Search Name" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[Account Type]"
-                              codePage="1252"
-                              dataType="str"
-                              length="13"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[Account Type]"
-                              name="Account Type" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[Account Category]"
-                              dataType="i4"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[Account Category]"
-                              name="Account Category" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[Income_Balance]"
-                              codePage="1252"
-                              dataType="str"
-                              length="12"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[Income_Balance]"
-                              name="Income_Balance" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[Debit_Credit]"
-                              dataType="i4"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[Debit_Credit]"
-                              name="Debit_Credit" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[Blocked]"
-                              codePage="1252"
-                              dataType="str"
-                              length="8"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[Blocked]"
-                              name="Blocked" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[Marchio]"
-                              dataType="wstr"
-                              length="20"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[Marchio]"
-                              name="Marchio" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[Company]"
-                              codePage="1252"
-                              dataType="str"
-                              length="5"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[Company]"
-                              name="Company" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                              dataType="i4"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                              name="ErrorCode"
-                              specialFlags="1" />
-                            <outputColumn
-                              refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                              dataType="i4"
-                              lineageId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                              name="ErrorColumn"
-                              specialFlags="2" />
-                          </outputColumns>
-                          <externalMetadataColumns />
-                        </output>
-                      </outputs>
-                    </component>
-                  </components>
-                  <paths>
-                    <path
-                      refId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto.Paths[OLE DB Source Output]"
-                      endId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB.Inputs[Input destinazione OLE DB]"
-                      name="OLE DB Source Output"
-                      startId="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source.Outputs[OLE DB Source Output]" />
-                  </paths>
-                </pipeline>
-              </DTS:ObjectData>
-            </DTS:Executable>
-            <DTS:Executable
-              DTS:refId="Package\Dim Articolo Marchio Collezione\DimConto\Truncate DimConto"
-              DTS:CreationName="Microsoft.ExecuteSQLTask"
-              DTS:Description="Execute SQL Task"
-              DTS:DTSID="{acb5b5ab-e72f-4b64-9b02-050e4b6c9838}"
-              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-              DTS:LocaleID="-1"
-              DTS:ObjectName="Truncate DimConto"
-              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="0">
-              <DTS:Variables />
-              <DTS:ObjectData>
-                <SQLTask:SqlTaskData
-                  SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-                  SQLTask:SqlStatementSource="Truncate Table dbo.DimConto" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-              </DTS:ObjectData>
-            </DTS:Executable>
-          </DTS:Executables>
-          <DTS:PrecedenceConstraints>
-            <DTS:PrecedenceConstraint
-              DTS:refId="Package\Dim Articolo Marchio Collezione\DimConto.PrecedenceConstraints[Constraint]"
-              DTS:CreationName=""
-              DTS:DTSID="{56602731-4075-498a-932b-ae25854bd38a}"
-              DTS:From="Package\Dim Articolo Marchio Collezione\DimConto\Truncate DimConto"
-              DTS:LogicalAnd="True"
-              DTS:ObjectName="Constraint"
-              DTS:To="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto" />
-          </DTS:PrecedenceConstraints>
         </DTS:Executable>
       </DTS:Executables>
       <DTS:PrecedenceConstraints>
@@ -3058,8 +2443,8 @@
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo 1]"
           DTS:CreationName=""
-          DTS:DTSID="{783D0F93-DFA4-4DB4-A6BC-4E1DAA9E4882}"
-          DTS:From="Package\Dim Articolo Marchio Collezione\DimConto"
+          DTS:DTSID="{22702DFB-DD07-470C-AB63-6BD615CFCDCD}"
+          DTS:From="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimConto"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Vincolo 1"
           DTS:To="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimArticolo" />
@@ -3092,7 +2477,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimStagione"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3109,7 +2494,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimUltimaStagione"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3451,7 +2836,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate DimArticoloListino"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="0">
+              DTS:ThreadHint="4">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -3931,7 +3316,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate DimListino"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="0">
+              DTS:ThreadHint="4">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -4318,7 +3703,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate DimArticoloListino"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="0">
+              DTS:ThreadHint="4">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -4882,7 +4267,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimAgente"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="10">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5347,7 +4732,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="11">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5386,7 +4771,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="populate DimAssortimentoArticoloModello"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="12">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5403,7 +4788,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate DimAssortimentoArticoloModello"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="12">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5766,7 +5151,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCanale"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="8">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -6703,7 +6088,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="9">
+          DTS:ThreadHint="19">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -7066,7 +6451,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCompany"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="10">
+          DTS:ThreadHint="20">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -8692,7 +8077,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="11">
+          DTS:ThreadHint="21">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -9992,7 +9377,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="12">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11231,7 +10616,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimFornitore"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="13">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11712,7 +11097,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="14">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12522,7 +11907,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13228,7 +12613,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimNegozio"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="15">
+          DTS:ThreadHint="13">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13520,7 +12905,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimOV"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="16">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13911,7 +13296,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="17">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14307,7 +13692,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimProfitCenter"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="18">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14785,7 +14170,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate Dimqty"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="19">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15106,7 +14491,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimStatoVendita"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="20">
+          DTS:ThreadHint="22">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15469,7 +14854,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimSubcanale"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="14">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15508,7 +14893,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="populate DimTipologiaMktg"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="22">
+          DTS:ThreadHint="23">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15525,7 +14910,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate DimTipologiaMktg"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="22">
+          DTS:ThreadHint="23">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15817,7 +15202,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="23">
+          DTS:ThreadHint="18">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -16500,7 +15885,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimUnitàDiMisura"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="25">
+          DTS:ThreadHint="27">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -17000,7 +16385,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimZona"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="26">
+          DTS:ThreadHint="17">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -17354,7 +16739,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimZonaAgente"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="27">
+          DTS:ThreadHint="25">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -17650,7 +17035,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCompany"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="21">
+          DTS:ThreadHint="26">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -17996,7 +17381,7 @@
         <NodeLayout
           Size="224,42.6666666666667"
           Id="Package\ACTUAL_DIM_Macrosubcanale"
-          TopLeft="73.8333322529993,796.561034931237" />
+          TopLeft="73.8333322529993,822.561034466321" />
         <NodeLayout
           Size="185.333333333334,42.6666666666667"
           Id="Package\affidamentoClienti\Populate DimFornitore"
@@ -18035,7 +17420,7 @@
           PanelSize="197.333333333334,184"
           Size="187.333333333334,42.6666666666667"
           Id="Package\affidamentoClienti"
-          TopLeft="1066.60713977846,361.821422757209" />
+          TopLeft="1066.60713977846,387.821422292293" />
         <NodeLayout
           Size="120,42.6666666666667"
           Id="Package\CMP_NEW\Populate"
@@ -18074,94 +17459,33 @@
           PanelSize="214,206.666666666667"
           Size="151.333333333334,42.6666666666667"
           Id="Package\CMP_NEW"
-          TopLeft="806.75594035936,453.374991893024" />
+          TopLeft="806.75594035936,479.374991428108" />
         <NodeLayout
           Size="202.666666666667,42.6666666666667"
           Id="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimArticolo"
-          TopLeft="36.8333323275049,90.2166644931832" />
+          TopLeft="42.4583322436859,124.016663888792" />
         <NodeLayout
           Size="204,42.6666666666667"
           Id="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimMarchio"
-          TopLeft="40.5833322716256,175.083330369492" />
+          TopLeft="37.4583323181917,242.68332916071" />
         <NodeLayout
           Size="145.333333333334,42.6666666666667"
           Id="Package\Dim Articolo Marchio Collezione\DimCollezione"
-          TopLeft="64.250002291053,280.933332938155" />
-        <NodeLayout
-          Size="170,42"
-          Id="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto"
-          TopLeft="6.16666666666667,108.166666666667" />
-        <NodeLayout
-          Size="170,42"
-          Id="Package\Dim Articolo Marchio Collezione\DimConto\Truncate DimConto"
-          TopLeft="5.50000000000001,5.50000000000004" />
-        <EdgeLayout
-          Id="Package\Dim Articolo Marchio Collezione\DimConto.PrecedenceConstraints[Constraint]"
-          TopLeft="90.8333333333333,47.7857142857143">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.3809523809527"
-              Start="0,0"
-              End="0,52.8809523809527">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.8809523809527" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="False"
-          PanelSize="214,206.666666666667"
-          Size="149.333333333334,42.6666666666667"
-          Id="Package\Dim Articolo Marchio Collezione\DimConto"
-          TopLeft="63.4861375359541,16.1659392951563" />
+          TopLeft="63.6250023003663,362.183331485292" />
         <EdgeLayout
           Id="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo]"
-          TopLeft="140.374998966232,132.88333115985">
+          TopLeft="141.624998947605,166.683330555459">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,42.1999992096426"
+              EndConnector="0,75.9999986052509"
               Start="0,0"
-              End="0,34.6999992096426">
+              End="0,68.4999986052509">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.6999992096426" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo 1]"
-          TopLeft="138.15973493173,58.8326059618229">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.3840585313603"
-              Start="0,0"
-              End="0,23.8840585313603">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.8840585313603" />
+                    End="0,68.4999986052509" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18172,18 +17496,44 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo 2]"
-          TopLeft="139.750000614673,217.749997036159">
+          TopLeft="137.875000642612,285.349995827376">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,63.1833359019956"
+              EndConnector="0,76.8333356579154"
               Start="0,0"
-              End="0,55.6833359019956">
+              End="0,69.3333356579154">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,55.6833359019956" />
+                    End="0,69.3333356579154" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="194.666666666667,42.6666666666667"
+          Id="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimConto"
+          TopLeft="49.9583321319275,27.0277126164152" />
+        <EdgeLayout
+          Id="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo 1]"
+          TopLeft="145.54166552114,69.6943792830818">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54.3222846057103"
+              Start="0,0"
+              End="0,46.8222846057103">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.8222846057103" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18195,8 +17545,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="317.333333333334,476"
-          Size="317.333333333334,518.666666666667"
+          PanelSize="310.666666666667,472.666666666667"
+          Size="310.666666666667,515.333333333334"
           Id="Package\Dim Articolo Marchio Collezione"
           TopLeft="31.9583328769854,110.699998163581" />
         <NodeLayout
@@ -18418,7 +17768,7 @@
           PanelSize="317.333333333334,462.666666666667"
           Size="317.333333333334,505.333333333334"
           Id="Package\Dim Stagione - Listino - Ultima Stagione"
-          TopLeft="411.406243869569,95.1208342312028" />
+          TopLeft="411.406243869569,121.120833766286" />
         <NodeLayout
           Size="176,42.6666666666667"
           Id="Package\DimAgente\Populate DimAgente"
@@ -18457,7 +17807,7 @@
           PanelSize="186.666666666667,206.666666666667"
           Size="186.666666666667,42.6666666666667"
           Id="Package\DimAgente"
-          TopLeft="801.406238058117,271.058328259935" />
+          TopLeft="801.406238058117,297.058327795019" />
         <NodeLayout
           Size="120,42"
           Id="Package\dimAssortimento\populate"
@@ -18496,7 +17846,7 @@
           PanelSize="186.666666666667,205.333333333334"
           Size="181.333333333334,42.6666666666667"
           Id="Package\dimAssortimento"
-          TopLeft="720.34725586976,728.123711306283" />
+          TopLeft="720.34725586976,754.123710841367" />
         <NodeLayout
           Size="274.666666666667,42.6666666666667"
           Id="Package\DimAssortimentoArticoloModello\populate DimAssortimentoArticoloModello"
@@ -18547,7 +17897,7 @@
           PanelSize="324.666666666667,212"
           Size="324.666666666667,42.6666666666667"
           Id="Package\DimAssortimentoArticoloModello"
-          TopLeft="975.208318801598,1078.97770033875" />
+          TopLeft="975.208318801598,1104.97769987383" />
         <NodeLayout
           Size="173.333333333334,42.6666666666667"
           Id="Package\DimCanale\Populate DimCanale"
@@ -18586,7 +17936,7 @@
           PanelSize="237.333333333334,207.333333333334"
           Size="237.333333333334,42.6666666666667"
           Id="Package\DimCanale"
-          TopLeft="400.104156532325,634.760083721796" />
+          TopLeft="400.104156532325,660.76008325688" />
         <NodeLayout
           Size="120,42"
           Id="Package\DimCliente_NEW\populate"
@@ -18625,7 +17975,7 @@
           PanelSize="198,205.333333333334"
           Size="198,42.6666666666667"
           Id="Package\DimCliente_NEW"
-          TopLeft="70.2083738172308,943.406993471566" />
+          TopLeft="70.2083738172308,969.40699300665" />
         <NodeLayout
           Size="186.666666666667,42.6666666666667"
           Id="Package\DimCompany\Populate DimCompany"
@@ -18664,7 +18014,7 @@
           PanelSize="197.333333333334,206.666666666667"
           Size="197.333333333334,42.6666666666667"
           Id="Package\DimCompany"
-          TopLeft="948.958323079468,630.291661252331" />
+          TopLeft="948.958323079468,656.291660787415" />
         <NodeLayout
           Size="120,42"
           Id="Package\DimConto_GL\populate"
@@ -18715,7 +18065,7 @@
           PanelSize="187,234"
           Size="186.666666666667,42.6666666666667"
           Id="Package\DimConto_GL"
-          TopLeft="966.812204085989,831.495909043071" />
+          TopLeft="966.812204085989,857.495908578155" />
         <NodeLayout
           Size="120,42.2857142857143"
           Id="Package\dimFiliale\populate"
@@ -18754,7 +18104,7 @@
           PanelSize="187,205.142857142858"
           Size="186.666666666667,42.6666666666667"
           Id="Package\dimFiliale"
-          TopLeft="706.275805963453,629.92806047363" />
+          TopLeft="706.275805963453,655.928060008714" />
         <NodeLayout
           Size="185.333333333334,42.6666666666667"
           Id="Package\DimFornitore\Populate DimFornitore"
@@ -18793,7 +18143,7 @@
           PanelSize="197.333333333334,206.666666666667"
           Size="197.333333333334,42.6666666666667"
           Id="Package\DimFornitore"
-          TopLeft="793.072911653823,172.483336053094" />
+          TopLeft="793.072911653823,198.483335588178" />
         <NodeLayout
           Size="120,42"
           Id="Package\DimListino_Retail\populate"
@@ -18832,7 +18182,7 @@
           PanelSize="187,205.333333333334"
           Size="186.666666666667,42.6666666666667"
           Id="Package\DimListino_Retail"
-          TopLeft="806.537038630785,362.478845113598" />
+          TopLeft="806.537038630785,388.478844648682" />
         <NodeLayout
           Size="120,42"
           Id="Package\DimMagazzino_NEW\populate"
@@ -18871,7 +18221,7 @@
           PanelSize="198,205.333333333334"
           Size="198,42.6666666666667"
           Id="Package\DimMagazzino_NEW"
-          TopLeft="709.541691876876,829.339564419461" />
+          TopLeft="709.541691876876,855.339563954545" />
         <NodeLayout
           Size="178.857142857143,42.2857142857143"
           Id="Package\DimNegozio\Populate DimNegozio"
@@ -18910,7 +18260,7 @@
           PanelSize="250.857142857143,206.857142857143"
           Size="158,42.6666666666667"
           Id="Package\DimNegozio"
-          TopLeft="99.0000206505257,874.10000231683" />
+          TopLeft="99.0000206505257,900.100001851914" />
         <NodeLayout
           Size="173.333333333334,42.6666666666667"
           Id="Package\DimOV\Populate DimOV"
@@ -18949,7 +18299,7 @@
           PanelSize="237.333333333334,208"
           Size="237.333333333334,42.6666666666667"
           Id="Package\DimOV"
-          TopLeft="51.5972435866483,1073.31934454028" />
+          TopLeft="51.5972435866483,1099.31934407536" />
         <NodeLayout
           Size="120,42"
           Id="Package\dimPCCDC\populate"
@@ -18988,7 +18338,7 @@
           PanelSize="186.666666666667,205.333333333334"
           Size="186.666666666667,42.6666666666667"
           Id="Package\dimPCCDC"
-          TopLeft="706.874989466742,946.177832262826" />
+          TopLeft="706.874989466742,972.17783179791" />
         <NodeLayout
           Size="198.666666666667,42.6666666666667"
           Id="Package\DimProfitCenter\Populate DimProfitCenter"
@@ -19027,7 +18377,7 @@
           PanelSize="209.333333333334,206.666666666667"
           Size="177.333333333334,42.6666666666667"
           Id="Package\DimProfitCenter"
-          TopLeft="976.96427515841,732.82380978837" />
+          TopLeft="976.96427515841,758.823809323454" />
         <NodeLayout
           Size="208,42.6666666666667"
           Id="Package\DimQtaAssortimento\Populate Dimqty"
@@ -19066,7 +18416,7 @@
           PanelSize="220,206.666666666667"
           Size="220,42.6666666666667"
           Id="Package\DimQtaAssortimento"
-          TopLeft="379.062494351532,1080.30283537196" />
+          TopLeft="379.062494351532,1106.30283490704" />
         <NodeLayout
           Size="202,42"
           Id="Package\DimStatoVendita\Populate DimStatoVendita"
@@ -19105,7 +18455,7 @@
           PanelSize="214,206.666666666667"
           Size="214,42.6666666666667"
           Id="Package\DimStatoVendita"
-          TopLeft="1043.6666470468,173.283330044051" />
+          TopLeft="1043.6666470468,199.283329579135" />
         <NodeLayout
           Size="190.666666666667,42.6666666666667"
           Id="Package\DimSubcanale\Populate DimSubcanale"
@@ -19133,7 +18483,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
@@ -19142,7 +18494,7 @@
           PanelSize="201.333333333334,205.333333333334"
           Size="168.666666666667,42.6666666666667"
           Id="Package\DimSubcanale"
-          TopLeft="97.8750085774804,702.233327490886" />
+          TopLeft="97.8750085774804,728.23332702597" />
         <NodeLayout
           Size="208,42.6666666666667"
           Id="Package\DimTipologiaMktg\populate DimTipologiaMktg"
@@ -19193,7 +18545,7 @@
           PanelSize="258,213.333333333334"
           Size="258,42.6666666666667"
           Id="Package\DimTipologiaMktg"
-          TopLeft="382.648803821897,1234.69435859431" />
+          TopLeft="382.648803821897,1260.69435812939" />
         <NodeLayout
           Size="173.333333333334,42.6666666666667"
           Id="Package\DimTipoOperazioneCDV\Populate"
@@ -19232,7 +18584,7 @@
           PanelSize="237.333333333334,206.666666666667"
           Size="237.333333333334,42.6666666666667"
           Id="Package\DimTipoOperazioneCDV"
-          TopLeft="48.5416659433399,1224.77768625179" />
+          TopLeft="48.5416659433399,1250.77768578687" />
         <NodeLayout
           Size="193.333333333334,42"
           Id="Package\DimTipoOrdine\Populate DimTipoOrdine"
@@ -19271,7 +18623,7 @@
           PanelSize="237.333333333334,207.333333333334"
           Size="237.333333333334,42.6666666666667"
           Id="Package\DimTipoOrdine"
-          TopLeft="1067.33330579102,441.125003845245" />
+          TopLeft="1067.33330579102,467.125003380329" />
         <NodeLayout
           Size="208,42.6666666666667"
           Id="Package\DimUnitàDiMisura\Populate DimUnitàDiMisura"
@@ -19310,7 +18662,7 @@
           PanelSize="237.333333333334,206.666666666667"
           Size="237.333333333334,42.6666666666667"
           Id="Package\DimUnitàDiMisura"
-          TopLeft="77.1666707520686,627.516665903428" />
+          TopLeft="77.1666707520686,653.516665438512" />
         <NodeLayout
           Size="165.142857142858,42.8571428571429"
           Id="Package\DimZona\Populate DimZona"
@@ -19349,7 +18701,7 @@
           PanelSize="433.142857142858,198.857142857143"
           Size="250,42.6666666666667"
           Id="Package\DimZona"
-          TopLeft="394.624998550242,726.312488556281" />
+          TopLeft="394.624998550242,752.312488091365" />
         <NodeLayout
           Size="198.666666666667,42.6666666666667"
           Id="Package\DimZonaAgente\Populate DimZonaAgente"
@@ -19388,7 +18740,7 @@
           PanelSize="211,206.666666666667"
           Size="210.666666666667,42.6666666666667"
           Id="Package\DimZonaAgente"
-          TopLeft="401.208329679445,821.316670064433" />
+          TopLeft="401.208329679445,847.316669599517" />
         <NodeLayout
           Size="186.666666666667,42.6666666666667"
           Id="Package\MargineCliente_TipologiaSpesa\Populate DimCompany"
@@ -19427,7 +18779,7 @@
           PanelSize="246.666666666667,206.666666666667"
           Size="246.666666666667,42.6666666666667"
           Id="Package\MargineCliente_TipologiaSpesa"
-          TopLeft="701.666656211022,1074.69435007084" />
+          TopLeft="701.666656211022,1100.69434960592" />
         <NodeLayout
           Size="170,42"
           Id="Package\Rif Ordine Cliente\Populate DimConto"
@@ -19466,33 +18818,21 @@
           PanelSize="214,206.666666666667"
           Size="214,42.6666666666667"
           Id="Package\Rif Ordine Cliente"
-          TopLeft="968.593735566828,951.115337682" />
+          TopLeft="968.593735566828,977.115337217084" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Vincolo]"
-          TopLeft="349.291666210319,370.033331496914">
+          TopLeft="342.624999543652,371.0770826316">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="62.1145776592504,-22.2458305990448"
+              EndConnector="68.781244325917,0"
               Start="0,0"
-              End="54.6145776592504,-22.2458305990448">
+              End="61.281244325917,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="27.0572888296252,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="27.0572888296252,0"
-                    Point2="31.0572888296252,0"
-                    Point3="31.0572888296252,-4" />
-                  <mssgle:LineSegment
-                    End="31.0572888296252,-18.2458305990448" />
-                  <mssgle:CubicBezierSegment
-                    Point1="31.0572888296252,-18.2458305990448"
-                    Point2="31.0572888296252,-22.2458305990448"
-                    Point3="35.0572888296252,-22.2458305990448" />
-                  <mssgle:LineSegment
-                    End="54.6145776592504,-22.2458305990448" />
+                    End="61.281244325917,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -19503,7 +18843,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Vincolo 1]"
-          TopLeft="184.020837081907,744.899994157553">
+          TopLeft="184.020837081907,770.899993692637">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -19667,84 +19007,6 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="178,42"
-          Id="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB"
-          TopLeft="370.000009801653,213.652179449853" />
-        <NodeLayout
-          Size="161.333333333334,42"
-          Id="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source"
-          TopLeft="213.749996814877,100.74999819845" />
-        <EdgeLayout
-          Id="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto.Paths[OLE DB Source Output]"
-          TopLeft="294.321425386306,143.035712484164">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="164.821441558204,70.6164669656888"
-              Start="0,0"
-              End="164.821441558204,63.1164669656888">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.3082334828444" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.3082334828444"
-                    Point2="0,35.3082334828444"
-                    Point3="4,35.3082334828444" />
-                  <mssgle:LineSegment
-                    End="160.821441558204,35.3082334828444" />
-                  <mssgle:CubicBezierSegment
-                    Point1="160.821441558204,35.3082334828444"
-                    Point2="164.821441558204,35.3082334828444"
-                    Point3="164.821441558204,39.3082334828444" />
-                  <mssgle:LineSegment
-                    End="164.821441558204,63.1164669656888" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\Destinazione OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dim Articolo Marchio Collezione\DimConto\Populate DimConto\DimConto Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">View</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
