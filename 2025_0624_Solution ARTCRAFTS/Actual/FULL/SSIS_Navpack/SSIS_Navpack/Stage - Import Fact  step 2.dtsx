@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="Stage - Import Fact  step 2"
   DTS:PackageType="5"
-  DTS:VersionBuild="192"
-  DTS:VersionGUID="{6A7B7011-48EC-4374-9FD0-17381411368A}">
+  DTS:VersionBuild="193"
+  DTS:VersionGUID="{545237BA-6EF0-4F83-8A0D-49B460B28CA5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -65745,6 +65745,10 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="244,42.6666666666667"
+          Id="Package\Import Fact\Sales Shipment Header (ottimizzazione)\Populate Sales Shipment Header\Sales Shipment Header (STAGING)"
+          TopLeft="8.16666666666671,210.833333333334" />
+        <NodeLayout
           Size="249.333333333334,42.6666666666667"
           Id="Package\Import Fact\Sales Shipment Header (ottimizzazione)\Populate Sales Shipment Header\Sales Shipment Header (NAVISION)"
           TopLeft="5.50000000000001,5.50000000000004" />
@@ -65774,10 +65778,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="244,42.6666666666667"
-          Id="Package\Import Fact\Sales Shipment Header (ottimizzazione)\Populate Sales Shipment Header\Sales Shipment Header (STAGING)"
-          TopLeft="8.16666666666671,210.833333333334" />
         <EdgeLayout
           Id="Package\Import Fact\Sales Shipment Header (ottimizzazione)\Populate Sales Shipment Header.Paths[Derived Column Output]"
           TopLeft="130.166666666667,150.833333333333">

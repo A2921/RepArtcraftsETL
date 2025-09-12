@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>ETL_FULL_ACTUAL</Name>
-    <LastWriteTime>2025-05-11T08:06:49.0348475Z</LastWriteTime>
+    <LastWriteTime>2025-09-10T14:22:08.7384458Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -19,11 +19,6 @@
     <ProjectBuildItemInfo>
       <Name>Stage - Import Dim.dtsx</Name>
       <LastWriteTime>2025-06-26T13:47:23.8827659Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>Integrazioni GA.dtsx</Name>
-      <LastWriteTime>2025-01-31T16:22:03.4461063Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -68,7 +63,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Stage - Import Fact  step 2.dtsx</Name>
-      <LastWriteTime>2025-09-09T10:12:12.5135179Z</LastWriteTime>
+      <LastWriteTime>2025-09-11T14:36:19.8851037Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
