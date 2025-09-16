@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="Stage - Import Fact  step 2"
   DTS:PackageType="5"
-  DTS:VersionBuild="282"
-  DTS:VersionGUID="{18D2F3DB-F312-443B-83FF-B44124F33130}">
+  DTS:VersionBuild="283"
+  DTS:VersionGUID="{83671DC7-6835-40B2-874B-23E47EF88B6C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -11177,7 +11177,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="EXECUTE  LoadSTG_Sales Line_0"
-          DTS:ThreadHint="42">
+          DTS:ThreadHint="40">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11193,7 +11193,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="EXECUTE  LoadSTG_Sales Line_1"
-          DTS:ThreadHint="42">
+          DTS:ThreadHint="40">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11579,7 +11579,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Return Receipt Line"
-          DTS:ThreadHint="31">
+          DTS:ThreadHint="30">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11596,7 +11596,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Return Shipment Header"
-          DTS:ThreadHint="32">
+          DTS:ThreadHint="31">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11613,7 +11613,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Return Shipment Line"
-          DTS:ThreadHint="34">
+          DTS:ThreadHint="33">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11630,7 +11630,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Cr Memo Header"
-          DTS:ThreadHint="35">
+          DTS:ThreadHint="34">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11647,7 +11647,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Cr Memo Line"
-          DTS:ThreadHint="33">
+          DTS:ThreadHint="32">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11664,7 +11664,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Header"
-          DTS:ThreadHint="36">
+          DTS:ThreadHint="35">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11681,7 +11681,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Header Delta"
-          DTS:ThreadHint="36">
+          DTS:ThreadHint="35">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11698,7 +11698,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Header Extension"
-          DTS:ThreadHint="37">
+          DTS:ThreadHint="36">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11715,7 +11715,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Header Extension Delta"
-          DTS:ThreadHint="37">
+          DTS:ThreadHint="36">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11732,67 +11732,13 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Invoice Header"
-          DTS:ThreadHint="38">
+          DTS:ThreadHint="37">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{EBDC3EEE-A910-457C-95AF-2952194294D6}"
               SQLTask:SqlStmtSourceType="Variable"
               SQLTask:SqlStatementSource="User::Populate_Sale_Invoice_Header" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Contenitore Sequenza\Sales Invoice Line"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:Disabled="True"
-          DTS:DTSID="{69A38B60-DD2A-4403-9490-A0F2F1422CDE}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Sales Invoice Line"
-          DTS:ThreadHint="39">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{EBDC3EEE-A910-457C-95AF-2952194294D6}"
-              SQLTask:SqlStmtSourceType="Variable"
-              SQLTask:SqlStatementSource="User::Populate_Sales_Invoice_Line" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Contenitore Sequenza\Sales Line"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:Disabled="True"
-          DTS:DTSID="{4593B40D-87D7-493D-9B0E-96F89EA02434}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Sales Line"
-          DTS:ThreadHint="30">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{EBDC3EEE-A910-457C-95AF-2952194294D6}"
-              SQLTask:SqlStmtSourceType="Variable"
-              SQLTask:SqlStatementSource="User::Populate_Sales_Line" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Contenitore Sequenza\Sales Line Delta"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:Disabled="True"
-          DTS:DTSID="{27E1CE2F-F9A5-46CE-B2EB-9B2CD89576B1}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Sales Line Delta"
-          DTS:ThreadHint="30">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{EBDC3EEE-A910-457C-95AF-2952194294D6}"
-              SQLTask:SqlStmtSourceType="Variable"
-              SQLTask:SqlStatementSource="User::Populate_Sales_Line_Delta" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -11825,23 +11771,6 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
             <SQLTask:SqlTaskData
               SQLTask:Connection="{EBDC3EEE-A910-457C-95AF-2952194294D6}"
               SQLTask:SqlStatementSource="TRUNCATE TABLE [NAV].[Gen_ Journal Line Maint_ EAM]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Contenitore Sequenza\truncate 2"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:Disabled="True"
-          DTS:DTSID="{A1573924-A887-46FB-B9D7-09337D0E9EBA}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="truncate 2"
-          DTS:ThreadHint="30">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{EBDC3EEE-A910-457C-95AF-2952194294D6}"
-              SQLTask:SqlStatementSource="TRUNCATE TABLE [NAV].[Sales Line_0] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -11948,7 +11877,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate Sales Header"
-          DTS:ThreadHint="36">
+          DTS:ThreadHint="35">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11964,7 +11893,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate Sales Header Extension"
-          DTS:ThreadHint="37">
+          DTS:ThreadHint="36">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11981,7 +11910,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Value Entry_bk_2025_0912"
-          DTS:ThreadHint="40">
+          DTS:ThreadHint="38">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11998,7 +11927,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Vendor Leadger Entry"
-          DTS:ThreadHint="41">
+          DTS:ThreadHint="39">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12026,14 +11955,6 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ObjectName="Vincolo 1"
           DTS:To="Package\Contenitore Sequenza\Gen_ Journal Line Maint_ EAM" />
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\Contenitore Sequenza.PrecedenceConstraints[Vincolo 2]"
-          DTS:CreationName=""
-          DTS:DTSID="{557318AA-2BDD-4F9F-BAF2-4D087E785747}"
-          DTS:From="Package\Contenitore Sequenza\truncate 2"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Vincolo 2"
-          DTS:To="Package\Contenitore Sequenza\Sales Line" />
-        <DTS:PrecedenceConstraint
           DTS:refId="Package\Contenitore Sequenza.PrecedenceConstraints[Vincolo 2 1]"
           DTS:CreationName=""
           DTS:DTSID="{796E80F4-B046-43F5-B424-CB4F8E39E728}"
@@ -12057,14 +11978,6 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:LogicalAnd="True"
           DTS:ObjectName="Vincolo 2 2"
           DTS:To="Package\Contenitore Sequenza\DDT_Picking Header" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Contenitore Sequenza.PrecedenceConstraints[Vincolo 3]"
-          DTS:CreationName=""
-          DTS:DTSID="{2A1D1F67-EC15-4E21-B6E2-B1E62C1B5900}"
-          DTS:From="Package\Contenitore Sequenza\Sales Line"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Vincolo 3"
-          DTS:To="Package\Contenitore Sequenza\Sales Line Delta" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Contenitore Sequenza.PrecedenceConstraints[Vincolo 3 1]"
           DTS:CreationName=""
@@ -12218,7 +12131,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
         <NodeLayout
           Size="225.333333333334,42"
           Id="Package\Contenitore Sequenza\DDT_Picking Line"
-          TopLeft="8.4907423629282,2197.25005089384" />
+          TopLeft="4.32407575834968,1892.47227856591" />
         <NodeLayout
           Size="212,42"
           Id="Package\Contenitore Sequenza\Detailed Cust_ Ledg_ Entry"
@@ -12230,15 +12143,15 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
         <NodeLayout
           Size="297.333333333334,42.6666666666667"
           Id="Package\Contenitore Sequenza\EXECUTE  LoadSTG_Sales_Shipment_HEADER"
-          TopLeft="38.7824081289714,1169.66517897595" />
+          TopLeft="4.06018642415063,1009.3318485096" />
         <NodeLayout
           Size="277.333333333334,42.6666666666667"
           Id="Package\Contenitore Sequenza\EXECUTE  LoadSTG_Sales_Shipment_Line"
-          TopLeft="40.083332755913,1248.49999709428" />
+          TopLeft="6.05555548518865,1093.22222209309" />
         <NodeLayout
           Size="264,42.6666666666667"
           Id="Package\Contenitore Sequenza\EXECUTE LoadSTG_Sales_Invoice_Line"
-          TopLeft="288.124995706603,1080.78333201994" />
+          TopLeft="3.40277772707245,929.838890274593" />
         <NodeLayout
           Size="230.666666666667,42.6666666666667"
           Id="Package\Contenitore Sequenza\EXECUTE LoadSTG_Value_Entry"
@@ -12258,15 +12171,15 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
         <NodeLayout
           Size="225.333333333334,42"
           Id="Package\Contenitore Sequenza\G_L Entry EAM"
-          TopLeft="6.40740906063895,1586.16233357031" />
+          TopLeft="13.3518534016031,1391.16233705718" />
         <NodeLayout
           Size="228,42.6666666666667"
           Id="Package\Contenitore Sequenza\Gen_ Journal Line Maint_ EAM"
-          TopLeft="8.4907423629282,1685.82147946526" />
+          TopLeft="6.40740906063898,1546.43259306884" />
         <NodeLayout
           Size="181.333333333334,42.6666666666667"
           Id="Package\Contenitore Sequenza\Item Cross Referenxe"
-          TopLeft="6.189155049646,2405.83329509397" />
+          TopLeft="27.0224880725385,2077.22218985888" />
         <NodeLayout
           Size="164,42.6666666666667"
           Id="Package\Contenitore Sequenza\Item Ledger Entry"
@@ -12274,7 +12187,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
         <NodeLayout
           Size="133.333333333334,42.6666666666667"
           Id="Package\Contenitore Sequenza\Order Type"
-          TopLeft="241.249996405095,2628.449898686" />
+          TopLeft="51.3333326503635,2267.33879403206" />
         <NodeLayout
           Size="225.333333333334,42"
           Id="Package\Contenitore Sequenza\Purch_ Cr_ Memo Hdr_"
@@ -12354,31 +12267,15 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
         <NodeLayout
           Size="225.333333333334,42"
           Id="Package\Contenitore Sequenza\Sales Invoice Header"
-          TopLeft="7.30026619019149,973.42549148344" />
-        <NodeLayout
-          Size="225.333333333334,42"
-          Id="Package\Contenitore Sequenza\Sales Invoice Line"
-          TopLeft="7.30026619019149,1075.71120576915" />
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Contenitore Sequenza\Sales Line"
-          TopLeft="8.4907423629282,1890.39290803669" />
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Contenitore Sequenza\Sales Line Delta"
-          TopLeft="8.4907423629282,1992.67862232241" />
+          TopLeft="7.99471062428792,850.6477159011" />
         <NodeLayout
           Size="118.666666666667,42"
           Id="Package\Contenitore Sequenza\truncate"
-          TopLeft="7.30026619019149,1484.85406291201" />
+          TopLeft="58.6891543133262,1292.74295523611" />
         <NodeLayout
           Size="225.333333333334,42"
           Id="Package\Contenitore Sequenza\truncate 1"
-          TopLeft="287.657404869687,1621.16734483524" />
-        <NodeLayout
-          Size="128,42.6666666666667"
-          Id="Package\Contenitore Sequenza\truncate 2"
-          TopLeft="8.4907423629282,1788.10719375098" />
+          TopLeft="9.87963123112063,1470.22290308989" />
         <NodeLayout
           Size="133.333333333334,42.6666666666667"
           Id="Package\Contenitore Sequenza\truncate 23"
@@ -12388,21 +12285,21 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           Id="Package\Contenitore Sequenza\truncate 24"
           TopLeft="607.439146090323,366.150085460361" />
         <NodeLayout
-          Size="133.333333333334,42.6666666666667"
+          Size="133.333333333334,42"
           Id="Package\Contenitore Sequenza\truncate 25"
-          TopLeft="24.8783099130272,2299.25005089384" />
+          TopLeft="45.7116429359197,1970.63894565875" />
         <NodeLayout
           Size="133.333333333334,42.6666666666667"
           Id="Package\Contenitore Sequenza\truncate 26"
-          TopLeft="259.939151268476,2521.86665448586" />
+          TopLeft="47.8002656226592,2163.64443866915" />
         <NodeLayout
           Size="216,42.6666666666667"
           Id="Package\Contenitore Sequenza\truncate DDT Picking Header"
           TopLeft="1238.38097348541,14.7380965026933" />
         <NodeLayout
-          Size="118.666666666667,62.6666666666667"
+          Size="223.333333333334,48.6666666666667"
           Id="Package\Contenitore Sequenza\truncate DDT Picking Line"
-          TopLeft="8.4907423629282,2094.96433660812" />
+          TopLeft="9.1851867970246,1794.51989753604" />
         <NodeLayout
           Size="187.333333333334,42"
           Id="Package\Contenitore Sequenza\truncate Sales Header"
@@ -12418,33 +12315,21 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
         <NodeLayout
           Size="225.333333333334,42"
           Id="Package\Contenitore Sequenza\Vendor Leadger Entry"
-          TopLeft="7.30026619019149,1382.5683486263" />
+          TopLeft="12.1613772288664,1201.29057409002" />
         <EdgeLayout
           Id="Package\Contenitore Sequenza.PrecedenceConstraints[Vincolo]"
-          TopLeft="66.6335995235248,1526.85406291201">
+          TopLeft="122.020503857465,1334.74295523611">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="52.4404762037808,59.3082706582995"
+              EndConnector="0,56.4193818210686"
               Start="0,0"
-              End="52.4404762037808,51.8082706582995">
+              End="0,48.9193818210686">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.6541353291498" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.6541353291498"
-                    Point2="0,29.6541353291498"
-                    Point3="4,29.6541353291498" />
-                  <mssgle:LineSegment
-                    End="48.4404762037808,29.6541353291498" />
-                  <mssgle:CubicBezierSegment
-                    Point1="48.4404762037808,29.6541353291498"
-                    Point2="52.4404762037808,29.6541353291498"
-                    Point3="52.4404762037808,33.6541353291498" />
-                  <mssgle:LineSegment
-                    End="52.4404762037808,51.8082706582995" />
+                    End="0,48.9193818210686" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12455,52 +12340,18 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Contenitore Sequenza.PrecedenceConstraints[Vincolo 1]"
-          TopLeft="400.324071536354,1663.16734483524">
+          TopLeft="121.476853479213,1512.22290308989">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-277.833329173426,22.6541346300207"
+              EndConnector="0,34.209689978946"
               Start="0,0"
-              End="-277.833329173426,15.1541346300207">
+              End="0,26.709689978946">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,7.32706731501037" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,7.32706731501037"
-                    Point2="0,11.3270673150104"
-                    Point3="-4,11.3270673150104" />
-                  <mssgle:LineSegment
-                    End="-273.833329173426,11.3270673150104" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-273.833329173426,11.3270673150104"
-                    Point2="-277.833329173426,11.3270673150104"
-                    Point3="-277.833329173426,15.3270673150104" />
-                  <mssgle:LineSegment
-                    End="-277.833329173426,15.1541346300207" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Contenitore Sequenza.PrecedenceConstraints[Vincolo 2]"
-          TopLeft="72.9907423629282,1830.77386041765">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.6190476190432"
-              Start="0,0"
-              End="0,52.1190476190432">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.1190476190432" />
+                    End="0,26.709689978946" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12600,28 +12451,6 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contenitore Sequenza.PrecedenceConstraints[Vincolo 3]"
-          TopLeft="73.6335995057853,1932.67862232241">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Contenitore Sequenza.PrecedenceConstraints[Vincolo 3 1]"
           TopLeft="1056.0952591997,159.309525074121">
           <EdgeLayout.Curve>
@@ -12679,30 +12508,18 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Contenitore Sequenza.PrecedenceConstraints[Vincolo 4]"
-          TopLeft="67.8240756962615,2157.63100327479">
+          TopLeft="118.921297944354,1843.18656420271">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="53.3333333333333,39.6190476190536"
+              EndConnector="0,49.2857143632061"
               Start="0,0"
-              End="53.3333333333333,32.1190476190536">
+              End="0,41.7857143632061">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.8095238095268" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.8095238095268"
-                    Point2="0,19.8095238095268"
-                    Point3="4,19.8095238095268" />
-                  <mssgle:LineSegment
-                    End="49.3333333333333,19.8095238095268" />
-                  <mssgle:CubicBezierSegment
-                    Point1="49.3333333333333,19.8095238095268"
-                    Point2="53.3333333333333,19.8095238095268"
-                    Point3="53.3333333333333,23.8095238095268" />
-                  <mssgle:LineSegment
-                    End="53.3333333333333,32.1190476190536" />
+                    End="0,41.7857143632061" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12769,18 +12586,18 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Contenitore Sequenza.PrecedenceConstraints[Vincolo 6 1]"
-          TopLeft="94.2003991480033,2341.91671756051">
+          TopLeft="115.033732170896,2012.63894565875">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,63.9165775334673"
+              EndConnector="0,64.5832442001297"
               Start="0,0"
-              End="0,56.4165775334673">
+              End="0,57.0832442001297">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,56.4165775334673" />
+                    End="0,57.0832442001297" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12791,30 +12608,18 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Contenitore Sequenza.PrecedenceConstraints[Vincolo 6 1 1]"
-          TopLeft="326.605817935143,2564.53332115253">
+          TopLeft="116.233465803178,2206.31110533582">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-18.6891548633812,63.9165775334673"
+              EndConnector="0,61.0276886962415"
               Start="0,0"
-              End="-18.6891548633812,56.4165775334673">
+              End="0,53.5276886962415">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.9582887667336" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27.9582887667336"
-                    Point2="0,31.9582887667336"
-                    Point3="-4,31.9582887667336" />
-                  <mssgle:LineSegment
-                    End="-14.6891548633812,31.9582887667336" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-14.6891548633812,31.9582887667336"
-                    Point2="-18.6891548633812,31.9582887667336"
-                    Point3="-18.6891548633812,35.9582887667336" />
-                  <mssgle:LineSegment
-                    End="-18.6891548633812,56.4165775334673" />
+                    End="0,53.5276886962415" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12826,25 +12631,25 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
         <NodeLayout
           Size="236,42.6666666666667"
           Id="Package\Contenitore Sequenza\EXECUTE  LoadSTG_Sales Line_0"
-          TopLeft="199.601848881968,1853.27777479457" />
+          TopLeft="11.407407241839,1629.38888990912" />
         <NodeLayout
           Size="236,42.6666666666667"
           Id="Package\Contenitore Sequenza\EXECUTE  LoadSTG_Sales Line_1"
-          TopLeft="194.879628551672,1932.34849868337" />
+          TopLeft="6.6851869115429,1708.45961379793" />
         <EdgeLayout
           Id="Package\Contenitore Sequenza.PrecedenceConstraints[Vincolo 7]"
-          TopLeft="315.24073871682,1895.94444146123">
+          TopLeft="127.046297076691,1672.05555657579">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36.404057222139"
+              EndConnector="0,36.4040572221393"
               Start="0,0"
-              End="0,28.904057222139">
+              End="0,28.9040572221393">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.904057222139" />
+                    End="0,28.9040572221393" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12856,44 +12661,44 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="1720.66666666667,2728"
-          Size="1720.66666666667,2770.66666666667"
+          PanelSize="1720.66666666667,2648"
+          Size="1720.66666666667,2690.66666666667"
           Id="Package\Contenitore Sequenza"
           TopLeft="69.0740759039121,135.515150046545" />
         <NodeLayout
           Size="153.333333333334,42"
           Id="Package\Load Company"
-          TopLeft="139.629633328552,51.9999994364652" />
+          TopLeft="139.629633328552,219.555551995893" />
         <NodeLayout
           Size="152,42.6666666666667"
           Id="Package\load timestamp"
-          TopLeft="366.613766177875,52.3309975545683" />
+          TopLeft="366.613766177875,219.886550113996" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Vincolo]"
-          TopLeft="216.296299995219,93.9999994364652">
+          TopLeft="216.296299995219,219.555551995893">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="713.111109242027,41.5151506100797"
+              EndConnector="713.111109242027,-84.0404019493485"
               Start="0,0"
-              End="713.111109242027,34.0151506100797">
+              End="713.111109242027,-91.5404019493485">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.7575753050399" />
+                    End="0,-102.540401949348" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.7575753050399"
-                    Point2="0,20.7575753050399"
-                    Point3="4,20.7575753050399" />
+                    Point1="0,-102.540401949348"
+                    Point2="0,-106.540401949348"
+                    Point3="4,-106.540401949348" />
                   <mssgle:LineSegment
-                    End="709.111109242027,20.7575753050399" />
+                    End="709.111109242027,-106.540401949348" />
                   <mssgle:CubicBezierSegment
-                    Point1="709.111109242027,20.7575753050399"
-                    Point2="713.111109242027,20.7575753050399"
-                    Point3="713.111109242027,24.7575753050399" />
+                    Point1="709.111109242027,-106.540401949348"
+                    Point2="713.111109242027,-106.540401949348"
+                    Point3="713.111109242027,-102.540401949348" />
                   <mssgle:LineSegment
-                    End="713.111109242027,34.0151506100797" />
+                    End="713.111109242027,-91.5404019493485" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
