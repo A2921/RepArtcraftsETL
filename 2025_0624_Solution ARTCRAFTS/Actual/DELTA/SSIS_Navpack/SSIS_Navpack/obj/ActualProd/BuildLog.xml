@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>ETL_DELTA</Name>
-    <LastWriteTime>2025-09-05T09:59:46.098591Z</LastWriteTime>
+    <LastWriteTime>2025-09-19T14:20:34.9133236Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -13,7 +13,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>TEST_IMPORT_DELTA 2.dtsx</Name>
-      <LastWriteTime>2025-09-16T09:14:38.710556Z</LastWriteTime>
+      <LastWriteTime>2025-09-19T14:20:11.4953367Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
