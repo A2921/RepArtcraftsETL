@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="Stage - Import Fact"
   DTS:PackageType="5"
-  DTS:VersionBuild="205"
-  DTS:VersionGUID="{2281D88A-27CD-42DB-A425-A9299D181470}">
+  DTS:VersionBuild="206"
+  DTS:VersionGUID="{284DBADD-1943-4F9E-8829-DC5A1F492680}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -982,7 +982,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Accessories Costs Model ItemDelete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
+              DTS:ThreadHint="2">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -1743,7 +1743,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="delete"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="25">
+              DTS:ThreadHint="7">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -2291,7 +2291,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Delete Commission Calculation Setup Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="5">
+              DTS:ThreadHint="1">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -3374,7 +3374,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Delete DDT_Picking Header Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="6">
+              DTS:ThreadHint="3">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -7931,7 +7931,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Delete DDT_Picking Line Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="7">
+              DTS:ThreadHint="4">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -10291,7 +10291,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="delete dimensio set entry"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="8">
+              DTS:ThreadHint="5">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -12009,6 +12009,19 @@
                               cachedName="Company"
                               externalMetadataColumnId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Company]"
                               lineageId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Derived Column.Outputs[Derived Column Output].Columns[Company]" />
+                            <inputColumn
+                              refId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Destination.Inputs[Input destinazione OLE DB].Columns[Variant Code]"
+                              cachedDataType="wstr"
+                              cachedLength="10"
+                              cachedName="Variant Code"
+                              externalMetadataColumnId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Variant Code]"
+                              lineageId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Source.Outputs[OLE DB Source Output].Columns[Variant Code]" />
+                            <inputColumn
+                              refId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Destination.Inputs[Input destinazione OLE DB].Columns[Drop Shipment]"
+                              cachedDataType="ui1"
+                              cachedName="Drop Shipment"
+                              externalMetadataColumnId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Drop Shipment]"
+                              lineageId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Source.Outputs[OLE DB Source Output].Columns[Drop Shipment]" />
                           </inputColumns>
                           <externalMetadataColumns
                             isUsed="True">
@@ -12197,6 +12210,15 @@
                               dataType="str"
                               length="5"
                               name="Company" />
+                            <externalMetadataColumn
+                              refId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Variant Code]"
+                              dataType="wstr"
+                              length="10"
+                              name="Variant Code" />
+                            <externalMetadataColumn
+                              refId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Drop Shipment]"
+                              dataType="ui1"
+                              name="Drop Shipment" />
                           </externalMetadataColumns>
                         </input>
                       </inputs>
@@ -12250,7 +12272,7 @@
                           dataType="System.String"
                           description="The SQL command to be executed."
                           name="SqlCommand"
-                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT
        [timestamp]
       ,[Posting Date]
       ,[Document Date]
@@ -12289,6 +12311,8 @@
       ,[Model Item No_]
       ,[Variable Code 01]
       ,[Reason Code]
+      ,[Variant Code]
+      ,[Drop Shipment]
 FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
                         <property
                           dataType="System.String"
@@ -12694,6 +12718,25 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
                               lineageId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Source.Outputs[OLE DB Source Output].Columns[Reason Code]"
                               name="Reason Code"
                               truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Source.Outputs[OLE DB Source Output].Columns[Variant Code]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Conversione"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Source.Outputs[OLE DB Source Output].ExternalColumns[Variant Code]"
+                              length="10"
+                              lineageId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Source.Outputs[OLE DB Source Output].Columns[Variant Code]"
+                              name="Variant Code"
+                              truncationRowDisposition="FailComponent" />
+                            <outputColumn
+                              refId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Source.Outputs[OLE DB Source Output].Columns[Drop Shipment]"
+                              dataType="ui1"
+                              errorOrTruncationOperation="Conversione"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Source.Outputs[OLE DB Source Output].ExternalColumns[Drop Shipment]"
+                              lineageId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Source.Outputs[OLE DB Source Output].Columns[Drop Shipment]"
+                              name="Drop Shipment"
+                              truncationRowDisposition="FailComponent" />
                           </outputColumns>
                           <externalMetadataColumns
                             isUsed="True">
@@ -12876,6 +12919,15 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
                               dataType="wstr"
                               length="10"
                               name="Reason Code" />
+                            <externalMetadataColumn
+                              refId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Source.Outputs[OLE DB Source Output].ExternalColumns[Variant Code]"
+                              dataType="wstr"
+                              length="10"
+                              name="Variant Code" />
+                            <externalMetadataColumn
+                              refId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Source.Outputs[OLE DB Source Output].ExternalColumns[Drop Shipment]"
+                              dataType="ui1"
+                              name="Drop Shipment" />
                           </externalMetadataColumns>
                         </output>
                         <output
@@ -13101,6 +13153,17 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
                               lineageId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Source.Outputs[OLE DB Source Error Output].Columns[Reason Code]"
                               name="Reason Code" />
                             <outputColumn
+                              refId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Source.Outputs[OLE DB Source Error Output].Columns[Variant Code]"
+                              dataType="wstr"
+                              length="10"
+                              lineageId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Source.Outputs[OLE DB Source Error Output].Columns[Variant Code]"
+                              name="Variant Code" />
+                            <outputColumn
+                              refId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Source.Outputs[OLE DB Source Error Output].Columns[Drop Shipment]"
+                              dataType="ui1"
+                              lineageId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Source.Outputs[OLE DB Source Error Output].Columns[Drop Shipment]"
+                              name="Drop Shipment" />
+                            <outputColumn
                               refId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                               dataType="i4"
                               lineageId="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
@@ -13181,7 +13244,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Order Type Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="11">
+              DTS:ThreadHint="6">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -20583,7 +20646,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Purchase Header Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="12">
+              DTS:ThreadHint="8">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -30065,7 +30128,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Purchase Line Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="18">
+              DTS:ThreadHint="0">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -34191,7 +34254,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Purch_ Cr_ Memo Hdr_ Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="19">
+              DTS:ThreadHint="11">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -39331,7 +39394,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Purch_ Cr_ Memo Line Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="20">
+              DTS:ThreadHint="12">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -43622,7 +43685,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Purch_ Inv_ Header Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="21">
+              DTS:ThreadHint="13">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -48965,7 +49028,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Purch_ Inv_ Line Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="22">
+              DTS:ThreadHint="14">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -52626,7 +52689,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Purch_ Rcpt_ Header Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="23">
+              DTS:ThreadHint="15">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -58382,7 +58445,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Purch_ Rcpt_ Line Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="24">
+              DTS:ThreadHint="16">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -58421,7 +58484,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="delete"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="2">
+              DTS:ThreadHint="17">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -64761,7 +64824,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Return Receipt Header Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="3">
+              DTS:ThreadHint="18">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -69629,7 +69692,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Return Receipt Line Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="4">
+              DTS:ThreadHint="19">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -73554,7 +73617,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Return Shipment Header Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="13">
+              DTS:ThreadHint="20">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -77760,7 +77823,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Return Shipment Line Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="14">
+              DTS:ThreadHint="21">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -82761,7 +82824,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Sales Cr_Memo Header Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="15">
+              DTS:ThreadHint="22">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -88511,7 +88574,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Sales Cr_Memo Line Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="16">
+              DTS:ThreadHint="23">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -98478,7 +98541,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Sales Line Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="17">
+              DTS:ThreadHint="24">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -99395,7 +99458,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Sales_Purchase Status Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="26">
+              DTS:ThreadHint="25">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -99436,7 +99499,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Delete Value Entry Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="0">
+              DTS:ThreadHint="26">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
