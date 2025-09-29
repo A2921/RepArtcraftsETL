@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="DWH - Import Dim"
   DTS:PackageType="5"
-  DTS:VersionBuild="161"
-  DTS:VersionGUID="{5285284A-F660-41D8-BAEC-90DAFB539406}">
+  DTS:VersionBuild="162"
+  DTS:VersionGUID="{AD6E0E0C-A557-4B02-BD41-587AB59EC7EF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -26,7 +26,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="ACTUAL_DIM_Macrosubcanale"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="14">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -1875,7 +1875,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimFornitore"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="15">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2332,7 +2332,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="16">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2371,7 +2371,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimArticolo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2388,7 +2388,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimConto"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2405,7 +2405,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimMarchio"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2422,7 +2422,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="DimCollezione"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2477,7 +2477,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimStagione"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2494,7 +2494,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimUltimaStagione"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2836,7 +2836,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate DimArticoloListino"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="4">
+              DTS:ThreadHint="1">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -3316,7 +3316,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate DimListino"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="4">
+              DTS:ThreadHint="1">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -3703,7 +3703,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate DimArticoloListino"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="4">
+              DTS:ThreadHint="1">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -4267,7 +4267,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimAgente"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="10">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -4732,7 +4732,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="11">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -4771,7 +4771,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="populate DimAssortimentoArticoloModello"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="12">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -4788,7 +4788,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate DimAssortimentoArticoloModello"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="12">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5151,7 +5151,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCanale"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -6088,7 +6088,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="19">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -6451,7 +6451,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCompany"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="20">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -8077,7 +8077,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="21">
+          DTS:ThreadHint="10">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -9377,7 +9377,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="11">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10616,7 +10616,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimFornitore"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="12">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10661,11 +10661,11 @@
               version="1">
               <components>
                 <component
-                  refId="Package\DimListino_Retail\populate\Destinazione OLE DB"
+                  refId="Package\DimListino_Retail\populate\DimListino_Retail"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="Destinazione OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;4"
                   description="Destinazione OLE DB"
-                  name="Destinazione OLE DB"
+                  name="DimListino_Retail"
                   usesDispositions="true"
                   version="4">
                   <properties>
@@ -10718,7 +10718,7 @@
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\DimListino_Retail\populate\Destinazione OLE DB.Connections[OleDbConnection]"
+                      refId="Package\DimListino_Retail\populate\DimListino_Retail.Connections[OleDbConnection]"
                       connectionManagerID="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}:external"
                       connectionManagerRefId="Project.ConnectionManagers[DWH]"
                       description="Connessione di run-time OLE DB utilizzata per accedere al database."
@@ -10726,118 +10726,134 @@
                   </connections>
                   <inputs>
                     <input
-                      refId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB]"
+                      refId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB]"
                       errorOrTruncationOperation="Inserimento"
                       errorRowDisposition="FailComponent"
                       hasSideEffects="true"
                       name="Input destinazione OLE DB">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[ListinoKey]"
+                          refId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].Columns[ListinoKey]"
                           cachedDataType="wstr"
                           cachedLength="42"
                           cachedName="ListinoKey"
-                          externalMetadataColumnId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[ListinoKey]"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[ListinoKey]" />
+                          externalMetadataColumnId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].ExternalColumns[ListinoKey]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[ListinoKey]" />
                         <inputColumn
-                          refId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[ArticoloModello]"
+                          refId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].Columns[ArticoloModello]"
                           cachedDataType="wstr"
                           cachedLength="20"
                           cachedName="ArticoloModello"
-                          externalMetadataColumnId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[ArticoloModello]"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[ArticoloModello]" />
+                          externalMetadataColumnId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].ExternalColumns[ArticoloModello]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[ArticoloModello]" />
                         <inputColumn
-                          refId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[DataInizio]"
+                          refId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].Columns[DataInizio]"
                           cachedDataType="dbDate"
                           cachedName="DataInizio"
-                          externalMetadataColumnId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[DataInizio]"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[DataInizio]" />
+                          externalMetadataColumnId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].ExternalColumns[DataInizio]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[DataInizio]" />
                         <inputColumn
-                          refId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[StagioneListino]"
+                          refId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].Columns[StagioneListino]"
                           cachedDataType="wstr"
                           cachedLength="10"
                           cachedName="StagioneListino"
-                          externalMetadataColumnId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[StagioneListino]"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[StagioneListino]" />
+                          externalMetadataColumnId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].ExternalColumns[StagioneListino]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[StagioneListino]" />
                         <inputColumn
-                          refId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[CodiceColore]"
+                          refId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].Columns[CodiceColore]"
                           cachedDataType="wstr"
                           cachedLength="10"
                           cachedName="CodiceColore"
-                          externalMetadataColumnId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[CodiceColore]"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[CodiceColore]" />
+                          externalMetadataColumnId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].ExternalColumns[CodiceColore]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[CodiceColore]" />
                         <inputColumn
-                          refId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[PrezzoUnitario]"
+                          refId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].Columns[PrezzoUnitario]"
                           cachedDataType="numeric"
                           cachedName="PrezzoUnitario"
                           cachedPrecision="18"
                           cachedScale="4"
-                          externalMetadataColumnId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[PrezzoUnitario]"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[PrezzoUnitario]" />
+                          externalMetadataColumnId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].ExternalColumns[PrezzoUnitario]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[PrezzoUnitario]" />
                         <inputColumn
-                          refId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[rownumber]"
+                          refId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].Columns[rownumber]"
                           cachedDataType="i8"
                           cachedName="rownumber"
-                          externalMetadataColumnId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[rownumber]"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[rownumber]" />
+                          externalMetadataColumnId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].ExternalColumns[rownumber]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[rownumber]" />
+                        <inputColumn
+                          refId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].Columns[Taglia]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="Taglia"
+                          externalMetadataColumnId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].ExternalColumns[Taglia]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[Taglia]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[ListinoKey]"
+                          refId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].ExternalColumns[ListinoKey]"
                           dataType="wstr"
                           length="42"
                           name="ListinoKey" />
                         <externalMetadataColumn
-                          refId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[ArticoloModello]"
+                          refId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].ExternalColumns[ArticoloModello]"
                           dataType="wstr"
                           length="20"
                           name="ArticoloModello" />
                         <externalMetadataColumn
-                          refId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[DataInizio]"
+                          refId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].ExternalColumns[DataInizio]"
                           dataType="dbDate"
                           name="DataInizio" />
                         <externalMetadataColumn
-                          refId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[StagioneListino]"
+                          refId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].ExternalColumns[StagioneListino]"
                           dataType="wstr"
                           length="10"
                           name="StagioneListino" />
                         <externalMetadataColumn
-                          refId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[CodiceColore]"
+                          refId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].ExternalColumns[CodiceColore]"
                           dataType="wstr"
                           length="10"
                           name="CodiceColore" />
                         <externalMetadataColumn
-                          refId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[PrezzoUnitario]"
+                          refId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].ExternalColumns[PrezzoUnitario]"
                           dataType="numeric"
                           name="PrezzoUnitario"
                           precision="18"
                           scale="4" />
                         <externalMetadataColumn
-                          refId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[rownumber]"
+                          refId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].ExternalColumns[rownumber]"
                           dataType="i8"
                           name="rownumber" />
+                        <externalMetadataColumn
+                          refId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].ExternalColumns[ListinoKeyId]"
+                          dataType="i4"
+                          name="ListinoKeyId" />
+                        <externalMetadataColumn
+                          refId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB].ExternalColumns[Taglia]"
+                          dataType="wstr"
+                          length="10"
+                          name="Taglia" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\DimListino_Retail\populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB]"
+                      refId="Package\DimListino_Retail\populate\DimListino_Retail.Outputs[Output errori destinazione OLE DB]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="Output errori destinazione OLE DB"
-                      synchronousInputId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB]">
+                      synchronousInputId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\DimListino_Retail\populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                          refId="Package\DimListino_Retail\populate\DimListino_Retail.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\DimListino_Retail\populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                          lineageId="Package\DimListino_Retail\populate\DimListino_Retail.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\DimListino_Retail\populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                          refId="Package\DimListino_Retail\populate\DimListino_Retail.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\DimListino_Retail\populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                          lineageId="Package\DimListino_Retail\populate\DimListino_Retail.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -10846,11 +10862,11 @@
                   </outputs>
                 </component>
                 <component
-                  refId="Package\DimListino_Retail\populate\source"
+                  refId="Package\DimListino_Retail\populate\stg DimListino_Retail"
                   componentClassID="Microsoft.OLEDBSource"
                   contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
                   description="OLE DB Source"
-                  name="source"
+                  name="stg DimListino_Retail"
                   usesDispositions="true"
                   version="7">
                   <properties>
@@ -10895,7 +10911,7 @@
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\DimListino_Retail\populate\source.Connections[OleDbConnection]"
+                      refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Connections[OleDbConnection]"
                       connectionManagerID="{EBDC3EEE-A910-457C-95AF-2952194294D6}:external"
                       connectionManagerRefId="Project.ConnectionManagers[Stage]"
                       description="The OLE DB runtime connection used to access the database."
@@ -10903,173 +10919,194 @@
                   </connections>
                   <outputs>
                     <output
-                      refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output]"
+                      refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output]"
                       name="OLE DB Source Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[ListinoKey]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[ListinoKey]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversione"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].ExternalColumns[ListinoKey]"
+                          externalMetadataColumnId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].ExternalColumns[ListinoKey]"
                           length="42"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[ListinoKey]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[ListinoKey]"
                           name="ListinoKey"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[ArticoloModello]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[ArticoloModello]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversione"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].ExternalColumns[ArticoloModello]"
+                          externalMetadataColumnId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].ExternalColumns[ArticoloModello]"
                           length="20"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[ArticoloModello]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[ArticoloModello]"
                           name="ArticoloModello"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[DataInizio]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[DataInizio]"
                           dataType="dbDate"
                           errorOrTruncationOperation="Conversione"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].ExternalColumns[DataInizio]"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[DataInizio]"
+                          externalMetadataColumnId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].ExternalColumns[DataInizio]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[DataInizio]"
                           name="DataInizio"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[StagioneListino]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[StagioneListino]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversione"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].ExternalColumns[StagioneListino]"
+                          externalMetadataColumnId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].ExternalColumns[StagioneListino]"
                           length="10"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[StagioneListino]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[StagioneListino]"
                           name="StagioneListino"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[CodiceColore]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[CodiceColore]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversione"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].ExternalColumns[CodiceColore]"
+                          externalMetadataColumnId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].ExternalColumns[CodiceColore]"
                           length="10"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[CodiceColore]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[CodiceColore]"
                           name="CodiceColore"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[PrezzoUnitario]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[PrezzoUnitario]"
                           dataType="numeric"
                           errorOrTruncationOperation="Conversione"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].ExternalColumns[PrezzoUnitario]"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[PrezzoUnitario]"
+                          externalMetadataColumnId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].ExternalColumns[PrezzoUnitario]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[PrezzoUnitario]"
                           name="PrezzoUnitario"
                           precision="18"
                           scale="4"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[rownumber]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[rownumber]"
                           dataType="i8"
                           errorOrTruncationOperation="Conversione"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].ExternalColumns[rownumber]"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].Columns[rownumber]"
+                          externalMetadataColumnId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].ExternalColumns[rownumber]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[rownumber]"
                           name="rownumber"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[Taglia]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].ExternalColumns[Taglia]"
+                          length="10"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].Columns[Taglia]"
+                          name="Taglia"
                           truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].ExternalColumns[ListinoKey]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].ExternalColumns[ListinoKey]"
                           dataType="wstr"
                           length="42"
                           name="ListinoKey" />
                         <externalMetadataColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].ExternalColumns[ArticoloModello]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].ExternalColumns[ArticoloModello]"
                           dataType="wstr"
                           length="20"
                           name="ArticoloModello" />
                         <externalMetadataColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].ExternalColumns[DataInizio]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].ExternalColumns[DataInizio]"
                           dataType="dbDate"
                           name="DataInizio" />
                         <externalMetadataColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].ExternalColumns[StagioneListino]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].ExternalColumns[StagioneListino]"
                           dataType="wstr"
                           length="10"
                           name="StagioneListino" />
                         <externalMetadataColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].ExternalColumns[CodiceColore]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].ExternalColumns[CodiceColore]"
                           dataType="wstr"
                           length="10"
                           name="CodiceColore" />
                         <externalMetadataColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].ExternalColumns[PrezzoUnitario]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].ExternalColumns[PrezzoUnitario]"
                           dataType="numeric"
                           name="PrezzoUnitario"
                           precision="18"
                           scale="4" />
                         <externalMetadataColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output].ExternalColumns[rownumber]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].ExternalColumns[rownumber]"
                           dataType="i8"
                           name="rownumber" />
+                        <externalMetadataColumn
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output].ExternalColumns[Taglia]"
+                          dataType="wstr"
+                          length="10"
+                          name="Taglia" />
                       </externalMetadataColumns>
                     </output>
                     <output
-                      refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Error Output]"
+                      refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output]"
                       isErrorOut="true"
                       name="OLE DB Source Error Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Error Output].Columns[ListinoKey]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[ListinoKey]"
                           dataType="wstr"
                           length="42"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Error Output].Columns[ListinoKey]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[ListinoKey]"
                           name="ListinoKey" />
                         <outputColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Error Output].Columns[ArticoloModello]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[ArticoloModello]"
                           dataType="wstr"
                           length="20"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Error Output].Columns[ArticoloModello]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[ArticoloModello]"
                           name="ArticoloModello" />
                         <outputColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Error Output].Columns[DataInizio]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[DataInizio]"
                           dataType="dbDate"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Error Output].Columns[DataInizio]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[DataInizio]"
                           name="DataInizio" />
                         <outputColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Error Output].Columns[StagioneListino]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[StagioneListino]"
                           dataType="wstr"
                           length="10"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Error Output].Columns[StagioneListino]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[StagioneListino]"
                           name="StagioneListino" />
                         <outputColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Error Output].Columns[CodiceColore]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[CodiceColore]"
                           dataType="wstr"
                           length="10"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Error Output].Columns[CodiceColore]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[CodiceColore]"
                           name="CodiceColore" />
                         <outputColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Error Output].Columns[PrezzoUnitario]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[PrezzoUnitario]"
                           dataType="numeric"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Error Output].Columns[PrezzoUnitario]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[PrezzoUnitario]"
                           name="PrezzoUnitario"
                           precision="18"
                           scale="4" />
                         <outputColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Error Output].Columns[rownumber]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[Taglia]"
+                          dataType="wstr"
+                          length="10"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[Taglia]"
+                          name="Taglia" />
+                        <outputColumn
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[rownumber]"
                           dataType="i8"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Error Output].Columns[rownumber]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[rownumber]"
                           name="rownumber" />
                         <outputColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          refId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -11081,9 +11118,9 @@
               <paths>
                 <path
                   refId="Package\DimListino_Retail\populate.Paths[OLE DB Source Output]"
-                  endId="Package\DimListino_Retail\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB]"
+                  endId="Package\DimListino_Retail\populate\DimListino_Retail.Inputs[Input destinazione OLE DB]"
                   name="OLE DB Source Output"
-                  startId="Package\DimListino_Retail\populate\source.Outputs[OLE DB Source Output]" />
+                  startId="Package\DimListino_Retail\populate\stg DimListino_Retail.Outputs[OLE DB Source Output]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -11097,7 +11134,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="13">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11907,7 +11944,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="8">
+          DTS:ThreadHint="14">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12613,7 +12650,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimNegozio"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="13">
+          DTS:ThreadHint="15">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12905,7 +12942,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimOV"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="16">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13296,7 +13333,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="17">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13692,7 +13729,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimProfitCenter"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="18">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14170,7 +14207,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate Dimqty"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="9">
+          DTS:ThreadHint="19">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14491,7 +14528,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimStatoVendita"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="22">
+          DTS:ThreadHint="20">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14854,7 +14891,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimSubcanale"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="14">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14893,7 +14930,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="populate DimTipologiaMktg"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="23">
+          DTS:ThreadHint="22">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14910,7 +14947,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate DimTipologiaMktg"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="23">
+          DTS:ThreadHint="22">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15202,7 +15239,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="18">
+          DTS:ThreadHint="23">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15885,7 +15922,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimUnitàDiMisura"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="27">
+          DTS:ThreadHint="25">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -16385,7 +16422,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimZona"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="17">
+          DTS:ThreadHint="26">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -16739,7 +16776,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimZonaAgente"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="25">
+          DTS:ThreadHint="27">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -17035,7 +17072,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCompany"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="26">
+          DTS:ThreadHint="21">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -17465,6 +17502,10 @@
           Id="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimArticolo"
           TopLeft="42.4583322436859,124.016663888792" />
         <NodeLayout
+          Size="194.666666666667,42.6666666666667"
+          Id="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimConto"
+          TopLeft="49.9583321319275,27.0277126164152" />
+        <NodeLayout
           Size="204,42.6666666666667"
           Id="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimMarchio"
           TopLeft="37.4583323181917,242.68332916071" />
@@ -17495,32 +17536,6 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo 2]"
-          TopLeft="137.875000642612,285.349995827376">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,76.8333356579154"
-              Start="0,0"
-              End="0,69.3333356579154">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,69.3333356579154" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="194.666666666667,42.6666666666667"
-          Id="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimConto"
-          TopLeft="49.9583321319275,27.0277126164152" />
-        <EdgeLayout
           Id="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo 1]"
           TopLeft="145.54166552114,69.6943792830818">
           <EdgeLayout.Curve>
@@ -17534,6 +17549,28 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,46.8222846057103" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo 2]"
+          TopLeft="137.875000642612,285.349995827376">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,76.8333356579154"
+              Start="0,0"
+              End="0,69.3333356579154">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69.3333356579154" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18171,16 +18208,14 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
-          IsExpanded="False"
-          PanelSize="187,205.333333333334"
-          Size="186.666666666667,42.6666666666667"
+          IsExpanded="True"
+          PanelSize="186.666666666667,205.333333333334"
+          Size="186.666666666667,248"
           Id="Package\DimListino_Retail"
           TopLeft="806.537038630785,388.478844648682" />
         <NodeLayout
@@ -19812,56 +19847,42 @@
     design-time-name="Package\DimListino_Retail\populate">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="110,42"
-          Id="Package\DimListino_Retail\populate\source"
-          TopLeft="213.749996814877,100.74999819845" />
+          Size="178.666666666667,42.6666666666667"
+          Id="Package\DimListino_Retail\populate\stg DimListino_Retail"
+          TopLeft="5.50000000000001,5.50000000000004" />
         <NodeLayout
-          Size="178,42"
-          Id="Package\DimListino_Retail\populate\Destinazione OLE DB"
-          TopLeft="332.250002142042,210.473682600706" />
+          Size="160,42.6666666666667"
+          Id="Package\DimListino_Retail\populate\DimListino_Retail"
+          TopLeft="14.8333333333333,108.166666666667" />
         <EdgeLayout
           Id="Package\DimListino_Retail\populate.Paths[OLE DB Source Output]"
-          TopLeft="268.749996814877,142.74999819845">
+          TopLeft="94.8333333333333,48.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="152.500005327165,67.7236844022555"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="152.500005327165,60.2236844022555">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.8618422011278" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29.8618422011278"
-                    Point2="0,33.8618422011278"
-                    Point3="4,33.8618422011278" />
-                  <mssgle:LineSegment
-                    End="148.500005327165,33.8618422011278" />
-                  <mssgle:CubicBezierSegment
-                    Point1="148.500005327165,33.8618422011278"
-                    Point2="152.500005327165,33.8618422011278"
-                    Point3="152.500005327165,37.8618422011278" />
-                  <mssgle:LineSegment
-                    End="152.500005327165,60.2236844022555" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DimListino_Retail\populate\Destinazione OLE DB">
+    design-time-name="Package\DimListino_Retail\populate\DimListino_Retail">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -19874,7 +19895,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DimListino_Retail\populate\source">
+    design-time-name="Package\DimListino_Retail\populate\stg DimListino_Retail">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
