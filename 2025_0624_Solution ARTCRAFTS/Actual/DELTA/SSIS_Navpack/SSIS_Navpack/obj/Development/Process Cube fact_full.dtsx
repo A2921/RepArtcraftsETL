@@ -7,12 +7,12 @@
   DTS:CreatorName="CORP\FBARBACA"
   DTS:DTSID="{84F83BEC-1315-4E72-9128-2CBC23F491B6}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
   DTS:LocaleID="1040"
   DTS:ObjectName="Process Cube fact_full"
   DTS:PackageType="5"
-  DTS:VersionBuild="123"
-  DTS:VersionGUID="{1D21E365-BEA4-4D25-AD2D-EB2136AA601D}">
+  DTS:VersionBuild="125"
+  DTS:VersionGUID="{9654DA45-02ED-43F3-8BD5-49EFDEC1FDF3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -32,14 +32,14 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Attività Esegui DDL Analysis Services"
+      DTS:refId="Package\DDL SSAS PARLALLELO 1 Step1"
       DTS:CreationName="Microsoft.ASExecuteDDLTask"
       DTS:Description="Attività Esegui DDL Analysis Services"
       DTS:DTSID="{E21678BD-DCAF-48B9-A695-7FCC23AD764C}"
       DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Attività Esegui DDL Analysis Services"
-      DTS:ThreadHint="0">
+      DTS:ObjectName="DDL SSAS PARLALLELO 1 Step1"
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ASDdlData
@@ -49,13 +49,30 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Attività Esegui DDL Analysis Services 1"
+      DTS:refId="Package\DDL SSAS PARLALLELO 1 Step2"
+      DTS:CreationName="Microsoft.ASExecuteDDLTask"
+      DTS:Description="Attività Esegui DDL Analysis Services"
+      DTS:DTSID="{A8B90950-B251-4FE1-8FFA-D872B1824BB2}"
+      DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DDL SSAS PARLALLELO 1 Step2"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ASDdlData
+          ConnectionName="localhost"
+          SourceType="DirectInput"
+          Source="{&#xA;&quot;refresh&quot;: {&#xA;&quot;type&quot;: &quot;full&quot;,&#xA;&quot;objects&quot;: [&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;MARGINE_FATTURATO_SPEDIZIONI&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB vTestataFatturaVendita&quot;&#xA;}&#xA;]&#xA;}&#xA;}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DDL SSAS PARLALLELO 2  Step1"
       DTS:CreationName="Microsoft.ASExecuteDDLTask"
       DTS:Description="Attività Esegui DDL Analysis Services"
       DTS:DTSID="{A10DB145-BF59-4B42-BC63-AD7C2C67FE44}"
       DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Attività Esegui DDL Analysis Services 1"
+      DTS:ObjectName="DDL SSAS PARLALLELO 2  Step1"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -66,31 +83,14 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Attività Esegui DDL Analysis Services 2"
-      DTS:CreationName="Microsoft.ASExecuteDDLTask"
-      DTS:Description="Attività Esegui DDL Analysis Services"
-      DTS:DTSID="{A8B90950-B251-4FE1-8FFA-D872B1824BB2}"
-      DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Attività Esegui DDL Analysis Services 2"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <ASDdlData
-          ConnectionName="localhost"
-          SourceType="DirectInput"
-          Source="{&#xA;&quot;refresh&quot;: {&#xA;&quot;type&quot;: &quot;full&quot;,&#xA;&quot;objects&quot;: [&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;MARGINE_FATTURATO_SPEDIZIONI&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB vTestataFatturaVendita&quot;&#xA;}&#xA;]&#xA;}&#xA;}" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Attività Esegui DDL Analysis Services 3"
+      DTS:refId="Package\DDL SSAS PARLALLELO 2  Step2"
       DTS:CreationName="Microsoft.ASExecuteDDLTask"
       DTS:Description="Attività Esegui DDL Analysis Services"
       DTS:DTSID="{BEAE24C1-E45D-4643-B277-0492572ACA06}"
       DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Attività Esegui DDL Analysis Services 3"
-      DTS:ThreadHint="0">
+      DTS:ObjectName="DDL SSAS PARLALLELO 2  Step2"
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <ASDdlData
@@ -100,32 +100,6 @@
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
-  <DTS:PrecedenceConstraints>
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Vincolo 5]"
-      DTS:CreationName=""
-      DTS:DTSID="{49EF9BFC-3BFA-4537-8830-F79ED743C754}"
-      DTS:From="Package\Attività Esegui DDL Analysis Services"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Vincolo 5"
-      DTS:To="Package\Attività Esegui DDL Analysis Services 1" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Vincolo 6]"
-      DTS:CreationName=""
-      DTS:DTSID="{9FAA425C-A352-4A20-B193-C6FEBBB8F360}"
-      DTS:From="Package\Attività Esegui DDL Analysis Services 1"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Vincolo 6"
-      DTS:To="Package\Attività Esegui DDL Analysis Services 2" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Vincolo 7]"
-      DTS:CreationName=""
-      DTS:DTSID="{CFD0800A-94DA-480E-90D4-83C834C713B6}"
-      DTS:From="Package\Attività Esegui DDL Analysis Services 2"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Vincolo 7"
-      DTS:To="Package\Attività Esegui DDL Analysis Services 3" />
-  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
 <!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
@@ -137,89 +111,23 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="252,42.6666666666667"
-          Id="Package\Attività Esegui DDL Analysis Services"
-          TopLeft="10.1666666666667,5.50000000000004" />
+          Size="229.333333333334,42.6666666666667"
+          Id="Package\DDL SSAS PARLALLELO 1 Step1"
+          TopLeft="40.1666662196319,21.0999997210503" />
         <NodeLayout
-          Size="252,42.6666666666667"
-          Id="Package\Attività Esegui DDL Analysis Services 1"
-          TopLeft="10.1666666666667,108.166666666667" />
+          Size="229.333333333334,42.6666666666667"
+          Id="Package\DDL SSAS PARLALLELO 1 Step2"
+          TopLeft="43.2916661730657,191.333333682021" />
         <NodeLayout
-          Size="252,42.6666666666667"
-          Id="Package\Attività Esegui DDL Analysis Services 2"
-          TopLeft="10.1666666666667,210.833333333334" />
+          Size="233.333333333334,42.6666666666667"
+          Id="Package\DDL SSAS PARLALLELO 2  Step1"
+          TopLeft="353.291661553706,24.3166681660218" />
         <NodeLayout
-          Size="261.333333333334,42.6666666666667"
-          Id="Package\Attività Esegui DDL Analysis Services 3"
-          TopLeft="5.50000000000006,313.5" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Vincolo 5]"
-          TopLeft="136.166666666667,48.1666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
-              Start="0,0"
-              End="0,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Vincolo 6]"
-          TopLeft="136.166666666667,150.833333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
-              Start="0,0"
-              End="0,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Vincolo 7]"
-          TopLeft="136.166666666667,253.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
-              Start="0,0"
-              End="0,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="233.333333333334,42.6666666666667"
+          Id="Package\DDL SSAS PARLALLELO 2  Step2"
+          TopLeft="358.624994738028,186.750002266466" />
       </GraphLayout>
     </LayoutInfo>
   </Package>

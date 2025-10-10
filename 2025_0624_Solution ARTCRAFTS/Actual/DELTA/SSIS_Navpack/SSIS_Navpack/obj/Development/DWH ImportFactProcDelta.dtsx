@@ -7,12 +7,12 @@
   DTS:CreatorName="ARTCRAFTS\powerbi02"
   DTS:DTSID="{62542B2D-F582-4438-87FC-EE04E7FC32CE}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
   DTS:LocaleID="1040"
   DTS:ObjectName="DWH ImportFactProcDelta"
   DTS:PackageType="5"
-  DTS:VersionBuild="100"
-  DTS:VersionGUID="{9848835B-7569-4E3F-B0A7-773628CC9A58}">
+  DTS:VersionBuild="102"
+  DTS:VersionGUID="{B5AFD23D-6F2F-49C6-AD9E-62D2A49FE456}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -3662,13 +3662,107 @@ SELECT TIMESTAMP
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="ACTUAL_MAIN_FINE_ELAB"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
           SQLTask:SqlStatementSource="&#xA;EXECUTE [dbo].[ACTUAL_MAIN_FINE_ELAB] &#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Altro"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Contenitore Sequenza"
+      DTS:DTSID="{6502a9d5-fc02-42cd-a1e9-5d37dea98433}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Altro">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Altro\FactAcquisto_Costi_Accessori_preventivi"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Attività Esegui SQL"
+          DTS:DTSID="{0100a57d-19bb-4463-a5c2-1848c317376d}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="FactAcquisto_Costi_Accessori_preventivi"
+          DTS:ThreadHint="2">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+              SQLTask:SqlStatementSource="INSERT INTO [BI_Model_DWH].[dbo].[FactAcquisto_Costi_Accessori_preventivi]&#xA;           ([Tipo Costo]&#xA;      ,[Season Code]&#xA;      ,[Currency Code]&#xA;      ,[Country_Region Code]&#xA;      ,[Exchange Rate Amount]&#xA;      ,[Costo Unitario Euro]&#xA;      ,[Costo Unitario in Valuta]&#xA;      ,[Marchio]&#xA;      ,[Company]&#xA;      ,[model item no_])&#xA;   &#xA;   SELECT  [Tipo Costo]&#xA;      ,[Season Code]&#xA;      ,[Currency Code]&#xA;      ,[Country_Region Code]&#xA;      ,[Exchange Rate Amount]&#xA;      ,[Costo Unitario Euro]&#xA;      ,[Costo Unitario in Valuta]&#xA;      ,[Marchio]&#xA;      ,[Company]&#xA;      ,[model item no_]&#xA;        FROM [BI_Model_Stage].[stg].[vFactAcquisto_Costi_Accessori_preventivi] WITH (NOLOCK)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Altro\FactAffidamentoClienti"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Attività Esegui SQL"
+          DTS:DTSID="{ec5a1e22-38d4-4e5b-8477-d32ca59678f4}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="FactAffidamentoClienti"
+          DTS:ThreadHint="3">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+              SQLTask:SqlStatementSource="INSERT INTO [dbo].[FactAffidamentoClienti]&#xA;           ([ClienteKey]&#xA;           ,[Amount]&#xA;           ,[Company]&#xA;           ,[timestamp]&#xA;           ,[Company Code]&#xA;           ,[Update Date]&#xA;           ,[Status]&#xA;           ,[Starting Date]&#xA;           ,[Data Visura Protesti]&#xA;           ,[Limit of Credit _]&#xA;           ,[Situation]&#xA;           ,[Memo]&#xA;           ,[Extra Credit]&#xA;           ,[Data Extra Credit]&#xA;           ,[Active]&#xA;           ,[Cerved Credit]&#xA;           ,[Memo 2]&#xA;           ,[Payment Times]&#xA;           ,[Negative Events]&#xA;           ,[Econ-Financial Situation]&#xA;           ,[Risk no consultations]&#xA;           ,[Revenues]&#xA;           ,[Purchases]&#xA;           ,[Mol]&#xA;           ,[Useful Loss]&#xA;           ,[Net Assets]&#xA;           ,[No_ Employees]&#xA;           ,[No_ Requests Last 12 Months]&#xA;           ,[Cash Flow]&#xA;           ,[Ebitda]&#xA;           ,[Inventories]&#xA;           ,[Payables to ML Banks Term]&#xA;           ,[Payables to Banks BT]&#xA;           ,[Payables to Vendors]&#xA;           ,[Other Liabilities]&#xA;           ,[Current Ratio]&#xA;           ,[Net Circular Capital]&#xA;           ,[Protests]&#xA;           ,[Preg Cons]&#xA;           ,[Email Certified]&#xA;           ,[Start Activity]&#xA;           ,[Secondary Seats No_]&#xA;           ,[Ateco Code]&#xA;           ,[Consistence Properties]&#xA;           ,[Insert Date]&#xA;           ,[Receipt Date]&#xA;           ,[Due Date])&#xA;    &#xA; select &#xA; [ClienteKey]&#xA;           ,[Amount]&#xA;           ,[Company]&#xA;           ,[timestamp]&#xA;           ,[Company Code]&#xA;           ,[Update Date]&#xA;           ,[Status]&#xA;           ,[Starting Date]&#xA;           ,[Data Visura Protesti]&#xA;           ,[Limit of Credit _]&#xA;           ,[Situation]&#xA;           ,[Memo]&#xA;           ,[Extra Credit]&#xA;           ,[Data Extra Credit]&#xA;           ,[Active]&#xA;           ,[Cerved Credit]&#xA;           ,[Memo 2]&#xA;           ,[Payment Times]&#xA;           ,[Negative Events]&#xA;           ,[Econ-Financial Situation]&#xA;           ,[Risk no consultations]&#xA;           ,[Revenues]&#xA;           ,[Purchases]&#xA;           ,[Mol]&#xA;           ,[Useful Loss]&#xA;           ,[Net Assets]&#xA;           ,[No_ Employees]&#xA;           ,[No_ Requests Last 12 Months]&#xA;           ,[Cash Flow]&#xA;           ,[Ebitda]&#xA;           ,[Inventories]&#xA;           ,[Payables to ML Banks Term]&#xA;           ,[Payables to Banks BT]&#xA;           ,[Payables to Vendors]&#xA;           ,[Other Liabilities]&#xA;           ,[Current Ratio]&#xA;           ,[Net Circular Capital]&#xA;           ,[Protests]&#xA;           ,[Preg Cons]&#xA;           ,[Email Certified]&#xA;           ,[Start Activity]&#xA;           ,[Secondary Seats No_]&#xA;           ,[Ateco Code]&#xA;           ,[Consistence Properties]&#xA;           ,[Insert Date]&#xA;           ,[Receipt Date]&#xA;           ,[Due Date]&#xA; from [BI_Model_Stage].[stg].[vFactAffidamentoClienti]&#xA; WITH (NOLOCK)&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Altro\truncate"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Attività Esegui SQL"
+          DTS:DTSID="{d593b7df-d614-431b-901b-16245c8297c5}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="truncate"
+          DTS:ThreadHint="2">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+              SQLTask:SqlStatementSource="TRUNCATE TABLE [BI_Model_DWH].[dbo].[FactAcquisto_Costi_Accessori_preventivi]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Altro\truncate 6"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Attività Esegui SQL"
+          DTS:DTSID="{e7c9e629-1445-47fb-af4a-10f58e0ab403}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="truncate 6"
+          DTS:ThreadHint="3">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+              SQLTask:SqlStatementSource="TRUNCATE TABLE [BI_Model_DWH].[dbo].[FactAffidamentoClienti]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Altro.PrecedenceConstraints[Vincolo]"
+          DTS:CreationName=""
+          DTS:DTSID="{55fce890-42fd-4396-bfe3-6cc3ab8957f7}"
+          DTS:From="Package\Altro\truncate"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Vincolo"
+          DTS:To="Package\Altro\FactAcquisto_Costi_Accessori_preventivi" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Altro.PrecedenceConstraints[Vincolo 6]"
+          DTS:CreationName=""
+          DTS:DTSID="{a114cb2f-4491-494b-b8c3-9f95d319b6b4}"
+          DTS:From="Package\Altro\truncate 6"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Vincolo 6"
+          DTS:To="Package\Altro\FactAffidamentoClienti" />
+      </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Contabilità"
@@ -3681,186 +3775,38 @@ SELECT TIMESTAMP
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\Contabilità\FactAcquisto_Costi_Accessori_preventivi"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:DTSID="{0A4008F8-70F0-4BC8-95B4-65E4C5BB1B09}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="FactAcquisto_Costi_Accessori_preventivi"
-          DTS:ThreadHint="3">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="INSERT INTO [BI_Model_DWH].[dbo].[FactAcquisto_Costi_Accessori_preventivi]&#xA;           ([Tipo Costo]&#xA;      ,[Season Code]&#xA;      ,[Currency Code]&#xA;      ,[Country_Region Code]&#xA;      ,[Exchange Rate Amount]&#xA;      ,[Costo Unitario Euro]&#xA;      ,[Costo Unitario in Valuta]&#xA;      ,[Marchio]&#xA;      ,[Company]&#xA;      ,[model item no_])&#xA;&#x9;  &#xA;&#x9;  SELECT  [Tipo Costo]&#xA;      ,[Season Code]&#xA;      ,[Currency Code]&#xA;      ,[Country_Region Code]&#xA;      ,[Exchange Rate Amount]&#xA;      ,[Costo Unitario Euro]&#xA;      ,[Costo Unitario in Valuta]&#xA;      ,[Marchio]&#xA;      ,[Company]&#xA;      ,[model item no_]&#xA;        FROM [BI_Model_Stage].[stg].[vFactAcquisto_Costi_Accessori_preventivi] WITH (NOLOCK)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Contabilità\FactAffidamentoClienti"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:DTSID="{DC5355A7-9F1D-4905-977C-5CE3E4C84EE1}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="FactAffidamentoClienti"
-          DTS:ThreadHint="1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="INSERT INTO [dbo].[FactAffidamentoClienti]&#xA;           ([ClienteKey]&#xA;           ,[Amount]&#xA;           ,[Company]&#xA;           ,[timestamp]&#xA;           ,[Company Code]&#xA;           ,[Update Date]&#xA;           ,[Status]&#xA;           ,[Starting Date]&#xA;           ,[Data Visura Protesti]&#xA;           ,[Limit of Credit _]&#xA;           ,[Situation]&#xA;           ,[Memo]&#xA;           ,[Extra Credit]&#xA;           ,[Data Extra Credit]&#xA;           ,[Active]&#xA;           ,[Cerved Credit]&#xA;           ,[Memo 2]&#xA;           ,[Payment Times]&#xA;           ,[Negative Events]&#xA;           ,[Econ-Financial Situation]&#xA;           ,[Risk no consultations]&#xA;           ,[Revenues]&#xA;           ,[Purchases]&#xA;           ,[Mol]&#xA;           ,[Useful Loss]&#xA;           ,[Net Assets]&#xA;           ,[No_ Employees]&#xA;           ,[No_ Requests Last 12 Months]&#xA;           ,[Cash Flow]&#xA;           ,[Ebitda]&#xA;           ,[Inventories]&#xA;           ,[Payables to ML Banks Term]&#xA;           ,[Payables to Banks BT]&#xA;           ,[Payables to Vendors]&#xA;           ,[Other Liabilities]&#xA;           ,[Current Ratio]&#xA;           ,[Net Circular Capital]&#xA;           ,[Protests]&#xA;           ,[Preg Cons]&#xA;           ,[Email Certified]&#xA;           ,[Start Activity]&#xA;           ,[Secondary Seats No_]&#xA;           ,[Ateco Code]&#xA;           ,[Consistence Properties]&#xA;           ,[Insert Date]&#xA;           ,[Receipt Date]&#xA;           ,[Due Date])&#xA;    &#xA;&#x9;select &#xA;&#x9;[ClienteKey]&#xA;           ,[Amount]&#xA;           ,[Company]&#xA;           ,[timestamp]&#xA;           ,[Company Code]&#xA;           ,[Update Date]&#xA;           ,[Status]&#xA;           ,[Starting Date]&#xA;           ,[Data Visura Protesti]&#xA;           ,[Limit of Credit _]&#xA;           ,[Situation]&#xA;           ,[Memo]&#xA;           ,[Extra Credit]&#xA;           ,[Data Extra Credit]&#xA;           ,[Active]&#xA;           ,[Cerved Credit]&#xA;           ,[Memo 2]&#xA;           ,[Payment Times]&#xA;           ,[Negative Events]&#xA;           ,[Econ-Financial Situation]&#xA;           ,[Risk no consultations]&#xA;           ,[Revenues]&#xA;           ,[Purchases]&#xA;           ,[Mol]&#xA;           ,[Useful Loss]&#xA;           ,[Net Assets]&#xA;           ,[No_ Employees]&#xA;           ,[No_ Requests Last 12 Months]&#xA;           ,[Cash Flow]&#xA;           ,[Ebitda]&#xA;           ,[Inventories]&#xA;           ,[Payables to ML Banks Term]&#xA;           ,[Payables to Banks BT]&#xA;           ,[Payables to Vendors]&#xA;           ,[Other Liabilities]&#xA;           ,[Current Ratio]&#xA;           ,[Net Circular Capital]&#xA;           ,[Protests]&#xA;           ,[Preg Cons]&#xA;           ,[Email Certified]&#xA;           ,[Start Activity]&#xA;           ,[Secondary Seats No_]&#xA;           ,[Ateco Code]&#xA;           ,[Consistence Properties]&#xA;           ,[Insert Date]&#xA;           ,[Receipt Date]&#xA;           ,[Due Date]&#xA; from [BI_Model_Stage].[stg].[vFactAffidamentoClienti]&#xA;&#x9;WITH (NOLOCK)&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Contabilità\FactCogeManutenzione"
+          DTS:refId="Package\Contabilità\ACTUAL_CONT_FactCOGEManutenzione"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Attività Esegui SQL"
           DTS:DTSID="{D7AC3AA8-E086-4A43-A878-4C28869A5194}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
-          DTS:ObjectName="FactCogeManutenzione"
-          DTS:ThreadHint="4">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="INSERT INTO [BI_Model_DWH].[dbo].[FactCOGEManutenzione]&#xA;           ([Gen_ Bus_ Posting Group]&#xA;      ,[ContoKey]&#xA;      ,[StagioneKey]&#xA;      ,[Tax Area Code]&#xA;      ,[Tax Liable]&#xA;      ,[VAT Bus_ Posting Group]&#xA;      ,[Dimension Set ID]&#xA;      ,[Posting Date]&#xA;      ,[Bal_ Account No_]&#xA;      ,[Reason Code]&#xA;      ,[Bal_ Account Type]&#xA;      ,[Document Date]&#xA;      ,[Source Code]&#xA;      ,[SourceType]&#xA;      ,[Source No_]&#xA;      ,[Document Type]&#xA;      ,[Document No_]&#xA;      ,[Description]&#xA;      ,[Amount]&#xA;      ,[System-Created Entry]&#xA;      ,[Job No_]&#xA;      ,[Quantity]&#xA;      ,[VAT Amount]&#xA;      ,[Business Unit Code]&#xA;      ,[Journal Batch Name]&#xA;      ,[Gen_ Posting Type]&#xA;      ,[Gen_ Prod_ Posting Group]&#xA;      ,[Debit Amount]&#xA;      ,[Credit Amount]&#xA;      ,[External Document No_]&#xA;      ,[Tax Group Code]&#xA;      ,[Use Tax]&#xA;      ,[VAT Prod_ Posting Group]&#xA;      ,[IC Partner Code]&#xA;      ,[Prod_ Order No_]&#xA;      ,[Due Date]&#xA;      ,[Letter No_]&#xA;      ,[Journal Template Name]&#xA;      ,[Line No_]&#xA;      ,[Account Type]&#xA;      ,[VAT _]&#xA;      ,[Currency Code]&#xA;      ,[Amount (LCY)]&#xA;      ,[Balance (LCY)]&#xA;      ,[Currency Factor]&#xA;      ,[Sales_Purch_ (LCY)]&#xA;      ,[Profit (LCY)]&#xA;      ,[Inv_ Discount (LCY)]&#xA;      ,[Bill-to_Pay-to No_]&#xA;      ,[Posting Group]&#xA;      ,[Marchio]&#xA;      ,[Salespers__Purch_ Code]&#xA;      ,[On Hold]&#xA;      ,[Applies-to Doc_ Type]&#xA;      ,[Applies-to Doc_ No_]&#xA;      ,[Pmt_ Discount Date]&#xA;      ,[Payment Discount _]&#xA;      ,[VAT Posting]&#xA;      ,[Payment Terms Code]&#xA;      ,[Applies-to ID]&#xA;      ,[Recurring Method]&#xA;      ,[Expiration Date]&#xA;      ,[Recurring Frequency]&#xA;      ,[VAT Calculation Type]&#xA;      ,[EU 3-Party Trade]&#xA;      ,[Allow Application]&#xA;      ,[Bal_ Gen_ Posting Type]&#xA;      ,[Bal_ Gen_ Bus_ Posting Group]&#xA;      ,[Bal_ Gen_ Prod_ Posting Group]&#xA;      ,[Bal_ VAT Calculation Type]&#xA;      ,[Bal_ VAT _]&#xA;      ,[Bal_ VAT Amount]&#xA;      ,[Bank Payment Type]&#xA;      ,[VAT Base Amount]&#xA;      ,[Bal_ VAT Base Amount]&#xA;      ,[Correction]&#xA;      ,[Check Printed]&#xA;      ,[Posting No_ Series]&#xA;      ,[Bal_ Tax Area Code]&#xA;      ,[Bal_ Tax Liable]&#xA;      ,[Bal_ Tax Group Code]&#xA;      ,[Bal_ Use Tax]&#xA;      ,[Bal_ VAT Bus_ Posting Group]&#xA;      ,[Bal_ VAT Prod_ Posting Group]&#xA;      ,[Additional-Currency Posting]&#xA;      ,[FA Add_-Currency Factor]&#xA;      ,[Source Currency Code]&#xA;      ,[Source Currency Amount]&#xA;      ,[Source Curr_ VAT Base Amount]&#xA;      ,[Source Curr_ VAT Amount]&#xA;      ,[VAT Base Discount _]&#xA;      ,[VAT Amount (LCY)]&#xA;      ,[VAT Base Amount (LCY)]&#xA;      ,[Bal_ VAT Amount (LCY)]&#xA;      ,[Bal_ VAT Base Amount (LCY)]&#xA;      ,[Reversing Entry]&#xA;      ,[Allow Zero-Amount Posting]&#xA;      ,[Ship-to_Order Address Code]&#xA;      ,[VAT Difference]&#xA;      ,[Bal_ VAT Difference]&#xA;      ,[IC Direction]&#xA;      ,[IC Partner G_L Acc_ No_]&#xA;      ,[IC Partner Transaction No_]&#xA;      ,[Sell-to_Buy-from No_]&#xA;      ,[VAT Registration No_]&#xA;      ,[Country_Region Code]&#xA;      ,[Prepayment]&#xA;      ,[Financial Void]&#xA;      ,[Incoming Document Entry No_]&#xA;      ,[Creditor No_]&#xA;      ,[Payment Reference]&#xA;      ,[Payment Method Code]&#xA;      ,[Applies-to Ext_ Doc_ No_]&#xA;      ,[Recipient Bank Account]&#xA;      ,[Message to Recipient]&#xA;      ,[Exported to Payment File]&#xA;      ,[Credit Card No_]&#xA;      ,[Job Task No_]&#xA;      ,[Job Unit Price (LCY)]&#xA;      ,[Job Total Price (LCY)]&#xA;      ,[Job Quantity]&#xA;      ,[Job Unit Cost (LCY)]&#xA;      ,[Job Line Discount _]&#xA;      ,[Job Line Disc_ Amount (LCY)]&#xA;      ,[Job Unit Of Measure Code]&#xA;      ,[Job Line Type]&#xA;      ,[Job Unit Price]&#xA;      ,[Job Total Price]&#xA;      ,[Job Unit Cost]&#xA;      ,[Job Total Cost]&#xA;      ,[Job Line Discount Amount]&#xA;      ,[Job Line Amount]&#xA;      ,[Job Total Cost (LCY)]&#xA;      ,[Job Line Amount (LCY)]&#xA;      ,[Job Currency Factor]&#xA;      ,[Job Currency Code]&#xA;      ,[Job Planning Line No_]&#xA;      ,[Job Remaining Qty_]&#xA;      ,[Direct Debit Mandate ID]&#xA;      ,[Data Exch_ Entry No_]&#xA;      ,[Payer Information]&#xA;      ,[Transaction Information]&#xA;      ,[Data Exch_ Line No_]&#xA;      ,[Applied Automatically]&#xA;      ,[Deferral Code]&#xA;      ,[Deferral Line No_]&#xA;      ,[Campaign No_]&#xA;      ,[FA Posting Date]&#xA;      ,[FA Posting Type]&#xA;      ,[Depreciation Book Code]&#xA;      ,[Salvage Value]&#xA;      ,[No_ of Depreciation Days]&#xA;      ,[Depr_ until FA Posting Date]&#xA;      ,[Depr_ Acquisition Cost]&#xA;      ,[Maintenance Code]&#xA;      ,[Insurance No_]&#xA;      ,[Budgeted FA No_]&#xA;      ,[Duplicate in Depreciation Book]&#xA;      ,[Use Duplication List]&#xA;      ,[FA Reclassification Entry]&#xA;      ,[FA Error Entry No_]&#xA;      ,[Index Entry]&#xA;      ,[Source Line No_]&#xA;      ,[Comment]&#xA;      ,[VAT Identifier]&#xA;      ,[Fiscal Code]&#xA;      ,[Deductible _]&#xA;      ,[Bal_ Deductible _]&#xA;      ,[Operation Occurred Date]&#xA;      ,[Reverse Sales VAT No_ Series]&#xA;      ,[Reverse Sales VAT No_]&#xA;      ,[Closing Balance Sheet]&#xA;      ,[Activity Code]&#xA;      ,[Service Tariff No_]&#xA;      ,[Transport Method]&#xA;      ,[Include in VAT Transac_ Rep_]&#xA;      ,[Resident]&#xA;      ,[Individual Person]&#xA;      ,[Related Entry No_]&#xA;      ,[First Name]&#xA;      ,[Last Name]&#xA;      ,[Date of Birth]&#xA;      ,[Tax Representative Type]&#xA;      ,[Tax Representative No_]&#xA;      ,[Place of Birth]&#xA;      ,[Refers to Period]&#xA;      ,[Contract No_]&#xA;      ,[Applies-to Occurrence No_]&#xA;      ,[Bank Receipt]&#xA;      ,[Cumulative Bank Receipts]&#xA;      ,[Document Type to Close]&#xA;      ,[Document No_ to Close]&#xA;      ,[Document Occurrence to Close]&#xA;      ,[Allow Issue]&#xA;      ,[Bill No_]&#xA;      ,[Competence Line]&#xA;      ,[Balance line competence]&#xA;      ,[Created from Accruals_Payable]&#xA;      ,[Ignore Direct Posting]&#xA;      ,[No Check Dimension]&#xA;      ,[Des_Rec_ Journal Template Name]&#xA;      ,[Des_ Rec_ Journal Batch Name]&#xA;      ,[Destin_ Journal Template Name]&#xA;      ,[Destin_ Journal Batch Name]&#xA;      ,[Account Type EXAC]&#xA;      ,[Bal_ Account Type EXAC]&#xA;      ,[Recurring]&#xA;      ,[Company])&#xA;   &#xA;   SELECT  [Gen_ Bus_ Posting Group]&#xA;      ,[ContoKey]&#xA;      ,[StagioneKey]&#xA;      ,[Tax Area Code]&#xA;      ,[Tax Liable]&#xA;      ,[VAT Bus_ Posting Group]&#xA;      ,[Dimension Set ID]&#xA;      ,[Posting Date]&#xA;      ,[Bal_ Account No_]&#xA;      ,[Reason Code]&#xA;      ,[Bal_ Account Type]&#xA;      ,[Document Date]&#xA;      ,[Source Code]&#xA;      ,[SourceType]&#xA;      ,[Source No_]&#xA;      ,[Document Type]&#xA;      ,[Document No_]&#xA;      ,[Description]&#xA;      ,[Amount]&#xA;      ,[System-Created Entry]&#xA;      ,[Job No_]&#xA;      ,[Quantity]&#xA;      ,[VAT Amount]&#xA;      ,[Business Unit Code]&#xA;      ,[Journal Batch Name]&#xA;      ,[Gen_ Posting Type]&#xA;      ,[Gen_ Prod_ Posting Group]&#xA;      ,[Debit Amount]&#xA;      ,[Credit Amount]&#xA;      ,[External Document No_]&#xA;      ,[Tax Group Code]&#xA;      ,[Use Tax]&#xA;      ,[VAT Prod_ Posting Group]&#xA;      ,[IC Partner Code]&#xA;      ,[Prod_ Order No_]&#xA;      ,[Due Date]&#xA;      ,[Letter No_]&#xA;      ,[Journal Template Name]&#xA;      ,[Line No_]&#xA;      ,[Account Type]&#xA;      ,[VAT _]&#xA;      ,[Currency Code]&#xA;      ,[Amount (LCY)]&#xA;      ,[Balance (LCY)]&#xA;      ,[Currency Factor]&#xA;      ,[Sales_Purch_ (LCY)]&#xA;      ,[Profit (LCY)]&#xA;      ,[Inv_ Discount (LCY)]&#xA;      ,[Bill-to_Pay-to No_]&#xA;      ,[Posting Group]&#xA;      ,[Marchio]&#xA;      ,[Salespers__Purch_ Code]&#xA;      ,[On Hold]&#xA;      ,[Applies-to Doc_ Type]&#xA;      ,[Applies-to Doc_ No_]&#xA;      ,[Pmt_ Discount Date]&#xA;      ,[Payment Discount _]&#xA;      ,[VAT Posting]&#xA;      ,[Payment Terms Code]&#xA;      ,[Applies-to ID]&#xA;      ,[Recurring Method]&#xA;      ,[Expiration Date]&#xA;      ,[Recurring Frequency]&#xA;      ,[VAT Calculation Type]&#xA;      ,[EU 3-Party Trade]&#xA;      ,[Allow Application]&#xA;      ,[Bal_ Gen_ Posting Type]&#xA;      ,[Bal_ Gen_ Bus_ Posting Group]&#xA;      ,[Bal_ Gen_ Prod_ Posting Group]&#xA;      ,[Bal_ VAT Calculation Type]&#xA;      ,[Bal_ VAT _]&#xA;      ,[Bal_ VAT Amount]&#xA;      ,[Bank Payment Type]&#xA;      ,[VAT Base Amount]&#xA;      ,[Bal_ VAT Base Amount]&#xA;      ,[Correction]&#xA;      ,[Check Printed]&#xA;      ,[Posting No_ Series]&#xA;      ,[Bal_ Tax Area Code]&#xA;      ,[Bal_ Tax Liable]&#xA;      ,[Bal_ Tax Group Code]&#xA;      ,[Bal_ Use Tax]&#xA;      ,[Bal_ VAT Bus_ Posting Group]&#xA;      ,[Bal_ VAT Prod_ Posting Group]&#xA;      ,[Additional-Currency Posting]&#xA;      ,[FA Add_-Currency Factor]&#xA;      ,[Source Currency Code]&#xA;      ,[Source Currency Amount]&#xA;      ,[Source Curr_ VAT Base Amount]&#xA;      ,[Source Curr_ VAT Amount]&#xA;      ,[VAT Base Discount _]&#xA;      ,[VAT Amount (LCY)]&#xA;      ,[VAT Base Amount (LCY)]&#xA;      ,[Bal_ VAT Amount (LCY)]&#xA;      ,[Bal_ VAT Base Amount (LCY)]&#xA;      ,[Reversing Entry]&#xA;      ,[Allow Zero-Amount Posting]&#xA;      ,[Ship-to_Order Address Code]&#xA;      ,[VAT Difference]&#xA;      ,[Bal_ VAT Difference]&#xA;      ,[IC Direction]&#xA;      ,[IC Partner G_L Acc_ No_]&#xA;      ,[IC Partner Transaction No_]&#xA;      ,[Sell-to_Buy-from No_]&#xA;      ,[VAT Registration No_]&#xA;      ,[Country_Region Code]&#xA;      ,[Prepayment]&#xA;      ,[Financial Void]&#xA;      ,[Incoming Document Entry No_]&#xA;      ,[Creditor No_]&#xA;      ,[Payment Reference]&#xA;      ,[Payment Method Code]&#xA;      ,[Applies-to Ext_ Doc_ No_]&#xA;      ,[Recipient Bank Account]&#xA;      ,[Message to Recipient]&#xA;      ,[Exported to Payment File]&#xA;      ,[Credit Card No_]&#xA;      ,[Job Task No_]&#xA;      ,[Job Unit Price (LCY)]&#xA;      ,[Job Total Price (LCY)]&#xA;      ,[Job Quantity]&#xA;      ,[Job Unit Cost (LCY)]&#xA;      ,[Job Line Discount _]&#xA;      ,[Job Line Disc_ Amount (LCY)]&#xA;      ,[Job Unit Of Measure Code]&#xA;      ,[Job Line Type]&#xA;      ,[Job Unit Price]&#xA;      ,[Job Total Price]&#xA;      ,[Job Unit Cost]&#xA;      ,[Job Total Cost]&#xA;      ,[Job Line Discount Amount]&#xA;      ,[Job Line Amount]&#xA;      ,[Job Total Cost (LCY)]&#xA;      ,[Job Line Amount (LCY)]&#xA;      ,[Job Currency Factor]&#xA;      ,[Job Currency Code]&#xA;      ,[Job Planning Line No_]&#xA;      ,[Job Remaining Qty_]&#xA;      ,[Direct Debit Mandate ID]&#xA;      ,[Data Exch_ Entry No_]&#xA;      ,[Payer Information]&#xA;      ,[Transaction Information]&#xA;      ,[Data Exch_ Line No_]&#xA;      ,[Applied Automatically]&#xA;      ,[Deferral Code]&#xA;      ,[Deferral Line No_]&#xA;      ,[Campaign No_]&#xA;      ,[FA Posting Date]&#xA;      ,[FA Posting Type]&#xA;      ,[Depreciation Book Code]&#xA;      ,[Salvage Value]&#xA;      ,[No_ of Depreciation Days]&#xA;      ,[Depr_ until FA Posting Date]&#xA;      ,[Depr_ Acquisition Cost]&#xA;      ,[Maintenance Code]&#xA;      ,[Insurance No_]&#xA;      ,[Budgeted FA No_]&#xA;      ,[Duplicate in Depreciation Book]&#xA;      ,[Use Duplication List]&#xA;      ,[FA Reclassification Entry]&#xA;      ,[FA Error Entry No_]&#xA;      ,[Index Entry]&#xA;      ,[Source Line No_]&#xA;      ,[Comment]&#xA;      ,[VAT Identifier]&#xA;      ,[Fiscal Code]&#xA;      ,[Deductible _]&#xA;      ,[Bal_ Deductible _]&#xA;      ,[Operation Occurred Date]&#xA;      ,[Reverse Sales VAT No_ Series]&#xA;      ,[Reverse Sales VAT No_]&#xA;      ,[Closing Balance Sheet]&#xA;      ,[Activity Code]&#xA;      ,[Service Tariff No_]&#xA;      ,[Transport Method]&#xA;      ,[Include in VAT Transac_ Rep_]&#xA;      ,[Resident]&#xA;      ,[Individual Person]&#xA;      ,[Related Entry No_]&#xA;      ,[First Name]&#xA;      ,[Last Name]&#xA;      ,[Date of Birth]&#xA;      ,[Tax Representative Type]&#xA;      ,[Tax Representative No_]&#xA;      ,[Place of Birth]&#xA;      ,[Refers to Period]&#xA;      ,[Contract No_]&#xA;      ,[Applies-to Occurrence No_]&#xA;      ,[Bank Receipt]&#xA;      ,[Cumulative Bank Receipts]&#xA;      ,[Document Type to Close]&#xA;      ,[Document No_ to Close]&#xA;      ,[Document Occurrence to Close]&#xA;      ,[Allow Issue]&#xA;      ,[Bill No_]&#xA;      ,[Competence Line]&#xA;      ,[Balance line competence]&#xA;      ,[Created from Accruals_Payable]&#xA;      ,[Ignore Direct Posting]&#xA;      ,[No Check Dimension]&#xA;      ,[Des_Rec_ Journal Template Name]&#xA;      ,[Des_ Rec_ Journal Batch Name]&#xA;      ,[Destin_ Journal Template Name]&#xA;      ,[Destin_ Journal Batch Name]&#xA;      ,[Account Type EXAC]&#xA;      ,[Bal_ Account Type EXAC]&#xA;      ,[Recurring]&#xA;      ,[Company]&#xA;        FROM [BI_Model_Stage].[stg].[vFactCOGEManutenzione] WITH (NOLOCK)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Contabilità\FactExtraContabili"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:DTSID="{C2C207F7-8654-4910-AFBD-EC922BFA3DFD}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="FactExtraContabili"
-          DTS:ThreadHint="2">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="INSERT INTO [BI_Model_DWH].[dbo].[FactExtraContabili]&#xA;           ([Gen_ Bus_ Posting Group]&#xA;      ,[Shortcut Dimension 3 Code]&#xA;      ,[CanaleKey]&#xA;      ,[StagioneKey]&#xA;      ,[Shortcut Dimension 5 Code]&#xA;      ,[Collezione]&#xA;      ,[PccdcKey]&#xA;      ,[SubcanaleKey]&#xA;      ,[Tax Area Code]&#xA;      ,[Tax Liable]&#xA;      ,[VAT Bus_ Posting Group]&#xA;      ,[Posting Date]&#xA;      ,[Bal_ Account No_]&#xA;      ,[Reason Code]&#xA;      ,[Bal_ Account Type]&#xA;      ,[Document Date]&#xA;      ,[No_ Series]&#xA;      ,[User ID]&#xA;      ,[Source Code]&#xA;      ,[Entry No_]&#xA;      ,[Document Type]&#xA;      ,[Document No_]&#xA;      ,[Description]&#xA;      ,[Amount]&#xA;      ,[Global Dimension 1 Code]&#xA;      ,[Marchio]&#xA;      ,[System-Created Entry]&#xA;      ,[Prior-Year Entry]&#xA;      ,[Job No_]&#xA;      ,[Quantity]&#xA;      ,[VAT Amount]&#xA;      ,[Business Unit Code]&#xA;      ,[Journal Batch Name]&#xA;      ,[Gen_ Posting Type]&#xA;      ,[Gen_ Prod_ Posting Group]&#xA;      ,[Transaction No_]&#xA;      ,[Debit Amount]&#xA;      ,[Credit Amount]&#xA;      ,[External Document No_]&#xA;      ,[Source Type]&#xA;      ,[Source No_]&#xA;      ,[Tax Group Code]&#xA;      ,[Use Tax]&#xA;      ,[VAT Prod_ Posting Group]&#xA;      ,[Close Income Statement Dim_ ID]&#xA;      ,[IC Partner Code]&#xA;      ,[Reversed]&#xA;      ,[Reversed by Entry No_]&#xA;      ,[Reversed Entry No_]&#xA;      ,[Prod_ Order No_]&#xA;      ,[Official Date]&#xA;      ,[Positive]&#xA;      ,[Due Date]&#xA;      ,[Letter No_]&#xA;      ,[Not Process]&#xA;      ,[Stagione]&#xA;      ,[Journal Line No_]&#xA;      ,[Journal Template Name]&#xA;      ,[G_L Register No_]&#xA;      ,[Tipo Operazione CDV]&#xA;      ,[Company]&#xA;      ,[ContoKey])&#xA;   &#xA;   SELECT  [Gen_ Bus_ Posting Group]&#xA;      ,[Shortcut Dimension 3 Code]&#xA;      ,[CanaleKey]&#xA;      ,[StagioneKey]&#xA;      ,[Shortcut Dimension 5 Code]&#xA;      ,[Collezione]&#xA;      ,[PccdcKey]&#xA;      ,[SubcanaleKey]&#xA;      ,[Tax Area Code]&#xA;      ,[Tax Liable]&#xA;      ,[VAT Bus_ Posting Group]&#xA;      ,[Posting Date]&#xA;      ,[Bal_ Account No_]&#xA;      ,[Reason Code]&#xA;      ,[Bal_ Account Type]&#xA;      ,[Document Date]&#xA;      ,[No_ Series]&#xA;      ,[User ID]&#xA;      ,[Source Code]&#xA;      ,[Entry No_]&#xA;      ,[Document Type]&#xA;      ,[Document No_]&#xA;      ,[Description]&#xA;      ,[Amount]&#xA;      ,[Global Dimension 1 Code]&#xA;      ,[Marchio]&#xA;      ,[System-Created Entry]&#xA;      ,[Prior-Year Entry]&#xA;      ,[Job No_]&#xA;      ,[Quantity]&#xA;      ,[VAT Amount]&#xA;      ,[Business Unit Code]&#xA;      ,[Journal Batch Name]&#xA;      ,[Gen_ Posting Type]&#xA;      ,[Gen_ Prod_ Posting Group]&#xA;      ,[Transaction No_]&#xA;      ,[Debit Amount]&#xA;      ,[Credit Amount]&#xA;      ,[External Document No_]&#xA;      ,[Source Type]&#xA;      ,[Source No_]&#xA;      ,[Tax Group Code]&#xA;      ,[Use Tax]&#xA;      ,[VAT Prod_ Posting Group]&#xA;      ,[Close Income Statement Dim_ ID]&#xA;      ,[IC Partner Code]&#xA;      ,[Reversed]&#xA;      ,[Reversed by Entry No_]&#xA;      ,[Reversed Entry No_]&#xA;      ,[Prod_ Order No_]&#xA;      ,[Official Date]&#xA;      ,[Positive]&#xA;      ,[Due Date]&#xA;      ,[Letter No_]&#xA;      ,[Not Process]&#xA;      ,[Stagione]&#xA;      ,[Journal Line No_]&#xA;      ,[Journal Template Name]&#xA;      ,[G_L Register No_]&#xA;      ,[Tipo Operazione CDV]&#xA;      ,[Company]&#xA;      ,[ContoKey]&#xA;        FROM [BI_Model_Stage].[stg].[vFactExtraContabili] WITH (NOLOCK)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Contabilità\truncate"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:DTSID="{235D0721-E8BB-44B5-A4BD-959F18C1B496}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="truncate"
-          DTS:ThreadHint="3">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="TRUNCATE TABLE [BI_Model_DWH].[dbo].[FactAcquisto_Costi_Accessori_preventivi]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Contabilità\truncate 4"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:DTSID="{5DCEBD00-B32F-4668-8217-0ED016BD5AD9}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="truncate 4"
-          DTS:ThreadHint="2">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="TRUNCATE TABLE [BI_Model_DWH].[dbo].[FactExtraContabili]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Contabilità\truncate 5"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:DTSID="{7A0ADD42-29AC-4AE4-90F5-AC59E23F66AC}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="truncate 5"
-          DTS:ThreadHint="4">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="TRUNCATE TABLE [BI_Model_DWH].[dbo].[FactCOGEManutenzione]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Contabilità\truncate 6"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:DTSID="{DC7FE45E-2C4D-4A6B-AFF9-3B1541DFF775}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="truncate 6"
+          DTS:ObjectName="ACTUAL_CONT_FactCOGEManutenzione"
           DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="TRUNCATE TABLE [BI_Model_DWH].[dbo].[FactAffidamentoClienti]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="EXECUTE [dbo].[ACTUAL_CONT_FactCOGEManutenzione] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Contabilità\ACTUAL_CONT_FactExtraContabili"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Attività Esegui SQL"
+          DTS:DTSID="{C2C207F7-8654-4910-AFBD-EC922BFA3DFD}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="ACTUAL_CONT_FactExtraContabili"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+              SQLTask:SqlStatementSource="EXECUTE [dbo].[ACTUAL_CONT_FactExtraContabili] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
-      <DTS:PrecedenceConstraints>
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Contabilità.PrecedenceConstraints[Vincolo]"
-          DTS:CreationName=""
-          DTS:DTSID="{35ED09AA-6116-47FB-9A2B-88CCE803A265}"
-          DTS:From="Package\Contabilità\truncate"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Vincolo"
-          DTS:To="Package\Contabilità\FactAcquisto_Costi_Accessori_preventivi" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Contabilità.PrecedenceConstraints[Vincolo 2 1]"
-          DTS:CreationName=""
-          DTS:DTSID="{1E4D725E-5BC8-4D81-90B5-C37491988F73}"
-          DTS:From="Package\Contabilità\truncate 4"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Vincolo 2 1"
-          DTS:To="Package\Contabilità\FactExtraContabili" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Contabilità.PrecedenceConstraints[Vincolo 2 1 1]"
-          DTS:CreationName=""
-          DTS:DTSID="{185CBB0A-5771-412B-B335-9115B0B5CD3E}"
-          DTS:From="Package\Contabilità\truncate 5"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Vincolo 2 1 1"
-          DTS:To="Package\Contabilità\FactCogeManutenzione" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Contabilità.PrecedenceConstraints[Vincolo 6]"
-          DTS:CreationName=""
-          DTS:DTSID="{91562442-46C9-49A5-8D29-C606D31841C3}"
-          DTS:From="Package\Contabilità\truncate 6"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Vincolo 6"
-          DTS:To="Package\Contabilità\FactAffidamentoClienti" />
-      </DTS:PrecedenceConstraints>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Execute Update DimData"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Attività Esegui SQL"
-      DTS:Disabled="True"
-      DTS:DTSID="{C8B047FB-54A4-4351-A0DE-3196E205F495}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Execute Update DimData"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-          SQLTask:SqlStatementSource="exec dbo.UpdateDimData" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Procedure in parallelo"
@@ -3880,7 +3826,7 @@ SELECT TIMESTAMP
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="SP_DELTA_MAIN_FACT_000"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3896,12 +3842,28 @@ SELECT TIMESTAMP
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="SP_DELTA_MAIN_FACT_000_2parte"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
               SQLTask:SqlStatementSource="EXECUTE [dbo].[SP_DELTA_MAIN_FACT_000_2parte] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Procedure in parallelo\SP_DELTA_MAIN_FACT_000_3parte"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Attività Esegui SQL"
+          DTS:DTSID="{15b3810e-d9bd-46c8-9c0f-2df0a1c4fd05}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SP_DELTA_MAIN_FACT_000_3parte"
+          DTS:ThreadHint="2">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+              SQLTask:SqlStatementSource="EXECUTE [dbo].[SP_DELTA_MAIN_FACT_000_3parte] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -3930,7 +3892,7 @@ SELECT TIMESTAMP
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="SP_DELTA_MAIN_FACT_002"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -3948,6 +3910,14 @@ SELECT TIMESTAMP
       DTS:LogicalAnd="True"
       DTS:ObjectName="Vincolo"
       DTS:To="Package\SP_DELTA_MAIN_FACT_002" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Vincolo 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{5B80F65A-A91C-4B8B-8D96-F854CB8C726C}"
+      DTS:From="Package\Altro"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Vincolo 1"
+      DTS:To="Package\Procedure in parallelo" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Vincolo 2]"
       DTS:CreationName=""
@@ -3980,41 +3950,145 @@ SELECT TIMESTAMP
         <NodeLayout
           Size="206.666666666667,42.6666666666667"
           Id="Package\ACTUAL_MAIN_FINE_ELAB"
-          TopLeft="506.041663248713,695.866663784186" />
+          TopLeft="549.083337958902,820.203700268489" />
         <NodeLayout
           Size="278.666666666667,42"
-          Id="Package\Contabilità\FactAcquisto_Costi_Accessori_preventivi"
-          TopLeft="5.4999999999998,107.833333333333" />
+          Id="Package\Contabilità\ACTUAL_CONT_FactCOGEManutenzione"
+          TopLeft="5.50000000000003,5.49999999999989" />
+        <NodeLayout
+          Size="278.666666666667,42"
+          Id="Package\Contabilità\ACTUAL_CONT_FactExtraContabili"
+          TopLeft="344.5,5.49999999999989" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="628.666666666667,102.666666666667"
+          Size="628.666666666667,248"
+          Id="Package\Contabilità"
+          TopLeft="15.3611109972827,13.0555562529297" />
+        <NodeLayout
+          Size="213.333333333334,42.6666666666667"
+          Id="Package\Procedure in parallelo\SP_DELTA_MAIN_FACT_000"
+          TopLeft="5.49999999999996,5.50000000000004" />
+        <NodeLayout
+          Size="249.333333333334,42.6666666666667"
+          Id="Package\Procedure in parallelo\SP_DELTA_MAIN_FACT_000_2parte"
+          TopLeft="279.5,5.50000000000004" />
+        <NodeLayout
+          Size="249.333333333334,42.6666666666667"
+          Id="Package\Procedure in parallelo\SP_DELTA_MAIN_FACT_000_3parte"
+          TopLeft="589.5,5.49999999999993" />
+        <NodeLayout
+          Size="213.333333333334,42.6666666666667"
+          Id="Package\Procedure in parallelo\SP_DELTA_MAIN_FACT_001"
+          TopLeft="899.5,5.49999999999993" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="1118.66666666667,102.666666666667"
+          Size="1118.66666666667,146"
+          Id="Package\Procedure in parallelo"
+          TopLeft="93.083337958902,511.537033601823" />
+        <NodeLayout
+          Size="213.333333333334,42.6666666666667"
+          Id="Package\SP_DELTA_MAIN_FACT_002"
+          TopLeft="545.750004625569,717.537033601823" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Vincolo]"
+          TopLeft="652.416671292235,657.537033601823">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Vincolo 2]"
+          TopLeft="652.416671292235,760.203700268489">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.0000000000001"
+              Start="0,0"
+              End="0,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Vincolo 3]"
+          TopLeft="329.694444330616,261.05555625293">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="137.611115850508,250.481477348893"
+              Start="0,0"
+              End="137.611115850508,242.981477348893">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,146.07423910668" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,146.07423910668"
+                    Point2="0,150.07423910668"
+                    Point3="4,150.07423910668" />
+                  <mssgle:LineSegment
+                    End="133.611115850508,150.07423910668" />
+                  <mssgle:CubicBezierSegment
+                    Point1="133.611115850508,150.07423910668"
+                    Point2="137.611115850508,150.07423910668"
+                    Point3="137.611115850508,154.07423910668" />
+                  <mssgle:LineSegment
+                    End="137.611115850508,242.981477348893" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="278.666666666667,42"
+          Id="Package\Altro\FactAcquisto_Costi_Accessori_preventivi"
+          TopLeft="5.50000000000003,107.833333333333" />
         <NodeLayout
           Size="185.333333333334,42.6666666666667"
-          Id="Package\Contabilità\FactAffidamentoClienti"
-          TopLeft="1023.16666666667,107.5" />
-        <NodeLayout
-          Size="278.666666666667,42"
-          Id="Package\Contabilità\FactCogeManutenzione"
-          TopLeft="683.5,107.833333333333" />
-        <NodeLayout
-          Size="278.666666666667,42"
-          Id="Package\Contabilità\FactExtraContabili"
-          TopLeft="344.5,107.833333333333" />
+          Id="Package\Altro\FactAffidamentoClienti"
+          TopLeft="345.166666666667,107.5" />
         <NodeLayout
           Size="118.666666666667,42"
-          Id="Package\Contabilità\truncate"
-          TopLeft="85.4999999999998,5.5" />
-        <NodeLayout
-          Size="127.333333333334,42"
-          Id="Package\Contabilità\truncate 4"
-          TopLeft="420.166666666666,5.5" />
-        <NodeLayout
-          Size="127.333333333334,42"
-          Id="Package\Contabilità\truncate 5"
-          TopLeft="759.166666666667,5.49999999999989" />
+          Id="Package\Altro\truncate"
+          TopLeft="85.5,5.5" />
         <NodeLayout
           Size="118.666666666667,42"
-          Id="Package\Contabilità\truncate 6"
-          TopLeft="1056.5,5.49999999999989" />
+          Id="Package\Altro\truncate 6"
+          TopLeft="378.5,5.5" />
         <EdgeLayout
-          Id="Package\Contabilità.PrecedenceConstraints[Vincolo]"
+          Id="Package\Altro.PrecedenceConstraints[Vincolo]"
           TopLeft="144.833333333333,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4036,52 +4110,8 @@ SELECT TIMESTAMP
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Contabilità.PrecedenceConstraints[Vincolo 2 1]"
-          TopLeft="483.833333333333,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.3333333333334"
-              Start="0,0"
-              End="0,52.8333333333334">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.8333333333334" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Contabilità.PrecedenceConstraints[Vincolo 2 1 1]"
-          TopLeft="822.833333333333,47.4999999999999">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.3333333333334"
-              Start="0,0"
-              End="0,52.8333333333334">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.8333333333334" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Contabilità.PrecedenceConstraints[Vincolo 6]"
-          TopLeft="1115.83333333333,47.4999999999999">
+          Id="Package\Altro.PrecedenceConstraints[Vincolo 6]"
+          TopLeft="437.833333333333,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4104,95 +4134,36 @@ SELECT TIMESTAMP
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="1214,205.333333333334"
-          Size="1214,248"
-          Id="Package\Contabilità"
-          TopLeft="5.50000000000011,5.5" />
-        <NodeLayout
-          Size="197.333333333334,42"
-          Id="Package\Execute Update DimData"
-          TopLeft="513.833333333333,930.166666666667" />
-        <NodeLayout
-          Size="213.333333333334,42.6666666666667"
-          Id="Package\Procedure in parallelo\SP_DELTA_MAIN_FACT_000"
-          TopLeft="5.49999999999996,5.50000000000004" />
-        <NodeLayout
-          Size="249.333333333334,42.6666666666667"
-          Id="Package\Procedure in parallelo\SP_DELTA_MAIN_FACT_000_2parte"
-          TopLeft="279.5,5.49999999999993" />
-        <NodeLayout
-          Size="213.333333333334,42.6666666666667"
-          Id="Package\Procedure in parallelo\SP_DELTA_MAIN_FACT_001"
-          TopLeft="589.5,5.49999999999993" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="808,103.333333333334"
-          Size="808,146"
-          Id="Package\Procedure in parallelo"
-          TopLeft="208.5,313.5" />
-        <NodeLayout
-          Size="213.333333333334,42.6666666666667"
-          Id="Package\SP_DELTA_MAIN_FACT_002"
-          TopLeft="505.833333333333,519.5" />
+          PanelSize="628.666666666667,205.333333333334"
+          Size="628.666666666667,248"
+          Id="Package\Altro"
+          TopLeft="704.694444330616,6.37037046077054" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Vincolo]"
-          TopLeft="612.5,459.5">
+          Id="Package.PrecedenceConstraints[Vincolo 1]"
+          TopLeft="1019.02777766395,254.370370460771">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="-181.499995260603,257.166663141052"
               Start="0,0"
-              End="0,52.5">
+              End="-181.499995260603,249.666663141052">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Vincolo 2]"
-          TopLeft="610.937498291023,562.166666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,133.699997117519"
-              Start="0,0"
-              End="0,126.199997117519">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
+                    End="0,150.079621786724" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,150.079621786724"
+                    Point2="0,154.079621786724"
+                    Point3="-4,154.079621786724" />
                   <mssgle:LineSegment
-                    End="0,126.199997117519" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Vincolo 3]"
-          TopLeft="612.5,253.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
+                    End="-177.499995260603,154.079621786724" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-177.499995260603,154.079621786724"
+                    Point2="-181.499995260603,154.079621786724"
+                    Point3="-181.499995260603,158.079621786724" />
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="-181.499995260603,249.666663141052" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
