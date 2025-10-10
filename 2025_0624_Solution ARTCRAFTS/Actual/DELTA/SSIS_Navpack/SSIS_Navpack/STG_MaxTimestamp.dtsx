@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="SRVPOWERBI"
   DTS:CreatorName="ARTCRAFTS\powerbi02"
-  DTS:DTSID="{22AA3145-0342-4C25-9C8C-297EDC6D9361}"
+  DTS:DTSID="{1B878466-D20B-43F8-B883-AE25681D875B}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5467.0"
   DTS:LocaleID="1040"
-  DTS:ObjectName="test_MaxTimestamp"
+  DTS:ObjectName="STG_MaxTimestamp"
   DTS:PackageType="5"
-  DTS:VersionBuild="37"
-  DTS:VersionGUID="{0CCD421D-AD9E-4B25-87D2-D9613707C8F0}">
+  DTS:VersionBuild="38"
+  DTS:VersionGUID="{9BB08BFA-9773-46A1-8F21-EF6CA2BD8D1C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
