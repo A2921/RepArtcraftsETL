@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LIT004005</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAswJPnd5HC0eobEpShU+DnAAAAAACAAAAAAADZgAAwAAAABAAAAB6QAY9wEOqc0i6OTuaRlS8AAAAAASAAACgAAAAEAAAAIEF4yEZPYMk555+WplV+NmIAAAA6yCHrqDC7Qok6H/uIN+uqobREDPBG1GoP3h5auPG2JNHbYx8J9ngFAriCth2sWIxWkbXIbtAYOuBLtw5qKm0Ys4skLbxhHKg+A0XWzkU/KLErTyRfZflBcRHEt+vHiTfeW0qpdH1ixaXzwlfJUmUunZTALhL/d2Ddgvx/RZBzfC/Ndbqg/zCQRQAAAB/FVmHD3C6blNSap71owAR1QwOUw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAswJPnd5HC0eobEpShU+DnAAAAAACAAAAAAADZgAAwAAAABAAAADRek9Ui8c16r8uPk6UXYQxAAAAAASAAACgAAAAEAAAAMq0P7Lp7n00ulY/AJlhIPeIAAAA/2EPx2boKWfWkG7LtGSasgcTrwLpkanka5G41h6wO6XtP2Ma4zBBQVhOOYSWiXS4t7xOeWeofr+PoyXicoWEV4/0h54t2/FcVX975nYl20ZKt6+Ps05EsLXZ4OqIwGKrMh7skh86raSQ4jzxxMvCoH3bsDwiSwmcq+k/r3+ZcqE7+qASYOw1ARQAAAALcCHFPPrEGPFrH0DlS8XyfgVorQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -47,7 +47,6 @@
           <SSIS:Package SSIS:Name="semaforo_success.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="semaforo_error.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH_Import_FACT_PROC.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="shrink db.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="SSAS_BISolution.conmgr" />
@@ -1141,23 +1140,6 @@
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{BC83BA0D-001D-4ABC-A522-C1E6DEA4C71C}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="shrink db.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{B76536AE-7DED-48B1-86EB-ABD707064DE2}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">shrink db</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">6</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{2C98AC9C-A1D2-4F9D-9A0F-760D30431CE1}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

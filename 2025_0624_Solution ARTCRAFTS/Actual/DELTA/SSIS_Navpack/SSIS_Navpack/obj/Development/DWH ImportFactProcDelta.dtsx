@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="DWH ImportFactProcDelta"
   DTS:PackageType="5"
-  DTS:VersionBuild="102"
-  DTS:VersionGUID="{B5AFD23D-6F2F-49C6-AD9E-62D2A49FE456}">
+  DTS:VersionBuild="106"
+  DTS:VersionGUID="{DBCDD183-2F82-4C5E-A3BC-063971F6A48E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -3655,6 +3655,22 @@ SELECT TIMESTAMP
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
+      DTS:refId="Package\ACTUAL_CONT_MAIN_001"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Attività Esegui SQL"
+      DTS:DTSID="{D7AC3AA8-E086-4A43-A878-4C28869A5194}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ACTUAL_CONT_MAIN_001"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+          SQLTask:SqlStatementSource="EXECUTE [dbo].[ACTUAL_CONT_MAIN_001] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\ACTUAL_MAIN_FINE_ELAB"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Attività Esegui SQL"
@@ -3669,144 +3685,6 @@ SELECT TIMESTAMP
           SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
           SQLTask:SqlStatementSource="&#xA;EXECUTE [dbo].[ACTUAL_MAIN_FINE_ELAB] &#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Altro"
-      DTS:CreationName="STOCK:SEQUENCE"
-      DTS:Description="Contenitore Sequenza"
-      DTS:DTSID="{6502a9d5-fc02-42cd-a1e9-5d37dea98433}"
-      DTS:ExecutableType="STOCK:SEQUENCE"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Altro">
-      <DTS:Variables />
-      <DTS:Executables>
-        <DTS:Executable
-          DTS:refId="Package\Altro\FactAcquisto_Costi_Accessori_preventivi"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:DTSID="{0100a57d-19bb-4463-a5c2-1848c317376d}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="FactAcquisto_Costi_Accessori_preventivi"
-          DTS:ThreadHint="2">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="INSERT INTO [BI_Model_DWH].[dbo].[FactAcquisto_Costi_Accessori_preventivi]&#xA;           ([Tipo Costo]&#xA;      ,[Season Code]&#xA;      ,[Currency Code]&#xA;      ,[Country_Region Code]&#xA;      ,[Exchange Rate Amount]&#xA;      ,[Costo Unitario Euro]&#xA;      ,[Costo Unitario in Valuta]&#xA;      ,[Marchio]&#xA;      ,[Company]&#xA;      ,[model item no_])&#xA;   &#xA;   SELECT  [Tipo Costo]&#xA;      ,[Season Code]&#xA;      ,[Currency Code]&#xA;      ,[Country_Region Code]&#xA;      ,[Exchange Rate Amount]&#xA;      ,[Costo Unitario Euro]&#xA;      ,[Costo Unitario in Valuta]&#xA;      ,[Marchio]&#xA;      ,[Company]&#xA;      ,[model item no_]&#xA;        FROM [BI_Model_Stage].[stg].[vFactAcquisto_Costi_Accessori_preventivi] WITH (NOLOCK)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Altro\FactAffidamentoClienti"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:DTSID="{ec5a1e22-38d4-4e5b-8477-d32ca59678f4}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="FactAffidamentoClienti"
-          DTS:ThreadHint="3">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="INSERT INTO [dbo].[FactAffidamentoClienti]&#xA;           ([ClienteKey]&#xA;           ,[Amount]&#xA;           ,[Company]&#xA;           ,[timestamp]&#xA;           ,[Company Code]&#xA;           ,[Update Date]&#xA;           ,[Status]&#xA;           ,[Starting Date]&#xA;           ,[Data Visura Protesti]&#xA;           ,[Limit of Credit _]&#xA;           ,[Situation]&#xA;           ,[Memo]&#xA;           ,[Extra Credit]&#xA;           ,[Data Extra Credit]&#xA;           ,[Active]&#xA;           ,[Cerved Credit]&#xA;           ,[Memo 2]&#xA;           ,[Payment Times]&#xA;           ,[Negative Events]&#xA;           ,[Econ-Financial Situation]&#xA;           ,[Risk no consultations]&#xA;           ,[Revenues]&#xA;           ,[Purchases]&#xA;           ,[Mol]&#xA;           ,[Useful Loss]&#xA;           ,[Net Assets]&#xA;           ,[No_ Employees]&#xA;           ,[No_ Requests Last 12 Months]&#xA;           ,[Cash Flow]&#xA;           ,[Ebitda]&#xA;           ,[Inventories]&#xA;           ,[Payables to ML Banks Term]&#xA;           ,[Payables to Banks BT]&#xA;           ,[Payables to Vendors]&#xA;           ,[Other Liabilities]&#xA;           ,[Current Ratio]&#xA;           ,[Net Circular Capital]&#xA;           ,[Protests]&#xA;           ,[Preg Cons]&#xA;           ,[Email Certified]&#xA;           ,[Start Activity]&#xA;           ,[Secondary Seats No_]&#xA;           ,[Ateco Code]&#xA;           ,[Consistence Properties]&#xA;           ,[Insert Date]&#xA;           ,[Receipt Date]&#xA;           ,[Due Date])&#xA;    &#xA; select &#xA; [ClienteKey]&#xA;           ,[Amount]&#xA;           ,[Company]&#xA;           ,[timestamp]&#xA;           ,[Company Code]&#xA;           ,[Update Date]&#xA;           ,[Status]&#xA;           ,[Starting Date]&#xA;           ,[Data Visura Protesti]&#xA;           ,[Limit of Credit _]&#xA;           ,[Situation]&#xA;           ,[Memo]&#xA;           ,[Extra Credit]&#xA;           ,[Data Extra Credit]&#xA;           ,[Active]&#xA;           ,[Cerved Credit]&#xA;           ,[Memo 2]&#xA;           ,[Payment Times]&#xA;           ,[Negative Events]&#xA;           ,[Econ-Financial Situation]&#xA;           ,[Risk no consultations]&#xA;           ,[Revenues]&#xA;           ,[Purchases]&#xA;           ,[Mol]&#xA;           ,[Useful Loss]&#xA;           ,[Net Assets]&#xA;           ,[No_ Employees]&#xA;           ,[No_ Requests Last 12 Months]&#xA;           ,[Cash Flow]&#xA;           ,[Ebitda]&#xA;           ,[Inventories]&#xA;           ,[Payables to ML Banks Term]&#xA;           ,[Payables to Banks BT]&#xA;           ,[Payables to Vendors]&#xA;           ,[Other Liabilities]&#xA;           ,[Current Ratio]&#xA;           ,[Net Circular Capital]&#xA;           ,[Protests]&#xA;           ,[Preg Cons]&#xA;           ,[Email Certified]&#xA;           ,[Start Activity]&#xA;           ,[Secondary Seats No_]&#xA;           ,[Ateco Code]&#xA;           ,[Consistence Properties]&#xA;           ,[Insert Date]&#xA;           ,[Receipt Date]&#xA;           ,[Due Date]&#xA; from [BI_Model_Stage].[stg].[vFactAffidamentoClienti]&#xA; WITH (NOLOCK)&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Altro\truncate"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:DTSID="{d593b7df-d614-431b-901b-16245c8297c5}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="truncate"
-          DTS:ThreadHint="2">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="TRUNCATE TABLE [BI_Model_DWH].[dbo].[FactAcquisto_Costi_Accessori_preventivi]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Altro\truncate 6"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:DTSID="{e7c9e629-1445-47fb-af4a-10f58e0ab403}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="truncate 6"
-          DTS:ThreadHint="3">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="TRUNCATE TABLE [BI_Model_DWH].[dbo].[FactAffidamentoClienti]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-      </DTS:Executables>
-      <DTS:PrecedenceConstraints>
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Altro.PrecedenceConstraints[Vincolo]"
-          DTS:CreationName=""
-          DTS:DTSID="{55fce890-42fd-4396-bfe3-6cc3ab8957f7}"
-          DTS:From="Package\Altro\truncate"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Vincolo"
-          DTS:To="Package\Altro\FactAcquisto_Costi_Accessori_preventivi" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Altro.PrecedenceConstraints[Vincolo 6]"
-          DTS:CreationName=""
-          DTS:DTSID="{a114cb2f-4491-494b-b8c3-9f95d319b6b4}"
-          DTS:From="Package\Altro\truncate 6"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Vincolo 6"
-          DTS:To="Package\Altro\FactAffidamentoClienti" />
-      </DTS:PrecedenceConstraints>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Contabilità"
-      DTS:CreationName="STOCK:SEQUENCE"
-      DTS:Description="Contenitore Sequenza"
-      DTS:DTSID="{90211C1D-8886-4776-80A3-4D3AA42E6C5E}"
-      DTS:ExecutableType="STOCK:SEQUENCE"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Contabilità">
-      <DTS:Variables />
-      <DTS:Executables>
-        <DTS:Executable
-          DTS:refId="Package\Contabilità\ACTUAL_CONT_FactCOGEManutenzione"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:DTSID="{D7AC3AA8-E086-4A43-A878-4C28869A5194}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="ACTUAL_CONT_FactCOGEManutenzione"
-          DTS:ThreadHint="1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="EXECUTE [dbo].[ACTUAL_CONT_FactCOGEManutenzione] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Contabilità\ACTUAL_CONT_FactExtraContabili"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:DTSID="{C2C207F7-8654-4910-AFBD-EC922BFA3DFD}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="ACTUAL_CONT_FactExtraContabili"
-          DTS:ThreadHint="0">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="EXECUTE [dbo].[ACTUAL_CONT_FactExtraContabili] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-      </DTS:Executables>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Procedure in parallelo"
@@ -3911,14 +3789,6 @@ SELECT TIMESTAMP
       DTS:ObjectName="Vincolo"
       DTS:To="Package\SP_DELTA_MAIN_FACT_002" />
     <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Vincolo 1]"
-      DTS:CreationName=""
-      DTS:DTSID="{5B80F65A-A91C-4B8B-8D96-F854CB8C726C}"
-      DTS:From="Package\Altro"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Vincolo 1"
-      DTS:To="Package\Procedure in parallelo" />
-    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Vincolo 2]"
       DTS:CreationName=""
       DTS:DTSID="{1449F473-F985-43BC-887C-1ED15CEDDCEA}"
@@ -3929,8 +3799,8 @@ SELECT TIMESTAMP
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Vincolo 3]"
       DTS:CreationName=""
-      DTS:DTSID="{4BD944D5-A252-49E1-BBE7-075760CFB209}"
-      DTS:From="Package\Contabilità"
+      DTS:DTSID="{6850279E-3ECE-4EC9-A92A-3BFC2787DBD4}"
+      DTS:From="Package\ACTUAL_CONT_MAIN_001"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Vincolo 3"
       DTS:To="Package\Procedure in parallelo" />
@@ -3946,26 +3816,11 @@ SELECT TIMESTAMP
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="206.666666666667,42.6666666666667"
           Id="Package\ACTUAL_MAIN_FINE_ELAB"
-          TopLeft="549.083337958902,820.203700268489" />
-        <NodeLayout
-          Size="278.666666666667,42"
-          Id="Package\Contabilità\ACTUAL_CONT_FactCOGEManutenzione"
-          TopLeft="5.50000000000003,5.49999999999989" />
-        <NodeLayout
-          Size="278.666666666667,42"
-          Id="Package\Contabilità\ACTUAL_CONT_FactExtraContabili"
-          TopLeft="344.5,5.49999999999989" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="628.666666666667,102.666666666667"
-          Size="628.666666666667,248"
-          Id="Package\Contabilità"
-          TopLeft="15.3611109972827,13.0555562529297" />
+          TopLeft="461.5,416.166666666667" />
         <NodeLayout
           Size="213.333333333334,42.6666666666667"
           Id="Package\Procedure in parallelo\SP_DELTA_MAIN_FACT_000"
@@ -3985,28 +3840,28 @@ SELECT TIMESTAMP
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="1118.66666666667,102.666666666667"
+          PanelSize="1118.66666666667,103.333333333334"
           Size="1118.66666666667,146"
           Id="Package\Procedure in parallelo"
-          TopLeft="93.083337958902,511.537033601823" />
+          TopLeft="5.5,107.5" />
         <NodeLayout
           Size="213.333333333334,42.6666666666667"
           Id="Package\SP_DELTA_MAIN_FACT_002"
-          TopLeft="545.750004625569,717.537033601823" />
+          TopLeft="458.166666666667,313.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Vincolo]"
-          TopLeft="652.416671292235,657.537033601823">
+          TopLeft="564.833333333333,253.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
+              EndConnector="0,60.0000000000002"
               Start="0,0"
-              End="0,52.5000000000001">
+              End="0,52.5000000000002">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5000000000001" />
+                    End="0,52.5000000000002" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4017,7 +3872,7 @@ SELECT TIMESTAMP
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Vincolo 2]"
-          TopLeft="652.416671292235,760.203700268489">
+          TopLeft="564.833333333333,356.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4037,133 +3892,24 @@ SELECT TIMESTAMP
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Vincolo 3]"
-          TopLeft="329.694444330616,261.05555625293">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="137.611115850508,250.481477348893"
-              Start="0,0"
-              End="137.611115850508,242.981477348893">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,146.07423910668" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,146.07423910668"
-                    Point2="0,150.07423910668"
-                    Point3="4,150.07423910668" />
-                  <mssgle:LineSegment
-                    End="133.611115850508,150.07423910668" />
-                  <mssgle:CubicBezierSegment
-                    Point1="133.611115850508,150.07423910668"
-                    Point2="137.611115850508,150.07423910668"
-                    Point3="137.611115850508,154.07423910668" />
-                  <mssgle:LineSegment
-                    End="137.611115850508,242.981477348893" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="278.666666666667,42"
-          Id="Package\Altro\FactAcquisto_Costi_Accessori_preventivi"
-          TopLeft="5.50000000000003,107.833333333333" />
-        <NodeLayout
-          Size="185.333333333334,42.6666666666667"
-          Id="Package\Altro\FactAffidamentoClienti"
-          TopLeft="345.166666666667,107.5" />
-        <NodeLayout
-          Size="118.666666666667,42"
-          Id="Package\Altro\truncate"
-          TopLeft="85.5,5.5" />
-        <NodeLayout
-          Size="118.666666666667,42"
-          Id="Package\Altro\truncate 6"
-          TopLeft="378.5,5.5" />
+          Id="Package\ACTUAL_CONT_MAIN_001"
+          TopLeft="425.5,5.49999999999989" />
         <EdgeLayout
-          Id="Package\Altro.PrecedenceConstraints[Vincolo]"
-          TopLeft="144.833333333333,47.5">
+          Id="Package.PrecedenceConstraints[Vincolo 3]"
+          TopLeft="564.833333333333,47.4999999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.3333333333334"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="0,52.8333333333334">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.8333333333334" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Altro.PrecedenceConstraints[Vincolo 6]"
-          TopLeft="437.833333333333,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="628.666666666667,205.333333333334"
-          Size="628.666666666667,248"
-          Id="Package\Altro"
-          TopLeft="704.694444330616,6.37037046077054" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Vincolo 1]"
-          TopLeft="1019.02777766395,254.370370460771">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-181.499995260603,257.166663141052"
-              Start="0,0"
-              End="-181.499995260603,249.666663141052">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,150.079621786724" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,150.079621786724"
-                    Point2="0,154.079621786724"
-                    Point3="-4,154.079621786724" />
-                  <mssgle:LineSegment
-                    End="-177.499995260603,154.079621786724" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-177.499995260603,154.079621786724"
-                    Point2="-181.499995260603,154.079621786724"
-                    Point3="-181.499995260603,158.079621786724" />
-                  <mssgle:LineSegment
-                    End="-181.499995260603,249.666663141052" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
