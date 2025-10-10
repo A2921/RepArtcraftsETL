@@ -42,7 +42,7 @@
         <UseWinAuth>false</UseWinAuth>
         <WinAuthUserName />
         <WinAuthDomain />
-        <ServerName>10.0.0.252</ServerName>
+        <ServerName>10.0.0.6</ServerName>
         <PathOnServer>/SSISDB/ETL_FULL_ACTUAL/ETL_FULL_ACTUAL</PathOnServer>
         <UserIDs>
           <ConfigurationSetting>

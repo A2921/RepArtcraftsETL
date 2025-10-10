@@ -2,28 +2,23 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>ETL_FULL_ACTUAL</Name>
-    <LastWriteTime>2025-04-09T15:16:31.9434138Z</LastWriteTime>
+    <LastWriteTime>2025-09-10T14:22:08.7384458Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>DWH - Import Dim.dtsx</Name>
-      <LastWriteTime>2025-04-09T08:59:47.7460687Z</LastWriteTime>
+      <LastWriteTime>2025-09-29T14:36:53.3190431Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Stage - Import Fact.dtsx</Name>
-      <LastWriteTime>2025-01-31T16:22:11.7940331Z</LastWriteTime>
+      <LastWriteTime>2025-09-20T06:35:19.7546101Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Stage - Import Dim.dtsx</Name>
-      <LastWriteTime>2025-03-18T10:54:21.3476288Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>Integrazioni GA.dtsx</Name>
-      <LastWriteTime>2025-01-31T16:22:03.4461063Z</LastWriteTime>
+      <LastWriteTime>2025-10-09T15:49:01.6091215Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -43,7 +38,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>populate_dispo.dtsx</Name>
-      <LastWriteTime>2025-03-31T13:55:53.021296Z</LastWriteTime>
+      <LastWriteTime>2025-06-09T09:43:00.7220943Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -68,7 +63,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Stage - Import Fact  step 2.dtsx</Name>
-      <LastWriteTime>2025-01-31T16:22:08.1170736Z</LastWriteTime>
+      <LastWriteTime>2025-10-09T10:28:14.6857438Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -83,7 +78,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>semaforo_success.dtsx</Name>
-      <LastWriteTime>2025-02-01T19:05:46.9726646Z</LastWriteTime>
+      <LastWriteTime>2025-06-26T07:57:39.5140088Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -93,12 +88,12 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DWH_Import_FACT_PROC.dtsx</Name>
-      <LastWriteTime>2025-04-11T04:25:17.670114Z</LastWriteTime>
+      <LastWriteTime>2025-10-03T15:56:58.8152065Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>shrink db.dtsx</Name>
-      <LastWriteTime>2025-04-09T15:16:26.3189457Z</LastWriteTime>
+      <LastWriteTime>2025-09-09T10:13:06.2448241Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

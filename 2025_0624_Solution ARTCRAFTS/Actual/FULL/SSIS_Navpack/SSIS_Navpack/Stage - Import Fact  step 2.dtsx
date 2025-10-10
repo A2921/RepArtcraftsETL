@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="Stage - Import Fact  step 2"
   DTS:PackageType="5"
-  DTS:VersionBuild="200"
-  DTS:VersionGUID="{8CE76453-4BFA-452B-AC76-3120729636BA}">
+  DTS:VersionBuild="201"
+  DTS:VersionGUID="{8F5B0670-B57F-4159-84DC-DFD40D3C1867}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -27157,7 +27157,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate Sales Invoice Line"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="6">
+              DTS:ThreadHint="5">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -29946,7 +29946,7 @@ FROM dbo.[Artcrafts$Sales Line] WITH (TABLOCK) WHERE [Document Type]=0</property
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate Sales Line_0"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="5">
+              DTS:ThreadHint="6">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -32735,7 +32735,7 @@ FROM dbo.[Artcrafts$Sales Line] WITH (TABLOCK) WHERE [Document Type]&lt;&gt;0</p
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate Sales_Line_1"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="8">
+              DTS:ThreadHint="7">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -34172,7 +34172,7 @@ FROM dbo.[Artcrafts$Sales Line] WITH (TABLOCK) WHERE [Document Type]&lt;&gt;0</p
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate Sales Shipment Header"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="7">
+              DTS:ThreadHint="8">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -37511,14 +37511,14 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="269.333333333334,220"
-          Size="269.333333333334,262.666666666667"
+          PanelSize="256.666666666667,206"
+          Size="256.666666666667,248.666666666667"
           Id="Package\Import Fact\Sales Header"
-          TopLeft="107.718748583613,805.109873799454" />
+          TopLeft="5.50000000000014,5.8333333333333" />
         <NodeLayout
           Size="238.666666666667,42.6666666666667"
           Id="Package\Import Fact\Sales Header Extension\Populate Sales Header Extension"
-          TopLeft="14.9642860202919,108.166666666667" />
+          TopLeft="36.1666666666667,108.166666666667" />
         <NodeLayout
           Size="300,42.6666666666667"
           Id="Package\Import Fact\Sales Header Extension\Sales Header Extension Delete Company Row"
@@ -37529,26 +37529,14 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-21.2023806463748,60.0000000000003"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="-21.2023806463748,52.5000000000003">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.0000000000001" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.0000000000001"
-                    Point2="0,30.0000000000001"
-                    Point3="-4,30.0000000000001" />
-                  <mssgle:LineSegment
-                    End="-17.2023806463748,30.0000000000001" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-17.2023806463748,30.0000000000001"
-                    Point2="-21.2023806463748,30.0000000000001"
-                    Point3="-21.2023806463748,34.0000000000001" />
-                  <mssgle:LineSegment
-                    End="-21.2023806463748,52.5000000000003" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -37560,14 +37548,14 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="321.333333333334,198.666666666667"
-          Size="321.333333333334,241.333333333334"
+          PanelSize="310.666666666667,206"
+          Size="310.666666666667,248.666666666667"
           Id="Package\Import Fact\Sales Header Extension"
-          TopLeft="853.538691836584,801.447361588698" />
+          TopLeft="322.5,5.8333333333333" />
         <NodeLayout
           Size="265.333333333334,42.6666666666667"
           Id="Package\Import Fact\Sales Header Extension_delta\Populate Sales Header Extension delta"
-          TopLeft="14.9642860202919,108.166666666667" />
+          TopLeft="35.8333333333334,108.166666666667" />
         <NodeLayout
           Size="326,42.6666666666667"
           Id="Package\Import Fact\Sales Header Extension_delta\Sales Header Extension delta Delete Company Row"
@@ -37578,26 +37566,14 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-20.8690473130414,60.0000000000003"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="-20.8690473130414,52.5000000000003">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.0000000000002" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.0000000000002"
-                    Point2="0,30.0000000000002"
-                    Point3="-4,30.0000000000002" />
-                  <mssgle:LineSegment
-                    End="-16.8690473130414,30.0000000000002" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-16.8690473130414,30.0000000000002"
-                    Point2="-20.8690473130414,30.0000000000002"
-                    Point3="-20.8690473130414,34.0000000000002" />
-                  <mssgle:LineSegment
-                    End="-20.8690473130414,52.5000000000003" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -37609,10 +37585,10 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="337.333333333334,206.666666666667"
-          Size="337.333333333334,249.333333333334"
+          PanelSize="337.333333333334,206"
+          Size="337.333333333334,248.666666666667"
           Id="Package\Import Fact\Sales Header Extension_delta"
-          TopLeft="761.214291142565,415.885952634714" />
+          TopLeft="694.166666666667,5.8333333333333" />
         <NodeLayout
           Size="185.333333333334,42.6666666666667"
           Id="Package\Import Fact\Sales Header_2\Populate Sales Header"
@@ -37646,10 +37622,10 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="264,236"
-          Size="264,278.666666666667"
+          PanelSize="256.666666666667,206"
+          Size="256.666666666667,248.666666666667"
           Id="Package\Import Fact\Sales Header_2"
-          TopLeft="417.22767374751,793.649895204028" />
+          TopLeft="1092.5,5.83333333333319" />
         <NodeLayout
           Size="222.666666666667,42.6666666666667"
           Id="Package\Import Fact\Sales Invoice Header\Populate Sales Invoice Header"
@@ -37688,7 +37664,7 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
           PanelSize="293.333333333334,206.666666666667"
           Size="293.333333333334,42.6666666666667"
           Id="Package\Import Fact\Sales Invoice Header"
-          TopLeft="455.020825440375,1143.65833158408" />
+          TopLeft="1410.16666666667,108.833333333333" />
         <NodeLayout
           Size="208,42.6666666666667"
           Id="Package\Import Fact\Sales Invoice Line (ottimizzazione)\Populate Sales Invoice Line"
@@ -37727,29 +37703,29 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
           PanelSize="293.333333333334,206"
           Size="293.333333333334,42.6666666666667"
           Id="Package\Import Fact\Sales Invoice Line (ottimizzazione)"
-          TopLeft="825.499994076788,1215.24999622256" />
+          TopLeft="1764.16666666667,108.833333333333" />
         <NodeLayout
           Size="185.333333333334,42.6666666666667"
           Id="Package\Import Fact\Sales Line 0 (ottimizzazione)\Populate Sales_Line_0"
-          TopLeft="35.5,113.216665074329" />
+          TopLeft="5.50000000000001,108.166666666667" />
         <NodeLayout
           Size="182.666666666667,42.6666666666667"
           Id="Package\Import Fact\Sales Line 0 (ottimizzazione)\Truncate Sales Line_0"
-          TopLeft="32.0624996041879,10.5499984076619" />
+          TopLeft="6.83333333333336,5.50000000000004" />
         <EdgeLayout
           Id="Package\Import Fact\Sales Line 0 (ottimizzazione).PrecedenceConstraints[Constraint]"
-          TopLeft="125.781249802094,53.2166650743285">
+          TopLeft="98.1666666666667,48.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000005"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="0,52.5000000000005">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5000000000005" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -37761,32 +37737,32 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="258,210.666666666667"
-          Size="258,254"
+          PanelSize="196.666666666667,206"
+          Size="196.666666666667,249.333333333334"
           Id="Package\Import Fact\Sales Line 0 (ottimizzazione)"
-          TopLeft="802.297607086777,1848.82144402159" />
+          TopLeft="2118.5,5.49999999999973" />
         <NodeLayout
           Size="185.333333333334,42.6666666666667"
           Id="Package\Import Fact\Sales Line 1 (ottimizzazione\Populate Sales_Line_1"
-          TopLeft="35.5,113.216665074329" />
+          TopLeft="5.50000000000001,108.166666666667" />
         <NodeLayout
           Size="185.333333333334,42.6666666666667"
           Id="Package\Import Fact\Sales Line 1 (ottimizzazione\Truncate Sales_Line_1"
-          TopLeft="31.2812496158294,8.92499843671931" />
+          TopLeft="5.50000000000001,5.50000000000004" />
         <EdgeLayout
           Id="Package\Import Fact\Sales Line 1 (ottimizzazione.PrecedenceConstraints[Constraint]"
-          TopLeft="126.057291474581,51.591665103386">
+          TopLeft="98.1666666666667,48.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,61.624999970943"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="0,54.124999970943">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.124999970943" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -37798,32 +37774,32 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="258.666666666667,210.666666666667"
-          Size="258.666666666667,253.333333333334"
+          PanelSize="196.666666666667,206"
+          Size="196.666666666667,248.666666666667"
           Id="Package\Import Fact\Sales Line 1 (ottimizzazione"
-          TopLeft="1124.57291627318,1847.14648955975" />
+          TopLeft="2375.5,5.83333333333307" />
         <NodeLayout
           Size="233.333333333334,42.6666666666667"
           Id="Package\Import Fact\Sales Shipment Header (ottimizzazione)\Populate Sales Shipment Header"
-          TopLeft="35.5,108.166666666667" />
+          TopLeft="5.50000000000001,108.166666666667" />
         <NodeLayout
           Size="233.333333333334,42.6666666666667"
           Id="Package\Import Fact\Sales Shipment Header (ottimizzazione)\Truncate Sales Shipment Header"
-          TopLeft="33.2777773638567,20.6666663954654" />
+          TopLeft="5.50000000000001,5.50000000000004" />
         <EdgeLayout
           Id="Package\Import Fact\Sales Shipment Header (ottimizzazione).PrecedenceConstraints[Constraint]"
-          TopLeft="151.055555348595,63.3333330621321">
+          TopLeft="122.166666666667,48.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.8333336045349"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="0,37.3333336045349">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.3333336045349" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -37835,32 +37811,32 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="304,206.666666666667"
-          Size="304,249.333333333334"
+          PanelSize="244.666666666667,206"
+          Size="244.666666666667,248.666666666667"
           Id="Package\Import Fact\Sales Shipment Header (ottimizzazione)"
-          TopLeft="396.648143077614,1497.22222059502" />
+          TopLeft="2632.5,5.83333333333307" />
         <NodeLayout
           Size="218.666666666667,42.6666666666667"
           Id="Package\Import Fact\Sales Shipment Line (ottimizzazione)\Populate Sales Shipment Line"
-          TopLeft="45.544642707466,134.050594775255" />
+          TopLeft="5.50000000000001,108.166666666667" />
         <NodeLayout
           Size="218.666666666667,42.6666666666667"
           Id="Package\Import Fact\Sales Shipment Line (ottimizzazione)\Truncate Sales Shipment Line"
-          TopLeft="38.3124995110556,32.3124995205549" />
+          TopLeft="5.50000000000001,5.50000000000004" />
         <EdgeLayout
           Id="Package\Import Fact\Sales Shipment Line (ottimizzazione).PrecedenceConstraints[Constraint]"
-          TopLeft="151.261904442594,74.9791661872215">
+          TopLeft="114.833333333333,48.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.0714285880336"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="0,51.5714285880336">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51.5714285880336" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -37872,32 +37848,32 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="309.333333333334,236"
-          Size="309.333333333334,278.666666666667"
+          PanelSize="229.333333333334,206"
+          Size="229.333333333334,248.666666666667"
           Id="Package\Import Fact\Sales Shipment Line (ottimizzazione)"
-          TopLeft="791.677073426389,1468.64582843718" />
+          TopLeft="2938.16666666667,5.83333333333296" />
         <NodeLayout
           Size="177.333333333334,42.6666666666667"
           Id="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry"
-          TopLeft="36.1666666666667,108.166666666667" />
+          TopLeft="6.16666666666667,108.166666666667" />
         <NodeLayout
           Size="178.666666666667,42.6666666666667"
           Id="Package\Import Fact\Value Entry (ottimizzazione)\Truncate Value Entry"
-          TopLeft="42.9999994412064,20.9374997239556" />
+          TopLeft="5.50000000000001,5.50000000000004" />
         <EdgeLayout
           Id="Package\Import Fact\Value Entry (ottimizzazione).PrecedenceConstraints[Constraint]"
-          TopLeft="128.583333053937,63.6041663906223">
+          TopLeft="94.8333333333333,48.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.5625002760447"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="0,37.0625002760447">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.0625002760447" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -37909,47 +37885,35 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="336,206.666666666667"
-          Size="336,249.333333333334"
+          PanelSize="189.333333333334,206"
+          Size="189.333333333334,248.666666666667"
           Id="Package\Import Fact\Value Entry (ottimizzazione)"
-          TopLeft="423.031248963903,1821.54167157735" />
+          TopLeft="3228.16666666667,5.83333333333296" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="1536,3340"
-          Size="1536,3382.66666666667"
+          PanelSize="3422.66666666667,310"
+          Size="3422.66666666667,352.666666666667"
           Id="Package\Import Fact"
-          TopLeft="387.202375182617,146.877412057304" />
+          TopLeft="5.50000000000023,107.5" />
         <NodeLayout
           Size="149.333333333334,42"
           Id="Package\Load Company"
-          TopLeft="802.827369883391,59.4982477994848" />
+          TopLeft="1642.16666666667,5.49999999999977" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="877.494036550058,101.498247799485">
+          TopLeft="1716.83333333333,47.4999999999998">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="277.708338632559,45.3791642578193"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="277.708338632559,37.8791642578193">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.6895821289097" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.6895821289097"
-                    Point2="0,22.6895821289097"
-                    Point3="4,22.6895821289097" />
-                  <mssgle:LineSegment
-                    End="273.708338632559,22.6895821289097" />
-                  <mssgle:CubicBezierSegment
-                    Point1="273.708338632559,22.6895821289097"
-                    Point2="277.708338632559,22.6895821289097"
-                    Point3="277.708338632559,26.6895821289097" />
-                  <mssgle:LineSegment
-                    End="277.708338632559,37.8791642578193" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
