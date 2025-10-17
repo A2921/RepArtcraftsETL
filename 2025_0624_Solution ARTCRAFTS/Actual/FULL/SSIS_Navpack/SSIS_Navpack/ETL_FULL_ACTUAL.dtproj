@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LIT004005</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAswJPnd5HC0eobEpShU+DnAAAAAACAAAAAAADZgAAwAAAABAAAADRek9Ui8c16r8uPk6UXYQxAAAAAASAAACgAAAAEAAAAMq0P7Lp7n00ulY/AJlhIPeIAAAA/2EPx2boKWfWkG7LtGSasgcTrwLpkanka5G41h6wO6XtP2Ma4zBBQVhOOYSWiXS4t7xOeWeofr+PoyXicoWEV4/0h54t2/FcVX975nYl20ZKt6+Ps05EsLXZ4OqIwGKrMh7skh86raSQ4jzxxMvCoH3bsDwiSwmcq+k/r3+ZcqE7+qASYOw1ARQAAAALcCHFPPrEGPFrH0DlS8XyfgVorQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAswJPnd5HC0eobEpShU+DnAAAAAACAAAAAAADZgAAwAAAABAAAADcKd3N2q9jj9kR7RV2Sy8vAAAAAASAAACgAAAAEAAAAJ8gbGjNqPsau99eG0/kJDmIAAAAg/QHoPITNkiO13GywlPc3LQzDrjYgavgWSr7N6rYMDaOpX4M3+zVP2rhlkrdutbX/yBoKYuJH2dc6SZT3ki0yBWXdhWkraUlN4TN3gBdHmB+0FbOmkA4SrWUqHp6+a01Jpy2HTZDCUXg+vwVeEag8C5WyW95zD3i5rpn1ef5CUjvp9VFVgQrzhQAAABbZbFoM2NxB3id7vBPDiiVDovFSw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -83,7 +83,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=10.0.0.252;User ID=artcrafts\powerbi02;Initial Catalog=SSAS_BI_Solution_2024;Provider=MSOLAP.8;Persist Security Info=False;Impersonation Level=Impersonate;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=10.0.0.6;User ID=artcrafts\powerbi02;Initial Catalog=SSAS_BI_Solution_2024;Provider=MSOLAP.8;Persist Security Info=False;Impersonation Level=Impersonate;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -157,7 +157,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=10.0.0.252;Initial Catalog=BI_Model_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-{01E748CB-DAFD-4EA7-920E-23E68DAB645E}BI_DWH;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=10.0.0.6;Initial Catalog=BI_Model_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-{01E748CB-DAFD-4EA7-920E-23E68DAB645E}BI_DWH;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -365,7 +365,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=10.0.0.252;Initial Catalog=BI_Model_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-{EBDC3EEE-A910-457C-95AF-2952194294D6}NEW_BI_Stage;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=10.0.0.6;Initial Catalog=BI_Model_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-{EBDC3EEE-A910-457C-95AF-2952194294D6}NEW_BI_Stage;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -483,7 +483,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=10.0.0.252;Initial Catalog=BI_Model_HIST;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-ETL_FULL_ACTUAL-{CF7C5D77-8095-4874-A417-37A23D590321}10.0.0.6.BI_Model_HIST;Auto Translate=False;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=10.0.0.6;Initial Catalog=BI_Model_HIST;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-ETL_FULL_ACTUAL-{CF7C5D77-8095-4874-A417-37A23D590321}10.0.0.6.BI_Model_HIST;Auto Translate=False;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>

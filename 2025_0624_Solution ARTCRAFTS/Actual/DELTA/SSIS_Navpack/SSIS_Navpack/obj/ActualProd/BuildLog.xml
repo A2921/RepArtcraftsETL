@@ -2,15 +2,10 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>ETL_DELTA</Name>
-    <LastWriteTime>2025-09-19T14:20:34.9133236Z</LastWriteTime>
+    <LastWriteTime>2025-10-10T13:09:49.9381493Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
-    <ProjectBuildItemInfo>
-      <Name>test_MaxTimestamp.dtsx</Name>
-      <LastWriteTime>2025-10-10T13:05:49.0892521Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>TEST_IMPORT_DELTA 2.dtsx</Name>
       <LastWriteTime>2025-09-19T14:20:11.4953367Z</LastWriteTime>
@@ -44,6 +39,11 @@
     <ProjectBuildItemInfo>
       <Name>Process Cube dim.dtsx</Name>
       <LastWriteTime>2025-10-07T15:47:43.8664318Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>STG_MaxTimestamp.dtsx</Name>
+      <LastWriteTime>2025-10-10T13:09:37.4356785Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
