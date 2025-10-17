@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="DWH ImportFactProcDelta"
   DTS:PackageType="5"
-  DTS:VersionBuild="106"
-  DTS:VersionGUID="{DBCDD183-2F82-4C5E-A3BC-063971F6A48E}">
+  DTS:VersionBuild="108"
+  DTS:VersionGUID="{E16FB405-298B-4A01-B4BE-A59C2BDED474}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -3671,6 +3671,22 @@ SELECT TIMESTAMP
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\ACTUAL_FULL_MAIN_FACT_002"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Attività Esegui SQL"
+      DTS:DTSID="{046AF44D-82E5-4AFE-9146-682224319CF7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ACTUAL_FULL_MAIN_FACT_002"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+          SQLTask:SqlStatementSource="EXECUTE  [dbo].[ACTUAL_FULL_MAIN_FACT_002] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\ACTUAL_MAIN_FINE_ELAB"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Attività Esegui SQL"
@@ -3697,19 +3713,19 @@ SELECT TIMESTAMP
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\Procedure in parallelo\SP_DELTA_MAIN_FACT_000"
+          DTS:refId="Package\Procedure in parallelo\ACTUAL_FULL_MAIN_FACT_000"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Attività Esegui SQL"
           DTS:DTSID="{ea699ddc-943b-485e-a0cb-1cbfbb005a88}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
-          DTS:ObjectName="SP_DELTA_MAIN_FACT_000"
-          DTS:ThreadHint="1">
+          DTS:ObjectName="ACTUAL_FULL_MAIN_FACT_000"
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="EXECUTE [dbo].[SP_DELTA_MAIN_FACT_000]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="EXECUTE [dbo].[ACTUAL_FULL_MAIN_FACT_000] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -3720,7 +3736,7 @@ SELECT TIMESTAMP
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="SP_DELTA_MAIN_FACT_000_2parte"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3736,7 +3752,7 @@ SELECT TIMESTAMP
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="SP_DELTA_MAIN_FACT_000_3parte"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3752,7 +3768,7 @@ SELECT TIMESTAMP
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="SP_DELTA_MAIN_FACT_001"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3761,22 +3777,6 @@ SELECT TIMESTAMP
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\SP_DELTA_MAIN_FACT_002"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Attività Esegui SQL"
-      DTS:DTSID="{046AF44D-82E5-4AFE-9146-682224319CF7}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="SP_DELTA_MAIN_FACT_002"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-          SQLTask:SqlStatementSource="EXECUTE [dbo].[SP_DELTA_MAIN_FACT_002]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
@@ -3787,12 +3787,12 @@ SELECT TIMESTAMP
       DTS:From="Package\Procedure in parallelo"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Vincolo"
-      DTS:To="Package\SP_DELTA_MAIN_FACT_002" />
+      DTS:To="Package\ACTUAL_FULL_MAIN_FACT_002" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Vincolo 2]"
       DTS:CreationName=""
       DTS:DTSID="{1449F473-F985-43BC-887C-1ED15CEDDCEA}"
-      DTS:From="Package\SP_DELTA_MAIN_FACT_002"
+      DTS:From="Package\ACTUAL_FULL_MAIN_FACT_002"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Vincolo 2"
       DTS:To="Package\ACTUAL_MAIN_FINE_ELAB" />
@@ -3818,12 +3818,16 @@ SELECT TIMESTAMP
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="278.666666666667,42"
+          Id="Package\ACTUAL_CONT_MAIN_001"
+          TopLeft="425.5,5.49999999999989" />
+        <NodeLayout
           Size="206.666666666667,42.6666666666667"
           Id="Package\ACTUAL_MAIN_FINE_ELAB"
           TopLeft="461.5,416.166666666667" />
         <NodeLayout
-          Size="213.333333333334,42.6666666666667"
-          Id="Package\Procedure in parallelo\SP_DELTA_MAIN_FACT_000"
+          Size="232,42.6666666666667"
+          Id="Package\Procedure in parallelo\ACTUAL_FULL_MAIN_FACT_000"
           TopLeft="5.49999999999996,5.50000000000004" />
         <NodeLayout
           Size="249.333333333334,42.6666666666667"
@@ -3841,27 +3845,27 @@ SELECT TIMESTAMP
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="1118.66666666667,103.333333333334"
-          Size="1118.66666666667,146"
+          Size="1118.66666666667,146.666666666667"
           Id="Package\Procedure in parallelo"
           TopLeft="5.5,107.5" />
         <NodeLayout
-          Size="213.333333333334,42.6666666666667"
-          Id="Package\SP_DELTA_MAIN_FACT_002"
-          TopLeft="458.166666666667,313.5" />
+          Size="232,42.6666666666667"
+          Id="Package\ACTUAL_FULL_MAIN_FACT_002"
+          TopLeft="446.291666843618,314.799999976754" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Vincolo]"
-          TopLeft="564.833333333333,253.5">
+          TopLeft="563.562500088476,254.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000002"
+              EndConnector="0,60.6333333100875"
               Start="0,0"
-              End="0,52.5000000000002">
+              End="0,53.1333333100875">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5000000000002" />
+                    End="0,53.1333333100875" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3872,18 +3876,18 @@ SELECT TIMESTAMP
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Vincolo 2]"
-          TopLeft="564.833333333333,356.166666666667">
+          TopLeft="563.562500088476,357.466666643421">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
+              EndConnector="0,58.7000000232462"
               Start="0,0"
-              End="0,52.5000000000001">
+              End="0,51.2000000232462">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5000000000001" />
+                    End="0,51.2000000232462" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3892,10 +3896,6 @@ SELECT TIMESTAMP
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="278.666666666667,42"
-          Id="Package\ACTUAL_CONT_MAIN_001"
-          TopLeft="425.5,5.49999999999989" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Vincolo 3]"
           TopLeft="564.833333333333,47.4999999999999">
