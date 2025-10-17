@@ -11,12 +11,29 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="DWH - Import Dim"
   DTS:PackageType="5"
-  DTS:VersionBuild="163"
-  DTS:VersionGUID="{6A9D83B5-A3D5-4012-9F34-F09A6A3E61D7}">
+  DTS:VersionBuild="164"
+  DTS:VersionGUID="{E8E65B12-0B09-4AF0-BD62-EB930EF43EBF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\ACTUAL_DIM_DimNegozio"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{7f5c7d4f-e8b0-44ec-a134-d0a962f88c55}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ACTUAL_DIM_DimNegozio"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="5">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+          SQLTask:SqlStatementSource="EXECUTE [dbo].[ACTUAL_DIM_DimNegozio] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\ACTUAL_DIM_Macrosubcanale"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
@@ -26,7 +43,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="ACTUAL_DIM_Macrosubcanale"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="7">
+      DTS:ThreadHint="6">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -1875,7 +1892,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimFornitore"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="27">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2332,7 +2349,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="21">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2371,7 +2388,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimArticolo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="10">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2388,7 +2405,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimConto"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="10">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2405,7 +2422,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimMarchio"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="10">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2422,7 +2439,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="DimCollezione"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="10">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2477,7 +2494,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimStagione"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="10">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2494,7 +2511,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimUltimaStagione"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="10">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2836,7 +2853,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate DimArticoloListino"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="10">
+              DTS:ThreadHint="2">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -3316,7 +3333,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate DimListino"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="10">
+              DTS:ThreadHint="2">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -3703,7 +3720,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate DimArticoloListino"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="10">
+              DTS:ThreadHint="2">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -4267,7 +4284,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimAgente"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="11">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -4732,7 +4749,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="12">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -4771,7 +4788,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="populate DimAssortimentoArticoloModello"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -4788,7 +4805,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate DimAssortimentoArticoloModello"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5151,7 +5168,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCanale"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="10">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -6088,7 +6105,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="20">
+          DTS:ThreadHint="11">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -6451,7 +6468,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCompany"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="22">
+          DTS:ThreadHint="14">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -8077,7 +8094,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="23">
+          DTS:ThreadHint="15">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -9377,7 +9394,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="24">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10616,7 +10633,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimFornitore"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="25">
+          DTS:ThreadHint="16">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11134,7 +11151,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="26">
+          DTS:ThreadHint="17">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11944,7 +11961,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="15">
+          DTS:ThreadHint="18">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11962,712 +11979,6 @@
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
           DTS:To="Package\DimMagazzino_NEW\populate" />
-      </DTS:PrecedenceConstraints>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\DimNegozio"
-      DTS:CreationName="STOCK:SEQUENCE"
-      DTS:Description="Sequence Container"
-      DTS:DTSID="{50cd3550-3beb-47d1-8558-3825472c2900}"
-      DTS:ExecutableType="STOCK:SEQUENCE"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="DimNegozio">
-      <DTS:Variables />
-      <DTS:Executables>
-        <DTS:Executable
-          DTS:refId="Package\DimNegozio\Populate DimNegozio"
-          DTS:CreationName="Microsoft.Pipeline"
-          DTS:Description="Data Flow Task"
-          DTS:DTSID="{9a7c475c-6387-4ef2-a903-c63c849a1e73}"
-          DTS:ExecutableType="Microsoft.Pipeline"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Populate DimNegozio"
-          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <pipeline
-              version="1">
-              <components>
-                <component
-                  refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB"
-                  componentClassID="Microsoft.OLEDBDestination"
-                  contactInfo="Destinazione OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;4"
-                  description="Destinazione OLE DB"
-                  name="Destinazione OLE DB"
-                  usesDispositions="true"
-                  version="4">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
-                      name="CommandTimeout">0</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
-                      name="OpenRowset">[dbo].[DimNegozio]</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
-                      name="OpenRowsetVariable"></property>
-                    <property
-                      dataType="System.String"
-                      description="Comando SQL da eseguire."
-                      name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
-                      name="DefaultCodePage">1252</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
-                      name="AlwaysUseDefaultCodePage">false</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifica la modalità utilizzata per accedere al database."
-                      name="AccessMode"
-                      typeConverter="AccessMode">3</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indica se i valori specificati per le colonne Identity verranno copiati nella destinazione. Se false, i valori delle colonne Identity verranno generati automaticamente nella destinazione. Applicabile solo se è abilitato il caricamento rapido."
-                      name="FastLoadKeepIdentity">false</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indica se per le colonne con valori Null, tali valori verranno inseriti nella destinazione. Se false, per le colonne con valori Null verranno inseriti i valori predefiniti corrispondenti nella destinazione. Applicabile solo se è attivato il caricamento rapido."
-                      name="FastLoadKeepNulls">false</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifica le opzioni da utilizzare con il caricamento rapido. Applicabile solo se è attivato il caricamento rapido."
-                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifica se vengono eseguiti commit durante l'inserimento dei dati. Il valore 0 indica che verrà eseguito un solo commit al termine dell'inserimento dei dati. Applicabile solo se è attivato il caricamento rapido."
-                      name="FastLoadMaxInsertCommitSize">2147483647</property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Connections[OleDbConnection]"
-                      connectionManagerID="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DWH]"
-                      description="Connessione di run-time OLE DB utilizzata per accedere al database."
-                      name="OleDbConnection" />
-                  </connections>
-                  <inputs>
-                    <input
-                      refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB]"
-                      errorOrTruncationOperation="Inserimento"
-                      errorRowDisposition="FailComponent"
-                      hasSideEffects="true"
-                      name="Input destinazione OLE DB">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[NegozioKey]"
-                          cachedDataType="wstr"
-                          cachedLength="16"
-                          cachedName="NegozioKey"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[NegozioKey]"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioKey]" />
-                        <inputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[NegozioCodice]"
-                          cachedDataType="wstr"
-                          cachedLength="10"
-                          cachedName="NegozioCodice"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[NegozioCodice]"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioCodice]" />
-                        <inputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Negozio]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
-                          cachedName="Negozio"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Negozio]"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[Negozio]" />
-                        <inputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[NegozioIndirizzo]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
-                          cachedName="NegozioIndirizzo"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[NegozioIndirizzo]"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioIndirizzo]" />
-                        <inputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[NegozioCittà]"
-                          cachedDataType="wstr"
-                          cachedLength="30"
-                          cachedName="NegozioCittà"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[NegozioCittà]"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioCittà]" />
-                        <inputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[NegozioNumeroTelefonico]"
-                          cachedDataType="wstr"
-                          cachedLength="30"
-                          cachedName="NegozioNumeroTelefonico"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[NegozioNumeroTelefonico]"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioNumeroTelefonico]" />
-                        <inputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[NegozioCodicePostale]"
-                          cachedDataType="wstr"
-                          cachedLength="20"
-                          cachedName="NegozioCodicePostale"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[NegozioCodicePostale]"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioCodicePostale]" />
-                        <inputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[NegozioProvincia]"
-                          cachedDataType="wstr"
-                          cachedLength="30"
-                          cachedName="NegozioProvincia"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[NegozioProvincia]"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioProvincia]" />
-                        <inputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[NegozioEmail]"
-                          cachedDataType="wstr"
-                          cachedLength="80"
-                          cachedName="NegozioEmail"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[NegozioEmail]"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioEmail]" />
-                        <inputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[NegozioCodiceNazione]"
-                          cachedDataType="wstr"
-                          cachedLength="10"
-                          cachedName="NegozioCodiceNazione"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[NegozioCodiceNazione]"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioCodiceNazione]" />
-                        <inputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[AnnoApertura]"
-                          cachedDataType="i4"
-                          cachedName="AnnoApertura"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[AnnoApertura]"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[AnnoApertura]" />
-                        <inputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[MeseApertura]"
-                          cachedDataType="i4"
-                          cachedName="MeseApertura"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[MeseApertura]"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[MeseApertura]" />
-                        <inputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[DataApertura]"
-                          cachedDataType="dbDate"
-                          cachedName="DataApertura"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[DataApertura]"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[DataApertura]" />
-                        <inputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Insegna]"
-                          cachedDataType="wstr"
-                          cachedLength="10"
-                          cachedName="Insegna"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Insegna]"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[Insegna]" />
-                      </inputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[NegozioKey]"
-                          dataType="wstr"
-                          length="16"
-                          name="NegozioKey" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[NegozioCodice]"
-                          dataType="wstr"
-                          length="10"
-                          name="NegozioCodice" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Negozio]"
-                          dataType="wstr"
-                          length="50"
-                          name="Negozio" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[NegozioIndirizzo]"
-                          dataType="wstr"
-                          length="50"
-                          name="NegozioIndirizzo" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[NegozioCittà]"
-                          dataType="wstr"
-                          length="30"
-                          name="NegozioCittà" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[NegozioNumeroTelefonico]"
-                          dataType="wstr"
-                          length="30"
-                          name="NegozioNumeroTelefonico" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[NegozioCodicePostale]"
-                          dataType="wstr"
-                          length="20"
-                          name="NegozioCodicePostale" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[NegozioProvincia]"
-                          dataType="wstr"
-                          length="30"
-                          name="NegozioProvincia" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[NegozioEmail]"
-                          dataType="wstr"
-                          length="80"
-                          name="NegozioEmail" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[NegozioCodiceNazione]"
-                          dataType="wstr"
-                          length="10"
-                          name="NegozioCodiceNazione" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[AnnoApertura]"
-                          dataType="i4"
-                          name="AnnoApertura" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[MeseApertura]"
-                          dataType="i4"
-                          name="MeseApertura" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[DataApertura]"
-                          dataType="dbDate"
-                          name="DataApertura" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Insegna]"
-                          dataType="wstr"
-                          length="10"
-                          name="Insegna" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[NegozioKeyId]"
-                          dataType="i4"
-                          name="NegozioKeyId" />
-                      </externalMetadataColumns>
-                    </input>
-                  </inputs>
-                  <outputs>
-                    <output
-                      refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB]"
-                      exclusionGroup="1"
-                      isErrorOut="true"
-                      name="Output errori destinazione OLE DB"
-                      synchronousInputId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB]">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
-                  refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source"
-                  componentClassID="Microsoft.OLEDBSource"
-                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-                  description="OLE DB Source"
-                  name="DimNegozio Source"
-                  usesDispositions="true"
-                  version="7">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                      name="CommandTimeout">0</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[stg].[vDimNegozio]</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
-                    <property
-                      dataType="System.String"
-                      description="The SQL command to be executed."
-                      name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                    <property
-                      dataType="System.String"
-                      description="The variable that contains the SQL command to be executed."
-                      name="SqlCommandVariable"></property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the column code page to use when code page information is unavailable from the data source."
-                      name="DefaultCodePage">1252</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Forces the use of the DefaultCodePage property value when describing character data."
-                      name="AlwaysUseDefaultCodePage">false</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the mode used to access the database."
-                      name="AccessMode"
-                      typeConverter="AccessMode">0</property>
-                    <property
-                      dataType="System.String"
-                      description="The mappings between the parameters in the SQL command and variables."
-                      name="ParameterMapping"></property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Connections[OleDbConnection]"
-                      connectionManagerID="{EBDC3EEE-A910-457C-95AF-2952194294D6}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[Stage]"
-                      description="The OLE DB runtime connection used to access the database."
-                      name="OleDbConnection" />
-                  </connections>
-                  <outputs>
-                    <output
-                      refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output]"
-                      name="OLE DB Source Output">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioKey]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[NegozioKey]"
-                          length="16"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioKey]"
-                          name="NegozioKey"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioCodice]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[NegozioCodice]"
-                          length="10"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioCodice]"
-                          name="NegozioCodice"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[Negozio]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[Negozio]"
-                          length="50"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[Negozio]"
-                          name="Negozio"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioIndirizzo]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[NegozioIndirizzo]"
-                          length="50"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioIndirizzo]"
-                          name="NegozioIndirizzo"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioCittà]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[NegozioCittà]"
-                          length="30"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioCittà]"
-                          name="NegozioCittà"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioNumeroTelefonico]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[NegozioNumeroTelefonico]"
-                          length="30"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioNumeroTelefonico]"
-                          name="NegozioNumeroTelefonico"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioCodicePostale]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[NegozioCodicePostale]"
-                          length="20"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioCodicePostale]"
-                          name="NegozioCodicePostale"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioProvincia]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[NegozioProvincia]"
-                          length="30"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioProvincia]"
-                          name="NegozioProvincia"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioEmail]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[NegozioEmail]"
-                          length="80"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioEmail]"
-                          name="NegozioEmail"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioCodiceNazione]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[NegozioCodiceNazione]"
-                          length="10"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[NegozioCodiceNazione]"
-                          name="NegozioCodiceNazione"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[AnnoApertura]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[AnnoApertura]"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[AnnoApertura]"
-                          name="AnnoApertura"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[MeseApertura]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[MeseApertura]"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[MeseApertura]"
-                          name="MeseApertura"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[DataApertura]"
-                          dataType="dbDate"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[DataApertura]"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[DataApertura]"
-                          name="DataApertura"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[Insegna]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[Insegna]"
-                          length="10"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].Columns[Insegna]"
-                          name="Insegna"
-                          truncationRowDisposition="FailComponent" />
-                      </outputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[NegozioKey]"
-                          dataType="wstr"
-                          length="16"
-                          name="NegozioKey" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[NegozioCodice]"
-                          dataType="wstr"
-                          length="10"
-                          name="NegozioCodice" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[Negozio]"
-                          dataType="wstr"
-                          length="50"
-                          name="Negozio" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[NegozioIndirizzo]"
-                          dataType="wstr"
-                          length="50"
-                          name="NegozioIndirizzo" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[NegozioCittà]"
-                          dataType="wstr"
-                          length="30"
-                          name="NegozioCittà" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[NegozioNumeroTelefonico]"
-                          dataType="wstr"
-                          length="30"
-                          name="NegozioNumeroTelefonico" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[NegozioCodicePostale]"
-                          dataType="wstr"
-                          length="20"
-                          name="NegozioCodicePostale" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[NegozioProvincia]"
-                          dataType="wstr"
-                          length="30"
-                          name="NegozioProvincia" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[NegozioEmail]"
-                          dataType="wstr"
-                          length="80"
-                          name="NegozioEmail" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[NegozioCodiceNazione]"
-                          dataType="wstr"
-                          length="10"
-                          name="NegozioCodiceNazione" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[AnnoApertura]"
-                          dataType="i4"
-                          name="AnnoApertura" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[MeseApertura]"
-                          dataType="i4"
-                          name="MeseApertura" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[DataApertura]"
-                          dataType="dbDate"
-                          name="DataApertura" />
-                        <externalMetadataColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output].ExternalColumns[Insegna]"
-                          dataType="wstr"
-                          length="10"
-                          name="Insegna" />
-                      </externalMetadataColumns>
-                    </output>
-                    <output
-                      refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output]"
-                      isErrorOut="true"
-                      name="OLE DB Source Error Output">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[NegozioKey]"
-                          dataType="wstr"
-                          length="16"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[NegozioKey]"
-                          name="NegozioKey" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[NegozioCodice]"
-                          dataType="wstr"
-                          length="10"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[NegozioCodice]"
-                          name="NegozioCodice" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[Insegna]"
-                          dataType="wstr"
-                          length="10"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[Insegna]"
-                          name="Insegna" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[Negozio]"
-                          dataType="wstr"
-                          length="50"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[Negozio]"
-                          name="Negozio" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[NegozioIndirizzo]"
-                          dataType="wstr"
-                          length="50"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[NegozioIndirizzo]"
-                          name="NegozioIndirizzo" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[NegozioCittà]"
-                          dataType="wstr"
-                          length="30"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[NegozioCittà]"
-                          name="NegozioCittà" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[NegozioNumeroTelefonico]"
-                          dataType="wstr"
-                          length="30"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[NegozioNumeroTelefonico]"
-                          name="NegozioNumeroTelefonico" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[NegozioCodicePostale]"
-                          dataType="wstr"
-                          length="20"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[NegozioCodicePostale]"
-                          name="NegozioCodicePostale" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[NegozioProvincia]"
-                          dataType="wstr"
-                          length="30"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[NegozioProvincia]"
-                          name="NegozioProvincia" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[NegozioEmail]"
-                          dataType="wstr"
-                          length="80"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[NegozioEmail]"
-                          name="NegozioEmail" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[NegozioCodiceNazione]"
-                          dataType="wstr"
-                          length="10"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[NegozioCodiceNazione]"
-                          name="NegozioCodiceNazione" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[AnnoApertura]"
-                          dataType="i4"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[AnnoApertura]"
-                          name="AnnoApertura" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[MeseApertura]"
-                          dataType="i4"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[MeseApertura]"
-                          name="MeseApertura" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[DataApertura]"
-                          dataType="dbDate"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[DataApertura]"
-                          name="DataApertura" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-              </components>
-              <paths>
-                <path
-                  refId="Package\DimNegozio\Populate DimNegozio.Paths[OLE DB Source Output]"
-                  endId="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB.Inputs[Input destinazione OLE DB]"
-                  name="OLE DB Source Output"
-                  startId="Package\DimNegozio\Populate DimNegozio\DimNegozio Source.Outputs[OLE DB Source Output]" />
-              </paths>
-            </pipeline>
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\DimNegozio\Truncate DimNegozio"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Execute SQL Task"
-          DTS:DTSID="{7f5c7d4f-e8b0-44ec-a134-d0a962f88c55}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Truncate DimNegozio"
-          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="16">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="Truncate Table dbo.DimNegozio" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-      </DTS:Executables>
-      <DTS:PrecedenceConstraints>
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\DimNegozio.PrecedenceConstraints[Constraint]"
-          DTS:CreationName=""
-          DTS:DTSID="{9b04988d-988f-46b8-845b-489e4d48315a}"
-          DTS:From="Package\DimNegozio\Truncate DimNegozio"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint"
-          DTS:To="Package\DimNegozio\Populate DimNegozio" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
@@ -12942,7 +12253,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimOV"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="17">
+          DTS:ThreadHint="12">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13333,7 +12644,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="18">
+          DTS:ThreadHint="13">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14207,7 +13518,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate Dimqty"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="13">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14528,7 +13839,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimStatoVendita"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="14">
+          DTS:ThreadHint="20">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14891,7 +14202,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimSubcanale"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14930,7 +14241,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="populate DimTipologiaMktg"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="8">
+          DTS:ThreadHint="21">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14947,7 +14258,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate DimTipologiaMktg"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="8">
+          DTS:ThreadHint="21">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15239,7 +14550,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="23">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15564,7 +14875,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimTipoOrdine"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="24">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15922,7 +15233,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimUnitàDiMisura"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="25">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -16422,7 +15733,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimZona"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="26">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -16776,7 +16087,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimZonaAgente"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="9">
+          DTS:ThreadHint="27">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -17072,7 +16383,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCompany"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="28">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -17364,7 +16675,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimConto"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="28">
+          DTS:ThreadHint="22">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -18012,7 +17323,7 @@
           PanelSize="198,205.333333333334"
           Size="198,42.6666666666667"
           Id="Package\DimCliente_NEW"
-          TopLeft="70.2083738172308,969.40699300665" />
+          TopLeft="84.5833736030266,999.956992460374" />
         <NodeLayout
           Size="186.666666666667,42.6666666666667"
           Id="Package\DimCompany\Populate DimCompany"
@@ -18257,45 +17568,6 @@
           Size="198,42.6666666666667"
           Id="Package\DimMagazzino_NEW"
           TopLeft="709.541691876876,855.339563954545" />
-        <NodeLayout
-          Size="178.857142857143,42.2857142857143"
-          Id="Package\DimNegozio\Populate DimNegozio"
-          TopLeft="5.50000000000001,108.166666666667" />
-        <NodeLayout
-          Size="180,42.2857142857143"
-          Id="Package\DimNegozio\Truncate DimNegozio"
-          TopLeft="5.50000000000001,5.50000000000004" />
-        <EdgeLayout
-          Id="Package\DimNegozio.PrecedenceConstraints[Constraint]"
-          TopLeft="95.25,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.666666666667"
-              Start="0,0"
-              End="0,53.166666666667">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,53.166666666667" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="False"
-          PanelSize="250.857142857143,206.857142857143"
-          Size="158,42.6666666666667"
-          Id="Package\DimNegozio"
-          TopLeft="99.0000206505257,900.100001851914" />
         <NodeLayout
           Size="173.333333333334,42.6666666666667"
           Id="Package\DimOV\Populate DimOV"
@@ -18882,14 +18154,14 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,51.6610407736848"
+              EndConnector="0,51.6610407736844"
               Start="0,0"
-              End="0,44.1610407736848">
+              End="0,44.1610407736844">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.1610407736848" />
+                    End="0,44.1610407736844" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18898,6 +18170,10 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="204,42.6666666666667"
+          Id="Package\ACTUAL_DIM_DimNegozio"
+          TopLeft="89.208333566164,915.016667259435" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -19974,84 +19250,6 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DimMagazzino_NEW\populate\source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">View</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\DimNegozio\Populate DimNegozio">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="229.142857142858,42.8571428571429"
-          Id="Package\DimNegozio\Populate DimNegozio\DimNegozio Source"
-          TopLeft="213.749996814877,100.74999819845" />
-        <NodeLayout
-          Size="178.285714285715,42.2857142857143"
-          Id="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB"
-          TopLeft="821,303" />
-        <EdgeLayout
-          Id="Package\DimNegozio\Populate DimNegozio.Paths[OLE DB Source Output]"
-          TopLeft="328.321425386306,143.607141055593">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="581.821431756552,159.392858944407"
-              Start="0,0"
-              End="581.821431756552,151.892858944407">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,75.6964294722036" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,75.6964294722036"
-                    Point2="0,79.6964294722036"
-                    Point3="4,79.6964294722036" />
-                  <mssgle:LineSegment
-                    End="577.821431756552,79.6964294722036" />
-                  <mssgle:CubicBezierSegment
-                    Point1="577.821431756552,79.6964294722036"
-                    Point2="581.821431756552,79.6964294722036"
-                    Point3="581.821431756552,83.6964294722036" />
-                  <mssgle:LineSegment
-                    End="581.821431756552,151.892858944407" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\DimNegozio\Populate DimNegozio\Destinazione OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DimNegozio\Populate DimNegozio\DimNegozio Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
