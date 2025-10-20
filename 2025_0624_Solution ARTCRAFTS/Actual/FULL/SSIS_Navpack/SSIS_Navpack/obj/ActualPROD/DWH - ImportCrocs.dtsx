@@ -7,7 +7,7 @@
   DTS:CreatorName="CORP\FBARBACA"
   DTS:DTSID="{CAFBF909-7AA0-4044-B36A-B8BCE0859C82}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
   DTS:LocaleID="1040"
   DTS:ObjectName="DWH - Import Dim"
   DTS:PackageType="5"

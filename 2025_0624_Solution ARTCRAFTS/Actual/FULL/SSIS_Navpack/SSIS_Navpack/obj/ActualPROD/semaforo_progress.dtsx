@@ -7,7 +7,7 @@
   DTS:CreatorName="ARTCRAFTS\powerbi02"
   DTS:DTSID="{F6119F61-D879-41C9-AB7A-3255CA70E808}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
   DTS:LocaleID="1040"
   DTS:ObjectName="test_MaxTimestamp"
   DTS:PackageType="5"
