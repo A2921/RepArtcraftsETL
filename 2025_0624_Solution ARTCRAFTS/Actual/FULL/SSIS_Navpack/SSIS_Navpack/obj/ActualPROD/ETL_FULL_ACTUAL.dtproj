@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LIT004005</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAswJPnd5HC0eobEpShU+DnAAAAAACAAAAAAADZgAAwAAAABAAAAAH/DNZccV3wYVcz2p9FdYuAAAAAASAAACgAAAAEAAAAI5rYEQlAsNqxH8/UkZCl16IAAAA2x9+Xx1KgzoBwkvqnfi++F5PxQHjm+XJz7MX/5HAA2fNwB07x7A+1c/5yWTSjDsavKvVK/4eHjBbAo+93P5PDlvo3kA0/fWcCbpR7r+7LVa0GZgkoP0odgMKN2adR5lFER8KEptcUWHi7k/ZFua1VKtxNDlSLt4r9LHsIz8u624igQEuv14SkBQAAAA444hL+Kz498NqMF5M+AvCXpnLhQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAswJPnd5HC0eobEpShU+DnAAAAAACAAAAAAADZgAAwAAAABAAAAApqqRGA/5pw82icoSYNIDLAAAAAASAAACgAAAAEAAAAI+zlTwcdIm+F47Ji5TzyoqIAAAAglLusbhG9UhNH+A6Webbl2iMZomBT0dElkZPbHX08Z/YQjUuRVUw1QxH5M6Ua4CUwBiS+v/IAsb12Q/DBgCjQ3kBHvcnd8uIRozSIfnWyf6YTOzMYkZKYG4MelZSzNu4yQnkd6/f7EEs5kSETX0hLVYncKdVguGlF5otABnjgEOTFMKxcwySaxQAAABBQ52Gbg4JtxAmla121UizLnZGhA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -583,10 +583,10 @@
                 <SSIS:Property SSIS:Name="Name">DWH - Import Dim</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">164</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">161</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{E8E65B12-0B09-4AF0-BD62-EB930EF43EBF}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{5285284A-F660-41D8-BAEC-90DAFB539406}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -830,10 +830,10 @@
                 <SSIS:Property SSIS:Name="Name">Stage - Import Fact  step 2</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">187</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">207</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{0D251826-7D75-4C37-8A69-5ACDEBEBE8F5}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{60263F38-5FDB-476A-AECA-649395E1B891}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1136,10 +1136,10 @@
                 <SSIS:Property SSIS:Name="Name">DWH_Import_FACT_PROC</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">9</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">18</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{BC83BA0D-001D-4ABC-A522-C1E6DEA4C71C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{27F027C0-6CA1-4FB5-8FE3-19D7A97E28D5}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
