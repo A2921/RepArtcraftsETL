@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="DWH - Import Dim"
   DTS:PackageType="5"
-  DTS:VersionBuild="164"
-  DTS:VersionGUID="{E8E65B12-0B09-4AF0-BD62-EB930EF43EBF}">
+  DTS:VersionBuild="167"
+  DTS:VersionGUID="{F6D16936-9081-41B2-932B-D8876A1A7DCE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -26,7 +26,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="ACTUAL_DIM_DimNegozio"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="28">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -43,7 +43,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="ACTUAL_DIM_Macrosubcanale"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -1892,7 +1892,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimFornitore"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2349,7 +2349,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2388,7 +2388,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimArticolo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2405,7 +2405,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimConto"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2422,7 +2422,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimMarchio"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2439,7 +2439,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="DimCollezione"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2494,7 +2494,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimStagione"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2511,7 +2511,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimUltimaStagione"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2853,7 +2853,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate DimArticoloListino"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="4">
+              DTS:ThreadHint="5">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -3333,7 +3333,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate DimListino"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="4">
+              DTS:ThreadHint="5">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -3720,7 +3720,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate DimArticoloListino"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="4">
+              DTS:ThreadHint="5">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -4284,7 +4284,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimAgente"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -4749,7 +4749,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -4788,7 +4788,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="populate DimAssortimentoArticoloModello"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -4805,7 +4805,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate DimAssortimentoArticoloModello"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5168,7 +5168,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCanale"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="8">
+          DTS:ThreadHint="10">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -6105,7 +6105,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="10">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -6468,7 +6468,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCompany"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="11">
+          DTS:ThreadHint="15">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -8094,7 +8094,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="14">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -9394,7 +9394,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="13">
+          DTS:ThreadHint="16">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10633,7 +10633,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimFornitore"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="14">
+          DTS:ThreadHint="18">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11151,7 +11151,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="12">
+          DTS:ThreadHint="19">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11961,7 +11961,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="9">
+          DTS:ThreadHint="11">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12253,7 +12253,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimOV"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="17">
+          DTS:ThreadHint="20">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12298,11 +12298,11 @@
               version="1">
               <components>
                 <component
-                  refId="Package\dimPCCDC\populate\Destinazione OLE DB"
+                  refId="Package\dimPCCDC\populate\DimPCCDC"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="Destinazione OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;4"
                   description="Destinazione OLE DB"
-                  name="Destinazione OLE DB"
+                  name="DimPCCDC"
                   usesDispositions="true"
                   version="4">
                   <properties>
@@ -12355,7 +12355,7 @@
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\dimPCCDC\populate\Destinazione OLE DB.Connections[OleDbConnection]"
+                      refId="Package\dimPCCDC\populate\DimPCCDC.Connections[OleDbConnection]"
                       connectionManagerID="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}:external"
                       connectionManagerRefId="Project.ConnectionManagers[DWH]"
                       description="Connessione di run-time OLE DB utilizzata per accedere al database."
@@ -12363,88 +12363,100 @@
                   </connections>
                   <inputs>
                     <input
-                      refId="Package\dimPCCDC\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB]"
+                      refId="Package\dimPCCDC\populate\DimPCCDC.Inputs[Input destinazione OLE DB]"
                       errorOrTruncationOperation="Inserimento"
                       errorRowDisposition="FailComponent"
                       hasSideEffects="true"
                       name="Input destinazione OLE DB">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\dimPCCDC\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[Dimension Code]"
+                          refId="Package\dimPCCDC\populate\DimPCCDC.Inputs[Input destinazione OLE DB].Columns[Dimension Code]"
                           cachedDataType="wstr"
                           cachedLength="20"
                           cachedName="Dimension Code"
-                          externalMetadataColumnId="Package\dimPCCDC\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Dimension Code]"
-                          lineageId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].Columns[Dimension Code]" />
+                          externalMetadataColumnId="Package\dimPCCDC\populate\DimPCCDC.Inputs[Input destinazione OLE DB].ExternalColumns[Dimension Code]"
+                          lineageId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].Columns[Dimension Code]" />
                         <inputColumn
-                          refId="Package\dimPCCDC\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[PPCDC Code]"
+                          refId="Package\dimPCCDC\populate\DimPCCDC.Inputs[Input destinazione OLE DB].Columns[PPCDC Code]"
                           cachedDataType="wstr"
                           cachedLength="20"
                           cachedName="PPCDC Code"
-                          externalMetadataColumnId="Package\dimPCCDC\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[PPCDC Code]"
-                          lineageId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].Columns[PPCDC Code]" />
+                          externalMetadataColumnId="Package\dimPCCDC\populate\DimPCCDC.Inputs[Input destinazione OLE DB].ExternalColumns[PPCDC Code]"
+                          lineageId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].Columns[PPCDC Code]" />
                         <inputColumn
-                          refId="Package\dimPCCDC\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[pccdcKey]"
+                          refId="Package\dimPCCDC\populate\DimPCCDC.Inputs[Input destinazione OLE DB].Columns[pccdcKey]"
                           cachedDataType="wstr"
                           cachedLength="26"
                           cachedName="pccdcKey"
-                          externalMetadataColumnId="Package\dimPCCDC\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[pccdcKey]"
-                          lineageId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].Columns[pccdcKey]" />
+                          externalMetadataColumnId="Package\dimPCCDC\populate\DimPCCDC.Inputs[Input destinazione OLE DB].ExternalColumns[pccdcKey]"
+                          lineageId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].Columns[pccdcKey]" />
                         <inputColumn
-                          refId="Package\dimPCCDC\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[DescrizionePCCDC]"
+                          refId="Package\dimPCCDC\populate\DimPCCDC.Inputs[Input destinazione OLE DB].Columns[DescrizionePCCDC]"
                           cachedDataType="wstr"
                           cachedLength="50"
                           cachedName="DescrizionePCCDC"
-                          externalMetadataColumnId="Package\dimPCCDC\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[DescrizionePCCDC]"
-                          lineageId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].Columns[DescrizionePCCDC]" />
+                          externalMetadataColumnId="Package\dimPCCDC\populate\DimPCCDC.Inputs[Input destinazione OLE DB].ExternalColumns[DescrizionePCCDC]"
+                          lineageId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].Columns[DescrizionePCCDC]" />
+                        <inputColumn
+                          refId="Package\dimPCCDC\populate\DimPCCDC.Inputs[Input destinazione OLE DB].Columns[ChannelDimension]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="ChannelDimension"
+                          externalMetadataColumnId="Package\dimPCCDC\populate\DimPCCDC.Inputs[Input destinazione OLE DB].ExternalColumns[ChannelDimension]"
+                          lineageId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].Columns[ChannelDimension]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\dimPCCDC\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[Dimension Code]"
+                          refId="Package\dimPCCDC\populate\DimPCCDC.Inputs[Input destinazione OLE DB].ExternalColumns[Dimension Code]"
                           dataType="wstr"
                           length="20"
                           name="Dimension Code" />
                         <externalMetadataColumn
-                          refId="Package\dimPCCDC\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[PPCDC Code]"
+                          refId="Package\dimPCCDC\populate\DimPCCDC.Inputs[Input destinazione OLE DB].ExternalColumns[PPCDC Code]"
                           dataType="wstr"
                           length="20"
                           name="PPCDC Code" />
                         <externalMetadataColumn
-                          refId="Package\dimPCCDC\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[pccdcKey]"
+                          refId="Package\dimPCCDC\populate\DimPCCDC.Inputs[Input destinazione OLE DB].ExternalColumns[pccdcKey]"
                           dataType="wstr"
                           length="26"
                           name="pccdcKey" />
                         <externalMetadataColumn
-                          refId="Package\dimPCCDC\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[DescrizionePCCDC]"
+                          refId="Package\dimPCCDC\populate\DimPCCDC.Inputs[Input destinazione OLE DB].ExternalColumns[DescrizionePCCDC]"
                           dataType="wstr"
                           length="50"
                           name="DescrizionePCCDC" />
                         <externalMetadataColumn
-                          refId="Package\dimPCCDC\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[PCCDCKeyId]"
+                          refId="Package\dimPCCDC\populate\DimPCCDC.Inputs[Input destinazione OLE DB].ExternalColumns[PCCDCKeyId]"
                           dataType="i4"
                           name="PCCDCKeyId" />
+                        <externalMetadataColumn
+                          refId="Package\dimPCCDC\populate\DimPCCDC.Inputs[Input destinazione OLE DB].ExternalColumns[ChannelDimension]"
+                          dataType="wstr"
+                          length="20"
+                          name="ChannelDimension" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\dimPCCDC\populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB]"
+                      refId="Package\dimPCCDC\populate\DimPCCDC.Outputs[Output errori destinazione OLE DB]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="Output errori destinazione OLE DB"
-                      synchronousInputId="Package\dimPCCDC\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB]">
+                      synchronousInputId="Package\dimPCCDC\populate\DimPCCDC.Inputs[Input destinazione OLE DB]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\dimPCCDC\populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                          refId="Package\dimPCCDC\populate\DimPCCDC.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\dimPCCDC\populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
+                          lineageId="Package\dimPCCDC\populate\DimPCCDC.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\dimPCCDC\populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                          refId="Package\dimPCCDC\populate\DimPCCDC.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\dimPCCDC\populate\Destinazione OLE DB.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
+                          lineageId="Package\dimPCCDC\populate\DimPCCDC.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -12453,11 +12465,11 @@
                   </outputs>
                 </component>
                 <component
-                  refId="Package\dimPCCDC\populate\source"
+                  refId="Package\dimPCCDC\populate\vDimPCCDC"
                   componentClassID="Microsoft.OLEDBSource"
                   contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
                   description="OLE DB Source"
-                  name="source"
+                  name="vDimPCCDC"
                   usesDispositions="true"
                   version="7">
                   <properties>
@@ -12502,7 +12514,7 @@
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\dimPCCDC\populate\source.Connections[OleDbConnection]"
+                      refId="Package\dimPCCDC\populate\vDimPCCDC.Connections[OleDbConnection]"
                       connectionManagerID="{EBDC3EEE-A910-457C-95AF-2952194294D6}:external"
                       connectionManagerRefId="Project.ConnectionManagers[Stage]"
                       description="The OLE DB runtime connection used to access the database."
@@ -12510,113 +12522,134 @@
                   </connections>
                   <outputs>
                     <output
-                      refId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output]"
+                      refId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output]"
                       name="OLE DB Source Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].Columns[Dimension Code]"
+                          refId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].Columns[Dimension Code]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversione"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].ExternalColumns[Dimension Code]"
+                          externalMetadataColumnId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].ExternalColumns[Dimension Code]"
                           length="20"
-                          lineageId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].Columns[Dimension Code]"
+                          lineageId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].Columns[Dimension Code]"
                           name="Dimension Code"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].Columns[PPCDC Code]"
+                          refId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].Columns[PPCDC Code]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversione"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].ExternalColumns[PPCDC Code]"
+                          externalMetadataColumnId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].ExternalColumns[PPCDC Code]"
                           length="20"
-                          lineageId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].Columns[PPCDC Code]"
+                          lineageId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].Columns[PPCDC Code]"
                           name="PPCDC Code"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].Columns[pccdcKey]"
+                          refId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].Columns[pccdcKey]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversione"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].ExternalColumns[pccdcKey]"
+                          externalMetadataColumnId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].ExternalColumns[pccdcKey]"
                           length="26"
-                          lineageId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].Columns[pccdcKey]"
+                          lineageId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].Columns[pccdcKey]"
                           name="pccdcKey"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].Columns[DescrizionePCCDC]"
+                          refId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].Columns[DescrizionePCCDC]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversione"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].ExternalColumns[DescrizionePCCDC]"
+                          externalMetadataColumnId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].ExternalColumns[DescrizionePCCDC]"
                           length="50"
-                          lineageId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].Columns[DescrizionePCCDC]"
+                          lineageId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].Columns[DescrizionePCCDC]"
                           name="DescrizionePCCDC"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].Columns[ChannelDimension]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversione"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].ExternalColumns[ChannelDimension]"
+                          length="20"
+                          lineageId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].Columns[ChannelDimension]"
+                          name="ChannelDimension"
                           truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].ExternalColumns[Dimension Code]"
+                          refId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].ExternalColumns[Dimension Code]"
                           dataType="wstr"
                           length="20"
                           name="Dimension Code" />
                         <externalMetadataColumn
-                          refId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].ExternalColumns[PPCDC Code]"
+                          refId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].ExternalColumns[PPCDC Code]"
                           dataType="wstr"
                           length="20"
                           name="PPCDC Code" />
                         <externalMetadataColumn
-                          refId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].ExternalColumns[pccdcKey]"
+                          refId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].ExternalColumns[pccdcKey]"
                           dataType="wstr"
                           length="26"
                           name="pccdcKey" />
                         <externalMetadataColumn
-                          refId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output].ExternalColumns[DescrizionePCCDC]"
+                          refId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].ExternalColumns[DescrizionePCCDC]"
                           dataType="wstr"
                           length="50"
                           name="DescrizionePCCDC" />
+                        <externalMetadataColumn
+                          refId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output].ExternalColumns[ChannelDimension]"
+                          dataType="wstr"
+                          length="20"
+                          name="ChannelDimension" />
                       </externalMetadataColumns>
                     </output>
                     <output
-                      refId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Error Output]"
+                      refId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Error Output]"
                       isErrorOut="true"
                       name="OLE DB Source Error Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Error Output].Columns[Dimension Code]"
+                          refId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Error Output].Columns[Dimension Code]"
                           dataType="wstr"
                           length="20"
-                          lineageId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Error Output].Columns[Dimension Code]"
+                          lineageId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Error Output].Columns[Dimension Code]"
                           name="Dimension Code" />
                         <outputColumn
-                          refId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Error Output].Columns[PPCDC Code]"
+                          refId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Error Output].Columns[PPCDC Code]"
                           dataType="wstr"
                           length="20"
-                          lineageId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Error Output].Columns[PPCDC Code]"
+                          lineageId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Error Output].Columns[PPCDC Code]"
                           name="PPCDC Code" />
                         <outputColumn
-                          refId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Error Output].Columns[pccdcKey]"
+                          refId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Error Output].Columns[pccdcKey]"
                           dataType="wstr"
                           length="26"
-                          lineageId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Error Output].Columns[pccdcKey]"
+                          lineageId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Error Output].Columns[pccdcKey]"
                           name="pccdcKey" />
                         <outputColumn
-                          refId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Error Output].Columns[DescrizionePCCDC]"
+                          refId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Error Output].Columns[DescrizionePCCDC]"
                           dataType="wstr"
                           length="50"
-                          lineageId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Error Output].Columns[DescrizionePCCDC]"
+                          lineageId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Error Output].Columns[DescrizionePCCDC]"
                           name="DescrizionePCCDC" />
                         <outputColumn
-                          refId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          refId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Error Output].Columns[ChannelDimension]"
+                          dataType="wstr"
+                          length="20"
+                          lineageId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Error Output].Columns[ChannelDimension]"
+                          name="ChannelDimension" />
+                        <outputColumn
+                          refId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          lineageId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          refId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -12628,9 +12661,9 @@
               <paths>
                 <path
                   refId="Package\dimPCCDC\populate.Paths[OLE DB Source Output]"
-                  endId="Package\dimPCCDC\populate\Destinazione OLE DB.Inputs[Input destinazione OLE DB]"
+                  endId="Package\dimPCCDC\populate\DimPCCDC.Inputs[Input destinazione OLE DB]"
                   name="OLE DB Source Output"
-                  startId="Package\dimPCCDC\populate\source.Outputs[OLE DB Source Output]" />
+                  startId="Package\dimPCCDC\populate\vDimPCCDC.Outputs[OLE DB Source Output]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -12644,7 +12677,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="15">
+          DTS:ThreadHint="12">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13040,7 +13073,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimProfitCenter"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="18">
+          DTS:ThreadHint="13">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13518,7 +13551,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate Dimqty"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="19">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13839,7 +13872,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimStatoVendita"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="20">
+          DTS:ThreadHint="25">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14202,7 +14235,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimSubcanale"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14241,7 +14274,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="populate DimTipologiaMktg"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="24">
+          DTS:ThreadHint="21">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14258,7 +14291,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate DimTipologiaMktg"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="24">
+          DTS:ThreadHint="21">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14550,7 +14583,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="22">
+          DTS:ThreadHint="17">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14875,7 +14908,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimTipoOrdine"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="23">
+          DTS:ThreadHint="26">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15233,7 +15266,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimUnitàDiMisura"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="21">
+          DTS:ThreadHint="27">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15733,7 +15766,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimZona"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="16">
+          DTS:ThreadHint="28">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -16087,7 +16120,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimZonaAgente"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="25">
+          DTS:ThreadHint="22">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -16383,7 +16416,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCompany"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="26">
+          DTS:ThreadHint="23">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -16675,7 +16708,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimConto"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="27">
+          DTS:ThreadHint="24">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -16727,9 +16760,13 @@
       <GraphLayout
         Capacity="256" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="204,42.6666666666667"
+          Id="Package\ACTUAL_DIM_DimNegozio"
+          TopLeft="5.5,776.5" />
+        <NodeLayout
           Size="224,42.6666666666667"
           Id="Package\ACTUAL_DIM_Macrosubcanale"
-          TopLeft="73.8333322529993,822.561034466321" />
+          TopLeft="5271.5,776.499999999999" />
         <NodeLayout
           Size="185.333333333334,42.6666666666667"
           Id="Package\affidamentoClienti\Populate DimFornitore"
@@ -16768,7 +16805,7 @@
           PanelSize="197.333333333334,184"
           Size="187.333333333334,42.6666666666667"
           Id="Package\affidamentoClienti"
-          TopLeft="1066.60713977846,387.821422292293" />
+          TopLeft="269.833333333333,776.5" />
         <NodeLayout
           Size="120,42.6666666666667"
           Id="Package\CMP_NEW\Populate"
@@ -16807,37 +16844,37 @@
           PanelSize="214,206.666666666667"
           Size="151.333333333334,42.6666666666667"
           Id="Package\CMP_NEW"
-          TopLeft="806.75594035936,479.374991428108" />
+          TopLeft="517.833333333333,776.5" />
         <NodeLayout
           Size="202.666666666667,42.6666666666667"
           Id="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimArticolo"
-          TopLeft="42.4583322436859,124.016663888792" />
+          TopLeft="6.16666666666669,108.166666666667" />
         <NodeLayout
           Size="194.666666666667,42.6666666666667"
           Id="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimConto"
-          TopLeft="49.9583321319275,27.0277126164152" />
+          TopLeft="10.1666666666667,5.50000000000004" />
         <NodeLayout
           Size="204,42.6666666666667"
           Id="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimMarchio"
-          TopLeft="37.4583323181917,242.68332916071" />
+          TopLeft="5.50000000000003,210.833333333334" />
         <NodeLayout
           Size="145.333333333334,42.6666666666667"
           Id="Package\Dim Articolo Marchio Collezione\DimCollezione"
-          TopLeft="63.6250023003663,362.183331485292" />
+          TopLeft="34.8333333333334,313.5" />
         <EdgeLayout
           Id="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo]"
-          TopLeft="141.624998947605,166.683330555459">
+          TopLeft="107.5,150.833333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,75.9999986052509"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="0,68.4999986052509">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,68.4999986052509" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -16848,18 +16885,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo 1]"
-          TopLeft="145.54166552114,69.6943792830818">
+          TopLeft="107.5,48.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,54.3222846057103"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="0,46.8222846057103">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,46.8222846057103" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -16870,18 +16907,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dim Articolo Marchio Collezione.PrecedenceConstraints[Vincolo 2]"
-          TopLeft="137.875000642612,285.349995827376">
+          TopLeft="107.5,253.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,76.8333356579154"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="0,69.3333356579154">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,69.3333356579154" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -16893,18 +16930,18 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="310.666666666667,472.666666666667"
-          Size="310.666666666667,515.333333333334"
+          PanelSize="214.666666666667,411.333333333334"
+          Size="214.666666666667,454"
           Id="Package\Dim Articolo Marchio Collezione"
-          TopLeft="31.9583328769854,110.699998163581" />
+          TopLeft="747.166666666667,5.5" />
         <NodeLayout
           Size="208,42.6666666666667"
           Id="Package\Dim Stagione - Listino - Ultima Stagione\ACTUAL_DIM_DimStagione"
-          TopLeft="40.5833328304186,30.9500113555782" />
+          TopLeft="20.1666666666667,5.50000000000004" />
         <NodeLayout
           Size="237.333333333334,42.6666666666667"
           Id="Package\Dim Stagione - Listino - Ultima Stagione\ACTUAL_DIM_DimUltimaStagione"
-          TopLeft="29.3958265672749,365.695825682556" />
+          TopLeft="5.50000000000004,416.166666666667" />
         <NodeLayout
           Size="208,42.6666666666667"
           Id="Package\Dim Stagione - Listino - Ultima Stagione\DimArticoloListino\Populate DimArticoloListino"
@@ -16943,7 +16980,7 @@
           PanelSize="220,206.666666666667"
           Size="220,42.6666666666667"
           Id="Package\Dim Stagione - Listino - Ultima Stagione\DimArticoloListino"
-          TopLeft="41.165178464659,189.947614029845" />
+          TopLeft="14.1666666666667,210.833333333334" />
         <NodeLayout
           Size="172,42.6666666666667"
           Id="Package\Dim Stagione - Listino - Ultima Stagione\DimListino\Populate DimListino"
@@ -16982,7 +17019,7 @@
           PanelSize="185.333333333334,206.666666666667"
           Size="150,42.6666666666667"
           Id="Package\Dim Stagione - Listino - Ultima Stagione\DimListino"
-          TopLeft="70.4999990314246,116.895243169466" />
+          TopLeft="49.1666666666667,108.166666666667" />
         <NodeLayout
           Size="208,42.8571428571429"
           Id="Package\Dim Stagione - Listino - Ultima Stagione\dimlistino_senza_data\Populate DimArticoloListino"
@@ -17021,21 +17058,21 @@
           PanelSize="220,206.857142857143"
           Size="206,42.6666666666667"
           Id="Package\Dim Stagione - Listino - Ultima Stagione\dimlistino_senza_data"
-          TopLeft="48.149325776782,296.015196247727" />
+          TopLeft="21.1666666666667,313.5" />
         <EdgeLayout
           Id="Package\Dim Stagione - Listino - Ultima Stagione.PrecedenceConstraints[Vincolo]"
-          TopLeft="145.041665930922,73.6166780222449">
+          TopLeft="124.166666666667,48.1666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,43.2785651472213"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="0,35.7785651472213">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.7785651472213" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -17046,18 +17083,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dim Stagione - Listino - Ultima Stagione.PrecedenceConstraints[Vincolo 1]"
-          TopLeft="151.15725212072,232.614280696512">
+          TopLeft="124.166666666667,253.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,63.4009155512151"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="0,55.9009155512151">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,55.9009155512151" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -17068,18 +17105,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dim Stagione - Listino - Ultima Stagione.PrecedenceConstraints[Vincolo 2]"
-          TopLeft="148.332588748042,159.561909836133">
+          TopLeft="124.166666666667,150.833333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,30.3857041937121"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="0,22.8857041937121">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.8857041937121" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -17090,18 +17127,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Dim Stagione - Listino - Ultima Stagione.PrecedenceConstraints[Vincolo 3]"
-          TopLeft="149.605909505362,338.681862914394">
+          TopLeft="124.166666666667,356.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,27.0139627681619"
+              EndConnector="0,60.0000000000001"
               Start="0,0"
-              End="0,19.5139627681619">
+              End="0,52.5000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.5139627681619" />
+                    End="0,52.5000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -17113,10 +17150,10 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="317.333333333334,462.666666666667"
-          Size="317.333333333334,505.333333333334"
+          PanelSize="248.666666666667,514"
+          Size="248.666666666667,556.666666666667"
           Id="Package\Dim Stagione - Listino - Ultima Stagione"
-          TopLeft="411.406243869569,121.120833766286" />
+          TopLeft="730.166666666667,519.5" />
         <NodeLayout
           Size="176,42.6666666666667"
           Id="Package\DimAgente\Populate DimAgente"
@@ -17155,7 +17192,7 @@
           PanelSize="186.666666666667,206.666666666667"
           Size="186.666666666667,42.6666666666667"
           Id="Package\DimAgente"
-          TopLeft="801.406238058117,297.058327795019" />
+          TopLeft="1039.16666666667,776.5" />
         <NodeLayout
           Size="120,42"
           Id="Package\dimAssortimento\populate"
@@ -17194,7 +17231,7 @@
           PanelSize="186.666666666667,205.333333333334"
           Size="181.333333333334,42.6666666666667"
           Id="Package\dimAssortimento"
-          TopLeft="720.34725586976,754.123710841367" />
+          TopLeft="1286.83333333333,776.5" />
         <NodeLayout
           Size="274.666666666667,42.6666666666667"
           Id="Package\DimAssortimentoArticoloModello\populate DimAssortimentoArticoloModello"
@@ -17245,7 +17282,7 @@
           PanelSize="324.666666666667,212"
           Size="324.666666666667,42.6666666666667"
           Id="Package\DimAssortimentoArticoloModello"
-          TopLeft="975.208318801598,1104.97769987383" />
+          TopLeft="1529.16666666667,776.5" />
         <NodeLayout
           Size="173.333333333334,42.6666666666667"
           Id="Package\DimCanale\Populate DimCanale"
@@ -17284,7 +17321,7 @@
           PanelSize="237.333333333334,207.333333333334"
           Size="237.333333333334,42.6666666666667"
           Id="Package\DimCanale"
-          TopLeft="379.479156839661,659.460083280126" />
+          TopLeft="1914.83333333333,776.5" />
         <NodeLayout
           Size="120,42"
           Id="Package\DimCliente_NEW\populate"
@@ -17323,7 +17360,7 @@
           PanelSize="198,205.333333333334"
           Size="198,42.6666666666667"
           Id="Package\DimCliente_NEW"
-          TopLeft="84.5833736030266,999.956992460374" />
+          TopLeft="2212.5,776.5" />
         <NodeLayout
           Size="186.666666666667,42.6666666666667"
           Id="Package\DimCompany\Populate DimCompany"
@@ -17362,7 +17399,7 @@
           PanelSize="197.333333333334,206.666666666667"
           Size="197.333333333334,42.6666666666667"
           Id="Package\DimCompany"
-          TopLeft="948.958323079468,656.291660787415" />
+          TopLeft="2470.83333333333,776.5" />
         <NodeLayout
           Size="120,42"
           Id="Package\DimConto_GL\populate"
@@ -17413,7 +17450,7 @@
           PanelSize="187,234"
           Size="186.666666666667,42.6666666666667"
           Id="Package\DimConto_GL"
-          TopLeft="966.812204085989,857.495908578155" />
+          TopLeft="2729.16666666667,776.5" />
         <NodeLayout
           Size="120,42.2857142857143"
           Id="Package\dimFiliale\populate"
@@ -17452,7 +17489,7 @@
           PanelSize="187,205.142857142858"
           Size="186.666666666667,42.6666666666667"
           Id="Package\dimFiliale"
-          TopLeft="706.275805963453,655.928060008714" />
+          TopLeft="2976.16666666667,776.5" />
         <NodeLayout
           Size="185.333333333334,42.6666666666667"
           Id="Package\DimFornitore\Populate DimFornitore"
@@ -17491,29 +17528,29 @@
           PanelSize="197.333333333334,206.666666666667"
           Size="197.333333333334,42.6666666666667"
           Id="Package\DimFornitore"
-          TopLeft="793.072911653823,198.483335588178" />
+          TopLeft="3223.83333333333,776.5" />
         <NodeLayout
           Size="120,42"
           Id="Package\DimListino_Retail\populate"
-          TopLeft="5.50000000000001,108.166666666667" />
+          TopLeft="5.50000000000001,107.5" />
         <NodeLayout
           Size="118,42"
           Id="Package\DimListino_Retail\truncate"
-          TopLeft="5.50000000000002,5.50000000000004" />
+          TopLeft="6.50000000000001,5.5" />
         <EdgeLayout
           Id="Package\DimListino_Retail.PrecedenceConstraints[Constraint]"
-          TopLeft="65.0714285714286,47.7857142857143">
+          TopLeft="65.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.3809523809527"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,52.8809523809527">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.8809523809527" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -17525,10 +17562,10 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="186.666666666667,205.333333333334"
-          Size="186.666666666667,248"
+          PanelSize="150,204.666666666667"
+          Size="130.666666666667,247.333333333334"
           Id="Package\DimListino_Retail"
-          TopLeft="806.537038630785,388.478844648682" />
+          TopLeft="3482.16666666667,674.166666666666" />
         <NodeLayout
           Size="120,42"
           Id="Package\DimMagazzino_NEW\populate"
@@ -17567,7 +17604,7 @@
           PanelSize="198,205.333333333334"
           Size="198,42.6666666666667"
           Id="Package\DimMagazzino_NEW"
-          TopLeft="709.541691876876,855.339563954545" />
+          TopLeft="3673.5,776.499999999999" />
         <NodeLayout
           Size="173.333333333334,42.6666666666667"
           Id="Package\DimOV\Populate DimOV"
@@ -17606,7 +17643,7 @@
           PanelSize="237.333333333334,208"
           Size="237.333333333334,42.6666666666667"
           Id="Package\DimOV"
-          TopLeft="51.5972435866483,1099.31934407536" />
+          TopLeft="3931.83333333333,776.499999999999" />
         <NodeLayout
           Size="120,42"
           Id="Package\dimPCCDC\populate"
@@ -17634,18 +17671,16 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="186.666666666667,205.333333333334"
-          Size="186.666666666667,42.6666666666667"
+          Size="151.333333333334,42.6666666666667"
           Id="Package\dimPCCDC"
-          TopLeft="706.874989466742,972.17783179791" />
+          TopLeft="4230.16666666667,776.499999999999" />
         <NodeLayout
           Size="198.666666666667,42.6666666666667"
           Id="Package\DimProfitCenter\Populate DimProfitCenter"
@@ -17684,7 +17719,7 @@
           PanelSize="209.333333333334,206.666666666667"
           Size="177.333333333334,42.6666666666667"
           Id="Package\DimProfitCenter"
-          TopLeft="976.96427515841,758.823809323454" />
+          TopLeft="4477.83333333333,776.499999999999" />
         <NodeLayout
           Size="208,42.6666666666667"
           Id="Package\DimQtaAssortimento\Populate Dimqty"
@@ -17723,7 +17758,7 @@
           PanelSize="220,206.666666666667"
           Size="220,42.6666666666667"
           Id="Package\DimQtaAssortimento"
-          TopLeft="379.062494351532,1106.30283490704" />
+          TopLeft="4715.5,776.499999999999" />
         <NodeLayout
           Size="202,42"
           Id="Package\DimStatoVendita\Populate DimStatoVendita"
@@ -17762,7 +17797,7 @@
           PanelSize="214,206.666666666667"
           Size="214,42.6666666666667"
           Id="Package\DimStatoVendita"
-          TopLeft="1043.6666470468,199.283329579135" />
+          TopLeft="4996.5,776.499999999999" />
         <NodeLayout
           Size="190.666666666667,42.6666666666667"
           Id="Package\DimSubcanale\Populate DimSubcanale"
@@ -17801,7 +17836,7 @@
           PanelSize="201.333333333334,205.333333333334"
           Size="168.666666666667,42.6666666666667"
           Id="Package\DimSubcanale"
-          TopLeft="97.8750085774804,728.23332702597" />
+          TopLeft="5299.16666666667,211.166666666666" />
         <NodeLayout
           Size="208,42.6666666666667"
           Id="Package\DimTipologiaMktg\populate DimTipologiaMktg"
@@ -17852,7 +17887,7 @@
           PanelSize="258,213.333333333334"
           Size="258,42.6666666666667"
           Id="Package\DimTipologiaMktg"
-          TopLeft="382.648803821897,1260.69435812939" />
+          TopLeft="5556.5,776.499999999999" />
         <NodeLayout
           Size="173.333333333334,42.6666666666667"
           Id="Package\DimTipoOperazioneCDV\Populate"
@@ -17891,7 +17926,7 @@
           PanelSize="237.333333333334,206.666666666667"
           Size="237.333333333334,42.6666666666667"
           Id="Package\DimTipoOperazioneCDV"
-          TopLeft="48.5416659433399,1250.77768578687" />
+          TopLeft="5874.83333333333,776.499999999999" />
         <NodeLayout
           Size="193.333333333334,42"
           Id="Package\DimTipoOrdine\Populate DimTipoOrdine"
@@ -17930,7 +17965,7 @@
           PanelSize="237.333333333334,207.333333333334"
           Size="237.333333333334,42.6666666666667"
           Id="Package\DimTipoOrdine"
-          TopLeft="1067.33330579102,467.125003380329" />
+          TopLeft="6172.83333333333,776.499999999999" />
         <NodeLayout
           Size="208,42.6666666666667"
           Id="Package\DimUnitàDiMisura\Populate DimUnitàDiMisura"
@@ -17969,7 +18004,7 @@
           PanelSize="237.333333333334,206.666666666667"
           Size="237.333333333334,42.6666666666667"
           Id="Package\DimUnitàDiMisura"
-          TopLeft="77.1666707520686,653.516665438512" />
+          TopLeft="6470.83333333333,776.499999999999" />
         <NodeLayout
           Size="165.142857142858,42.8571428571429"
           Id="Package\DimZona\Populate DimZona"
@@ -18008,7 +18043,7 @@
           PanelSize="433.142857142858,198.857142857143"
           Size="250,42.6666666666667"
           Id="Package\DimZona"
-          TopLeft="394.624998550242,752.312488091365" />
+          TopLeft="6768.5,776.499999999999" />
         <NodeLayout
           Size="198.666666666667,42.6666666666667"
           Id="Package\DimZonaAgente\Populate DimZonaAgente"
@@ -18047,7 +18082,7 @@
           PanelSize="211,206.666666666667"
           Size="210.666666666667,42.6666666666667"
           Id="Package\DimZonaAgente"
-          TopLeft="401.208329679445,847.316669599517" />
+          TopLeft="7079.16666666667,776.499999999999" />
         <NodeLayout
           Size="186.666666666667,42.6666666666667"
           Id="Package\MargineCliente_TipologiaSpesa\Populate DimCompany"
@@ -18086,7 +18121,7 @@
           PanelSize="246.666666666667,206.666666666667"
           Size="246.666666666667,42.6666666666667"
           Id="Package\MargineCliente_TipologiaSpesa"
-          TopLeft="701.666656211022,1100.69434960592" />
+          TopLeft="7350.16666666667,776.499999999999" />
         <NodeLayout
           Size="170,42"
           Id="Package\Rif Ordine Cliente\Populate DimConto"
@@ -18125,21 +18160,21 @@
           PanelSize="214,206.666666666667"
           Size="214,42.6666666666667"
           Id="Package\Rif Ordine Cliente"
-          TopLeft="968.593735566828,977.115337217084" />
+          TopLeft="7657.5,776.499999999999" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Vincolo]"
-          TopLeft="342.624999543652,371.0770826316">
+          TopLeft="854.5,459.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="68.781244325917,0"
+              EndConnector="0,59.9999999999998"
               Start="0,0"
-              End="61.281244325917,0">
+              End="0,52.4999999999998">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="61.281244325917,0" />
+                    End="0,52.4999999999998" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18150,18 +18185,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Vincolo 1]"
-          TopLeft="184.020837081907,770.899993692637">
+          TopLeft="5383.5,253.833333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,51.6610407736844"
+              EndConnector="0,522.666666666667"
               Start="0,0"
-              End="0,44.1610407736844">
+              End="0,515.166666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.1610407736844" />
+                    End="0,515.166666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18170,10 +18205,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="204,42.6666666666667"
-          Id="Package\ACTUAL_DIM_DimNegozio"
-          TopLeft="89.208333566164,915.016667259435" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -19123,15 +19154,15 @@
     design-time-name="Package\DimListino_Retail\populate">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="178.666666666667,42.6666666666667"
-          Id="Package\DimListino_Retail\populate\stg DimListino_Retail"
-          TopLeft="5.50000000000001,5.50000000000004" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="160,42.6666666666667"
           Id="Package\DimListino_Retail\populate\DimListino_Retail"
           TopLeft="14.8333333333333,108.166666666667" />
+        <NodeLayout
+          Size="178.666666666667,42.6666666666667"
+          Id="Package\DimListino_Retail\populate\stg DimListino_Retail"
+          TopLeft="5.50000000000001,5.50000000000004" />
         <EdgeLayout
           Id="Package\DimListino_Retail\populate.Paths[OLE DB Source Output]"
           TopLeft="94.8333333333333,48.1666666666667">
@@ -19151,7 +19182,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -19343,56 +19376,42 @@
     design-time-name="Package\dimPCCDC\populate">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="178.285714285715,42.2857142857143"
-          Id="Package\dimPCCDC\populate\Destinazione OLE DB"
-          TopLeft="455.555567623657,235.130440876029" />
+          Size="130.666666666667,42.6666666666667"
+          Id="Package\dimPCCDC\populate\DimPCCDC"
+          TopLeft="350.555569188279,230.580440957389" />
         <NodeLayout
-          Size="109.714285714286,42.2857142857143"
-          Id="Package\dimPCCDC\populate\source"
-          TopLeft="212.638885674331,99.619563386546" />
+          Size="136,42.6666666666667"
+          Id="Package\dimPCCDC\populate\vDimPCCDC"
+          TopLeft="351.388883606795,69.0695639328226" />
         <EdgeLayout
           Id="Package\dimPCCDC\populate.Paths[OLE DB Source Output]"
-          TopLeft="267.496028531474,141.90527767226">
+          TopLeft="417.638893064204,111.736230599489">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="277.20239623504,93.2251632037685"
+              EndConnector="0,118.8442103579"
               Start="0,0"
-              End="277.20239623504,85.7251632037685">
+              End="0,111.3442103579">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.6125816018843" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,42.6125816018843"
-                    Point2="0,46.6125816018843"
-                    Point3="4,46.6125816018843" />
-                  <mssgle:LineSegment
-                    End="273.20239623504,46.6125816018843" />
-                  <mssgle:CubicBezierSegment
-                    Point1="273.20239623504,46.6125816018843"
-                    Point2="277.20239623504,46.6125816018843"
-                    Point3="277.20239623504,50.6125816018843" />
-                  <mssgle:LineSegment
-                    End="277.20239623504,85.7251632037685" />
+                    End="0,111.3442103579" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\dimPCCDC\populate\Destinazione OLE DB">
+    design-time-name="Package\dimPCCDC\populate\DimPCCDC">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -19405,7 +19424,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\dimPCCDC\populate\source">
+    design-time-name="Package\dimPCCDC\populate\vDimPCCDC">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -19631,7 +19650,7 @@
     design-time-name="Package\DimSubcanale\Populate DimSubcanale">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="181.333333333334,42.6666666666667"
           Id="Package\DimSubcanale\Populate DimSubcanale\DimSubcanale Source"
@@ -19659,7 +19678,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
