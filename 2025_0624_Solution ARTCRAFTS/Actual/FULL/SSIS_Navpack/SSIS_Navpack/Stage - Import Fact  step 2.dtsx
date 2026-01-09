@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="Stage - Import Fact  step 2"
   DTS:PackageType="5"
-  DTS:VersionBuild="210"
-  DTS:VersionGUID="{EB229276-1E38-4111-93D9-2B24CB99347C}">
+  DTS:VersionBuild="213"
+  DTS:VersionGUID="{C4E9F24D-2A77-43FD-82CD-85F1DA5B7F5D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -1003,7 +1003,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="YearNow">
       <DTS:VariableValue
-        DTS:DataType="3">2021</DTS:VariableValue>
+        DTS:DataType="3">2022</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -1036,12 +1036,29 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="LoadSTG_Sales_Shipment_Line_FULL"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="10">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{EBDC3EEE-A910-457C-95AF-2952194294D6}"
               SQLTask:SqlStatementSource="EXECUTE  [dbo].[LoadSTG_Sales_Shipment_Line_FULL] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Import Fact\LoadSTG_Value_Entry_FULL"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Attività Esegui SQL"
+          DTS:DTSID="{32f4ad76-906b-426a-8c7f-a5fbb5d7fdd7}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="LoadSTG_Value_Entry_FULL"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="10">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{EBDC3EEE-A910-457C-95AF-2952194294D6}"
+              SQLTask:SqlStatementSource="EXECUTE [dbo].[LoadSTG_Value_Entry_FULL] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -8631,7 +8648,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Sales Header_0"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
+              DTS:ThreadHint="5">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -10424,7 +10441,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Sales Header Extension Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="3">
+              DTS:ThreadHint="6">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -12217,7 +12234,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Sales Header Extension delta Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="2">
+              DTS:ThreadHint="3">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -19824,7 +19841,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Sales Header Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="4">
+              DTS:ThreadHint="7">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -25370,7 +25387,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Sales Invoice Header Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="5">
+              DTS:ThreadHint="8">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -27324,7 +27341,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate Sales Invoice Line"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="0">
+              DTS:ThreadHint="9">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -30113,7 +30130,7 @@ FROM dbo.[Artcrafts$Sales Line] WITH (TABLOCK) WHERE [Document Type]=0</property
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate Sales Line_0"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="7">
+              DTS:ThreadHint="0">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -32902,7 +32919,7 @@ FROM dbo.[Artcrafts$Sales Line] WITH (TABLOCK) WHERE [Document Type]&lt;&gt;0</p
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate Sales_Line_1"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="6">
+              DTS:ThreadHint="1">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -34339,7 +34356,7 @@ FROM dbo.[Artcrafts$Sales Line] WITH (TABLOCK) WHERE [Document Type]&lt;&gt;0</p
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate Sales Shipment Header"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="8">
+              DTS:ThreadHint="2">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -34357,1264 +34374,6 @@ FROM dbo.[Artcrafts$Sales Line] WITH (TABLOCK) WHERE [Document Type]&lt;&gt;0</p
               DTS:LogicalAnd="True"
               DTS:ObjectName="Constraint"
               DTS:To="Package\Import Fact\Sales Shipment Header (ottimizzazione)\Populate Sales Shipment Header" />
-          </DTS:PrecedenceConstraints>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Import Fact\Value Entry (ottimizzazione)"
-          DTS:CreationName="STOCK:SEQUENCE"
-          DTS:Description="Sequence Container"
-          DTS:DTSID="{3cd8a4bc-c2c5-4305-b744-0f9df6499c40}"
-          DTS:ExecutableType="STOCK:SEQUENCE"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Value Entry (ottimizzazione)">
-          <DTS:Variables />
-          <DTS:Executables>
-            <DTS:Executable
-              DTS:refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry"
-              DTS:CreationName="Microsoft.Pipeline"
-              DTS:Description="Data Flow Task"
-              DTS:DTSID="{5c10eef0-459d-41ca-bbb7-24eddcb5d9b5}"
-              DTS:ExecutableType="Microsoft.Pipeline"
-              DTS:LocaleID="-1"
-              DTS:ObjectName="Populate Value Entry"
-              DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-              <DTS:Variables />
-              <DTS:ObjectData>
-                <pipeline
-                  version="1">
-                  <components>
-                    <component
-                      refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Derived Column"
-                      componentClassID="Microsoft.DerivedColumn"
-                      contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-                      description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-                      name="Derived Column"
-                      usesDispositions="true">
-                      <inputs>
-                        <input
-                          refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Derived Column.Inputs[Derived Column Input]"
-                          description="Input to the Derived Column Transformation"
-                          name="Derived Column Input">
-                          <externalMetadataColumns />
-                        </input>
-                      </inputs>
-                      <outputs>
-                        <output
-                          refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Derived Column.Outputs[Derived Column Output]"
-                          description="Default Output of the Derived Column Transformation"
-                          exclusionGroup="1"
-                          name="Derived Column Output"
-                          synchronousInputId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Derived Column.Inputs[Derived Column Input]">
-                          <outputColumns>
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Derived Column.Outputs[Derived Column Output].Columns[Company]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Computation"
-                              errorRowDisposition="FailComponent"
-                              length="50"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Derived Column.Outputs[Derived Column Output].Columns[Company]"
-                              name="Company"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  containsID="true"
-                                  dataType="System.String"
-                                  description="Derived Column Expression"
-                                  name="Expression">@[User::CompanyKey]</property>
-                                <property
-                                  containsID="true"
-                                  dataType="System.String"
-                                  description="Derived Column Friendly Expression"
-                                  expressionType="Notify"
-                                  name="FriendlyExpression">@[User::CompanyKey]</property>
-                              </properties>
-                            </outputColumn>
-                          </outputColumns>
-                          <externalMetadataColumns />
-                        </output>
-                        <output
-                          refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Derived Column.Outputs[Derived Column Error Output]"
-                          description="Error Output of the Derived Column Transformation"
-                          exclusionGroup="1"
-                          isErrorOut="true"
-                          name="Derived Column Error Output"
-                          synchronousInputId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Derived Column.Inputs[Derived Column Input]">
-                          <outputColumns>
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                              dataType="i4"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                              name="ErrorCode"
-                              specialFlags="1" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                              dataType="i4"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                              name="ErrorColumn"
-                              specialFlags="2" />
-                          </outputColumns>
-                          <externalMetadataColumns />
-                        </output>
-                      </outputs>
-                    </component>
-                    <component
-                      refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination"
-                      componentClassID="Microsoft.OLEDBDestination"
-                      contactInfo="Destinazione OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;4"
-                      description="Destinazione OLE DB"
-                      name="Value Entry Destination"
-                      usesDispositions="true"
-                      version="4">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
-                          name="CommandTimeout">0</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
-                          name="OpenRowset">[NAV].[Value Entry]</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
-                          name="OpenRowsetVariable"></property>
-                        <property
-                          dataType="System.String"
-                          description="Comando SQL da eseguire."
-                          name="SqlCommand"
-                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
-                          name="DefaultCodePage">1252</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
-                          name="AlwaysUseDefaultCodePage">false</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifica la modalità utilizzata per accedere al database."
-                          name="AccessMode"
-                          typeConverter="AccessMode">3</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se i valori specificati per le colonne Identity verranno copiati nella destinazione. Se false, i valori delle colonne Identity verranno generati automaticamente nella destinazione. Applicabile solo se è abilitato il caricamento rapido."
-                          name="FastLoadKeepIdentity">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se per le colonne con valori Null, tali valori verranno inseriti nella destinazione. Se false, per le colonne con valori Null verranno inseriti i valori predefiniti corrispondenti nella destinazione. Applicabile solo se è attivato il caricamento rapido."
-                          name="FastLoadKeepNulls">false</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifica le opzioni da utilizzare con il caricamento rapido. Applicabile solo se è attivato il caricamento rapido."
-                          name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifica se vengono eseguiti commit durante l'inserimento dei dati. Il valore 0 indica che verrà eseguito un solo commit al termine dell'inserimento dei dati. Applicabile solo se è attivato il caricamento rapido."
-                          name="FastLoadMaxInsertCommitSize">2147483647</property>
-                      </properties>
-                      <connections>
-                        <connection
-                          refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Connections[OleDbConnection]"
-                          connectionManagerID="{EBDC3EEE-A910-457C-95AF-2952194294D6}:external"
-                          connectionManagerRefId="Project.ConnectionManagers[Stage]"
-                          description="Connessione di run-time OLE DB utilizzata per accedere al database."
-                          name="OleDbConnection" />
-                      </connections>
-                      <inputs>
-                        <input
-                          refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB]"
-                          errorOrTruncationOperation="Inserimento"
-                          errorRowDisposition="FailComponent"
-                          hasSideEffects="true"
-                          name="Input destinazione OLE DB">
-                          <inputColumns>
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[timestamp]"
-                              cachedDataType="bytes"
-                              cachedLength="8"
-                              cachedName="timestamp"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[timestamp]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[timestamp]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Document Type]"
-                              cachedDataType="i4"
-                              cachedName="Document Type"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Document Type]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Document Type]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[No_]"
-                              cachedDataType="wstr"
-                              cachedLength="20"
-                              cachedName="No_"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[No_]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[No_]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Order No_]"
-                              cachedDataType="wstr"
-                              cachedLength="20"
-                              cachedName="Order No_"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Order No_]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Order No_]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Document No_]"
-                              cachedDataType="wstr"
-                              cachedLength="20"
-                              cachedName="Document No_"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Document No_]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Document No_]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Type]"
-                              cachedDataType="i4"
-                              cachedName="Type"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Type]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Type]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Location Code]"
-                              cachedDataType="wstr"
-                              cachedLength="10"
-                              cachedName="Location Code"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Location Code]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Location Code]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Description]"
-                              cachedDataType="wstr"
-                              cachedLength="50"
-                              cachedName="Description"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Description]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Description]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Order Line No_]"
-                              cachedDataType="i4"
-                              cachedName="Order Line No_"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Order Line No_]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Order Line No_]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Entry No_]"
-                              cachedDataType="i4"
-                              cachedName="Entry No_"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Entry No_]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Entry No_]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Item No_]"
-                              cachedDataType="wstr"
-                              cachedLength="20"
-                              cachedName="Item No_"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Item No_]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Item No_]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Posting Date]"
-                              cachedDataType="dbTimeStamp"
-                              cachedName="Posting Date"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Posting Date]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Posting Date]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Item Ledger Entry Type]"
-                              cachedDataType="i4"
-                              cachedName="Item Ledger Entry Type"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Item Ledger Entry Type]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Item Ledger Entry Type]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Source No_]"
-                              cachedDataType="wstr"
-                              cachedLength="20"
-                              cachedName="Source No_"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Source No_]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Source No_]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Item Ledger Entry No_]"
-                              cachedDataType="i4"
-                              cachedName="Item Ledger Entry No_"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Item Ledger Entry No_]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Item Ledger Entry No_]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Item Ledger Entry Quantity]"
-                              cachedDataType="numeric"
-                              cachedName="Item Ledger Entry Quantity"
-                              cachedPrecision="38"
-                              cachedScale="20"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Item Ledger Entry Quantity]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Item Ledger Entry Quantity]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Invoiced Quantity]"
-                              cachedDataType="numeric"
-                              cachedName="Invoiced Quantity"
-                              cachedPrecision="38"
-                              cachedScale="20"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Invoiced Quantity]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Invoiced Quantity]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Cost per Unit]"
-                              cachedDataType="numeric"
-                              cachedName="Cost per Unit"
-                              cachedPrecision="38"
-                              cachedScale="20"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Cost per Unit]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Cost per Unit]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Applies-to Entry]"
-                              cachedDataType="i4"
-                              cachedName="Applies-to Entry"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Applies-to Entry]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Applies-to Entry]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Global Dimension 1 Code]"
-                              cachedDataType="wstr"
-                              cachedLength="20"
-                              cachedName="Global Dimension 1 Code"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Global Dimension 1 Code]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Global Dimension 1 Code]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Global Dimension 2 Code]"
-                              cachedDataType="wstr"
-                              cachedLength="20"
-                              cachedName="Global Dimension 2 Code"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Global Dimension 2 Code]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Global Dimension 2 Code]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Reason Code]"
-                              cachedDataType="wstr"
-                              cachedLength="10"
-                              cachedName="Reason Code"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Reason Code]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Reason Code]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Document Date]"
-                              cachedDataType="dbTimeStamp"
-                              cachedName="Document Date"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Document Date]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Document Date]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Document Line No_]"
-                              cachedDataType="i4"
-                              cachedName="Document Line No_"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Document Line No_]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Document Line No_]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Order Type]"
-                              cachedDataType="i4"
-                              cachedName="Order Type"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Order Type]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Order Type]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Item Charge No_]"
-                              cachedDataType="wstr"
-                              cachedLength="20"
-                              cachedName="Item Charge No_"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Item Charge No_]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Item Charge No_]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Entry Type]"
-                              cachedDataType="i4"
-                              cachedName="Entry Type"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Entry Type]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Entry Type]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Return Reason Code]"
-                              cachedDataType="wstr"
-                              cachedLength="10"
-                              cachedName="Return Reason Code"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Return Reason Code]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Return Reason Code]" />
-                            <inputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].Columns[Company]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Company"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Company]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Derived Column.Outputs[Derived Column Output].Columns[Company]" />
-                          </inputColumns>
-                          <externalMetadataColumns
-                            isUsed="True">
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[timestamp]"
-                              dataType="bytes"
-                              length="8"
-                              name="timestamp" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Document Type]"
-                              dataType="i4"
-                              name="Document Type" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[No_]"
-                              dataType="wstr"
-                              length="20"
-                              name="No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Order No_]"
-                              dataType="wstr"
-                              length="20"
-                              name="Order No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Document No_]"
-                              dataType="wstr"
-                              length="20"
-                              name="Document No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Type]"
-                              dataType="i4"
-                              name="Type" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Location Code]"
-                              dataType="wstr"
-                              length="10"
-                              name="Location Code" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Description]"
-                              dataType="wstr"
-                              length="50"
-                              name="Description" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Order Line No_]"
-                              dataType="i4"
-                              name="Order Line No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Entry No_]"
-                              dataType="i4"
-                              name="Entry No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Item No_]"
-                              dataType="wstr"
-                              length="20"
-                              name="Item No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Posting Date]"
-                              dataType="dbTimeStamp"
-                              name="Posting Date" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Item Ledger Entry Type]"
-                              dataType="i4"
-                              name="Item Ledger Entry Type" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Source No_]"
-                              dataType="wstr"
-                              length="20"
-                              name="Source No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Item Ledger Entry No_]"
-                              dataType="i4"
-                              name="Item Ledger Entry No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Item Ledger Entry Quantity]"
-                              dataType="numeric"
-                              name="Item Ledger Entry Quantity"
-                              precision="38"
-                              scale="20" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Invoiced Quantity]"
-                              dataType="numeric"
-                              name="Invoiced Quantity"
-                              precision="38"
-                              scale="20" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Cost per Unit]"
-                              dataType="numeric"
-                              name="Cost per Unit"
-                              precision="38"
-                              scale="20" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Applies-to Entry]"
-                              dataType="i4"
-                              name="Applies-to Entry" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Global Dimension 1 Code]"
-                              dataType="wstr"
-                              length="20"
-                              name="Global Dimension 1 Code" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Global Dimension 2 Code]"
-                              dataType="wstr"
-                              length="20"
-                              name="Global Dimension 2 Code" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Reason Code]"
-                              dataType="wstr"
-                              length="10"
-                              name="Reason Code" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Document Date]"
-                              dataType="dbTimeStamp"
-                              name="Document Date" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Document Line No_]"
-                              dataType="i4"
-                              name="Document Line No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Order Type]"
-                              dataType="i4"
-                              name="Order Type" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Item Charge No_]"
-                              dataType="wstr"
-                              length="20"
-                              name="Item Charge No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Entry Type]"
-                              dataType="i4"
-                              name="Entry Type" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Return Reason Code]"
-                              dataType="wstr"
-                              length="10"
-                              name="Return Reason Code" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB].ExternalColumns[Company]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Company" />
-                          </externalMetadataColumns>
-                        </input>
-                      </inputs>
-                      <outputs>
-                        <output
-                          refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Outputs[Output errori destinazione OLE DB]"
-                          exclusionGroup="1"
-                          isErrorOut="true"
-                          name="Output errori destinazione OLE DB"
-                          synchronousInputId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB]">
-                          <outputColumns>
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
-                              dataType="i4"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Outputs[Output errori destinazione OLE DB].Columns[ErrorCode]"
-                              name="ErrorCode"
-                              specialFlags="1" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
-                              dataType="i4"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Outputs[Output errori destinazione OLE DB].Columns[ErrorColumn]"
-                              name="ErrorColumn"
-                              specialFlags="2" />
-                          </outputColumns>
-                          <externalMetadataColumns />
-                        </output>
-                      </outputs>
-                    </component>
-                    <component
-                      refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source"
-                      componentClassID="Microsoft.OLEDBSource"
-                      contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
-                      description="Origine OLE DB"
-                      name="Value Entry Source"
-                      usesDispositions="true"
-                      version="7">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
-                          name="CommandTimeout">0</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
-                          name="OpenRowset"></property>
-                        <property
-                          dataType="System.String"
-                          description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
-                          name="OpenRowsetVariable"></property>
-                        <property
-                          dataType="System.String"
-                          description="Comando SQL da eseguire."
-                          name="SqlCommand"
-                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT
-[timestamp],
-[Document Type],
-[No_],
-[Order No_],
-[Document No_],
-[Type],
-[Location Code],
- [Description],
-[Order Line No_],
-[Entry No_],
-[Item No_],   
-[Posting Date],
- [Item Ledger Entry Type],
- [Source No_],
- [Item Ledger Entry No_],
- [Item Ledger Entry Quantity],
-[Invoiced Quantity],
- [Cost per Unit],    
-[Applies-to Entry],
-[Global Dimension 1 Code],  
-[Global Dimension 2 Code], 
- [Reason Code],
-[Document Date],
-[Document Line No_],
-[Order Type],
-[Item Charge No_],    
-[Entry Type],    
- [Return Reason Code]
-  
-FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
-                        <property
-                          dataType="System.String"
-                          description="Variabile che contiene il comando SQL da eseguire."
-                          name="SqlCommandVariable"></property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
-                          name="DefaultCodePage">1252</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
-                          name="AlwaysUseDefaultCodePage">false</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifica la modalità utilizzata per accedere al database."
-                          name="AccessMode"
-                          typeConverter="AccessMode">2</property>
-                        <property
-                          dataType="System.String"
-                          description="Mapping tra i parametri nel comando SQL e le variabili."
-                          name="ParameterMapping"></property>
-                      </properties>
-                      <connections>
-                        <connection
-                          refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Connections[OleDbConnection]"
-                          connectionManagerID="{E25AF2F8-92B3-4003-9D30-6834C337E57F}:external"
-                          connectionManagerRefId="Project.ConnectionManagers[Navision]"
-                          description="Connessione di run-time OLE DB utilizzata per accedere al database."
-                          name="OleDbConnection" />
-                      </connections>
-                      <outputs>
-                        <output
-                          refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB]"
-                          name="Output origine OLE DB">
-                          <outputColumns>
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[timestamp]"
-                              dataType="bytes"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[timestamp]"
-                              length="8"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[timestamp]"
-                              name="timestamp"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Document Type]"
-                              dataType="i4"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Document Type]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Document Type]"
-                              name="Document Type"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[No_]"
-                              dataType="wstr"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[No_]"
-                              length="20"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[No_]"
-                              name="No_"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Order No_]"
-                              dataType="wstr"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Order No_]"
-                              length="20"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Order No_]"
-                              name="Order No_"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Document No_]"
-                              dataType="wstr"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Document No_]"
-                              length="20"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Document No_]"
-                              name="Document No_"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Type]"
-                              dataType="i4"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Type]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Type]"
-                              name="Type"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Location Code]"
-                              dataType="wstr"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Location Code]"
-                              length="10"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Location Code]"
-                              name="Location Code"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Description]"
-                              dataType="wstr"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Description]"
-                              length="50"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Description]"
-                              name="Description"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Order Line No_]"
-                              dataType="i4"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Order Line No_]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Order Line No_]"
-                              name="Order Line No_"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Entry No_]"
-                              dataType="i4"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Entry No_]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Entry No_]"
-                              name="Entry No_"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Item No_]"
-                              dataType="wstr"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Item No_]"
-                              length="20"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Item No_]"
-                              name="Item No_"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Posting Date]"
-                              dataType="dbTimeStamp"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Posting Date]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Posting Date]"
-                              name="Posting Date"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Item Ledger Entry Type]"
-                              dataType="i4"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Item Ledger Entry Type]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Item Ledger Entry Type]"
-                              name="Item Ledger Entry Type"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Source No_]"
-                              dataType="wstr"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Source No_]"
-                              length="20"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Source No_]"
-                              name="Source No_"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Item Ledger Entry No_]"
-                              dataType="i4"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Item Ledger Entry No_]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Item Ledger Entry No_]"
-                              name="Item Ledger Entry No_"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Item Ledger Entry Quantity]"
-                              dataType="numeric"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Item Ledger Entry Quantity]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Item Ledger Entry Quantity]"
-                              name="Item Ledger Entry Quantity"
-                              precision="38"
-                              scale="20"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Invoiced Quantity]"
-                              dataType="numeric"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Invoiced Quantity]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Invoiced Quantity]"
-                              name="Invoiced Quantity"
-                              precision="38"
-                              scale="20"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Cost per Unit]"
-                              dataType="numeric"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Cost per Unit]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Cost per Unit]"
-                              name="Cost per Unit"
-                              precision="38"
-                              scale="20"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Applies-to Entry]"
-                              dataType="i4"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Applies-to Entry]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Applies-to Entry]"
-                              name="Applies-to Entry"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Global Dimension 1 Code]"
-                              dataType="wstr"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Global Dimension 1 Code]"
-                              length="20"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Global Dimension 1 Code]"
-                              name="Global Dimension 1 Code"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Global Dimension 2 Code]"
-                              dataType="wstr"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Global Dimension 2 Code]"
-                              length="20"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Global Dimension 2 Code]"
-                              name="Global Dimension 2 Code"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Reason Code]"
-                              dataType="wstr"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Reason Code]"
-                              length="10"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Reason Code]"
-                              name="Reason Code"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Document Date]"
-                              dataType="dbTimeStamp"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Document Date]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Document Date]"
-                              name="Document Date"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Document Line No_]"
-                              dataType="i4"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Document Line No_]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Document Line No_]"
-                              name="Document Line No_"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Order Type]"
-                              dataType="i4"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Order Type]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Order Type]"
-                              name="Order Type"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Item Charge No_]"
-                              dataType="wstr"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Item Charge No_]"
-                              length="20"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Item Charge No_]"
-                              name="Item Charge No_"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Entry Type]"
-                              dataType="i4"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Entry Type]"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Entry Type]"
-                              name="Entry Type"
-                              truncationRowDisposition="FailComponent" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Return Reason Code]"
-                              dataType="wstr"
-                              errorOrTruncationOperation="Conversione"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Return Reason Code]"
-                              length="10"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].Columns[Return Reason Code]"
-                              name="Return Reason Code"
-                              truncationRowDisposition="FailComponent" />
-                          </outputColumns>
-                          <externalMetadataColumns
-                            isUsed="True">
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[timestamp]"
-                              dataType="bytes"
-                              length="8"
-                              name="timestamp" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Document Type]"
-                              dataType="i4"
-                              name="Document Type" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[No_]"
-                              dataType="wstr"
-                              length="20"
-                              name="No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Order No_]"
-                              dataType="wstr"
-                              length="20"
-                              name="Order No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Document No_]"
-                              dataType="wstr"
-                              length="20"
-                              name="Document No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Type]"
-                              dataType="i4"
-                              name="Type" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Location Code]"
-                              dataType="wstr"
-                              length="10"
-                              name="Location Code" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Description]"
-                              dataType="wstr"
-                              length="50"
-                              name="Description" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Order Line No_]"
-                              dataType="i4"
-                              name="Order Line No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Entry No_]"
-                              dataType="i4"
-                              name="Entry No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Item No_]"
-                              dataType="wstr"
-                              length="20"
-                              name="Item No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Posting Date]"
-                              dataType="dbTimeStamp"
-                              name="Posting Date" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Item Ledger Entry Type]"
-                              dataType="i4"
-                              name="Item Ledger Entry Type" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Source No_]"
-                              dataType="wstr"
-                              length="20"
-                              name="Source No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Item Ledger Entry No_]"
-                              dataType="i4"
-                              name="Item Ledger Entry No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Item Ledger Entry Quantity]"
-                              dataType="numeric"
-                              name="Item Ledger Entry Quantity"
-                              precision="38"
-                              scale="20" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Invoiced Quantity]"
-                              dataType="numeric"
-                              name="Invoiced Quantity"
-                              precision="38"
-                              scale="20" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Cost per Unit]"
-                              dataType="numeric"
-                              name="Cost per Unit"
-                              precision="38"
-                              scale="20" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Applies-to Entry]"
-                              dataType="i4"
-                              name="Applies-to Entry" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Global Dimension 1 Code]"
-                              dataType="wstr"
-                              length="20"
-                              name="Global Dimension 1 Code" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Global Dimension 2 Code]"
-                              dataType="wstr"
-                              length="20"
-                              name="Global Dimension 2 Code" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Reason Code]"
-                              dataType="wstr"
-                              length="10"
-                              name="Reason Code" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Document Date]"
-                              dataType="dbTimeStamp"
-                              name="Document Date" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Document Line No_]"
-                              dataType="i4"
-                              name="Document Line No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Order Type]"
-                              dataType="i4"
-                              name="Order Type" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Item Charge No_]"
-                              dataType="wstr"
-                              length="20"
-                              name="Item Charge No_" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Entry Type]"
-                              dataType="i4"
-                              name="Entry Type" />
-                            <externalMetadataColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB].ExternalColumns[Return Reason Code]"
-                              dataType="wstr"
-                              length="10"
-                              name="Return Reason Code" />
-                          </externalMetadataColumns>
-                        </output>
-                        <output
-                          refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB]"
-                          isErrorOut="true"
-                          name="Output errori origine OLE DB">
-                          <outputColumns>
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[timestamp]"
-                              dataType="bytes"
-                              length="8"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[timestamp]"
-                              name="timestamp" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Document Type]"
-                              dataType="i4"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Document Type]"
-                              name="Document Type" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[No_]"
-                              dataType="wstr"
-                              length="20"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[No_]"
-                              name="No_" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Order No_]"
-                              dataType="wstr"
-                              length="20"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Order No_]"
-                              name="Order No_" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Document No_]"
-                              dataType="wstr"
-                              length="20"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Document No_]"
-                              name="Document No_" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Type]"
-                              dataType="i4"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Type]"
-                              name="Type" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Location Code]"
-                              dataType="wstr"
-                              length="10"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Location Code]"
-                              name="Location Code" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Description]"
-                              dataType="wstr"
-                              length="50"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Description]"
-                              name="Description" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Order Line No_]"
-                              dataType="i4"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Order Line No_]"
-                              name="Order Line No_" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Entry No_]"
-                              dataType="i4"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Entry No_]"
-                              name="Entry No_" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Item No_]"
-                              dataType="wstr"
-                              length="20"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Item No_]"
-                              name="Item No_" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Posting Date]"
-                              dataType="dbTimeStamp"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Posting Date]"
-                              name="Posting Date" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Item Ledger Entry Type]"
-                              dataType="i4"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Item Ledger Entry Type]"
-                              name="Item Ledger Entry Type" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Source No_]"
-                              dataType="wstr"
-                              length="20"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Source No_]"
-                              name="Source No_" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Item Ledger Entry No_]"
-                              dataType="i4"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Item Ledger Entry No_]"
-                              name="Item Ledger Entry No_" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Item Ledger Entry Quantity]"
-                              dataType="numeric"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Item Ledger Entry Quantity]"
-                              name="Item Ledger Entry Quantity"
-                              precision="38"
-                              scale="20" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Invoiced Quantity]"
-                              dataType="numeric"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Invoiced Quantity]"
-                              name="Invoiced Quantity"
-                              precision="38"
-                              scale="20" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Cost per Unit]"
-                              dataType="numeric"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Cost per Unit]"
-                              name="Cost per Unit"
-                              precision="38"
-                              scale="20" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Applies-to Entry]"
-                              dataType="i4"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Applies-to Entry]"
-                              name="Applies-to Entry" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Global Dimension 1 Code]"
-                              dataType="wstr"
-                              length="20"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Global Dimension 1 Code]"
-                              name="Global Dimension 1 Code" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Global Dimension 2 Code]"
-                              dataType="wstr"
-                              length="20"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Global Dimension 2 Code]"
-                              name="Global Dimension 2 Code" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Reason Code]"
-                              dataType="wstr"
-                              length="10"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Reason Code]"
-                              name="Reason Code" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Document Date]"
-                              dataType="dbTimeStamp"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Document Date]"
-                              name="Document Date" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Document Line No_]"
-                              dataType="i4"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Document Line No_]"
-                              name="Document Line No_" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Order Type]"
-                              dataType="i4"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Order Type]"
-                              name="Order Type" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Item Charge No_]"
-                              dataType="wstr"
-                              length="20"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Item Charge No_]"
-                              name="Item Charge No_" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Entry Type]"
-                              dataType="i4"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Entry Type]"
-                              name="Entry Type" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Return Reason Code]"
-                              dataType="wstr"
-                              length="10"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[Return Reason Code]"
-                              name="Return Reason Code" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
-                              dataType="i4"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
-                              name="ErrorCode"
-                              specialFlags="1" />
-                            <outputColumn
-                              refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
-                              dataType="i4"
-                              lineageId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
-                              name="ErrorColumn"
-                              specialFlags="2" />
-                          </outputColumns>
-                          <externalMetadataColumns />
-                        </output>
-                      </outputs>
-                    </component>
-                  </components>
-                  <paths>
-                    <path
-                      refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry.Paths[Derived Column Output]"
-                      endId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination.Inputs[Input destinazione OLE DB]"
-                      name="Derived Column Output"
-                      startId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Derived Column.Outputs[Derived Column Output]" />
-                    <path
-                      refId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry.Paths[Output origine OLE DB]"
-                      endId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Derived Column.Inputs[Derived Column Input]"
-                      name="Output origine OLE DB"
-                      startId="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source.Outputs[Output origine OLE DB]" />
-                  </paths>
-                </pipeline>
-              </DTS:ObjectData>
-            </DTS:Executable>
-            <DTS:Executable
-              DTS:refId="Package\Import Fact\Value Entry (ottimizzazione)\Truncate Value Entry"
-              DTS:CreationName="Microsoft.ExecuteSQLTask"
-              DTS:Description="Execute SQL Task"
-              DTS:DTSID="{391e68be-6ed5-4df7-9d64-9a74ff7fda52}"
-              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-              DTS:LocaleID="-1"
-              DTS:ObjectName="Truncate Value Entry"
-              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="9">
-              <DTS:Variables />
-              <DTS:ObjectData>
-                <SQLTask:SqlTaskData
-                  SQLTask:Connection="{EBDC3EEE-A910-457C-95AF-2952194294D6}"
-                  SQLTask:SqlStatementSource="truncate table [NAV].[Value Entry]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-              </DTS:ObjectData>
-            </DTS:Executable>
-          </DTS:Executables>
-          <DTS:PrecedenceConstraints>
-            <DTS:PrecedenceConstraint
-              DTS:refId="Package\Import Fact\Value Entry (ottimizzazione).PrecedenceConstraints[Constraint]"
-              DTS:CreationName=""
-              DTS:DTSID="{8e573ad8-332f-44df-8b2e-21244ab939d5}"
-              DTS:From="Package\Import Fact\Value Entry (ottimizzazione)\Truncate Value Entry"
-              DTS:LogicalAnd="True"
-              DTS:ObjectName="Constraint"
-              DTS:To="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry" />
           </DTS:PrecedenceConstraints>
         </DTS:Executable>
       </DTS:Executables>
@@ -35679,6 +34438,10 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="256,42.6666666666667"
+          Id="Package\Import Fact\LoadSTG_Sales_Shipment_Line_FULL"
+          TopLeft="5.5,43.5000011622905" />
+        <NodeLayout
           Size="185.333333333334,42.6666666666667"
           Id="Package\Import Fact\Sales Header\Populate Sales Header"
           TopLeft="35.5,108.166666666667" />
@@ -35714,7 +34477,7 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
           PanelSize="256.666666666667,206"
           Size="256.666666666667,248.666666666667"
           Id="Package\Import Fact\Sales Header"
-          TopLeft="5.50000000000014,5.49999999999993" />
+          TopLeft="322.166666666667,5.49999999999993" />
         <NodeLayout
           Size="238.666666666667,42.6666666666667"
           Id="Package\Import Fact\Sales Header Extension\Populate Sales Header Extension"
@@ -35751,7 +34514,7 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
           PanelSize="310.666666666667,206"
           Size="310.666666666667,248.666666666667"
           Id="Package\Import Fact\Sales Header Extension"
-          TopLeft="322.5,5.49999999999993" />
+          TopLeft="639.166666666667,5.49999999999993" />
         <NodeLayout
           Size="265.333333333334,42.6666666666667"
           Id="Package\Import Fact\Sales Header Extension_delta\Populate Sales Header Extension delta"
@@ -35788,7 +34551,7 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
           PanelSize="337.333333333334,206"
           Size="337.333333333334,248.666666666667"
           Id="Package\Import Fact\Sales Header Extension_delta"
-          TopLeft="694.166666666667,5.49999999999993" />
+          TopLeft="1010.83333333333,5.49999999999982" />
         <NodeLayout
           Size="185.333333333334,42.6666666666667"
           Id="Package\Import Fact\Sales Header_2\Populate Sales Header"
@@ -35825,7 +34588,7 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
           PanelSize="256.666666666667,206"
           Size="256.666666666667,248.666666666667"
           Id="Package\Import Fact\Sales Header_2"
-          TopLeft="1092.5,5.49999999999982" />
+          TopLeft="1409.16666666667,5.49999999999982" />
         <NodeLayout
           Size="222.666666666667,42.6666666666667"
           Id="Package\Import Fact\Sales Invoice Header\Populate Sales Invoice Header"
@@ -35862,7 +34625,7 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
           PanelSize="293.333333333334,206"
           Size="293.333333333334,248.666666666667"
           Id="Package\Import Fact\Sales Invoice Header"
-          TopLeft="1410.16666666667,5.49999999999982" />
+          TopLeft="1726.83333333333,5.49999999999982" />
         <NodeLayout
           Size="208,42.6666666666667"
           Id="Package\Import Fact\Sales Invoice Line (ottimizzazione)\Populate Sales Invoice Line"
@@ -35899,7 +34662,7 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
           PanelSize="220.666666666667,206"
           Size="220.666666666667,248.666666666667"
           Id="Package\Import Fact\Sales Invoice Line (ottimizzazione)"
-          TopLeft="1764.5,5.4999999999997" />
+          TopLeft="2081.16666666667,5.4999999999997" />
         <NodeLayout
           Size="185.333333333334,42.6666666666667"
           Id="Package\Import Fact\Sales Line 0 (ottimizzazione)\Populate Sales_Line_0"
@@ -35936,7 +34699,7 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
           PanelSize="196.666666666667,206"
           Size="196.666666666667,248.666666666667"
           Id="Package\Import Fact\Sales Line 0 (ottimizzazione)"
-          TopLeft="2045.5,5.4999999999997" />
+          TopLeft="2362.16666666667,5.4999999999997" />
         <NodeLayout
           Size="185.333333333334,42.6666666666667"
           Id="Package\Import Fact\Sales Line 1 (ottimizzazione)\Populate Sales_Line_1"
@@ -35973,7 +34736,7 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
           PanelSize="196.666666666667,206"
           Size="196.666666666667,248.666666666667"
           Id="Package\Import Fact\Sales Line 1 (ottimizzazione)"
-          TopLeft="2302.5,5.4999999999997" />
+          TopLeft="2619.16666666667,5.4999999999997" />
         <NodeLayout
           Size="233.333333333334,42.6666666666667"
           Id="Package\Import Fact\Sales Shipment Header (ottimizzazione)\Populate Sales Shipment Header"
@@ -36010,62 +34773,25 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
           PanelSize="244.666666666667,206"
           Size="244.666666666667,248.666666666667"
           Id="Package\Import Fact\Sales Shipment Header (ottimizzazione)"
-          TopLeft="2559.5,5.4999999999997" />
+          TopLeft="2876.16666666667,5.49999999999959" />
         <NodeLayout
-          Size="177.333333333334,42.6666666666667"
-          Id="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry"
-          TopLeft="6.16666666666667,108.166666666667" />
-        <NodeLayout
-          Size="178.666666666667,42.6666666666667"
-          Id="Package\Import Fact\Value Entry (ottimizzazione)\Truncate Value Entry"
-          TopLeft="5.50000000000001,5.50000000000004" />
-        <EdgeLayout
-          Id="Package\Import Fact\Value Entry (ottimizzazione).PrecedenceConstraints[Constraint]"
-          TopLeft="94.8333333333333,48.1666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
-              Start="0,0"
-              End="0,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="246.666666666667,42"
+          Id="Package\Import Fact\LoadSTG_Value_Entry_FULL"
+          TopLeft="10.9583542228983,126.933334100445" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="189.333333333334,206"
-          Size="189.333333333334,248.666666666667"
-          Id="Package\Import Fact\Value Entry (ottimizzazione)"
-          TopLeft="3155.16666666667,5.49999999999959" />
-        <NodeLayout
-          Size="256,42.6666666666667"
-          Id="Package\Import Fact\LoadSTG_Sales_Shipment_Line_FULL"
-          TopLeft="2852.1249892991,112.083329207202" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="3350,350.666666666667"
-          Size="3350,394"
+          PanelSize="3400.66666666667,364.666666666667"
+          Size="3400.66666666667,407.333333333334"
           Id="Package\Import Fact"
-          TopLeft="5.50000000000023,107.5" />
+          TopLeft="9.87499993480765,107.5" />
         <NodeLayout
           Size="149.333333333334,42"
           Id="Package\Load Company"
-          TopLeft="1605.83333333333,5.49999999999977" />
+          TopLeft="1635.54166660147,5.49999999999977" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="1680.5,47.4999999999998">
+          TopLeft="1710.20833326814,47.4999999999998">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -36092,7 +34818,7 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
     design-time-name="Package\Import Fact\Sales Header\Populate Sales Header">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="197.333333333334,42.6666666666667"
           Id="Package\Import Fact\Sales Header\Populate Sales Header\Sales Header Destination"
@@ -36136,7 +34862,9 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36170,7 +34898,9 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -36201,7 +34931,7 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
     design-time-name="Package\Import Fact\Sales Header Extension\Populate Sales Header Extension">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="200.666666666667,42.6666666666667"
           Id="Package\Import Fact\Sales Header Extension\Populate Sales Header Extension\Sales Header Destination"
@@ -36214,40 +34944,6 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
           Size="176,42.6666666666667"
           Id="Package\Import Fact\Sales Header Extension\Populate Sales Header Extension\Sales Header Source"
           TopLeft="164.624997308478,45.4499991515279" />
-        <EdgeLayout
-          Id="Package\Import Fact\Sales Header Extension\Populate Sales Header Extension.Paths[OLE DB Source Output]"
-          TopLeft="252.624997308478,88.1166658181946">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="79.2083327093473,36.4333327056964"
-              Start="0,0"
-              End="79.2083327093473,28.9333327056964">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.2166663528482" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.2166663528482"
-                    Point2="0,18.2166663528482"
-                    Point3="4,18.2166663528482" />
-                  <mssgle:LineSegment
-                    End="75.2083327093473,18.2166663528482" />
-                  <mssgle:CubicBezierSegment
-                    Point1="75.2083327093473,18.2166663528482"
-                    Point2="79.2083327093473,18.2166663528482"
-                    Point3="79.2083327093473,22.2166663528482" />
-                  <mssgle:LineSegment
-                    End="79.2083327093473,28.9333327056964" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Import Fact\Sales Header Extension\Populate Sales Header Extension.Paths[Derived Column Output]"
           TopLeft="331.833330017825,167.216665190558">
@@ -36279,7 +34975,45 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import Fact\Sales Header Extension\Populate Sales Header Extension.Paths[OLE DB Source Output]"
+          TopLeft="252.624997308478,88.1166658181946">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="79.2083327093473,36.4333327056964"
+              Start="0,0"
+              End="79.2083327093473,28.9333327056964">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.2166663528482" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.2166663528482"
+                    Point2="0,18.2166663528482"
+                    Point3="4,18.2166663528482" />
+                  <mssgle:LineSegment
+                    End="75.2083327093473,18.2166663528482" />
+                  <mssgle:CubicBezierSegment
+                    Point1="75.2083327093473,18.2166663528482"
+                    Point2="79.2083327093473,18.2166663528482"
+                    Point3="79.2083327093473,22.2166663528482" />
+                  <mssgle:LineSegment
+                    End="79.2083327093473,28.9333327056964" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -36310,7 +35044,7 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
     design-time-name="Package\Import Fact\Sales Header Extension_delta\Populate Sales Header Extension delta">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="200.666666666667,42.6666666666667"
           Id="Package\Import Fact\Sales Header Extension_delta\Populate Sales Header Extension delta\Sales Header Destination"
@@ -36323,40 +35057,6 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
           Size="176,42.6666666666667"
           Id="Package\Import Fact\Sales Header Extension_delta\Populate Sales Header Extension delta\Sales Header Source"
           TopLeft="164.624997308478,45.4499991515279" />
-        <EdgeLayout
-          Id="Package\Import Fact\Sales Header Extension_delta\Populate Sales Header Extension delta.Paths[OLE DB Source Output]"
-          TopLeft="252.624997308478,88.1166658181946">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="79.2083327093473,36.4333327056964"
-              Start="0,0"
-              End="79.2083327093473,28.9333327056964">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.2166663528482" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.2166663528482"
-                    Point2="0,18.2166663528482"
-                    Point3="4,18.2166663528482" />
-                  <mssgle:LineSegment
-                    End="75.2083327093473,18.2166663528482" />
-                  <mssgle:CubicBezierSegment
-                    Point1="75.2083327093473,18.2166663528482"
-                    Point2="79.2083327093473,18.2166663528482"
-                    Point3="79.2083327093473,22.2166663528482" />
-                  <mssgle:LineSegment
-                    End="79.2083327093473,28.9333327056964" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Import Fact\Sales Header Extension_delta\Populate Sales Header Extension delta.Paths[Derived Column Output]"
           TopLeft="441.166663351159,145.883331857224">
@@ -36388,7 +35088,45 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import Fact\Sales Header Extension_delta\Populate Sales Header Extension delta.Paths[OLE DB Source Output]"
+          TopLeft="252.624997308478,88.1166658181946">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="79.2083327093473,36.4333327056964"
+              Start="0,0"
+              End="79.2083327093473,28.9333327056964">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.2166663528482" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.2166663528482"
+                    Point2="0,18.2166663528482"
+                    Point3="4,18.2166663528482" />
+                  <mssgle:LineSegment
+                    End="75.2083327093473,18.2166663528482" />
+                  <mssgle:CubicBezierSegment
+                    Point1="75.2083327093473,18.2166663528482"
+                    Point2="79.2083327093473,18.2166663528482"
+                    Point3="79.2083327093473,22.2166663528482" />
+                  <mssgle:LineSegment
+                    End="79.2083327093473,28.9333327056964" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -36419,7 +35157,7 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
     design-time-name="Package\Import Fact\Sales Header_2\Populate Sales Header">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="197.333333333334,42.6666666666667"
           Id="Package\Import Fact\Sales Header_2\Populate Sales Header\Sales Header Destination"
@@ -36463,7 +35201,9 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36497,7 +35237,9 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -36528,7 +35270,7 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
     design-time-name="Package\Import Fact\Sales Invoice Header\Populate Sales Invoice Header">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="234.666666666667,42.6666666666667"
           Id="Package\Import Fact\Sales Invoice Header\Populate Sales Invoice Header\Sales Invoice Header Destination"
@@ -36572,7 +35314,9 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36606,7 +35350,9 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -36637,7 +35383,7 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
     design-time-name="Package\Import Fact\Sales Invoice Line (ottimizzazione)\Populate Sales Invoice Line">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="200,42.6666666666667"
           Id="Package\Import Fact\Sales Invoice Line (ottimizzazione)\Populate Sales Invoice Line\Sales Invoice Line Source"
@@ -36669,7 +35415,9 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36691,7 +35439,9 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -36722,7 +35472,7 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
     design-time-name="Package\Import Fact\Sales Line 0 (ottimizzazione)\Populate Sales_Line_0">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="141.333333333334,42.6666666666667"
           Id="Package\Import Fact\Sales Line 0 (ottimizzazione)\Populate Sales_Line_0\Sales_Line_0"
@@ -36754,7 +35504,9 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36776,7 +35528,9 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -36807,7 +35561,7 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
     design-time-name="Package\Import Fact\Sales Line 1 (ottimizzazione)\Populate Sales_Line_1">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="240,42.6666666666667"
           Id="Package\Import Fact\Sales Line 1 (ottimizzazione)\Populate Sales_Line_1\Sales Line Source  diverso da zero"
@@ -36839,7 +35593,9 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36861,7 +35617,9 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -36892,7 +35650,7 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
     design-time-name="Package\Import Fact\Sales Shipment Header (ottimizzazione)\Populate Sales Shipment Header">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="244,42.6666666666667"
           Id="Package\Import Fact\Sales Shipment Header (ottimizzazione)\Populate Sales Shipment Header\Sales Shipment Header (STAGING)"
@@ -36924,7 +35682,9 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -36946,7 +35706,9 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -36967,91 +35729,6 @@ FROM [dbo].[Artcrafts$Value Entry] WITH (NOLOCK)</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Import Fact\Sales Shipment Header (ottimizzazione)\Populate Sales Shipment Header\Sales Shipment Header (NAVISION)">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="189.333333333334,42.6666666666667"
-          Id="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination"
-          TopLeft="5.50000000000003,210.833333333334" />
-        <NodeLayout
-          Size="189.333333333334,42.6666666666667"
-          Id="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Derived Column"
-          TopLeft="5.50000000000003,108.166666666667" />
-        <NodeLayout
-          Size="189.333333333334,42.6666666666667"
-          Id="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source"
-          TopLeft="6.12499999068679,5.50000000000004" />
-        <EdgeLayout
-          Id="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry.Paths[Output origine OLE DB]"
-          TopLeft="100.47916666201,48.1666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
-              Start="0,0"
-              End="0,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry.Paths[Derived Column Output]"
-          TopLeft="100.166666666667,150.833333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
-              Start="0,0"
-              End="0,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Import Fact\Value Entry (ottimizzazione)\Populate Value Entry\Value Entry Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
