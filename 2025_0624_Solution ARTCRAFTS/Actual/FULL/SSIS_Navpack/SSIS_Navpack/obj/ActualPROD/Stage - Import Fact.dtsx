@@ -982,7 +982,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Accessories Costs Model ItemDelete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="3">
+              DTS:ThreadHint="21">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -1743,7 +1743,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="delete"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="4">
+              DTS:ThreadHint="22">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -2291,7 +2291,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Delete Commission Calculation Setup Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="5">
+              DTS:ThreadHint="23">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -3374,7 +3374,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Delete DDT_Picking Header Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="6">
+              DTS:ThreadHint="24">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -7931,7 +7931,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Delete DDT_Picking Line Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
+              DTS:ThreadHint="0">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -10291,7 +10291,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="delete dimensio set entry"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="2">
+              DTS:ThreadHint="1">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -12406,7 +12406,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="TRUNCATE Item Ledger Entry"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="7">
+              DTS:ThreadHint="2">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -12435,7 +12435,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="LoadSTG_Item_Cross_Reference_FULL"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="8">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12462,7 +12462,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Order Type Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="9">
+              DTS:ThreadHint="4">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -19864,7 +19864,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Purchase Header Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="10">
+              DTS:ThreadHint="11">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -29346,7 +29346,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Purchase Line Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="11">
+              DTS:ThreadHint="5">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -33472,7 +33472,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Purch_ Cr_ Memo Hdr_ Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="12">
+              DTS:ThreadHint="6">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -38612,7 +38612,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Purch_ Cr_ Memo Line Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="13">
+              DTS:ThreadHint="7">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -42903,7 +42903,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Purch_ Inv_ Header Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="14">
+              DTS:ThreadHint="8">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -48246,7 +48246,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Purch_ Inv_ Line Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="15">
+              DTS:ThreadHint="9">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -51907,7 +51907,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Purch_ Rcpt_ Header Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="17">
+              DTS:ThreadHint="18">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -57663,7 +57663,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Purch_ Rcpt_ Line Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="18">
+              DTS:ThreadHint="19">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -57702,7 +57702,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="delete"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="19">
+              DTS:ThreadHint="20">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -64042,7 +64042,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Return Receipt Header Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="20">
+              DTS:ThreadHint="12">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -68910,7 +68910,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Return Receipt Line Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="16">
+              DTS:ThreadHint="13">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -72835,7 +72835,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Return Shipment Header Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="21">
+              DTS:ThreadHint="14">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -77041,7 +77041,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Return Shipment Line Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="22">
+              DTS:ThreadHint="15">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -82042,7 +82042,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Sales Cr_Memo Header Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="23">
+              DTS:ThreadHint="10">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -87792,7 +87792,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Sales Cr_Memo Line Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="24">
+              DTS:ThreadHint="16">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -88709,7 +88709,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Sales_Purchase Status Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="0">
+              DTS:ThreadHint="17">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
