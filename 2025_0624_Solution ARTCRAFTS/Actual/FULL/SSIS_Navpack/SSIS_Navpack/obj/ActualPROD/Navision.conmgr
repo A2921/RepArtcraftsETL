@@ -18,7 +18,7 @@
       DTS:ConnectionString="Data Source=10.0.0.5;User ID=BI_reader;Initial Catalog=ARTCRAFTS;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-{E25AF2F8-92B3-4003-9D30-6834C337E57F}Demo Database NAV  10-0;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmw4w+TrLskSGSfujpkQoywAAAAACAAAAAAADZgAAwAAAABAAAACHoCEG6HdzbRJBzRpaWyDcAAAAAASAAACgAAAAEAAAACf7JAiXHA4TfaV+OWN5eJ14AAAAkqmdzALKv/hXWZ3xUsEy61W3wp2LtwsOBtvZ4g6Hgk+PXMn7iwyF0srtnQ1XBsTvzHnDEpQDiUJZuEDUQvSLgbih72SUyVxP2upkMXQ0HSUeganqQQ3Qh7dyfEFhOLSCGYbbWVX1yqOeZHNK9eE0FAp/F6iSltp/FAAAAJL5G34WTN7sF4/vfjTYActe0wk7</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmw4w+TrLskSGSfujpkQoywAAAAACAAAAAAADZgAAwAAAABAAAACKOKojf2jKeuMNKPXLTNoAAAAAAASAAACgAAAAEAAAAEHTfj4iOOrxtCgKUpzCpNd4AAAAWZ95DVaXCa1tGmzUOaz+NWccweHLn6ssx/JTVkWp9Fqc3p8kKIfkTUSPRMPxmqLn7ZKemt2/3j4aKFdkgILHHp3qzXVOiBKX2IFaluubJQb4rXipU8QKEjqhfWXioHUhZmUE31p8B3y50W2A/ACgmHoiOt1txYh+FAAAAKKtydkMcixeu90U2RY6msD4ajv4</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>
