@@ -14,7 +14,7 @@
       DTS:ConnectionString="Data Source=10.0.0.252;User ID=artcrafts\powerbi02;Initial Catalog=SSAS_BI_Solution_2024;Provider=MSOLAP.8;Persist Security Info=False;Impersonation Level=Impersonate;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA/Jp7H1q1e0SEHydCCR6+AAAAAAACAAAAAAADZgAAwAAAABAAAADOG99QMWpH48ELVASe87q0AAAAAASAAACgAAAAEAAAAKb1YKCliwC4ETLtM2W5L2uAAAAADvCoreG+X+RTFUjKakP2o3mJSYeYhk2hJrVmS1HBJUp4ww3lsk53ti3JF+LZFwAXw3m9ZxCVF+kHPNOlBRkESa1jA4EmpjB+oxk1VVEWh/f0VOXRBFmocbkYKoFFIzZw1Z8QHk+N81JXF2pIOfKudD7M2u7DbsQTQIsONelfIYcUAAAAA3tUa08m+b8BuxD0ZuKZ5h0+ar8=</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA/Jp7H1q1e0SEHydCCR6+AAAAAAACAAAAAAADZgAAwAAAABAAAADAqGRN3WSnHJxZQ0RSLTM/AAAAAASAAACgAAAAEAAAAKJTaSsfsylL+gTqf/3obD2AAAAAwhdtvhlQy1ZzCznPOZ+NKsvLhU2yEGwFTZdEcKWYNWdGgRanp2UXbkH+qprY7JCs5L5Gi2tnQq+k+Hf0A967vm2H/cJxErQ/yJRk1WGZa6Kmx3Jcq9NB8pCMAR7shWErLbnLtq+Kg0yTbJi+8GCbBMfPmGnZ0SNIt1B6tHcW0eEUAAAAcqzflEvFYZDmVGDlwx4AJMgIB8Y=</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>
