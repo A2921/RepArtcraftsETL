@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="Stage - Import Dim"
   DTS:PackageType="5"
-  DTS:VersionBuild="176"
-  DTS:VersionGUID="{FEFA2848-01B4-4304-8977-9752218FF76D}">
+  DTS:VersionBuild="178"
+  DTS:VersionGUID="{F3BB1E08-63E2-4406-93BC-3B74F2A3A32E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -973,7 +973,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="0">
+              DTS:ThreadHint="4">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -1556,7 +1556,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="delete"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="9">
+              DTS:ThreadHint="6">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -2033,7 +2033,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Assortment Ledger Entry Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="10">
+              DTS:ThreadHint="5">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -3784,7 +3784,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="11">
+              DTS:ThreadHint="7">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -4845,7 +4845,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Collection Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="12">
+              DTS:ThreadHint="8">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -5472,7 +5472,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Country_Region Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="13">
+              DTS:ThreadHint="9">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -6842,7 +6842,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Customer Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="14">
+              DTS:ThreadHint="10">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -12795,7 +12795,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Customer Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="8">
+              DTS:ThreadHint="17">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -14712,7 +14712,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Customer Posting Group Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="15">
+              DTS:ThreadHint="11">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -15716,7 +15716,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Dimension Set Entry Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="16">
+              DTS:ThreadHint="12">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -16220,7 +16220,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Delete Generic Table Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="17">
+              DTS:ThreadHint="13">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -16765,7 +16765,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="G_L Account Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="3">
+              DTS:ThreadHint="14">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -18597,7 +18597,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Hist_ Location Item Avg Cost Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="4">
+              DTS:ThreadHint="18">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -19627,7 +19627,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Hist_ Location Season Avg Cost Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="2">
+              DTS:ThreadHint="19">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -20541,7 +20541,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Item Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="5">
+              DTS:ThreadHint="15">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -27972,7 +27972,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Item Category Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="18">
+              DTS:ThreadHint="16">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -28698,7 +28698,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Line Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="19">
+              DTS:ThreadHint="20">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -29213,7 +29213,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Delete NAV Opening Location History"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="20">
+              DTS:ThreadHint="23">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -29712,7 +29712,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="LoadSTG_Assortment_Composition_FULL"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="21">
+          DTS:ThreadHint="24">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -29729,7 +29729,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="LoadSTG_Dimension_Value_FULL"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="21">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -29756,7 +29756,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Location Delete Location"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="7">
+              DTS:ThreadHint="22">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -33718,7 +33718,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate Macroline Relations"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="22">
+              DTS:ThreadHint="32">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -33757,7 +33757,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Delete Model Item Cross Reference"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
+              DTS:ThreadHint="25">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -35008,7 +35008,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Post Code Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="23">
+              DTS:ThreadHint="26">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -35048,7 +35048,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Delete Reason Code"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="24">
+              DTS:ThreadHint="29">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -35457,7 +35457,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="delete"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="25">
+              DTS:ThreadHint="30">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -36879,7 +36879,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Sales Price Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="26">
+              DTS:ThreadHint="27">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -37932,7 +37932,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Sales Price Model Item Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="27">
+              DTS:ThreadHint="28">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -39080,7 +39080,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Salesperson_Purchaser Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="28">
+              DTS:ThreadHint="0">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -39585,7 +39585,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Season Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="29">
+              DTS:ThreadHint="1">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -41192,7 +41192,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Ship to Address Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="30">
+              DTS:ThreadHint="33">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -42658,7 +42658,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Unit Of Measure Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="32">
+              DTS:ThreadHint="2">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -43173,7 +43173,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Valid Model item Assortments"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="33">
+              DTS:ThreadHint="3">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -47993,11 +47993,11 @@
       <GraphLayout
         Capacity="256" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="259.333333333334,43.3333333333334"
+          Size="259,43"
           Id="Package\Import Dim\accounting_period\Delete Company Row"
           TopLeft="5.5,5.49999999999996" />
         <NodeLayout
-          Size="199.333333333334,43.3333333333334"
+          Size="199,43"
           Id="Package\Import Dim\accounting_period\Populate Assortment ledger entry item"
           TopLeft="35.5,108.833333333333" />
         <EdgeLayout
@@ -48025,8 +48025,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="270.666666666667,207.333333333334"
-          Size="270.666666666667,250"
+          PanelSize="271,207"
+          Size="271,250"
           Id="Package\Import Dim\accounting_period"
           TopLeft="5.5000000000006,5.49999999999989" />
         <NodeLayout
@@ -48077,15 +48077,15 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="310,156"
-          Size="154,42.6666666666667"
+          Size="154,43"
           Id="Package\Import Dim\assortment"
           TopLeft="336.833333333334,109.166666666667" />
         <NodeLayout
-          Size="267.333333333334,43.3333333333334"
+          Size="267,43"
           Id="Package\Import Dim\Assortment Ledger Entry\Assortment Ledger Entry Company Row"
           TopLeft="5.5,5.50000000000007" />
         <NodeLayout
-          Size="240,43.3333333333334"
+          Size="240,43"
           Id="Package\Import Dim\Assortment Ledger Entry\Populate Assortment Ledger Entry"
           TopLeft="19.1666666666667,108.833333333333" />
         <EdgeLayout
@@ -48113,8 +48113,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="278.666666666667,207.333333333334"
-          Size="278.666666666667,250"
+          PanelSize="279,207"
+          Size="279,250"
           Id="Package\Import Dim\Assortment Ledger Entry"
           TopLeft="551.500000000001,5.49999999999989" />
         <NodeLayout
@@ -48153,15 +48153,15 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="268.666666666667,205.333333333334"
-          Size="268.666666666667,42.6666666666667"
+          Size="269,43"
           Id="Package\Import Dim\Assortment Ledger Entry Item"
-          TopLeft="890.500000000001,109.166666666667" />
+          TopLeft="890.500000000001,108.166666666667" />
         <NodeLayout
-          Size="228.666666666667,43.3333333333334"
+          Size="229,43"
           Id="Package\Import Dim\Collection\Collection Delete Company Row"
           TopLeft="5.50000000000001,5.49999999999996" />
         <NodeLayout
-          Size="168.666666666667,43.3333333333334"
+          Size="169,43"
           Id="Package\Import Dim\Collection\Populate Collection"
           TopLeft="35.5,108.833333333333" />
         <EdgeLayout
@@ -48189,7 +48189,7 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="240,207.333333333334"
+          PanelSize="240,207"
           Size="240,250"
           Id="Package\Import Dim\Collection"
           TopLeft="1219.83333333333,5.49999999999977" />
@@ -48229,7 +48229,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="268.666666666667,206"
-          Size="176.666666666667,42.6666666666667"
+          Size="177,43"
           Id="Package\Import Dim\Country_Region"
           TopLeft="1520.5,109.166666666666" />
         <NodeLayout
@@ -48268,7 +48268,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="240.666666666667,309.333333333334"
-          Size="146,42.6666666666667"
+          Size="146,43"
           Id="Package\Import Dim\Customer"
           TopLeft="1757.83333333333,109.166666666666" />
         <NodeLayout
@@ -48307,15 +48307,15 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="240.666666666667,207.333333333334"
-          Size="210,42.6666666666667"
+          Size="210,43"
           Id="Package\Import Dim\customer limit of credit"
           TopLeft="1964.83333333333,109.166666666666" />
         <NodeLayout
-          Size="298.666666666667,42.6666666666667"
+          Size="299,43"
           Id="Package\Import Dim\Customer Posting Group\Customer Posting Group Delete Company Row"
           TopLeft="5.5,5.50000000000004" />
         <NodeLayout
-          Size="238.666666666667,42.6666666666667"
+          Size="239,43"
           Id="Package\Import Dim\Customer Posting Group\Populate Customer Posting Group"
           TopLeft="35.5,108.166666666667" />
         <EdgeLayout
@@ -48343,10 +48343,10 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="309.333333333334,206"
-          Size="309.333333333334,248.666666666667"
+          PanelSize="309,206"
+          Size="309,249"
           Id="Package\Import Dim\Customer Posting Group"
-          TopLeft="2235.16666666667,6.16666666666633" />
+          TopLeft="2235.16666666667,6.16666666666634" />
         <NodeLayout
           Size="280,42.6666666666667"
           Id="Package\Import Dim\Dimension Set Entry\Dimension Set Entry Delete Company Row"
@@ -48383,7 +48383,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="290.666666666667,207.333333333334"
-          Size="290.666666666667,42.6666666666667"
+          Size="291,43"
           Id="Package\Import Dim\Dimension Set Entry"
           TopLeft="2605.5,109.166666666666" />
         <NodeLayout
@@ -48422,15 +48422,15 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="252.666666666667,206"
-          Size="161.333333333334,42.6666666666667"
+          Size="161,43"
           Id="Package\Import Dim\G_L Account"
           TopLeft="2957.16666666667,109.166666666666" />
         <NodeLayout
-          Size="248,42.6666666666667"
+          Size="248,43"
           Id="Package\Import Dim\generic tables\Delete Generic Table Company Row"
           TopLeft="5.5,5.50000000000004" />
         <NodeLayout
-          Size="188,42.6666666666667"
+          Size="188,43"
           Id="Package\Import Dim\generic tables\Populate Generic Table"
           TopLeft="35.5,108.166666666667" />
         <EdgeLayout
@@ -48458,10 +48458,10 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="258.666666666667,206"
-          Size="258.666666666667,248.666666666667"
+          PanelSize="259,206"
+          Size="259,249"
           Id="Package\Import Dim\generic tables"
-          TopLeft="3179.5,6.16666666666622" />
+          TopLeft="3179.5,6.16666666666623" />
         <NodeLayout
           Size="323.333333333334,42.6666666666667"
           Id="Package\Import Dim\Hist_ Location Item Avg Cost\Hist_ Location Item Avg Cost Delete Company Row"
@@ -48498,15 +48498,15 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="332,206.666666666667"
-          Size="332,42.6666666666667"
+          Size="332,43"
           Id="Package\Import Dim\Hist_ Location Item Avg Cost"
           TopLeft="3498.83333333333,109.166666666666" />
         <NodeLayout
-          Size="332,42.6666666666667"
+          Size="332,43"
           Id="Package\Import Dim\Hist_ Location Season Avg Cost\Hist_ Location Season Avg Cost Delete Company Row"
           TopLeft="5.5,5.50000000000004" />
         <NodeLayout
-          Size="272,42.6666666666667"
+          Size="272,43"
           Id="Package\Import Dim\Hist_ Location Season Avg Cost\Populate Hist_ Location Season Avg Cost"
           TopLeft="35.5,108.166666666667" />
         <EdgeLayout
@@ -48534,12 +48534,12 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="342.666666666667,206"
-          Size="342.666666666667,248.666666666667"
+          PanelSize="343,206"
+          Size="343,249"
           Id="Package\Import Dim\Hist_ Location Season Avg Cost"
-          TopLeft="3891.5,6.1666666666661" />
+          TopLeft="3891.5,6.16666666666609" />
         <NodeLayout
-          Size="206.666666666667,42.6666666666667"
+          Size="207,43"
           Id="Package\Import Dim\Item\Item Delete Company Row"
           TopLeft="5.50000000000001,5.50000000000004" />
         <NodeLayout
@@ -48571,8 +48571,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="217.333333333334,205.333333333334"
-          Size="217.333333333334,248"
+          PanelSize="217,205"
+          Size="217,248"
           Id="Package\Import Dim\Item"
           TopLeft="4295.16666666667,6.49999999999943" />
         <NodeLayout
@@ -48611,15 +48611,15 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="263.333333333334,205.333333333334"
-          Size="168.666666666667,42.6666666666667"
+          Size="169,43"
           Id="Package\Import Dim\Item Category"
           TopLeft="4573.5,109.166666666666" />
         <NodeLayout
-          Size="203.333333333334,43.3333333333334"
+          Size="203,43"
           Id="Package\Import Dim\Line\Line Delete Company Row"
           TopLeft="5.50000000000001,5.49999999999996" />
         <NodeLayout
-          Size="143.333333333334,43.3333333333334"
+          Size="143,43"
           Id="Package\Import Dim\Line\Populate Line"
           TopLeft="35.5,108.833333333333" />
         <EdgeLayout
@@ -48647,16 +48647,16 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="214.666666666667,207.333333333334"
-          Size="214.666666666667,250"
+          PanelSize="215,207"
+          Size="215,250"
           Id="Package\Import Dim\Line"
           TopLeft="4802.5,5.49999999999932" />
         <NodeLayout
-          Size="254.666666666667,42.6666666666667"
+          Size="255,43"
           Id="Package\Import Dim\LOAD Opening Location History\Delete NAV Opening Location History"
           TopLeft="5.49999999999999,5.50000000000004" />
         <NodeLayout
-          Size="254.666666666667,42.6666666666667"
+          Size="255,43"
           Id="Package\Import Dim\LOAD Opening Location History\LOAD  NAV Opening Location History"
           TopLeft="5.50000000000001,108.166666666667" />
         <EdgeLayout
@@ -48684,24 +48684,24 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="265.333333333334,206"
-          Size="265.333333333334,248.666666666667"
+          PanelSize="265,206"
+          Size="265,249"
           Id="Package\Import Dim\LOAD Opening Location History"
-          TopLeft="5078.16666666667,6.16666666666599" />
+          TopLeft="5078.16666666667,6.166666666666" />
         <NodeLayout
-          Size="273.333333333334,42.6666666666667"
+          Size="273,43"
           Id="Package\Import Dim\LoadSTG_Assortment_Composition_FULL"
           TopLeft="10663.1666666667,109.166666666665" />
         <NodeLayout
-          Size="237.333333333334,42.6666666666667"
+          Size="237,43"
           Id="Package\Import Dim\LoadSTG_Dimension_Value_FULL"
           TopLeft="5404.16666666667,109.166666666666" />
         <NodeLayout
-          Size="194.666666666667,42.6666666666667"
+          Size="195,43"
           Id="Package\Import Dim\Location\Location Delete Location"
           TopLeft="5.50000000000001,5.50000000000004" />
         <NodeLayout
-          Size="163.333333333334,43.3333333333334"
+          Size="163,43"
           Id="Package\Import Dim\Location\Populate Location"
           TopLeft="21.1666666666667,108.166666666667" />
         <EdgeLayout
@@ -48729,10 +48729,10 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="205.333333333334,206.666666666667"
-          Size="205.333333333334,249.333333333334"
+          PanelSize="205,207"
+          Size="205,249"
           Id="Package\Import Dim\Location"
-          TopLeft="5702.16666666667,5.83333333333253" />
+          TopLeft="5702.16666666667,5.83333333333252" />
         <NodeLayout
           Size="214.666666666667,42.6666666666667"
           Id="Package\Import Dim\Macroline Relations\Populate Macroline Relations"
@@ -48769,7 +48769,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="248.666666666667,212"
-          Size="192.666666666667,42.6666666666667"
+          Size="193,43"
           Id="Package\Import Dim\Macroline Relations"
           TopLeft="5968.5,109.166666666666" />
         <NodeLayout
@@ -48820,15 +48820,15 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="332,188"
-          Size="234,42.6666666666667"
+          Size="234,43"
           Id="Package\Import Dim\Model Item Cross Reference"
           TopLeft="6221.83333333333,109.166666666666" />
         <NodeLayout
-          Size="171.333333333334,43.3333333333334"
+          Size="171,43"
           Id="Package\Import Dim\Post Code\Populate Post Code"
           TopLeft="35.5,108.833333333333" />
         <NodeLayout
-          Size="231.333333333334,43.3333333333334"
+          Size="231,43"
           Id="Package\Import Dim\Post Code\Post Code Delete Company Row"
           TopLeft="5.50000000000001,5.49999999999996" />
         <EdgeLayout
@@ -48856,8 +48856,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="242.666666666667,207.333333333334"
-          Size="242.666666666667,250"
+          PanelSize="243,207"
+          Size="243,250"
           Id="Package\Import Dim\Post Code"
           TopLeft="6516.5,5.49999999999909" />
         <NodeLayout
@@ -48896,7 +48896,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="292,205.333333333334"
-          Size="292,42.6666666666667"
+          Size="292,43"
           Id="Package\Import Dim\Reason Code"
           TopLeft="6819.83333333333,109.166666666666" />
         <NodeLayout
@@ -48947,7 +48947,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="292,205.142857142858"
-          Size="292,42.6666666666667"
+          Size="292,43"
           Id="Package\Import Dim\Return Reason"
           TopLeft="7172.83333333333,109.166666666666" />
         <NodeLayout
@@ -48986,15 +48986,15 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="272.666666666667,207.333333333334"
-          Size="152.666666666667,42.6666666666667"
+          Size="153,43"
           Id="Package\Import Dim\Sales Price"
           TopLeft="7525.5,109.166666666666" />
         <NodeLayout
-          Size="231.333333333334,43.3333333333334"
+          Size="231,43"
           Id="Package\Import Dim\Sales Price Model Item\Populate Sales Price Model Item"
           TopLeft="35.5,108.833333333333" />
         <NodeLayout
-          Size="291.333333333334,43.3333333333334"
+          Size="291,43"
           Id="Package\Import Dim\Sales Price Model Item\Sales Price Model Item Delete Company Row"
           TopLeft="5.5,5.50000000000007" />
         <EdgeLayout
@@ -49022,8 +49022,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="302.666666666667,207.333333333334"
-          Size="302.666666666667,250"
+          PanelSize="303,207"
+          Size="303,250"
           Id="Package\Import Dim\Sales Price Model Item"
           TopLeft="7738.5,5.49999999999898" />
         <NodeLayout
@@ -49062,15 +49062,15 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="303.333333333334,205.333333333334"
-          Size="303.333333333334,42.6666666666667"
+          Size="303,43"
           Id="Package\Import Dim\Salesperson_Purchaser"
           TopLeft="8102.16666666667,109.166666666666" />
         <NodeLayout
-          Size="156.666666666667,43.3333333333334"
+          Size="157,43"
           Id="Package\Import Dim\Season\Populate Season"
           TopLeft="35.5,108.833333333333" />
         <NodeLayout
-          Size="216.666666666667,43.3333333333334"
+          Size="217,43"
           Id="Package\Import Dim\Season\Season Delete Company Row"
           TopLeft="5.50000000000001,5.49999999999996" />
         <EdgeLayout
@@ -49098,16 +49098,16 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="228,207.333333333334"
+          PanelSize="228,207"
           Size="228,250"
           Id="Package\Import Dim\Season"
           TopLeft="8465.83333333333,5.49999999999886" />
         <NodeLayout
-          Size="196.666666666667,43.3333333333334"
+          Size="197,43"
           Id="Package\Import Dim\Ship to Address\Populate Ship to Address"
           TopLeft="35.5,108.833333333333" />
         <NodeLayout
-          Size="256.666666666667,43.3333333333334"
+          Size="257,43"
           Id="Package\Import Dim\Ship to Address\Ship to Address Delete Company Row"
           TopLeft="5.5,5.49999999999996" />
         <EdgeLayout
@@ -49135,16 +49135,16 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="268,207.333333333334"
+          PanelSize="268,207"
           Size="268,250"
           Id="Package\Import Dim\Ship to Address"
           TopLeft="8754.83333333333,5.49999999999886" />
         <NodeLayout
-          Size="175.333333333334,43.3333333333334"
+          Size="175,43"
           Id="Package\Import Dim\Trademark\Populate Trademark"
           TopLeft="35.1666666666667,108.166666666667" />
         <NodeLayout
-          Size="234.666666666667,42.6666666666667"
+          Size="235,43"
           Id="Package\Import Dim\Trademark\Trademark Delete Company Row"
           TopLeft="5.50000000000001,5.50000000000004" />
         <EdgeLayout
@@ -49172,16 +49172,16 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="245.333333333334,206.666666666667"
-          Size="245.333333333334,249.333333333334"
+          PanelSize="245,207"
+          Size="245,249"
           Id="Package\Import Dim\Trademark"
-          TopLeft="9083.16666666667,5.83333333333219" />
+          TopLeft="9083.16666666667,5.83333333333218" />
         <NodeLayout
-          Size="200,43.3333333333334"
+          Size="200,43"
           Id="Package\Import Dim\Unit Of Measure\Populate Unit Of Measure"
           TopLeft="35.5,108.833333333333" />
         <NodeLayout
-          Size="260,43.3333333333334"
+          Size="260,43"
           Id="Package\Import Dim\Unit Of Measure\Unit Of Measure Delete Company Row"
           TopLeft="5.5,5.49999999999996" />
         <EdgeLayout
@@ -49209,16 +49209,16 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="270.666666666667,207.333333333334"
-          Size="270.666666666667,250"
+          PanelSize="271,207"
+          Size="271,250"
           Id="Package\Import Dim\Unit Of Measure"
           TopLeft="9389.5,5.49999999999875" />
         <NodeLayout
-          Size="262.666666666667,42.6666666666667"
+          Size="263,43"
           Id="Package\Import Dim\Valid Model item Assortments\Populate Valid Model item Assortments"
           TopLeft="5.50000000000003,108.166666666667" />
         <NodeLayout
-          Size="218.666666666667,42.6666666666667"
+          Size="219,43"
           Id="Package\Import Dim\Valid Model item Assortments\Valid Model item Assortments"
           TopLeft="27.5,5.50000000000004" />
         <EdgeLayout
@@ -49247,15 +49247,15 @@
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="274,206"
-          Size="274,248.666666666667"
+          Size="274,249"
           Id="Package\Import Dim\Valid Model item Assortments"
-          TopLeft="9720.83333333333,6.16666666666542" />
+          TopLeft="9720.83333333333,6.16666666666541" />
         <NodeLayout
-          Size="188,43.3333333333334"
+          Size="188,43"
           Id="Package\Import Dim\Variable Code\Populate Variable Code"
           TopLeft="35.8333333333333,108.833333333333" />
         <NodeLayout
-          Size="248.666666666667,43.3333333333334"
+          Size="249,43"
           Id="Package\Import Dim\Variable Code\Variable Code Delete Company Row"
           TopLeft="5.49999999999999,5.49999999999996" />
         <EdgeLayout
@@ -49283,16 +49283,16 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="259.333333333334,207.333333333334"
-          Size="259.333333333334,250"
+          PanelSize="259,207"
+          Size="259,250"
           Id="Package\Import Dim\Variable Code"
           TopLeft="10055.1666666667,5.49999999999875" />
         <NodeLayout
-          Size="156.666666666667,43.3333333333334"
+          Size="157,43"
           Id="Package\Import Dim\Vendor\Populate Vendor"
           TopLeft="35.5,108.833333333333" />
         <NodeLayout
-          Size="216.666666666667,43.3333333333334"
+          Size="217,43"
           Id="Package\Import Dim\Vendor\Vendor Delete Company Row"
           TopLeft="5.50000000000001,5.49999999999996" />
         <EdgeLayout
@@ -49320,39 +49320,39 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="228,207.333333333334"
+          PanelSize="228,207"
           Size="228,250"
           Id="Package\Import Dim\Vendor"
           TopLeft="10374.8333333333,5.49999999999864" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="10942,310.666666666667"
+          PanelSize="10942,311"
           Size="10942,354"
           Id="Package\Import Dim"
           TopLeft="5.5,106.833333333333" />
         <NodeLayout
-          Size="148.666666666667,41.3333333333334"
+          Size="149,41"
           Id="Package\Load Company"
           TopLeft="5402.16666666667,5.49999999999939" />
         <NodeLayout
-          Size="235.333333333334,43.3333333333334"
+          Size="235,43"
           Id="Package\Populate DimListino_ValidityDate"
           TopLeft="5358.83333333333,520.833333333334" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="5476.5,46.8333333333327">
+          TopLeft="5476.58333333333,46.4999999999994">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000008"
+              EndConnector="0,60.3333333333336"
               Start="0,0"
-              End="0,52.5000000000008">
+              End="0,52.8333333333336">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5000000000008" />
+                    End="0,52.8333333333336" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -49363,18 +49363,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Vincolo]"
-          TopLeft="5476.5,460.833333333333">
+          TopLeft="5476.41666666667,460.833333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000007"
+              EndConnector="0,60.000000000001"
               Start="0,0"
-              End="0,52.5000000000007">
+              End="0,52.500000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5000000000007" />
+                    End="0,52.500000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -50927,20 +50927,20 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="126.666666666667,42.6666666666667"
+          Size="127,43"
           Id="Package\Import Dim\Item\Populate Item\NAV ITEM"
           TopLeft="32.1666666666667,210.833333333334" />
         <NodeLayout
-          Size="180,42.6666666666667"
+          Size="147,43"
+          Id="Package\Import Dim\Item\Populate Item\Artcrafts ITEM"
+          TopLeft="22.1666666666667,6.50000000000004" />
+        <NodeLayout
+          Size="180,43"
           Id="Package\Import Dim\Item\Populate Item\Item Derived Column"
           TopLeft="5.50000000000003,108.166666666667" />
-        <NodeLayout
-          Size="146.666666666667,42.6666666666667"
-          Id="Package\Import Dim\Item\Populate Item\Artcrafts ITEM"
-          TopLeft="22.1666666666667,5.50000000000004" />
         <EdgeLayout
-          Id="Package\Import Dim\Item\Populate Item.Paths[Output origine OLE DB]"
-          TopLeft="95.5,48.1666666666667">
+          Id="Package\Import Dim\Item\Populate Item.Paths[Derived Column Output]"
+          TopLeft="95.5,150.833333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -50961,19 +50961,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Import Dim\Item\Populate Item.Paths[Derived Column Output]"
-          TopLeft="95.5,150.833333333333">
+          Id="Package\Import Dim\Item\Populate Item.Paths[Output origine OLE DB]"
+          TopLeft="95.5833333333334,49.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
+              EndConnector="0,58.666666666667"
               Start="0,0"
-              End="0,52.5000000000001">
+              End="0,51.166666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5000000000001" />
+                    End="0,51.166666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

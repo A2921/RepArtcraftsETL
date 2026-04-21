@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="Stage - Import Fact"
   DTS:PackageType="5"
-  DTS:VersionBuild="213"
-  DTS:VersionGUID="{58E342FE-0670-4336-9992-C648186D93B0}">
+  DTS:VersionBuild="216"
+  DTS:VersionGUID="{F71E4854-6BE2-4D39-AA34-91446F623AF5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -982,7 +982,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Accessories Costs Model ItemDelete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="6">
+              DTS:ThreadHint="8">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -1743,7 +1743,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="delete"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="6">
+              DTS:ThreadHint="8">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -2291,7 +2291,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Delete Commission Calculation Setup Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="6">
+              DTS:ThreadHint="8">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -3374,7 +3374,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Delete DDT_Picking Header Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="9">
+              DTS:ThreadHint="11">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -7931,7 +7931,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Delete DDT_Picking Line Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="9">
+              DTS:ThreadHint="11">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -10291,7 +10291,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="delete dimensio set entry"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="8">
+              DTS:ThreadHint="6">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -12406,7 +12406,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="TRUNCATE Item Ledger Entry"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="8">
+              DTS:ThreadHint="6">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -12435,7 +12435,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="LoadSTG_Item_Cross_Reference_FULL"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="10">
+          DTS:ThreadHint="12">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12452,7 +12452,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="LoadSTG_Purch_Cr_Memo_Hdr_FULL"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="11">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12469,7 +12469,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="LoadSTG_Purch_Cr_Memo_Line_FULL"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="11">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12486,7 +12486,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="LoadSTG_Purch_Inv_Header_FULL"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="12">
+          DTS:ThreadHint="10">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12503,7 +12503,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="LoadSTG_Purch_Inv_Line_FULL"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="12">
+          DTS:ThreadHint="10">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12530,7 +12530,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Order Type Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="8">
+              DTS:ThreadHint="6">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -19932,7 +19932,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Purchase Header Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
+              DTS:ThreadHint="7">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -29414,7 +29414,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Purchase Line Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
+              DTS:ThreadHint="7">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -38870,7 +38870,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="delete"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="0">
+              DTS:ThreadHint="3">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -45210,7 +45210,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Return Receipt Header Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="7">
+              DTS:ThreadHint="1">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -50078,7 +50078,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Return Receipt Line Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="7">
+              DTS:ThreadHint="1">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -54003,7 +54003,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Return Shipment Header Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="3">
+              DTS:ThreadHint="0">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -58209,7 +58209,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
               DTS:LocaleID="-1"
               DTS:ObjectName="Return Shipment Line Delete Company Row"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="3">
+              DTS:ThreadHint="0">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -70092,8 +70092,8 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="330.666666666667,206.666666666667"
-          Size="330.666666666667,42.6666666666667"
+          PanelSize="331,206.666666666667"
+          Size="331,43"
           Id="Package\Import Fact\Accessories Costs Model Item"
           TopLeft="5.50000000000014,5.50000000000004" />
         <NodeLayout
@@ -70144,7 +70144,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="310,156"
-          Size="310,42.6666666666667"
+          Size="310,43"
           Id="Package\Import Fact\assortment quantity"
           TopLeft="15.8333333333335,211.166666666667" />
         <NodeLayout
@@ -70183,9 +70183,9 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="336,206.666666666667"
-          Size="242,42.6666666666667"
+          Size="242,43"
           Id="Package\Import Fact\Commission Calculation Setup"
-          TopLeft="49.8333333333335,416.833333333334" />
+          TopLeft="49.8333333333335,415.166666666667" />
         <NodeLayout
           Size="280,42"
           Id="Package\Import Fact\DDT_Picking Header\Delete DDT_Picking Header Company Row"
@@ -70222,7 +70222,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="336,208"
-          Size="336,42.6666666666667"
+          Size="336,43"
           Id="Package\Import Fact\DDT_Picking Header"
           TopLeft="386.833333333333,211.166666666667" />
         <NodeLayout
@@ -70261,9 +70261,9 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="336,206.666666666667"
-          Size="336,42.6666666666667"
+          Size="336,43"
           Id="Package\Import Fact\DDT_Picking Line"
-          TopLeft="386.833333333333,416.833333333334" />
+          TopLeft="385.166666666666,415.166666666667" />
         <NodeLayout
           Size="198.666666666667,42.6666666666667"
           Id="Package\Import Fact\Dimension Set Entry 1\delete dimensio set entry"
@@ -70312,15 +70312,15 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="518,222"
-          Size="518,42.6666666666667"
+          Size="518,43"
           Id="Package\Import Fact\Dimension Set Entry 1"
           TopLeft="639.833333333333,5.49999999999993" />
         <NodeLayout
-          Size="209.333333333334,42.6666666666667"
+          Size="209,43"
           Id="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry"
           TopLeft="10.8333333333333,108.166666666667" />
         <NodeLayout
-          Size="220,42.6666666666667"
+          Size="220,43"
           Id="Package\Import Fact\Item Ledger Entry (ottimizzazione)\TRUNCATE Item Ledger Entry"
           TopLeft="5.50000000000001,5.50000000000004" />
         <EdgeLayout
@@ -70348,14 +70348,30 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="230.666666666667,206"
-          Size="230.666666666667,248.666666666667"
+          PanelSize="270,206"
+          Size="270,249"
           Id="Package\Import Fact\Item Ledger Entry (ottimizzazione)"
-          TopLeft="783.5,108.166666666667" />
+          TopLeft="784.5,107.166666666667" />
         <NodeLayout
-          Size="262.666666666667,42.6666666666667"
+          Size="263,43"
           Id="Package\Import Fact\LoadSTG_Item_Cross_Reference_FULL"
           TopLeft="1037.5,416.833333333333" />
+        <NodeLayout
+          Size="256,43"
+          Id="Package\Import Fact\LoadSTG_Purch_Cr_Memo_Hdr_FULL"
+          TopLeft="3449.83333333333,211.166666666666" />
+        <NodeLayout
+          Size="259,43"
+          Id="Package\Import Fact\LoadSTG_Purch_Cr_Memo_Line_FULL"
+          TopLeft="3448.5,416.833333333333" />
+        <NodeLayout
+          Size="244,43"
+          Id="Package\Import Fact\LoadSTG_Purch_Inv_Header_FULL"
+          TopLeft="3766.83333333333,211.166666666666" />
+        <NodeLayout
+          Size="229,43"
+          Id="Package\Import Fact\LoadSTG_Purch_Inv_Line_FULL"
+          TopLeft="3774.16666666667,416.833333333333" />
         <NodeLayout
           Size="237.333333333334,42.6666666666667"
           Id="Package\Import Fact\Order Type\Order Type Delete Company Row"
@@ -70392,7 +70408,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="300,207.333333333334"
-          Size="155.333333333334,42.6666666666667"
+          Size="155,43"
           Id="Package\Import Fact\Order Type"
           TopLeft="821.166666666667,416.833333333333" />
         <NodeLayout
@@ -70431,7 +70447,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="294.666666666667,205.333333333334"
-          Size="200.666666666667,42.6666666666667"
+          Size="201,43"
           Id="Package\Import Fact\Purch_ Rcpt_ Header"
           TopLeft="1400.5,211.166666666667" />
         <NodeLayout
@@ -70470,7 +70486,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="280,206.666666666667"
-          Size="280,42.6666666666667"
+          Size="280,43"
           Id="Package\Import Fact\Purch_ Rcpt_ Line"
           TopLeft="1360.83333333333,416.833333333333" />
         <NodeLayout
@@ -70521,7 +70537,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="280,206.666666666667"
-          Size="194,42.6666666666667"
+          Size="194,43"
           Id="Package\Import Fact\Purch_Logistic_Line"
           TopLeft="1701.83333333333,416.833333333333" />
         <NodeLayout
@@ -70560,7 +70576,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="274.666666666667,206.666666666667"
-          Size="180.666666666667,42.6666666666667"
+          Size="181,43"
           Id="Package\Import Fact\Purchase Header"
           TopLeft="1996.5,211.166666666667" />
         <NodeLayout
@@ -70599,7 +70615,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="261.333333333334,206.666666666667"
-          Size="261.333333333334,42.6666666666667"
+          Size="261,43"
           Id="Package\Import Fact\Purchase Line"
           TopLeft="1956.16666666667,416.833333333333" />
         <NodeLayout
@@ -70638,7 +70654,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="301.333333333334,206.666666666667"
-          Size="208.666666666667,42.6666666666667"
+          Size="209,43"
           Id="Package\Import Fact\Return Receipt Header"
           TopLeft="2270.5,211.166666666667" />
         <NodeLayout
@@ -70677,7 +70693,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="301.333333333334,206.666666666667"
-          Size="194,42.6666666666667"
+          Size="194,43"
           Id="Package\Import Fact\Return Receipt Line"
           TopLeft="2277.83333333333,416.833333333333" />
         <NodeLayout
@@ -70716,7 +70732,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="310.666666666667,206.666666666667"
-          Size="218,42.6666666666667"
+          Size="218,43"
           Id="Package\Import Fact\Return Shipment Header"
           TopLeft="2539.83333333333,211.166666666666" />
         <NodeLayout
@@ -70755,7 +70771,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="296,206.666666666667"
-          Size="203.333333333334,42.6666666666667"
+          Size="203,43"
           Id="Package\Import Fact\Return Shipment Line"
           TopLeft="2547.16666666667,416.833333333333" />
         <NodeLayout
@@ -70794,7 +70810,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="304,206.666666666667"
-          Size="211.333333333334,42.6666666666667"
+          Size="211,43"
           Id="Package\Import Fact\Sales Cr_Memo Header"
           TopLeft="2857.16666666667,211.166666666666" />
         <NodeLayout
@@ -70833,7 +70849,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="304,206.666666666667"
-          Size="304,42.6666666666667"
+          Size="304,43"
           Id="Package\Import Fact\Sales Cr_Memo Line"
           TopLeft="2810.83333333333,416.833333333333" />
         <NodeLayout
@@ -70872,7 +70888,7 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="300,206.666666666667"
-          Size="212.666666666667,42.6666666666667"
+          Size="213,43"
           Id="Package\Import Fact\Sales_Purchase Status"
           TopLeft="3175.5,416.833333333333" />
         <EdgeLayout
@@ -70899,18 +70915,18 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Import Fact.PrecedenceConstraints[Vincolo 1]"
-          TopLeft="170.833333333333,253.833333333333">
+          TopLeft="170.833333333333,254.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,163"
+              EndConnector="0,161"
               Start="0,0"
-              End="0,155.5">
+              End="0,153.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,155.5" />
+                    End="0,153.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -70964,6 +70980,28 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Import Fact.PrecedenceConstraints[Vincolo 12]"
+          TopLeft="3888.83333333333,253.833333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,163"
+              Start="0,0"
+              End="0,155.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,155.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Import Fact.PrecedenceConstraints[Vincolo 2]"
           TopLeft="2648.83333333333,253.833333333333">
           <EdgeLayout.Curve>
@@ -70987,7 +71025,97 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Import Fact.PrecedenceConstraints[Vincolo 3]"
-          TopLeft="554.833333333333,253.833333333333">
+          TopLeft="554,254.166666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,161"
+              Start="0,0"
+              End="0,153.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,153.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import Fact.PrecedenceConstraints[Vincolo 4]"
+          TopLeft="898.833333333333,48.4999999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.666666666667,58.666666666667"
+              Start="0,0"
+              End="20.666666666667,51.166666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.3333333333335" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.3333333333335"
+                    Point2="0,29.3333333333335"
+                    Point3="4,29.3333333333335" />
+                  <mssgle:LineSegment
+                    End="16.666666666667,29.3333333333335" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.666666666667,29.3333333333335"
+                    Point2="20.666666666667,29.3333333333335"
+                    Point3="20.666666666667,33.3333333333335" />
+                  <mssgle:LineSegment
+                    End="20.666666666667,51.166666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import Fact.PrecedenceConstraints[Vincolo 5]"
+          TopLeft="919.5,356.166666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-20.833333333333,60.666666666666"
+              Start="0,0"
+              End="-20.833333333333,53.166666666666">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.333333333333"
+                    Point2="0,30.333333333333"
+                    Point3="-4,30.333333333333" />
+                  <mssgle:LineSegment
+                    End="-16.833333333333,30.333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-16.833333333333,30.333333333333"
+                    Point2="-20.833333333333,30.333333333333"
+                    Point3="-20.833333333333,34.333333333333" />
+                  <mssgle:LineSegment
+                    End="-20.833333333333,53.166666666666" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import Fact.PrecedenceConstraints[Vincolo 6]"
+          TopLeft="2962.83333333333,253.833333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -71008,52 +71136,8 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Import Fact.PrecedenceConstraints[Vincolo 4]"
-          TopLeft="898.833333333333,48.1666666666666">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
-              Start="0,0"
-              End="0,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Import Fact.PrecedenceConstraints[Vincolo 5]"
-          TopLeft="898.833333333333,356.833333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
-              Start="0,0"
-              End="0,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Import Fact.PrecedenceConstraints[Vincolo 6]"
-          TopLeft="2962.83333333333,253.833333333333">
+          Id="Package\Import Fact.PrecedenceConstraints[Vincolo 7]"
+          TopLeft="3577.83333333333,253.833333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -71095,91 +71179,31 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="256,42.6666666666667"
-          Id="Package\Import Fact\LoadSTG_Purch_Cr_Memo_Hdr_FULL"
-          TopLeft="3449.83333333333,211.166666666666" />
-        <NodeLayout
-          Size="258.666666666667,42.6666666666667"
-          Id="Package\Import Fact\LoadSTG_Purch_Cr_Memo_Line_FULL"
-          TopLeft="3448.5,416.833333333333" />
-        <EdgeLayout
-          Id="Package\Import Fact.PrecedenceConstraints[Vincolo 7]"
-          TopLeft="3577.83333333333,253.833333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,163"
-              Start="0,0"
-              End="0,155.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,155.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="244,42.6666666666667"
-          Id="Package\Import Fact\LoadSTG_Purch_Inv_Header_FULL"
-          TopLeft="3766.83333333333,211.166666666666" />
-        <NodeLayout
-          Size="229.333333333334,42.6666666666667"
-          Id="Package\Import Fact\LoadSTG_Purch_Inv_Line_FULL"
-          TopLeft="3774.16666666667,416.833333333333" />
-        <EdgeLayout
-          Id="Package\Import Fact.PrecedenceConstraints[Vincolo 12]"
-          TopLeft="3888.83333333333,253.833333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,163"
-              Start="0,0"
-              End="0,155.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,155.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="4016,514.666666666667"
-          Size="4016,557.333333333334"
+          PanelSize="4016,515"
+          Size="4016,558"
           Id="Package\Import Fact"
           TopLeft="5.50000000000023,107.5" />
         <NodeLayout
-          Size="149.333333333334,42"
+          Size="149,42"
           Id="Package\Load Company"
           TopLeft="1938.83333333333,5.49999999999977" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="2013.5,47.4999999999998">
+          TopLeft="2013.41666666667,47.4999999999998">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000003"
+              EndConnector="0,60.0000000000002"
               Start="0,0"
-              End="0,52.5000000000003">
+              End="0,52.5000000000002">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5000000000003" />
+                    End="0,52.5000000000002" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -71851,15 +71875,15 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="200.666666666667,42.6666666666667"
+          Size="201,43"
           Id="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Source"
           TopLeft="27.1666666666667,5.50000000000004" />
         <NodeLayout
-          Size="221.333333333334,42.6666666666667"
+          Size="221,43"
           Id="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Destination"
-          TopLeft="16.8333333333334,210.833333333334" />
+          TopLeft="18.8333333333334,209.833333333334" />
         <NodeLayout
-          Size="244,42.6666666666667"
+          Size="244,43"
           Id="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry\Item Ledger Entry Derived Column"
           TopLeft="5.50000000000003,108.166666666667" />
         <EdgeLayout
@@ -71888,18 +71912,18 @@ FROM [dbo].[Artcrafts$Item Ledger Entry] WITH (NOLOCK)</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Import Fact\Item Ledger Entry (ottimizzazione)\Populate Item Ledger Entry.Paths[Derived Column Output]"
-          TopLeft="127.5,150.833333333333">
+          TopLeft="128.416666666667,151.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
+              EndConnector="0,58.666666666667"
               Start="0,0"
-              End="0,52.5000000000001">
+              End="0,51.166666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5000000000001" />
+                    End="0,51.166666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
