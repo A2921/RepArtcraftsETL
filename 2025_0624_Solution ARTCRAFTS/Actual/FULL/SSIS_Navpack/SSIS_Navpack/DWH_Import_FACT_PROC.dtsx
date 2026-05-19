@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="DWH_Import_FACT_PROC"
   DTS:PackageType="5"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{633728B3-F1E1-4F2F-93F5-72EB1DCE9838}">
+  DTS:VersionBuild="40"
+  DTS:VersionGUID="{735A8600-20C8-41DD-AF6E-600616301F9A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -52,7 +52,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="ACTUAL_FULL_MAIN_FACT_000_2parte"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -68,7 +68,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="ACTUAL_FULL_MAIN_FACT_001"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -84,7 +84,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="ACTUAL_FULL_MAIN_FACT_002"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -100,7 +100,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="ACTUAL_MAIN_FINE_ELAB"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -108,114 +108,32 @@
           SQLTask:SqlStatementSource="EXECUTE  [dbo].[ACTUAL_MAIN_FINE_ELAB] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Contenitore Sequenza"
-      DTS:CreationName="STOCK:SEQUENCE"
-      DTS:Description="Contenitore Sequenza"
-      DTS:DTSID="{7EBE4ADA-0D7A-4B5D-AB40-22E45EF52FD1}"
-      DTS:ExecutableType="STOCK:SEQUENCE"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Contenitore Sequenza">
-      <DTS:Variables />
-      <DTS:Executables>
-        <DTS:Executable
-          DTS:refId="Package\Contenitore Sequenza\ACTUAL_FactFV_Margine_Cliente"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:DTSID="{7b464823-2eef-4a54-80e3-f7bbabc21570}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="ACTUAL_FactFV_Margine_Cliente"
-          DTS:ThreadHint="0">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="EXECUTE [dbo].[ACTUAL_FactFV_Margine_Cliente]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Contenitore Sequenza\ACTUAL_FactOV_Margine_Cliente"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:DTSID="{ac2b5b8d-67a4-4313-9e8e-3591ad9fc3a0}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="ACTUAL_FactOV_Margine_Cliente"
-          DTS:ThreadHint="1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="EXECUTE [dbo].[ACTUAL_FactOV_Margine_Cliente]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Contenitore Sequenza\ACTUAL_FactSpedizioni_Margine_Cliente"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Attività Esegui SQL"
-          DTS:DTSID="{99b85a4e-fc2d-43ab-8810-f545f0b9052a}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="ACTUAL_FactSpedizioni_Margine_Cliente"
-          DTS:ThreadHint="2">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="EXECUTE [dbo].[ACTUAL_FactSpedizioni_Margine_Cliente]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-      </DTS:Executables>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\IsSunday"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Attività Esegui SQL"
-      DTS:DTSID="{122FCB7D-CCF1-4656-8E20-A1D46F95C8EF}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="IsSunday"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-          SQLTask:SqlStatementSource="execute [dbo].[ACTUAL_IsSunday]"
-          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-          <SQLTask:ResultBinding
-            SQLTask:ResultName="IsSunday_text"
-            SQLTask:DtsVariableName="User::IsSunday_text" />
-        </SQLTask:SqlTaskData>
-      </DTS:ObjectData>
-    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Vincolo]"
       DTS:CreationName=""
-      DTS:DTSID="{DDB55945-0638-4E91-8694-380644B387A0}"
+      DTS:DTSID="{09FC53CD-74BC-42F5-8A70-EABE68A82B59}"
       DTS:From="Package\ACTUAL_FULL_MAIN_FACT_000"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Vincolo"
-      DTS:To="Package\IsSunday" />
+      DTS:To="Package\ACTUAL_FULL_MAIN_FACT_002" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Vincolo 1]"
       DTS:CreationName=""
-      DTS:DTSID="{9E29EF6D-5A7C-497E-BBDA-B9B60515A3A3}"
-      DTS:From="Package\ACTUAL_FULL_MAIN_FACT_001"
+      DTS:DTSID="{753D86F0-7CB7-48E2-92BE-2101F9BBA864}"
+      DTS:From="Package\ACTUAL_FULL_MAIN_FACT_000_2parte"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Vincolo 1"
-      DTS:To="Package\IsSunday" />
+      DTS:To="Package\ACTUAL_FULL_MAIN_FACT_002" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Vincolo 2]"
       DTS:CreationName=""
-      DTS:DTSID="{1B2914F6-2D2E-4198-89A4-FA9F807DC5A5}"
-      DTS:From="Package\ACTUAL_FULL_MAIN_FACT_000_2parte"
+      DTS:DTSID="{FFFE79BE-9BC8-4212-9819-FAB0519BAAB8}"
+      DTS:From="Package\ACTUAL_FULL_MAIN_FACT_001"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Vincolo 2"
-      DTS:To="Package\IsSunday" />
+      DTS:To="Package\ACTUAL_FULL_MAIN_FACT_002" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Vincolo 3]"
       DTS:CreationName=""
@@ -224,31 +142,6 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Vincolo 3"
       DTS:To="Package\ACTUAL_MAIN_FINE_ELAB" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Vincolo 4]"
-      DTS:CreationName=""
-      DTS:DTSID="{ADEC2784-1BB6-480E-B451-3D8D4146E326}"
-      DTS:EvalOp="3"
-      DTS:Expression="@[User::IsSunday_text]==&quot;NO&quot;"
-      DTS:From="Package\IsSunday"
-      DTS:ObjectName="Vincolo 4"
-      DTS:To="Package\ACTUAL_FULL_MAIN_FACT_002" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Vincolo 5]"
-      DTS:CreationName=""
-      DTS:DTSID="{FB50ABC6-F36A-4EE2-8495-8AA7F1B118A5}"
-      DTS:EvalOp="3"
-      DTS:Expression="@[User::IsSunday_text]==&quot;SI&quot;"
-      DTS:From="Package\IsSunday"
-      DTS:ObjectName="Vincolo 5"
-      DTS:To="Package\Contenitore Sequenza" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Vincolo 6]"
-      DTS:CreationName=""
-      DTS:DTSID="{566AD24E-7DC7-4F56-925D-7C421167A8EC}"
-      DTS:From="Package\Contenitore Sequenza"
-      DTS:ObjectName="Vincolo 6"
-      DTS:To="Package\ACTUAL_FULL_MAIN_FACT_002" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
@@ -261,143 +154,30 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="232,42.6666666666667"
+          Size="232,43"
           Id="Package\ACTUAL_FULL_MAIN_FACT_000"
-          TopLeft="5.5,5.4999999999997" />
+          TopLeft="5.5,5.5" />
         <NodeLayout
-          Size="268,42.6666666666667"
+          Size="268,43"
           Id="Package\ACTUAL_FULL_MAIN_FACT_000_2parte"
-          TopLeft="298.5,5.4999999999997" />
+          TopLeft="298.5,5.49999999999989" />
         <NodeLayout
-          Size="232,42.6666666666667"
+          Size="232,43"
           Id="Package\ACTUAL_FULL_MAIN_FACT_001"
-          TopLeft="627.5,5.4999999999997" />
+          TopLeft="627.5,5.49999999999989" />
         <NodeLayout
-          Size="232,42.6666666666667"
+          Size="232,43"
           Id="Package\ACTUAL_FULL_MAIN_FACT_002"
-          TopLeft="316.5,416.833333333333" />
+          TopLeft="316.5,108.5" />
         <NodeLayout
-          Size="206.666666666667,42.6666666666667"
+          Size="207,43"
           Id="Package\ACTUAL_MAIN_FINE_ELAB"
-          TopLeft="329.166666666667,519.5" />
-        <NodeLayout
-          Size="236,42.6666666666667"
-          Id="Package\Contenitore Sequenza\ACTUAL_FactFV_Margine_Cliente"
-          TopLeft="5.5,5.50000000000004" />
-        <NodeLayout
-          Size="238.666666666667,42.6666666666667"
-          Id="Package\Contenitore Sequenza\ACTUAL_FactOV_Margine_Cliente"
-          TopLeft="302.166666666667,5.49999999999993" />
-        <NodeLayout
-          Size="270.666666666667,42.6666666666667"
-          Id="Package\Contenitore Sequenza\ACTUAL_FactSpedizioni_Margine_Cliente"
-          TopLeft="601.166666666667,5.49999999999993" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="877.333333333334,103.333333333334"
-          Size="877.333333333334,146"
-          Id="Package\Contenitore Sequenza"
-          TopLeft="493.833333333333,210.833333333333" />
-        <NodeLayout
-          Size="122.666666666667,42.6666666666667"
-          Id="Package\IsSunday"
-          TopLeft="371.166666666667,108.166666666666" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Vincolo]"
-          TopLeft="121.5,48.1666666666664">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="282.333333333333,60.0000000000001"
-              Start="0,0"
-              End="282.333333333333,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.1489361702128" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,35.1489361702128"
-                    Point2="0,39.1489361702128"
-                    Point3="4,39.1489361702128" />
-                  <mssgle:LineSegment
-                    End="278.333333333333,39.1489361702128" />
-                  <mssgle:CubicBezierSegment
-                    Point1="278.333333333333,39.1489361702128"
-                    Point2="282.333333333333,39.1489361702128"
-                    Point3="282.333333333333,43.1489361702128" />
-                  <mssgle:LineSegment
-                    End="282.333333333333,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Vincolo 1]"
-          TopLeft="743.5,48.1666666666664">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-282.333333333333,60.0000000000001"
-              Start="0,0"
-              End="-282.333333333333,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.1489361702128" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,35.1489361702128"
-                    Point2="0,39.1489361702128"
-                    Point3="-4,39.1489361702128" />
-                  <mssgle:LineSegment
-                    End="-278.333333333333,39.1489361702128" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-278.333333333333,39.1489361702128"
-                    Point2="-282.333333333333,39.1489361702128"
-                    Point3="-282.333333333333,43.1489361702128" />
-                  <mssgle:LineSegment
-                    End="-282.333333333333,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Vincolo 2]"
-          TopLeft="432.5,48.1666666666664">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
-              Start="0,0"
-              End="0,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="329,211.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Vincolo 3]"
-          TopLeft="432.5,459.5">
+          TopLeft="432.5,151.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -418,103 +198,87 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Vincolo 4]"
-          TopLeft="413.388888888889,150.833333333333">
+          Id="Package.PrecedenceConstraints[Vincolo]"
+          TopLeft="121.5,48.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-18.2222222222222,266"
+              EndConnector="255,59.9999999999999"
               Start="0,0"
-              End="-18.2222222222222,258.5">
+              End="255,52.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,129.997074419455" />
+                    End="0,35.5454545454545" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,129.997074419455"
-                    Point2="0,133.997074419455"
-                    Point3="-4,133.997074419455" />
+                    Point1="0,35.5454545454545"
+                    Point2="0,39.5454545454545"
+                    Point3="4,39.5454545454545" />
                   <mssgle:LineSegment
-                    End="-14.2222222222222,133.997074419455" />
+                    End="251,39.5454545454545" />
                   <mssgle:CubicBezierSegment
-                    Point1="-14.2222222222222,133.997074419455"
-                    Point2="-18.2222222222222,133.997074419455"
-                    Point3="-18.2222222222222,137.997074419455" />
+                    Point1="251,39.5454545454545"
+                    Point2="255,39.5454545454545"
+                    Point3="255,43.5454545454545" />
                   <mssgle:LineSegment
-                    End="-18.2222222222222,258.5" />
+                    End="255,52.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-17.1111111111111,138.997074419455,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Vincolo 5]"
-          TopLeft="451.611111111111,150.833333333333">
+          Id="Package.PrecedenceConstraints[Vincolo 1]"
+          TopLeft="432.5,48.4999999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="480.888888888889,59.9999999999999"
+              EndConnector="0,60"
               Start="0,0"
-              End="480.888888888889,52.4999999999999">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.4635193133047" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.4635193133047"
-                    Point2="0,24.4635193133047"
-                    Point3="4,24.4635193133047" />
-                  <mssgle:LineSegment
-                    End="476.888888888889,24.4635193133047" />
-                  <mssgle:CubicBezierSegment
-                    Point1="476.888888888889,24.4635193133047"
-                    Point2="480.888888888889,24.4635193133047"
-                    Point3="480.888888888889,28.4635193133047" />
-                  <mssgle:LineSegment
-                    End="480.888888888889,52.4999999999999" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="232.444444444444,29.4635193133047,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Vincolo 6]"
-          TopLeft="932.5,356.833333333333">
+          Id="Package.PrecedenceConstraints[Vincolo 2]"
+          TopLeft="743.5,48.4999999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-462.666666666667,60.0000000000002"
+              EndConnector="-255,60"
               Start="0,0"
-              End="-462.666666666667,52.5000000000002">
+              End="-255,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.7534246575343" />
+                    End="0,35.5454545454545" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.7534246575343"
-                    Point2="0,35.7534246575343"
-                    Point3="-4,35.7534246575343" />
+                    Point1="0,35.5454545454545"
+                    Point2="0,39.5454545454545"
+                    Point3="-4,39.5454545454545" />
                   <mssgle:LineSegment
-                    End="-458.666666666667,35.7534246575343" />
+                    End="-251,39.5454545454545" />
                   <mssgle:CubicBezierSegment
-                    Point1="-458.666666666667,35.7534246575343"
-                    Point2="-462.666666666667,35.7534246575343"
-                    Point3="-462.666666666667,39.7534246575343" />
+                    Point1="-251,39.5454545454545"
+                    Point2="-255,39.5454545454545"
+                    Point3="-255,43.5454545454545" />
                   <mssgle:LineSegment
-                    End="-462.666666666667,52.5000000000002" />
+                    End="-255,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

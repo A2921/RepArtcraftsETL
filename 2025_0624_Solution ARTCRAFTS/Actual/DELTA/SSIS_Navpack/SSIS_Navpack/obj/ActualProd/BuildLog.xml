@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>ETL_DELTA</Name>
-    <LastWriteTime>2025-10-10T13:09:49.9381493Z</LastWriteTime>
+    <LastWriteTime>2026-05-19T13:57:59.836486Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -18,7 +18,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Process Cube fact_full.dtsx</Name>
-      <LastWriteTime>2026-01-29T10:46:32.3209384Z</LastWriteTime>
+      <LastWriteTime>2026-05-19T13:57:59.7744831Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
