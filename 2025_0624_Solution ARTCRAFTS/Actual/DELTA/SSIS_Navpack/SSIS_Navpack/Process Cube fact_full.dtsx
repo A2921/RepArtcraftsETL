@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="Process Cube fact_full"
   DTS:PackageType="5"
-  DTS:VersionBuild="127"
-  DTS:VersionGUID="{61A49353-3C6D-497E-9714-609D85E20BEA}">
+  DTS:VersionBuild="128"
+  DTS:VersionGUID="{49872236-4EB8-46B6-91B3-FECF98A60D5B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -39,7 +39,7 @@
       DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="DDL SSAS PARLALLELO 1 Step1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <ASDdlData
@@ -56,7 +56,7 @@
       DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="DDL SSAS PARLALLELO 1 Step2"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ASDdlData
@@ -73,7 +73,7 @@
       DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="DDL SSAS PARLALLELO 2  Step1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <ASDdlData
@@ -90,13 +90,13 @@
       DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="DDL SSAS PARLALLELO 2  Step2"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <ASDdlData
           ConnectionName="localhost"
           SourceType="DirectInput"
-          Source="&#xA;{&#xA;&quot;refresh&quot;: {&#xA;&quot;type&quot;: &quot;full&quot;,&#xA;&quot;objects&quot;: [&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;MovExtraContabili&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB AffidamentoClienti&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB ArticoloCrocs&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;MargineClienteFV&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;MargineClienteOV&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;MargineClienteSPEDIZIONI&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;MARGINE_FATTURATO_FATTURE&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB CalendarioCrocs&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB DettaglioScontrinoCrocs_NEW&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB GiacenzaCrocs&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB StoreCrocs&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB TrafficCrocs&quot;&#xA;},{&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;        &quot;table&quot;: &quot;TAB vCostiMktg&quot;&#xA;      },{&#xA;        &quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;        &quot;table&quot;: &quot;TAB vCostiMktgSettimanali&quot;&#xA;      }&#xA;]&#xA;}&#xA;}&#xA;" />
+          Source="&#xA;{&#xA;&quot;refresh&quot;: {&#xA;&quot;type&quot;: &quot;full&quot;,&#xA;&quot;objects&quot;: [&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;MovExtraContabili&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB AffidamentoClienti&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB ArticoloCrocs&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;MargineClienteFV&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;MargineClienteOV&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;MARGINE_FATTURATO_FATTURE&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB CalendarioCrocs&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB DettaglioScontrinoCrocs_NEW&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB GiacenzaCrocs&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB StoreCrocs&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB TrafficCrocs&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB vCostiMktg&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;CostoMedioPonderato&quot;&#xA;},&#xA;{&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&quot;table&quot;: &quot;TAB vCostiMktgSettimanali&quot;&#xA;}&#xA;]&#xA;}&#xA;}&#xA;" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -113,19 +113,19 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="229.333333333334,42.6666666666667"
+          Size="229,43"
           Id="Package\DDL SSAS PARLALLELO 1 Step1"
           TopLeft="40.1666662196319,21.0999997210503" />
         <NodeLayout
-          Size="229.333333333334,42.6666666666667"
+          Size="229,43"
           Id="Package\DDL SSAS PARLALLELO 1 Step2"
           TopLeft="43.2916661730657,191.333333682021" />
         <NodeLayout
-          Size="233.333333333334,42.6666666666667"
+          Size="233,43"
           Id="Package\DDL SSAS PARLALLELO 2  Step1"
           TopLeft="353.291661553706,24.3166681660218" />
         <NodeLayout
-          Size="233.333333333334,42.6666666666667"
+          Size="233,43"
           Id="Package\DDL SSAS PARLALLELO 2  Step2"
           TopLeft="358.624994738028,186.750002266466" />
       </GraphLayout>
