@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LIT004005</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAby5qJydrSUGj//N34klXLQAAAAACAAAAAAADZgAAwAAAABAAAAD+bWkqfU03VN//tj6DJgRjAAAAAASAAACgAAAAEAAAAMWuzZCd24FE9siLioawKReIAAAAKYXx3yYMbh1sQQIZ6hRbHjdfYOxaErJnmtYK8JhEAnZbGA/o8oNJpDxQYC4L7GJNkfOv82xiEnrmmOBTClsQwNlsiwPjBLfOXe4uB6fsPF23oFZmnk9VK0pnpGRYhuFloa8grlnn5G4dVFHM1anCJMDVBkaM07OmWW8dJSzWemV6YcqSCWO9JhQAAABgeXlJY3eW7qlkpROAx5O3qwmxSg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAby5qJydrSUGj//N34klXLQAAAAACAAAAAAADZgAAwAAAABAAAAD+c9AxN2FnBqYjG4nTMMj6AAAAAASAAACgAAAAEAAAAI83tU/JCmBD4Iu39uzfy8WIAAAARg5gX6TsQcWylaSOmra0PvalQfoHwegSvZcmacoZIZzd5j7lQdWnuZCT+2VqHS+/2rGvTzTf3FiMebZDtwpRYpuZJfQw4Jgh6oNyew+04CnWOSijWrlsbs3rmdsuxR++mh+RX43xaavwyzrsLqTS4VmcPWPsIEJ8n5jJMOKNEmftA1e2gZPNYhQAAABnRst9jwvTKet8zAd4DRBlfRPYkA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -583,10 +583,10 @@
                 <SSIS:Property SSIS:Name="Name">DWH - Import Dim</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">172</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">173</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{5C161C52-6580-41BF-B398-CBAAA6634446}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{FC5431AD-9C84-40F4-BA7F-00CC7BA6FE76}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

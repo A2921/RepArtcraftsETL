@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="Process Cube dim"
   DTS:PackageType="5"
-  DTS:VersionBuild="121"
-  DTS:VersionGUID="{3FA092A8-70A1-4617-BFC1-1C5EE9A6E006}">
+  DTS:VersionBuild="122"
+  DTS:VersionGUID="{4421171A-0528-4521-A289-D774FA4EB207}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
