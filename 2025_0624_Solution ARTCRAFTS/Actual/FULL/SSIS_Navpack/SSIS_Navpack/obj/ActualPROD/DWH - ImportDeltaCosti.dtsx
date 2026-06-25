@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="DWH - Import Dim"
   DTS:PackageType="5"
-  DTS:VersionBuild="89"
-  DTS:VersionGUID="{9C7C213A-7C74-4A4C-90C0-B42657FDB02A}">
+  DTS:VersionBuild="90"
+  DTS:VersionGUID="{44FAC2E1-2B05-4FFE-917B-62F5EF9EC667}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -1600,11 +1600,11 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="120,42.6666666666667"
+          Size="120,42.4"
           Id="Package\DimTipoCosto\Populate"
           TopLeft="5.50000000000001,108.166666666667" />
         <NodeLayout
-          Size="118.666666666667,42.6666666666667"
+          Size="118.4,42.4"
           Id="Package\DimTipoCosto\truncate"
           TopLeft="6.16666666666668,5.50000000000004" />
         <EdgeLayout
@@ -1632,16 +1632,16 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="150,206"
-          Size="130.666666666667,248.666666666667"
+          PanelSize="150.4,206.4"
+          Size="130.4,248.8"
           Id="Package\DimTipoCosto"
           TopLeft="5.50000000000011,622.833333333333" />
         <NodeLayout
-          Size="120,42.6666666666667"
+          Size="120,42.4"
           Id="Package\FactAcquisto_Costi_Accessori_preventivi\Populate"
           TopLeft="5.50000000000001,108.166666666667" />
         <NodeLayout
-          Size="118.666666666667,42.6666666666667"
+          Size="118.4,42.4"
           Id="Package\FactAcquisto_Costi_Accessori_preventivi\truncate"
           TopLeft="6.16666666666668,5.50000000000004" />
         <EdgeLayout
@@ -1669,16 +1669,16 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="150,206"
-          Size="130.666666666667,248.666666666667"
+          PanelSize="150.4,206.4"
+          Size="130.4,248.8"
           Id="Package\FactAcquisto_Costi_Accessori_preventivi"
           TopLeft="5.50000000000007,314.166666666667" />
         <NodeLayout
-          Size="120,42.6666666666667"
+          Size="120,42.4"
           Id="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate"
           TopLeft="5.50000000000001,108.166666666667" />
         <NodeLayout
-          Size="118.666666666667,42.6666666666667"
+          Size="118.4,42.4"
           Id="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\truncate"
           TopLeft="6.16666666666668,5.50000000000004" />
         <EdgeLayout
@@ -1706,8 +1706,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="150,206"
-          Size="130.666666666667,248.666666666667"
+          PanelSize="150.4,206.4"
+          Size="130.4,248.8"
           Id="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi"
           TopLeft="5.50000000000003,5.49999999999993" />
         <EdgeLayout
@@ -1915,39 +1915,39 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="166.666666666667,42.6666666666667"
+          Size="166.4,42.4"
           Id="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\source"
-          TopLeft="215.624996786937,102.049998175204" />
+          TopLeft="217.053568239837,102.814704068282" />
         <NodeLayout
-          Size="178.666666666667,42.6666666666667"
+          Size="178.4,42.4"
           Id="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate\Destinazione OLE DB"
           TopLeft="451.249993275851,282.749994944036" />
         <EdgeLayout
           Id="Package\FactFatturaAcquisto_Costi_Accessori_consuntivi\populate.Paths[OLE DB Source Output]"
-          TopLeft="298.958330120271,144.716664841871">
+          TopLeft="300.253568239837,145.214704068282">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="241.624996488914,138.033330102165"
+              EndConnector="240.196425036014,137.535290875754"
               Start="0,0"
-              End="241.624996488914,130.533330102165">
+              End="240.196425036014,130.035290875754">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,65.0166650510826" />
+                    End="0,64.7676454378772" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,65.0166650510826"
-                    Point2="0,69.0166650510826"
-                    Point3="4,69.0166650510826" />
+                    Point1="0,64.7676454378772"
+                    Point2="0,68.7676454378772"
+                    Point3="4,68.7676454378772" />
                   <mssgle:LineSegment
-                    End="237.624996488914,69.0166650510826" />
+                    End="236.196425036014,68.7676454378772" />
                   <mssgle:CubicBezierSegment
-                    Point1="237.624996488914,69.0166650510826"
-                    Point2="241.624996488914,69.0166650510826"
-                    Point3="241.624996488914,73.0166650510826" />
+                    Point1="236.196425036014,68.7676454378772"
+                    Point2="240.196425036014,68.7676454378772"
+                    Point3="240.196425036014,72.7676454378772" />
                   <mssgle:LineSegment
-                    End="241.624996488914,130.533330102165" />
+                    End="240.196425036014,130.035290875754" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

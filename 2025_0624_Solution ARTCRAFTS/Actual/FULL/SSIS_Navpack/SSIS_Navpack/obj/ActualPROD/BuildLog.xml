@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>ETL_FULL_ACTUAL</Name>
-    <LastWriteTime>2025-11-04T16:19:00.3583726Z</LastWriteTime>
+    <LastWriteTime>2026-06-25T14:35:00.0880762Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>DWH - Import Dim.dtsx</Name>
-      <LastWriteTime>2026-05-27T14:10:56.9245376Z</LastWriteTime>
+      <LastWriteTime>2026-06-25T14:11:51.413201Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -19,16 +19,6 @@
     <ProjectBuildItemInfo>
       <Name>Stage - Import Dim.dtsx</Name>
       <LastWriteTime>2026-04-03T11:06:27.024916Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>SHRINK_STAGE.dtsx</Name>
-      <LastWriteTime>2025-01-31T16:22:03.7461311Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>SHRINK_DWH.dtsx</Name>
-      <LastWriteTime>2025-01-31T16:22:03.7091331Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -52,23 +42,8 @@
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>SHRINK_LOG_FILE_STAGE.dtsx</Name>
-      <LastWriteTime>2025-01-31T16:22:03.7281331Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>Stage - Import Fact_TEST.dtsx</Name>
-      <LastWriteTime>2025-01-31T16:22:16.0439738Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
       <Name>Stage - Import Fact  step 2.dtsx</Name>
       <LastWriteTime>2026-01-23T16:53:15.3609744Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>DWH - ImportDeltaCosti.dtsx</Name>
-      <LastWriteTime>2025-03-31T13:26:50.304932Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -87,8 +62,8 @@
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>DWH_Import_FACT_PROC.dtsx</Name>
-      <LastWriteTime>2026-05-19T14:54:45.1780891Z</LastWriteTime>
+      <Name>DWH - ImportFact.dtsx</Name>
+      <LastWriteTime>2026-06-25T14:30:16.0452725Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

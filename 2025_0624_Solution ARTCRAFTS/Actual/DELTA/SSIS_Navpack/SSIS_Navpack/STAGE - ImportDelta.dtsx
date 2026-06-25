@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LIT004005"
   DTS:CreatorName="CORP\FBARBACA"
-  DTS:DTSID="{0E1EFB16-1376-4443-8EFD-BEBC3B3F64F9}"
+  DTS:DTSID="{A8E7890B-4907-4648-AB3A-1A6D65389590}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5467.0"
   DTS:LocaleID="1040"
-  DTS:ObjectName="Stage - Import Fact  step 2"
+  DTS:ObjectName="Stage - ImportDelta"
   DTS:PackageType="5"
-  DTS:VersionBuild="285"
-  DTS:VersionGUID="{5302AC28-B1F0-4B52-A50B-C66188F32B2D}">
+  DTS:VersionBuild="289"
+  DTS:VersionGUID="{FCB5BB38-C607-46E0-8137-5895431581B3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -11058,7 +11058,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Assortment Quantity"
-          DTS:ThreadHint="19">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11075,7 +11075,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="budget entry gl"
-          DTS:ThreadHint="20">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11092,7 +11092,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Cust_ Ledger Entry"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11109,7 +11109,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="DDT_Picking Header"
-          DTS:ThreadHint="8">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11126,7 +11126,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="DDT_Picking Line"
-          DTS:ThreadHint="25">
+          DTS:ThreadHint="10">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11143,7 +11143,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Detailed Cust_ Ledg_ Entry"
-          DTS:ThreadHint="26">
+          DTS:ThreadHint="11">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11160,7 +11160,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Detailed Vendor Ledg_ Entry"
-          DTS:ThreadHint="28">
+          DTS:ThreadHint="12">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11177,7 +11177,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="EXECUTE  LoadSTG_Sales Line_0"
-          DTS:ThreadHint="27">
+          DTS:ThreadHint="13">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11193,7 +11193,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="EXECUTE  LoadSTG_Sales Line_1"
-          DTS:ThreadHint="27">
+          DTS:ThreadHint="13">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11209,7 +11209,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="EXECUTE  LoadSTG_Sales_Shipment_HEADER"
-          DTS:ThreadHint="30">
+          DTS:ThreadHint="14">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11225,7 +11225,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="EXECUTE  LoadSTG_Sales_Shipment_Line"
-          DTS:ThreadHint="29">
+          DTS:ThreadHint="15">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11241,7 +11241,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="EXECUTE LoadSTG_Item_Ledger_Entry"
-          DTS:ThreadHint="31">
+          DTS:ThreadHint="16">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11257,7 +11257,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="EXECUTE LoadSTG_Sales_Invoice_Line"
-          DTS:ThreadHint="32">
+          DTS:ThreadHint="17">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11273,7 +11273,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="EXECUTE LoadSTG_Value_Entry"
-          DTS:ThreadHint="33">
+          DTS:ThreadHint="18">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11289,7 +11289,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Fields for Chart of Accounts"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11306,7 +11306,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Gen_ Journal Line Maint_ EAM"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11323,7 +11323,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="G_L Budget Name"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11340,7 +11340,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="G_L Entry"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11357,7 +11357,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="G_L Entry EAM"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="20">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11374,7 +11374,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="LoadSTG_Item_Cross_Reference_FULL"
-          DTS:ThreadHint="37">
+          DTS:ThreadHint="21">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11390,7 +11390,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Order Type"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="22">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11407,7 +11407,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Purchase Header"
-          DTS:ThreadHint="21">
+          DTS:ThreadHint="23">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11424,7 +11424,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Purchase Line"
-          DTS:ThreadHint="22">
+          DTS:ThreadHint="24">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11441,7 +11441,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Purch_ Cr_ Memo Hdr_"
-          DTS:ThreadHint="9">
+          DTS:ThreadHint="25">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11458,7 +11458,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Purch_ Cr_ Memo Line"
-          DTS:ThreadHint="10">
+          DTS:ThreadHint="26">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11475,7 +11475,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Purch_ Inv_ Header"
-          DTS:ThreadHint="11">
+          DTS:ThreadHint="27">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11492,7 +11492,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Purch_ Inv_ Line"
-          DTS:ThreadHint="12">
+          DTS:ThreadHint="28">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11509,7 +11509,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Purch_ Logistic Line"
-          DTS:ThreadHint="13">
+          DTS:ThreadHint="29">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11526,7 +11526,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Purch_ Rcpt_ Line"
-          DTS:ThreadHint="14">
+          DTS:ThreadHint="30">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11543,7 +11543,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Purch_Rctp_Header"
-          DTS:ThreadHint="15">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11560,7 +11560,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Return Receipt Header"
-          DTS:ThreadHint="16">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11577,7 +11577,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Return Receipt Line"
-          DTS:ThreadHint="17">
+          DTS:ThreadHint="31">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11594,7 +11594,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Return Shipment Header"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="32">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11611,7 +11611,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Return Shipment Line"
-          DTS:ThreadHint="34">
+          DTS:ThreadHint="33">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11628,7 +11628,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Cr Memo Header"
-          DTS:ThreadHint="35">
+          DTS:ThreadHint="34">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11645,7 +11645,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Cr Memo Line"
-          DTS:ThreadHint="23">
+          DTS:ThreadHint="35">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11662,7 +11662,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Header"
-          DTS:ThreadHint="24">
+          DTS:ThreadHint="36">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11679,7 +11679,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Header Delta"
-          DTS:ThreadHint="24">
+          DTS:ThreadHint="36">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11696,7 +11696,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Header Extension"
-          DTS:ThreadHint="18">
+          DTS:ThreadHint="19">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11713,7 +11713,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Header Extension Delta"
-          DTS:ThreadHint="18">
+          DTS:ThreadHint="19">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11730,7 +11730,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Invoice Header"
-          DTS:ThreadHint="36">
+          DTS:ThreadHint="37">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11747,7 +11747,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="20">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11763,7 +11763,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate 1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11779,7 +11779,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate 23"
-          DTS:ThreadHint="19">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11795,7 +11795,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate 24"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11811,7 +11811,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate 26"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="22">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11827,7 +11827,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate DDT Picking Header"
-          DTS:ThreadHint="8">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11843,7 +11843,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate DDT Picking Line"
-          DTS:ThreadHint="25">
+          DTS:ThreadHint="10">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11859,7 +11859,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate Sales Header"
-          DTS:ThreadHint="24">
+          DTS:ThreadHint="36">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11875,7 +11875,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate Sales Header Extension"
-          DTS:ThreadHint="18">
+          DTS:ThreadHint="19">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12046,207 +12046,207 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
       <GraphLayout
         Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176,42.6666666666667"
+          Size="176,42.4"
           Id="Package\Contenitore Sequenza\Assortment Quantity"
           TopLeft="8138.83333333333,216.833333333332" />
         <NodeLayout
-          Size="150.666666666667,42"
+          Size="150.4,41.6"
           Id="Package\Contenitore Sequenza\budget entry gl"
           TopLeft="5.50000000000061,217.166666666667" />
         <NodeLayout
-          Size="170.666666666667,42.6666666666667"
+          Size="170.4,42.4"
           Id="Package\Contenitore Sequenza\Cust_ Ledger Entry"
           TopLeft="216.500000000001,216.833333333334" />
         <NodeLayout
-          Size="181.333333333334,42"
+          Size="181.6,41.6"
           Id="Package\Contenitore Sequenza\DDT_Picking Header"
           TopLeft="9098.16666666667,217.166666666666" />
         <NodeLayout
-          Size="225.333333333334,42"
+          Size="225.6,41.6"
           Id="Package\Contenitore Sequenza\DDT_Picking Line"
           TopLeft="9356.16666666667,217.166666666666" />
         <NodeLayout
-          Size="212,42"
+          Size="212,41.6"
           Id="Package\Contenitore Sequenza\Detailed Cust_ Ledg_ Entry"
           TopLeft="447.833333333334,217.166666666667" />
         <NodeLayout
-          Size="218,42"
+          Size="217.6,41.6"
           Id="Package\Contenitore Sequenza\Detailed Vendor Ledg_ Entry"
           TopLeft="720.833333333334,217.166666666667" />
         <NodeLayout
-          Size="236,42.6666666666667"
+          Size="236,42.4"
           Id="Package\Contenitore Sequenza\EXECUTE  LoadSTG_Sales Line_0"
           TopLeft="999.833333333334,111.166666666667" />
         <NodeLayout
-          Size="236,42.6666666666667"
+          Size="236,42.4"
           Id="Package\Contenitore Sequenza\EXECUTE  LoadSTG_Sales Line_1"
           TopLeft="999.833333333334,216.833333333333" />
         <NodeLayout
-          Size="297.333333333334,42.6666666666667"
+          Size="297.6,42.4"
           Id="Package\Contenitore Sequenza\EXECUTE  LoadSTG_Sales_Shipment_HEADER"
           TopLeft="1296.16666666667,216.833333333333" />
         <NodeLayout
-          Size="277.333333333334,42.6666666666667"
+          Size="277.6,42.4"
           Id="Package\Contenitore Sequenza\EXECUTE  LoadSTG_Sales_Shipment_Line"
           TopLeft="1654.16666666667,216.833333333333" />
         <NodeLayout
-          Size="265.333333333334,42.6666666666667"
+          Size="265.6,42.4"
           Id="Package\Contenitore Sequenza\EXECUTE LoadSTG_Item_Ledger_Entry"
           TopLeft="1992.16666666667,216.833333333333" />
         <NodeLayout
-          Size="264,42.6666666666667"
+          Size="264,42.4"
           Id="Package\Contenitore Sequenza\EXECUTE LoadSTG_Sales_Invoice_Line"
           TopLeft="2317.83333333333,216.833333333333" />
         <NodeLayout
-          Size="230.666666666667,42.6666666666667"
+          Size="230.4,42.4"
           Id="Package\Contenitore Sequenza\EXECUTE LoadSTG_Value_Entry"
           TopLeft="2642.5,216.833333333333" />
         <NodeLayout
-          Size="209.333333333334,42.6666666666667"
+          Size="209.6,42.4"
           Id="Package\Contenitore Sequenza\Fields for Chart of Accounts"
           TopLeft="8375.16666666667,216.833333333332" />
         <NodeLayout
-          Size="202,42"
+          Size="201.6,41.6"
           Id="Package\Contenitore Sequenza\G_L Budget Name"
           TopLeft="2933.83333333333,217.166666666667" />
         <NodeLayout
-          Size="128,42"
+          Size="128,41.6"
           Id="Package\Contenitore Sequenza\G_L Entry"
           TopLeft="3196.83333333333,217.166666666667" />
         <NodeLayout
-          Size="225.333333333334,42"
+          Size="225.6,41.6"
           Id="Package\Contenitore Sequenza\G_L Entry EAM"
           TopLeft="7564.16666666667,217.166666666666" />
         <NodeLayout
-          Size="228,42.6666666666667"
+          Size="228,42.4"
           Id="Package\Contenitore Sequenza\Gen_ Journal Line Maint_ EAM"
           TopLeft="7849.83333333333,216.833333333332" />
         <NodeLayout
-          Size="133.333333333334,42.6666666666667"
-          Id="Package\Contenitore Sequenza\Order Type"
-          TopLeft="8887.16666666667,216.833333333332" />
-        <NodeLayout
-          Size="225.333333333334,42"
-          Id="Package\Contenitore Sequenza\Purch_ Cr_ Memo Hdr_"
-          TopLeft="3385.16666666667,217.166666666666" />
-        <NodeLayout
-          Size="190.666666666667,42"
-          Id="Package\Contenitore Sequenza\Purch_ Cr_ Memo Line"
-          TopLeft="3671.5,217.166666666666" />
-        <NodeLayout
-          Size="225.333333333334,42"
-          Id="Package\Contenitore Sequenza\Purch_ Inv_ Header"
-          TopLeft="3923.16666666667,217.166666666666" />
-        <NodeLayout
-          Size="225.333333333334,42"
-          Id="Package\Contenitore Sequenza\Purch_ Inv_ Line"
-          TopLeft="4209.16666666667,217.166666666666" />
-        <NodeLayout
-          Size="225.333333333334,42"
-          Id="Package\Contenitore Sequenza\Purch_ Logistic Line"
-          TopLeft="4495.16666666667,217.166666666666" />
-        <NodeLayout
-          Size="168.666666666667,42"
-          Id="Package\Contenitore Sequenza\Purch_ Rcpt_ Line"
-          TopLeft="4781.5,217.166666666666" />
-        <NodeLayout
-          Size="178,42"
-          Id="Package\Contenitore Sequenza\Purch_Rctp_Header"
-          TopLeft="5010.83333333333,217.166666666666" />
-        <NodeLayout
-          Size="164,42"
-          Id="Package\Contenitore Sequenza\Purchase Header"
-          TopLeft="5249.83333333333,217.166666666666" />
-        <NodeLayout
-          Size="153.333333333334,42"
-          Id="Package\Contenitore Sequenza\Purchase Line"
-          TopLeft="5474.16666666667,217.166666666666" />
-        <NodeLayout
-          Size="190,42"
-          Id="Package\Contenitore Sequenza\Return Receipt Header"
-          TopLeft="5687.83333333333,217.166666666666" />
-        <NodeLayout
-          Size="175.333333333334,42"
-          Id="Package\Contenitore Sequenza\Return Receipt Line"
-          TopLeft="5938.16666666667,217.166666666666" />
-        <NodeLayout
-          Size="225.333333333334,42"
-          Id="Package\Contenitore Sequenza\Return Shipment Header"
-          TopLeft="6174.16666666667,217.166666666666" />
-        <NodeLayout
-          Size="184.666666666667,42"
-          Id="Package\Contenitore Sequenza\Return Shipment Line"
-          TopLeft="6460.5,217.166666666666" />
-        <NodeLayout
-          Size="225.333333333334,42"
-          Id="Package\Contenitore Sequenza\Sales Cr Memo Header"
-          TopLeft="6706.16666666667,217.166666666666" />
-        <NodeLayout
-          Size="225.333333333334,42"
-          Id="Package\Contenitore Sequenza\Sales Cr Memo Line"
-          TopLeft="6992.16666666667,217.166666666666" />
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Contenitore Sequenza\Sales Header"
-          TopLeft="9641.83333333333,111.499999999999" />
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Contenitore Sequenza\Sales Header Delta"
-          TopLeft="9641.83333333333,217.166666666666" />
-        <NodeLayout
-          Size="193.333333333334,42.6666666666667"
-          Id="Package\Contenitore Sequenza\Sales Header Extension"
-          TopLeft="9882.16666666667,111.166666666666" />
-        <NodeLayout
-          Size="221.333333333334,42.6666666666667"
-          Id="Package\Contenitore Sequenza\Sales Header Extension Delta"
-          TopLeft="9868.16666666667,216.833333333332" />
-        <NodeLayout
-          Size="225.333333333334,42"
-          Id="Package\Contenitore Sequenza\Sales Invoice Header"
-          TopLeft="7278.16666666667,217.166666666666" />
-        <NodeLayout
-          Size="118.666666666667,42"
-          Id="Package\Contenitore Sequenza\truncate"
-          TopLeft="7617.5,111.499999999999" />
-        <NodeLayout
-          Size="225.333333333334,42"
-          Id="Package\Contenitore Sequenza\truncate 1"
-          TopLeft="7851.16666666667,111.499999999999" />
-        <NodeLayout
-          Size="133.333333333334,42.6666666666667"
-          Id="Package\Contenitore Sequenza\truncate 23"
-          TopLeft="8160.16666666667,111.166666666666" />
-        <NodeLayout
-          Size="133.333333333334,42.6666666666667"
-          Id="Package\Contenitore Sequenza\truncate 24"
-          TopLeft="8413.16666666667,111.166666666666" />
-        <NodeLayout
-          Size="262.666666666667,42.6666666666667"
+          Size="262.4,42.4"
           Id="Package\Contenitore Sequenza\LoadSTG_Item_Cross_Reference_FULL"
           TopLeft="8584.79166792395,109.550000034868" />
         <NodeLayout
-          Size="133.333333333334,42.6666666666667"
+          Size="133.6,42.4"
+          Id="Package\Contenitore Sequenza\Order Type"
+          TopLeft="8887.16666666667,216.833333333332" />
+        <NodeLayout
+          Size="225.6,41.6"
+          Id="Package\Contenitore Sequenza\Purch_ Cr_ Memo Hdr_"
+          TopLeft="3385.16666666667,217.166666666666" />
+        <NodeLayout
+          Size="190.4,41.6"
+          Id="Package\Contenitore Sequenza\Purch_ Cr_ Memo Line"
+          TopLeft="3671.5,217.166666666666" />
+        <NodeLayout
+          Size="225.6,41.6"
+          Id="Package\Contenitore Sequenza\Purch_ Inv_ Header"
+          TopLeft="3923.16666666667,217.166666666666" />
+        <NodeLayout
+          Size="225.6,41.6"
+          Id="Package\Contenitore Sequenza\Purch_ Inv_ Line"
+          TopLeft="4209.16666666667,217.166666666666" />
+        <NodeLayout
+          Size="225.6,41.6"
+          Id="Package\Contenitore Sequenza\Purch_ Logistic Line"
+          TopLeft="4495.16666666667,217.166666666666" />
+        <NodeLayout
+          Size="168.8,41.6"
+          Id="Package\Contenitore Sequenza\Purch_ Rcpt_ Line"
+          TopLeft="4781.5,217.166666666666" />
+        <NodeLayout
+          Size="177.6,41.6"
+          Id="Package\Contenitore Sequenza\Purch_Rctp_Header"
+          TopLeft="5010.83333333333,217.166666666666" />
+        <NodeLayout
+          Size="164,41.6"
+          Id="Package\Contenitore Sequenza\Purchase Header"
+          TopLeft="5249.83333333333,217.166666666666" />
+        <NodeLayout
+          Size="153.6,41.6"
+          Id="Package\Contenitore Sequenza\Purchase Line"
+          TopLeft="5474.16666666667,217.166666666666" />
+        <NodeLayout
+          Size="190.4,41.6"
+          Id="Package\Contenitore Sequenza\Return Receipt Header"
+          TopLeft="5687.83333333333,217.166666666666" />
+        <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\Contenitore Sequenza\Return Receipt Line"
+          TopLeft="5938.16666666667,217.166666666666" />
+        <NodeLayout
+          Size="225.6,41.6"
+          Id="Package\Contenitore Sequenza\Return Shipment Header"
+          TopLeft="6174.16666666667,217.166666666666" />
+        <NodeLayout
+          Size="184.8,41.6"
+          Id="Package\Contenitore Sequenza\Return Shipment Line"
+          TopLeft="6460.5,217.166666666666" />
+        <NodeLayout
+          Size="225.6,41.6"
+          Id="Package\Contenitore Sequenza\Sales Cr Memo Header"
+          TopLeft="6706.16666666667,217.166666666666" />
+        <NodeLayout
+          Size="225.6,41.6"
+          Id="Package\Contenitore Sequenza\Sales Cr Memo Line"
+          TopLeft="6992.16666666667,217.166666666666" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Contenitore Sequenza\Sales Header"
+          TopLeft="9641.83333333333,111.499999999999" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Contenitore Sequenza\Sales Header Delta"
+          TopLeft="9641.83333333333,217.166666666666" />
+        <NodeLayout
+          Size="193.6,42.4"
+          Id="Package\Contenitore Sequenza\Sales Header Extension"
+          TopLeft="9882.16666666667,111.166666666666" />
+        <NodeLayout
+          Size="221.6,42.4"
+          Id="Package\Contenitore Sequenza\Sales Header Extension Delta"
+          TopLeft="9868.16666666667,216.833333333332" />
+        <NodeLayout
+          Size="225.6,41.6"
+          Id="Package\Contenitore Sequenza\Sales Invoice Header"
+          TopLeft="7278.16666666667,217.166666666666" />
+        <NodeLayout
+          Size="118.4,41.6"
+          Id="Package\Contenitore Sequenza\truncate"
+          TopLeft="7617.5,111.499999999999" />
+        <NodeLayout
+          Size="225.6,41.6"
+          Id="Package\Contenitore Sequenza\truncate 1"
+          TopLeft="7851.16666666667,111.499999999999" />
+        <NodeLayout
+          Size="133.6,42.4"
+          Id="Package\Contenitore Sequenza\truncate 23"
+          TopLeft="8160.16666666667,111.166666666666" />
+        <NodeLayout
+          Size="133.6,42.4"
+          Id="Package\Contenitore Sequenza\truncate 24"
+          TopLeft="8413.16666666667,111.166666666666" />
+        <NodeLayout
+          Size="133.6,42.4"
           Id="Package\Contenitore Sequenza\truncate 26"
           TopLeft="8887.16666666667,111.166666666666" />
         <NodeLayout
-          Size="216,42.6666666666667"
+          Size="216,42.4"
           Id="Package\Contenitore Sequenza\truncate DDT Picking Header"
           TopLeft="9080.83333333333,111.166666666666" />
         <NodeLayout
-          Size="223.333333333334,48.6666666666667"
+          Size="223.2,48.8"
           Id="Package\Contenitore Sequenza\truncate DDT Picking Line"
           TopLeft="9357.16666666667,108.166666666666" />
         <NodeLayout
-          Size="187.333333333334,42"
+          Size="187.2,41.6"
           Id="Package\Contenitore Sequenza\truncate Sales Header"
           TopLeft="9613.16666666667,5.83333333333223" />
         <NodeLayout
-          Size="236,42.6666666666667"
+          Size="236,42.4"
           Id="Package\Contenitore Sequenza\truncate Sales Header Extension"
           TopLeft="9860.83333333333,5.49999999999879" />
         <NodeLayout
-          Size="225.333333333334,42"
+          Size="225.6,41.6"
           Id="Package\Contenitore Sequenza\Vendor Leadger Entry"
           TopLeft="10150.1666666667,217.166666666666" />
         <EdgeLayout
@@ -12516,12 +12516,12 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="10381.3333333334,314.666666666667"
-          Size="10381.3333333334,357.333333333334"
+          PanelSize="10381.6,314.4"
+          Size="10381.6,357.6"
           Id="Package\Contenitore Sequenza"
           TopLeft="5.5,107.5" />
         <NodeLayout
-          Size="153.333333333334,42"
+          Size="153.6,41.6"
           Id="Package\Load Company"
           TopLeft="5119.5,5.49999999999932" />
         <EdgeLayout

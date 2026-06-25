@@ -11,12 +11,29 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="DWH - Import Dim"
   DTS:PackageType="5"
-  DTS:VersionBuild="173"
-  DTS:VersionGUID="{FC5431AD-9C84-40F4-BA7F-00CC7BA6FE76}">
+  DTS:VersionBuild="177"
+  DTS:VersionGUID="{AC365060-FAD5-46CA-95C7-2DBCF9DD4E88}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\ACTUAL_DIM_DimCostiAccessoriTipoCosto"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{bb0d873a-728f-4573-b15f-ebb567e07f8e}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ACTUAL_DIM_DimCostiAccessoriTipoCosto"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="18">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
+          SQLTask:SqlStatementSource="EXECUTE [dbo].[ACTUAL_DIM_DimCostiAccessoriTipoCosto] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\ACTUAL_DIM_DimMagazzino"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
@@ -26,7 +43,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="ACTUAL_DIM_DimMagazzino"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="15">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -43,7 +60,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="ACTUAL_DIM_DimNegozio"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="16">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -60,1874 +77,13 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="ACTUAL_DIM_Macrosubcanale"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="17">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
           SQLTask:SqlStatementSource="EXECUTE [dbo].[ACTUAL_DIM_Macrosubcanale] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\affidamentoClienti"
-      DTS:CreationName="STOCK:SEQUENCE"
-      DTS:Description="Sequence Container"
-      DTS:DTSID="{e2596c5e-6cc1-4a3a-8980-ef098e90d991}"
-      DTS:ExecutableType="STOCK:SEQUENCE"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="affidamentoClienti">
-      <DTS:Variables />
-      <DTS:Executables>
-        <DTS:Executable
-          DTS:refId="Package\affidamentoClienti\Populate DimFornitore"
-          DTS:CreationName="Microsoft.Pipeline"
-          DTS:Description="Data Flow Task"
-          DTS:DTSID="{f094b82c-e632-4990-b1ba-dbf2f29785dd}"
-          DTS:ExecutableType="Microsoft.Pipeline"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Populate DimFornitore"
-          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <pipeline
-              version="1">
-              <components>
-                <component
-                  refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination"
-                  componentClassID="Microsoft.OLEDBDestination"
-                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-                  description="OLE DB Destination"
-                  name="DimFornitore Destination"
-                  usesDispositions="true"
-                  version="4">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                      name="CommandTimeout">0</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[dbo].[FactAffidamentoClienti]</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
-                    <property
-                      dataType="System.String"
-                      description="The SQL command to be executed."
-                      name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the column code page to use when code page information is unavailable from the data source."
-                      name="DefaultCodePage">1252</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Forces the use of the DefaultCodePage property value when describing character data."
-                      name="AlwaysUseDefaultCodePage">false</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the mode used to access the database."
-                      name="AccessMode"
-                      typeConverter="AccessMode">3</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepIdentity">false</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepNulls">false</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                      name="FastLoadMaxInsertCommitSize">2147483647</property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DWH]"
-                      description="The OLE DB runtime connection used to access the database."
-                      name="OleDbConnection" />
-                  </connections>
-                  <inputs>
-                    <input
-                      refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input]"
-                      errorOrTruncationOperation="Insert"
-                      errorRowDisposition="FailComponent"
-                      hasSideEffects="true"
-                      name="OLE DB Destination Input">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[ClienteKey]"
-                          cachedDataType="wstr"
-                          cachedLength="26"
-                          cachedName="ClienteKey"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[ClienteKey]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[ClienteKey]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Company Code]"
-                          cachedDataType="wstr"
-                          cachedLength="10"
-                          cachedName="Company Code"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Company Code]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Company Code]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Update Date]"
-                          cachedDataType="dbDate"
-                          cachedName="Update Date"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update Date]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Update Date]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Amount]"
-                          cachedDataType="numeric"
-                          cachedName="Amount"
-                          cachedPrecision="18"
-                          cachedScale="2"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Amount]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Amount]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Status]"
-                          cachedDataType="wstr"
-                          cachedLength="10"
-                          cachedName="Status"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Status]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Starting Date]"
-                          cachedDataType="dbTimeStamp"
-                          cachedName="Starting Date"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Starting Date]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Starting Date]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Data Visura Protesti]"
-                          cachedDataType="dbTimeStamp"
-                          cachedName="Data Visura Protesti"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Data Visura Protesti]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Data Visura Protesti]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Limit of Credit _]"
-                          cachedDataType="numeric"
-                          cachedName="Limit of Credit _"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Limit of Credit _]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Limit of Credit _]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Situation]"
-                          cachedDataType="wstr"
-                          cachedLength="20"
-                          cachedName="Situation"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Situation]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Situation]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Memo]"
-                          cachedDataType="wstr"
-                          cachedLength="250"
-                          cachedName="Memo"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Memo]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Memo]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Extra Credit]"
-                          cachedDataType="numeric"
-                          cachedName="Extra Credit"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Extra Credit]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Extra Credit]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Data Extra Credit]"
-                          cachedDataType="dbTimeStamp"
-                          cachedName="Data Extra Credit"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Data Extra Credit]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Data Extra Credit]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Active]"
-                          cachedDataType="ui1"
-                          cachedName="Active"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Active]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Cerved Credit]"
-                          cachedDataType="numeric"
-                          cachedName="Cerved Credit"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cerved Credit]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Cerved Credit]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Memo 2]"
-                          cachedDataType="wstr"
-                          cachedLength="250"
-                          cachedName="Memo 2"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Memo 2]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Memo 2]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Payment Times]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
-                          cachedName="Payment Times"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Payment Times]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Payment Times]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Negative Events]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
-                          cachedName="Negative Events"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Negative Events]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Negative Events]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Econ-Financial Situation]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
-                          cachedName="Econ-Financial Situation"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Econ-Financial Situation]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Econ-Financial Situation]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Risk no consultations]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
-                          cachedName="Risk no consultations"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Risk no consultations]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Risk no consultations]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Revenues]"
-                          cachedDataType="numeric"
-                          cachedName="Revenues"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Revenues]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Revenues]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Purchases]"
-                          cachedDataType="numeric"
-                          cachedName="Purchases"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Purchases]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Purchases]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Mol]"
-                          cachedDataType="numeric"
-                          cachedName="Mol"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mol]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Mol]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Useful Loss]"
-                          cachedDataType="numeric"
-                          cachedName="Useful Loss"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Useful Loss]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Useful Loss]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Net Assets]"
-                          cachedDataType="numeric"
-                          cachedName="Net Assets"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Net Assets]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Net Assets]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[No_ Employees]"
-                          cachedDataType="numeric"
-                          cachedName="No_ Employees"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[No_ Employees]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[No_ Employees]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[No_ Requests Last 12 Months]"
-                          cachedDataType="numeric"
-                          cachedName="No_ Requests Last 12 Months"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[No_ Requests Last 12 Months]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[No_ Requests Last 12 Months]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Cash Flow]"
-                          cachedDataType="numeric"
-                          cachedName="Cash Flow"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cash Flow]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Cash Flow]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Ebitda]"
-                          cachedDataType="numeric"
-                          cachedName="Ebitda"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ebitda]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Ebitda]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Inventories]"
-                          cachedDataType="numeric"
-                          cachedName="Inventories"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Inventories]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Inventories]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Payables to ML Banks Term]"
-                          cachedDataType="numeric"
-                          cachedName="Payables to ML Banks Term"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Payables to ML Banks Term]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Payables to ML Banks Term]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Payables to Banks BT]"
-                          cachedDataType="numeric"
-                          cachedName="Payables to Banks BT"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Payables to Banks BT]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Payables to Banks BT]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Payables to Vendors]"
-                          cachedDataType="numeric"
-                          cachedName="Payables to Vendors"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Payables to Vendors]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Payables to Vendors]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Other Liabilities]"
-                          cachedDataType="numeric"
-                          cachedName="Other Liabilities"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Other Liabilities]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Other Liabilities]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Current Ratio]"
-                          cachedDataType="numeric"
-                          cachedName="Current Ratio"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Current Ratio]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Current Ratio]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Net Circular Capital]"
-                          cachedDataType="numeric"
-                          cachedName="Net Circular Capital"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Net Circular Capital]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Net Circular Capital]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Protests]"
-                          cachedDataType="ui1"
-                          cachedName="Protests"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Protests]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Protests]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Preg Cons]"
-                          cachedDataType="ui1"
-                          cachedName="Preg Cons"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Preg Cons]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Preg Cons]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Email Certified]"
-                          cachedDataType="wstr"
-                          cachedLength="100"
-                          cachedName="Email Certified"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Email Certified]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Email Certified]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Start Activity]"
-                          cachedDataType="dbTimeStamp"
-                          cachedName="Start Activity"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Start Activity]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Start Activity]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Secondary Seats No_]"
-                          cachedDataType="numeric"
-                          cachedName="Secondary Seats No_"
-                          cachedPrecision="38"
-                          cachedScale="20"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Secondary Seats No_]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Secondary Seats No_]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Ateco Code]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
-                          cachedName="Ateco Code"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ateco Code]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Ateco Code]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Consistence Properties]"
-                          cachedDataType="wstr"
-                          cachedLength="100"
-                          cachedName="Consistence Properties"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Consistence Properties]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Consistence Properties]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Insert Date]"
-                          cachedDataType="dbTimeStamp"
-                          cachedName="Insert Date"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Insert Date]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Insert Date]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Receipt Date]"
-                          cachedDataType="dbTimeStamp"
-                          cachedName="Receipt Date"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Receipt Date]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Receipt Date]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Due Date]"
-                          cachedDataType="dbTimeStamp"
-                          cachedName="Due Date"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Due Date]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Due Date]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[Company]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="5"
-                          cachedName="Company"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Company]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Company]" />
-                        <inputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].Columns[timestamp]"
-                          cachedDataType="bytes"
-                          cachedLength="8"
-                          cachedName="timestamp"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[timestamp]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[timestamp]" />
-                      </inputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[ClienteKey]"
-                          dataType="wstr"
-                          length="26"
-                          name="ClienteKey" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Amount]"
-                          dataType="numeric"
-                          name="Amount"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Company]"
-                          codePage="1252"
-                          dataType="str"
-                          length="5"
-                          name="Company" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[timestamp]"
-                          dataType="bytes"
-                          length="8"
-                          name="timestamp" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Company Code]"
-                          dataType="wstr"
-                          length="10"
-                          name="Company Code" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update Date]"
-                          dataType="dbDate"
-                          name="Update Date" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
-                          dataType="wstr"
-                          length="10"
-                          name="Status" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Starting Date]"
-                          dataType="dbTimeStamp"
-                          name="Starting Date" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Data Visura Protesti]"
-                          dataType="dbTimeStamp"
-                          name="Data Visura Protesti" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Limit of Credit _]"
-                          dataType="numeric"
-                          name="Limit of Credit _"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Situation]"
-                          dataType="wstr"
-                          length="20"
-                          name="Situation" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Memo]"
-                          dataType="wstr"
-                          length="250"
-                          name="Memo" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Extra Credit]"
-                          dataType="numeric"
-                          name="Extra Credit"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Data Extra Credit]"
-                          dataType="dbTimeStamp"
-                          name="Data Extra Credit" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
-                          dataType="ui1"
-                          name="Active" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cerved Credit]"
-                          dataType="numeric"
-                          name="Cerved Credit"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Memo 2]"
-                          dataType="wstr"
-                          length="250"
-                          name="Memo 2" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Payment Times]"
-                          dataType="wstr"
-                          length="50"
-                          name="Payment Times" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Negative Events]"
-                          dataType="wstr"
-                          length="50"
-                          name="Negative Events" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Econ-Financial Situation]"
-                          dataType="wstr"
-                          length="50"
-                          name="Econ-Financial Situation" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Risk no consultations]"
-                          dataType="wstr"
-                          length="50"
-                          name="Risk no consultations" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Revenues]"
-                          dataType="numeric"
-                          name="Revenues"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Purchases]"
-                          dataType="numeric"
-                          name="Purchases"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mol]"
-                          dataType="numeric"
-                          name="Mol"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Useful Loss]"
-                          dataType="numeric"
-                          name="Useful Loss"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Net Assets]"
-                          dataType="numeric"
-                          name="Net Assets"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[No_ Employees]"
-                          dataType="numeric"
-                          name="No_ Employees"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[No_ Requests Last 12 Months]"
-                          dataType="numeric"
-                          name="No_ Requests Last 12 Months"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cash Flow]"
-                          dataType="numeric"
-                          name="Cash Flow"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ebitda]"
-                          dataType="numeric"
-                          name="Ebitda"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Inventories]"
-                          dataType="numeric"
-                          name="Inventories"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Payables to ML Banks Term]"
-                          dataType="numeric"
-                          name="Payables to ML Banks Term"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Payables to Banks BT]"
-                          dataType="numeric"
-                          name="Payables to Banks BT"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Payables to Vendors]"
-                          dataType="numeric"
-                          name="Payables to Vendors"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Other Liabilities]"
-                          dataType="numeric"
-                          name="Other Liabilities"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Current Ratio]"
-                          dataType="numeric"
-                          name="Current Ratio"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Net Circular Capital]"
-                          dataType="numeric"
-                          name="Net Circular Capital"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Protests]"
-                          dataType="ui1"
-                          name="Protests" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Preg Cons]"
-                          dataType="ui1"
-                          name="Preg Cons" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Email Certified]"
-                          dataType="wstr"
-                          length="100"
-                          name="Email Certified" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Start Activity]"
-                          dataType="dbTimeStamp"
-                          name="Start Activity" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Secondary Seats No_]"
-                          dataType="numeric"
-                          name="Secondary Seats No_"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ateco Code]"
-                          dataType="wstr"
-                          length="50"
-                          name="Ateco Code" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Consistence Properties]"
-                          dataType="wstr"
-                          length="100"
-                          name="Consistence Properties" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Insert Date]"
-                          dataType="dbTimeStamp"
-                          name="Insert Date" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Receipt Date]"
-                          dataType="dbTimeStamp"
-                          name="Receipt Date" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input].ExternalColumns[Due Date]"
-                          dataType="dbTimeStamp"
-                          name="Due Date" />
-                      </externalMetadataColumns>
-                    </input>
-                  </inputs>
-                  <outputs>
-                    <output
-                      refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Outputs[OLE DB Destination Error Output]"
-                      exclusionGroup="1"
-                      isErrorOut="true"
-                      name="OLE DB Destination Error Output"
-                      synchronousInputId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input]">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
-                  refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source"
-                  componentClassID="Microsoft.OLEDBSource"
-                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-                  description="OLE DB Source"
-                  name="DimFornitore Source"
-                  usesDispositions="true"
-                  version="7">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                      name="CommandTimeout">0</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[stg].[vFactAffidamentoClienti]</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
-                    <property
-                      dataType="System.String"
-                      description="The SQL command to be executed."
-                      name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                    <property
-                      dataType="System.String"
-                      description="The variable that contains the SQL command to be executed."
-                      name="SqlCommandVariable"></property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the column code page to use when code page information is unavailable from the data source."
-                      name="DefaultCodePage">1252</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Forces the use of the DefaultCodePage property value when describing character data."
-                      name="AlwaysUseDefaultCodePage">false</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the mode used to access the database."
-                      name="AccessMode"
-                      typeConverter="AccessMode">0</property>
-                    <property
-                      dataType="System.String"
-                      description="The mappings between the parameters in the SQL command and variables."
-                      name="ParameterMapping"></property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Connections[OleDbConnection]"
-                      connectionManagerID="{EBDC3EEE-A910-457C-95AF-2952194294D6}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[Stage]"
-                      description="The OLE DB runtime connection used to access the database."
-                      name="OleDbConnection" />
-                  </connections>
-                  <outputs>
-                    <output
-                      refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output]"
-                      name="OLE DB Source Output">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[ClienteKey]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[ClienteKey]"
-                          length="26"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[ClienteKey]"
-                          name="ClienteKey"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Company Code]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Company Code]"
-                          length="10"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Company Code]"
-                          name="Company Code"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Update Date]"
-                          dataType="dbDate"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Update Date]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Update Date]"
-                          name="Update Date"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Amount]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Amount]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Amount]"
-                          name="Amount"
-                          precision="18"
-                          scale="2"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Status]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Status]"
-                          length="10"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Status]"
-                          name="Status"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Starting Date]"
-                          dataType="dbTimeStamp"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Starting Date]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Starting Date]"
-                          name="Starting Date"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Data Visura Protesti]"
-                          dataType="dbTimeStamp"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Data Visura Protesti]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Data Visura Protesti]"
-                          name="Data Visura Protesti"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Limit of Credit _]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Limit of Credit _]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Limit of Credit _]"
-                          name="Limit of Credit _"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Situation]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Situation]"
-                          length="20"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Situation]"
-                          name="Situation"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Memo]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Memo]"
-                          length="250"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Memo]"
-                          name="Memo"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Extra Credit]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Extra Credit]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Extra Credit]"
-                          name="Extra Credit"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Data Extra Credit]"
-                          dataType="dbTimeStamp"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Data Extra Credit]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Data Extra Credit]"
-                          name="Data Extra Credit"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Active]"
-                          dataType="ui1"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Active]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Active]"
-                          name="Active"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Cerved Credit]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Cerved Credit]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Cerved Credit]"
-                          name="Cerved Credit"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Memo 2]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Memo 2]"
-                          length="250"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Memo 2]"
-                          name="Memo 2"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Payment Times]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Payment Times]"
-                          length="50"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Payment Times]"
-                          name="Payment Times"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Negative Events]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Negative Events]"
-                          length="50"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Negative Events]"
-                          name="Negative Events"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Econ-Financial Situation]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Econ-Financial Situation]"
-                          length="50"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Econ-Financial Situation]"
-                          name="Econ-Financial Situation"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Risk no consultations]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Risk no consultations]"
-                          length="50"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Risk no consultations]"
-                          name="Risk no consultations"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Revenues]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Revenues]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Revenues]"
-                          name="Revenues"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Purchases]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Purchases]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Purchases]"
-                          name="Purchases"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Mol]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Mol]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Mol]"
-                          name="Mol"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Useful Loss]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Useful Loss]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Useful Loss]"
-                          name="Useful Loss"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Net Assets]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Net Assets]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Net Assets]"
-                          name="Net Assets"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[No_ Employees]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[No_ Employees]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[No_ Employees]"
-                          name="No_ Employees"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[No_ Requests Last 12 Months]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[No_ Requests Last 12 Months]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[No_ Requests Last 12 Months]"
-                          name="No_ Requests Last 12 Months"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Cash Flow]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Cash Flow]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Cash Flow]"
-                          name="Cash Flow"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Ebitda]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Ebitda]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Ebitda]"
-                          name="Ebitda"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Inventories]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Inventories]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Inventories]"
-                          name="Inventories"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Payables to ML Banks Term]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Payables to ML Banks Term]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Payables to ML Banks Term]"
-                          name="Payables to ML Banks Term"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Payables to Banks BT]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Payables to Banks BT]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Payables to Banks BT]"
-                          name="Payables to Banks BT"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Payables to Vendors]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Payables to Vendors]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Payables to Vendors]"
-                          name="Payables to Vendors"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Other Liabilities]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Other Liabilities]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Other Liabilities]"
-                          name="Other Liabilities"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Current Ratio]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Current Ratio]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Current Ratio]"
-                          name="Current Ratio"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Net Circular Capital]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Net Circular Capital]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Net Circular Capital]"
-                          name="Net Circular Capital"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Protests]"
-                          dataType="ui1"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Protests]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Protests]"
-                          name="Protests"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Preg Cons]"
-                          dataType="ui1"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Preg Cons]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Preg Cons]"
-                          name="Preg Cons"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Email Certified]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Email Certified]"
-                          length="100"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Email Certified]"
-                          name="Email Certified"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Start Activity]"
-                          dataType="dbTimeStamp"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Start Activity]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Start Activity]"
-                          name="Start Activity"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Secondary Seats No_]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Secondary Seats No_]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Secondary Seats No_]"
-                          name="Secondary Seats No_"
-                          precision="38"
-                          scale="20"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Ateco Code]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Ateco Code]"
-                          length="50"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Ateco Code]"
-                          name="Ateco Code"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Consistence Properties]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Consistence Properties]"
-                          length="100"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Consistence Properties]"
-                          name="Consistence Properties"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Insert Date]"
-                          dataType="dbTimeStamp"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Insert Date]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Insert Date]"
-                          name="Insert Date"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Receipt Date]"
-                          dataType="dbTimeStamp"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Receipt Date]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Receipt Date]"
-                          name="Receipt Date"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Due Date]"
-                          dataType="dbTimeStamp"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Due Date]"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Due Date]"
-                          name="Due Date"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Company]"
-                          codePage="1252"
-                          dataType="str"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Company]"
-                          length="5"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[Company]"
-                          name="Company"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[timestamp]"
-                          dataType="bytes"
-                          errorOrTruncationOperation="Conversione"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[timestamp]"
-                          length="8"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].Columns[timestamp]"
-                          name="timestamp"
-                          truncationRowDisposition="FailComponent" />
-                      </outputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[ClienteKey]"
-                          dataType="wstr"
-                          length="26"
-                          name="ClienteKey" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Company Code]"
-                          dataType="wstr"
-                          length="10"
-                          name="Company Code" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Update Date]"
-                          dataType="dbDate"
-                          name="Update Date" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Amount]"
-                          dataType="numeric"
-                          name="Amount"
-                          precision="18"
-                          scale="2" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Status]"
-                          dataType="wstr"
-                          length="10"
-                          name="Status" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Starting Date]"
-                          dataType="dbTimeStamp"
-                          name="Starting Date" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Data Visura Protesti]"
-                          dataType="dbTimeStamp"
-                          name="Data Visura Protesti" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Limit of Credit _]"
-                          dataType="numeric"
-                          name="Limit of Credit _"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Situation]"
-                          dataType="wstr"
-                          length="20"
-                          name="Situation" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Memo]"
-                          dataType="wstr"
-                          length="250"
-                          name="Memo" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Extra Credit]"
-                          dataType="numeric"
-                          name="Extra Credit"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Data Extra Credit]"
-                          dataType="dbTimeStamp"
-                          name="Data Extra Credit" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Active]"
-                          dataType="ui1"
-                          name="Active" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Cerved Credit]"
-                          dataType="numeric"
-                          name="Cerved Credit"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Memo 2]"
-                          dataType="wstr"
-                          length="250"
-                          name="Memo 2" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Payment Times]"
-                          dataType="wstr"
-                          length="50"
-                          name="Payment Times" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Negative Events]"
-                          dataType="wstr"
-                          length="50"
-                          name="Negative Events" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Econ-Financial Situation]"
-                          dataType="wstr"
-                          length="50"
-                          name="Econ-Financial Situation" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Risk no consultations]"
-                          dataType="wstr"
-                          length="50"
-                          name="Risk no consultations" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Revenues]"
-                          dataType="numeric"
-                          name="Revenues"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Purchases]"
-                          dataType="numeric"
-                          name="Purchases"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Mol]"
-                          dataType="numeric"
-                          name="Mol"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Useful Loss]"
-                          dataType="numeric"
-                          name="Useful Loss"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Net Assets]"
-                          dataType="numeric"
-                          name="Net Assets"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[No_ Employees]"
-                          dataType="numeric"
-                          name="No_ Employees"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[No_ Requests Last 12 Months]"
-                          dataType="numeric"
-                          name="No_ Requests Last 12 Months"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Cash Flow]"
-                          dataType="numeric"
-                          name="Cash Flow"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Ebitda]"
-                          dataType="numeric"
-                          name="Ebitda"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Inventories]"
-                          dataType="numeric"
-                          name="Inventories"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Payables to ML Banks Term]"
-                          dataType="numeric"
-                          name="Payables to ML Banks Term"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Payables to Banks BT]"
-                          dataType="numeric"
-                          name="Payables to Banks BT"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Payables to Vendors]"
-                          dataType="numeric"
-                          name="Payables to Vendors"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Other Liabilities]"
-                          dataType="numeric"
-                          name="Other Liabilities"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Current Ratio]"
-                          dataType="numeric"
-                          name="Current Ratio"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Net Circular Capital]"
-                          dataType="numeric"
-                          name="Net Circular Capital"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Protests]"
-                          dataType="ui1"
-                          name="Protests" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Preg Cons]"
-                          dataType="ui1"
-                          name="Preg Cons" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Email Certified]"
-                          dataType="wstr"
-                          length="100"
-                          name="Email Certified" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Start Activity]"
-                          dataType="dbTimeStamp"
-                          name="Start Activity" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Secondary Seats No_]"
-                          dataType="numeric"
-                          name="Secondary Seats No_"
-                          precision="38"
-                          scale="20" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Ateco Code]"
-                          dataType="wstr"
-                          length="50"
-                          name="Ateco Code" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Consistence Properties]"
-                          dataType="wstr"
-                          length="100"
-                          name="Consistence Properties" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Insert Date]"
-                          dataType="dbTimeStamp"
-                          name="Insert Date" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Receipt Date]"
-                          dataType="dbTimeStamp"
-                          name="Receipt Date" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Due Date]"
-                          dataType="dbTimeStamp"
-                          name="Due Date" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[Company]"
-                          codePage="1252"
-                          dataType="str"
-                          length="5"
-                          name="Company" />
-                        <externalMetadataColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output].ExternalColumns[timestamp]"
-                          dataType="bytes"
-                          length="8"
-                          name="timestamp" />
-                      </externalMetadataColumns>
-                    </output>
-                    <output
-                      refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output]"
-                      isErrorOut="true"
-                      name="OLE DB Source Error Output">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[ClienteKey]"
-                          dataType="wstr"
-                          length="26"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[ClienteKey]"
-                          name="ClienteKey" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Company Code]"
-                          dataType="wstr"
-                          length="10"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Company Code]"
-                          name="Company Code" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Update Date]"
-                          dataType="dbDate"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Update Date]"
-                          name="Update Date" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Amount]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Amount]"
-                          name="Amount"
-                          precision="18"
-                          scale="2" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Status]"
-                          dataType="wstr"
-                          length="10"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Status]"
-                          name="Status" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Starting Date]"
-                          dataType="dbTimeStamp"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Starting Date]"
-                          name="Starting Date" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Data Visura Protesti]"
-                          dataType="dbTimeStamp"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Data Visura Protesti]"
-                          name="Data Visura Protesti" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Limit of Credit _]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Limit of Credit _]"
-                          name="Limit of Credit _"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Situation]"
-                          dataType="wstr"
-                          length="20"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Situation]"
-                          name="Situation" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Memo]"
-                          dataType="wstr"
-                          length="250"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Memo]"
-                          name="Memo" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Extra Credit]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Extra Credit]"
-                          name="Extra Credit"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Data Extra Credit]"
-                          dataType="dbTimeStamp"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Data Extra Credit]"
-                          name="Data Extra Credit" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Active]"
-                          dataType="ui1"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Active]"
-                          name="Active" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Cerved Credit]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Cerved Credit]"
-                          name="Cerved Credit"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Memo 2]"
-                          dataType="wstr"
-                          length="250"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Memo 2]"
-                          name="Memo 2" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Payment Times]"
-                          dataType="wstr"
-                          length="50"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Payment Times]"
-                          name="Payment Times" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Negative Events]"
-                          dataType="wstr"
-                          length="50"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Negative Events]"
-                          name="Negative Events" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Econ-Financial Situation]"
-                          dataType="wstr"
-                          length="50"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Econ-Financial Situation]"
-                          name="Econ-Financial Situation" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Risk no consultations]"
-                          dataType="wstr"
-                          length="50"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Risk no consultations]"
-                          name="Risk no consultations" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Revenues]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Revenues]"
-                          name="Revenues"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Purchases]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Purchases]"
-                          name="Purchases"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Mol]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Mol]"
-                          name="Mol"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Useful Loss]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Useful Loss]"
-                          name="Useful Loss"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Net Assets]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Net Assets]"
-                          name="Net Assets"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[No_ Employees]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[No_ Employees]"
-                          name="No_ Employees"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[No_ Requests Last 12 Months]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[No_ Requests Last 12 Months]"
-                          name="No_ Requests Last 12 Months"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Cash Flow]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Cash Flow]"
-                          name="Cash Flow"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Ebitda]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Ebitda]"
-                          name="Ebitda"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Inventories]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Inventories]"
-                          name="Inventories"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Payables to ML Banks Term]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Payables to ML Banks Term]"
-                          name="Payables to ML Banks Term"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Payables to Banks BT]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Payables to Banks BT]"
-                          name="Payables to Banks BT"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Payables to Vendors]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Payables to Vendors]"
-                          name="Payables to Vendors"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Other Liabilities]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Other Liabilities]"
-                          name="Other Liabilities"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Current Ratio]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Current Ratio]"
-                          name="Current Ratio"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Net Circular Capital]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Net Circular Capital]"
-                          name="Net Circular Capital"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Protests]"
-                          dataType="ui1"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Protests]"
-                          name="Protests" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Preg Cons]"
-                          dataType="ui1"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Preg Cons]"
-                          name="Preg Cons" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Email Certified]"
-                          dataType="wstr"
-                          length="100"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Email Certified]"
-                          name="Email Certified" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Start Activity]"
-                          dataType="dbTimeStamp"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Start Activity]"
-                          name="Start Activity" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Secondary Seats No_]"
-                          dataType="numeric"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Secondary Seats No_]"
-                          name="Secondary Seats No_"
-                          precision="38"
-                          scale="20" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Ateco Code]"
-                          dataType="wstr"
-                          length="50"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Ateco Code]"
-                          name="Ateco Code" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Consistence Properties]"
-                          dataType="wstr"
-                          length="100"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Consistence Properties]"
-                          name="Consistence Properties" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Insert Date]"
-                          dataType="dbTimeStamp"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Insert Date]"
-                          name="Insert Date" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Receipt Date]"
-                          dataType="dbTimeStamp"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Receipt Date]"
-                          name="Receipt Date" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Due Date]"
-                          dataType="dbTimeStamp"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Due Date]"
-                          name="Due Date" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Company]"
-                          codePage="1252"
-                          dataType="str"
-                          length="5"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[Company]"
-                          name="Company" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[timestamp]"
-                          dataType="bytes"
-                          length="8"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[timestamp]"
-                          name="timestamp" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-              </components>
-              <paths>
-                <path
-                  refId="Package\affidamentoClienti\Populate DimFornitore.Paths[OLE DB Source Output]"
-                  endId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination.Inputs[OLE DB Destination Input]"
-                  name="OLE DB Source Output"
-                  startId="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source.Outputs[OLE DB Source Output]" />
-              </paths>
-            </pipeline>
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\affidamentoClienti\Truncate DimFornitore"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Execute SQL Task"
-          DTS:DTSID="{9fe176a4-068f-4a02-86f2-30262de8846d}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Truncate DimFornitore"
-          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-              SQLTask:SqlStatementSource="Truncate Table dbo.FactAffidamentoClienti" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-      </DTS:Executables>
-      <DTS:PrecedenceConstraints>
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\affidamentoClienti.PrecedenceConstraints[Constraint]"
-          DTS:CreationName=""
-          DTS:DTSID="{41095a08-2364-46b1-968f-051449fc360d}"
-          DTS:From="Package\affidamentoClienti\Truncate DimFornitore"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint"
-          DTS:To="Package\affidamentoClienti\Populate DimFornitore" />
-      </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\CMP_NEW"
@@ -2366,7 +522,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2405,7 +561,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimArticolo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2422,7 +578,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimConto"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2439,7 +595,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimMarchio"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2456,7 +612,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_Mapping_Barcode_Articoli"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2473,7 +629,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="DimCollezione"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2536,7 +692,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="ACTUAL_DIM_DimStagione"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -2878,7 +1034,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate DimArticoloListino"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="5">
+              DTS:ThreadHint="3">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -3358,7 +1514,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate DimListino"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="5">
+              DTS:ThreadHint="3">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -3745,7 +1901,7 @@
               DTS:LocaleID="-1"
               DTS:ObjectName="Truncate DimArticoloListino"
               DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="5">
+              DTS:ThreadHint="3">
               <DTS:Variables />
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
@@ -4301,7 +2457,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimAgente"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="8">
+          DTS:ThreadHint="26">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -4766,7 +2922,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="9">
+          DTS:ThreadHint="27">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -4805,7 +2961,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="populate DimAssortimentoArticoloModello"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="10">
+          DTS:ThreadHint="28">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -4822,7 +2978,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate DimAssortimentoArticoloModello"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="10">
+          DTS:ThreadHint="28">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5185,7 +3341,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCanale"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="29">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -6122,7 +4278,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="11">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -6485,7 +4641,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCompany"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="12">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -8111,7 +6267,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="13">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -9411,7 +7567,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="14">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10650,7 +8806,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimFornitore"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="15">
+          DTS:ThreadHint="10">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11168,7 +9324,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="16">
+          DTS:ThreadHint="11">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11460,7 +9616,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimOV"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="20">
+          DTS:ThreadHint="12">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11884,7 +10040,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="21">
+          DTS:ThreadHint="19">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12280,7 +10436,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimProfitCenter"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="17">
+          DTS:ThreadHint="20">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12758,7 +10914,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate Dimqty"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="22">
+          DTS:ThreadHint="21">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13079,7 +11235,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimStatoVendita"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="23">
+          DTS:ThreadHint="22">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13442,7 +11598,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimSubcanale"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="17">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13481,7 +11637,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="populate DimTipologiaMktg"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="24">
+          DTS:ThreadHint="23">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13498,7 +11654,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate DimTipologiaMktg"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="24">
+          DTS:ThreadHint="23">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -13790,7 +11946,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="25">
+          DTS:ThreadHint="24">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14115,7 +12271,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimTipoOrdine"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="26">
+          DTS:ThreadHint="13">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14473,7 +12629,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimUnitàDiMisura"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="27">
+          DTS:ThreadHint="14">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -14973,7 +13129,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimZona"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="28">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15327,7 +13483,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimZonaAgente"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="18">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15623,7 +13779,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimCompany"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="19">
+          DTS:ThreadHint="25">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15915,7 +14071,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate DimConto"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="29">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -15967,56 +14123,17 @@
       <GraphLayout
         Capacity="256" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="224,43"
+          Size="224,43.2"
           Id="Package\ACTUAL_DIM_DimMagazzino"
           TopLeft="3669.5,780.5" />
         <NodeLayout
-          Size="204,43"
+          Size="204,43.2"
           Id="Package\ACTUAL_DIM_DimNegozio"
-          TopLeft="5.5,776.5" />
+          TopLeft="6.92857145289986,777.264705893078" />
         <NodeLayout
-          Size="224,43"
+          Size="224,43.2"
           Id="Package\ACTUAL_DIM_Macrosubcanale"
           TopLeft="5235.5,776.499999999999" />
-        <NodeLayout
-          Size="185.333333333334,42.6666666666667"
-          Id="Package\affidamentoClienti\Populate DimFornitore"
-          TopLeft="5.50000000000001,108.166666666667" />
-        <NodeLayout
-          Size="185.333333333334,42.6666666666667"
-          Id="Package\affidamentoClienti\Truncate DimFornitore"
-          TopLeft="5.50000000000001,5.50000000000004" />
-        <EdgeLayout
-          Id="Package\affidamentoClienti.PrecedenceConstraints[Constraint]"
-          TopLeft="98.1666666666667,48.1666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
-              Start="0,0"
-              End="0,52.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="False"
-          PanelSize="197.333333333334,184"
-          Size="187,43"
-          Id="Package\affidamentoClienti"
-          TopLeft="269.833333333333,776.5" />
         <NodeLayout
           Size="120,42.6666666666667"
           Id="Package\CMP_NEW\Populate"
@@ -16053,27 +14170,27 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="214,206.666666666667"
-          Size="151,43"
+          Size="151.2,43.2"
           Id="Package\CMP_NEW"
           TopLeft="517.833333333333,776.5" />
         <NodeLayout
-          Size="203,43"
+          Size="203.2,43.2"
           Id="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimArticolo"
           TopLeft="303.166666666667,108.166666666667" />
         <NodeLayout
-          Size="195,43"
+          Size="195.2,43.2"
           Id="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimConto"
           TopLeft="307.166666666667,5.50000000000004" />
         <NodeLayout
-          Size="204,43"
+          Size="204,43.2"
           Id="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_DimMarchio"
           TopLeft="5.50000000000006,210.833333333334" />
         <NodeLayout
-          Size="269,43"
+          Size="268.8,43.2"
           Id="Package\Dim Articolo Marchio Collezione\ACTUAL_DIM_Mapping_Barcode_Articoli"
           TopLeft="269.833333333333,210.833333333334" />
         <NodeLayout
-          Size="145,43"
+          Size="144.8,43.2"
           Id="Package\Dim Articolo Marchio Collezione\DimCollezione"
           TopLeft="34.8333333333334,313.5" />
         <EdgeLayout
@@ -16191,12 +14308,12 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="545,411"
-          Size="545,454"
+          PanelSize="544.8,411.2"
+          Size="544.8,454.4"
           Id="Package\Dim Articolo Marchio Collezione"
           TopLeft="582.166666666667,5.5" />
         <NodeLayout
-          Size="208,43"
+          Size="208,43.2"
           Id="Package\Dim Stagione - Listino - Ultima Stagione\ACTUAL_DIM_DimStagione"
           TopLeft="20.1666666666667,5.50000000000004" />
         <NodeLayout
@@ -16235,7 +14352,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="220,206.666666666667"
-          Size="220,43"
+          Size="220,43.2"
           Id="Package\Dim Stagione - Listino - Ultima Stagione\DimArticoloListino"
           TopLeft="14.1666666666667,210.833333333334" />
         <NodeLayout
@@ -16274,7 +14391,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="185.333333333334,206.666666666667"
-          Size="150,43"
+          Size="150.4,43.2"
           Id="Package\Dim Stagione - Listino - Ultima Stagione\DimListino"
           TopLeft="49.1666666666667,108.166666666667" />
         <NodeLayout
@@ -16313,7 +14430,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="220,206.857142857143"
-          Size="206,43"
+          Size="206.4,43.2"
           Id="Package\Dim Stagione - Listino - Ultima Stagione\dimlistino_senza_data"
           TopLeft="21.1666666666667,313.5" />
         <EdgeLayout
@@ -16385,8 +14502,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="249,514"
-          Size="249,557"
+          PanelSize="248.8,513.6"
+          Size="248.8,556.8"
           Id="Package\Dim Stagione - Listino - Ultima Stagione"
           TopLeft="730.166666666667,519.5" />
         <NodeLayout
@@ -16424,8 +14541,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="187,206.666666666667"
-          Size="187,43"
+          PanelSize="187.2,206.666666666667"
+          Size="187.2,43.2"
           Id="Package\DimAgente"
           TopLeft="1039.16666666667,776.5" />
         <NodeLayout
@@ -16464,7 +14581,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="186.666666666667,205.333333333334"
-          Size="181,43"
+          Size="180.8,43.2"
           Id="Package\dimAssortimento"
           TopLeft="1286.83333333333,776.5" />
         <NodeLayout
@@ -16515,7 +14632,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="325,212"
-          Size="325,43"
+          Size="324.8,43.2"
           Id="Package\DimAssortimentoArticoloModello"
           TopLeft="1529.16666666667,776.5" />
         <NodeLayout
@@ -16554,7 +14671,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="237.333333333334,207.333333333334"
-          Size="237,43"
+          Size="236.8,43.2"
           Id="Package\DimCanale"
           TopLeft="1914.83333333333,776.5" />
         <NodeLayout
@@ -16592,8 +14709,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="198,205.333333333334"
-          Size="198,43"
+          PanelSize="198.4,205.333333333334"
+          Size="198.4,43.2"
           Id="Package\DimCliente_NEW"
           TopLeft="2212.5,776.5" />
         <NodeLayout
@@ -16632,7 +14749,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="197.333333333334,206.666666666667"
-          Size="197,43"
+          Size="196.8,43.2"
           Id="Package\DimCompany"
           TopLeft="2470.83333333333,776.5" />
         <NodeLayout
@@ -16682,8 +14799,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="187,234"
-          Size="187,43"
+          PanelSize="187.2,234"
+          Size="187.2,43.2"
           Id="Package\DimConto_GL"
           TopLeft="2729.16666666667,776.5" />
         <NodeLayout
@@ -16721,16 +14838,16 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="187,205.142857142858"
-          Size="187,43"
+          PanelSize="187.2,205.142857142858"
+          Size="187.2,43.2"
           Id="Package\dimFiliale"
           TopLeft="2976.16666666667,776.5" />
         <NodeLayout
-          Size="185.333333333334,42.6666666666667"
+          Size="185.6,42.4"
           Id="Package\DimFornitore\Populate DimFornitore"
           TopLeft="5.50000000000001,108.166666666667" />
         <NodeLayout
-          Size="185.333333333334,42.6666666666667"
+          Size="185.6,42.4"
           Id="Package\DimFornitore\Truncate DimFornitore"
           TopLeft="5.50000000000001,5.50000000000004" />
         <EdgeLayout
@@ -16752,40 +14869,38 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="False"
-          PanelSize="197.333333333334,206.666666666667"
-          Size="197,43"
+          HeaderHeight="43.2"
+          IsExpanded="True"
+          PanelSize="197.6,206.4"
+          Size="197.6,249.6"
           Id="Package\DimFornitore"
-          TopLeft="3223.83333333333,776.5" />
+          TopLeft="3223.11904760688,778.029411786155" />
         <NodeLayout
-          Size="120,42"
+          Size="120,41.6"
           Id="Package\DimListino_Retail\populate"
-          TopLeft="5.50000000000001,107.5" />
+          TopLeft="4.07142854709991,109.029411786155" />
         <NodeLayout
-          Size="118,42"
+          Size="118.4,41.6"
           Id="Package\DimListino_Retail\truncate"
           TopLeft="6.50000000000001,5.5" />
         <EdgeLayout
           Id="Package\DimListino_Retail.PrecedenceConstraints[Constraint]"
-          TopLeft="65.5,47.5">
+          TopLeft="64.88571427355,47.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,61.9294117861553"
               Start="0,0"
-              End="0,52.5">
+              End="0,54.4294117861553">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,54.4294117861553" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -16797,8 +14912,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="150,205"
-          Size="131,247"
+          PanelSize="150.4,204.8"
+          Size="150.4,248"
           Id="Package\DimListino_Retail"
           TopLeft="3482.16666666667,674.166666666666" />
         <NodeLayout
@@ -16837,7 +14952,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="237.333333333334,208"
-          Size="237,43"
+          Size="236.8,43.2"
           Id="Package\DimOV"
           TopLeft="3931.83333333333,776.499999999999" />
         <NodeLayout
@@ -16876,7 +14991,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="186.666666666667,205.333333333334"
-          Size="151,43"
+          Size="151.2,43.2"
           Id="Package\dimPCCDC"
           TopLeft="4229.83333333333,776.499999999999" />
         <NodeLayout
@@ -16915,7 +15030,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="209.333333333334,206.666666666667"
-          Size="177,43"
+          Size="176.8,43.2"
           Id="Package\DimProfitCenter"
           TopLeft="4441.83333333333,776.499999999999" />
         <NodeLayout
@@ -16954,7 +15069,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="220,206.666666666667"
-          Size="220,43"
+          Size="220,43.2"
           Id="Package\DimQtaAssortimento"
           TopLeft="4679.5,776.499999999999" />
         <NodeLayout
@@ -16992,8 +15107,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="214,206.666666666667"
-          Size="214,43"
+          PanelSize="214.4,206.666666666667"
+          Size="214.4,43.2"
           Id="Package\DimStatoVendita"
           TopLeft="4960.5,776.499999999999" />
         <NodeLayout
@@ -17032,7 +15147,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="201.333333333334,205.333333333334"
-          Size="169,43"
+          Size="168.8,43.2"
           Id="Package\DimSubcanale"
           TopLeft="5263.16666666667,211.166666666666" />
         <NodeLayout
@@ -17083,7 +15198,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="258,213.333333333334"
-          Size="258,43"
+          Size="257.6,43.2"
           Id="Package\DimTipologiaMktg"
           TopLeft="5520.5,776.499999999999" />
         <NodeLayout
@@ -17122,7 +15237,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="237.333333333334,206.666666666667"
-          Size="237,43"
+          Size="236.8,43.2"
           Id="Package\DimTipoOperazioneCDV"
           TopLeft="5838.83333333333,776.499999999999" />
         <NodeLayout
@@ -17161,7 +15276,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="237.333333333334,207.333333333334"
-          Size="237,43"
+          Size="236.8,43.2"
           Id="Package\DimTipoOrdine"
           TopLeft="6136.83333333333,776.499999999999" />
         <NodeLayout
@@ -17200,7 +15315,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="237.333333333334,206.666666666667"
-          Size="237,43"
+          Size="236.8,43.2"
           Id="Package\DimUnitàDiMisura"
           TopLeft="6434.83333333333,776.499999999999" />
         <NodeLayout
@@ -17239,7 +15354,7 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="433.142857142858,198.857142857143"
-          Size="250,43"
+          Size="249.6,43.2"
           Id="Package\DimZona"
           TopLeft="6732.5,776.499999999999" />
         <NodeLayout
@@ -17277,8 +15392,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="211,206.666666666667"
-          Size="211,43"
+          PanelSize="211.2,206.666666666667"
+          Size="211.2,43.2"
           Id="Package\DimZonaAgente"
           TopLeft="7043.16666666667,776.499999999999" />
         <NodeLayout
@@ -17316,8 +15431,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="247,206.666666666667"
-          Size="247,43"
+          PanelSize="247.2,206.666666666667"
+          Size="247.2,43.2"
           Id="Package\MargineCliente_TipologiaSpesa"
           TopLeft="7314.16666666667,776.499999999999" />
         <NodeLayout
@@ -17355,8 +15470,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="214,206.666666666667"
-          Size="214,43"
+          PanelSize="214.4,206.666666666667"
+          Size="214.4,43.2"
           Id="Package\Rif Ordine Cliente"
           TopLeft="7621.5,776.499999999999" />
         <EdgeLayout
@@ -17403,75 +15518,13 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="279.2,41.6"
+          Id="Package\ACTUAL_DIM_DimCostiAccessoriTipoCosto"
+          TopLeft="219.071432208528,778.417642039659" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
-  <TaskHost
-    design-time-name="Package\affidamentoClienti\Populate DimFornitore">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="197.333333333334,42.6666666666667"
-          Id="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination"
-          TopLeft="196.874997066334,202.149996385276" />
-        <NodeLayout
-          Size="176,42.6666666666667"
-          Id="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source"
-          TopLeft="213.749996814877,100.74999819845" />
-        <EdgeLayout
-          Id="Package\affidamentoClienti\Populate DimFornitore.Paths[OLE DB Source Output]"
-          TopLeft="298.479163607272,143.416664865117">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58.7333315201593"
-              Start="0,0"
-              End="0,51.2333315201593">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.2333315201593" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\affidamentoClienti\Populate DimFornitore\DimFornitore Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">View</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\CMP_NEW\Populate">
     <LayoutInfo>
@@ -18352,13 +16405,13 @@
     design-time-name="Package\DimListino_Retail\populate">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="160,42.6666666666667"
+          Size="160,42.4"
           Id="Package\DimListino_Retail\populate\DimListino_Retail"
           TopLeft="14.8333333333333,108.166666666667" />
         <NodeLayout
-          Size="178.666666666667,42.6666666666667"
+          Size="178.4,42.4"
           Id="Package\DimListino_Retail\populate\stg DimListino_Retail"
           TopLeft="5.50000000000001,5.50000000000004" />
         <EdgeLayout
@@ -18380,9 +16433,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

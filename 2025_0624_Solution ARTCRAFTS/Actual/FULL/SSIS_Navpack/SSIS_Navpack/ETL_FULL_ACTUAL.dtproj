@@ -26,27 +26,22 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LIT004005</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmw4w+TrLskSGSfujpkQoywAAAAACAAAAAAADZgAAwAAAABAAAABfxYXUxBFwrIrkRX0ioXwbAAAAAASAAACgAAAAEAAAAKZgxzFuTmzlfQdoBTOHevOIAAAANd0ILftbGbuTROK/MrsMy8u+ZDPCfVCg/GWTZEXfILr6faOC5xQm5+fFBfUGfL2kg2Q9E7ozFvFlgEkmNEVRLexWJ5ZO5QPE5UaUgFJBQieOunCL8ZbM4hTpLkXj9xYsVH23V5JGzmaq1xzzh1GLEKIgtl7xrgISUGlPw41TUnvgHbzSMGdJ0hQAAABKMNT1/D8hHjjWRFipSqUqlDxtlg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAby5qJydrSUGj//N34klXLQAAAAACAAAAAAADZgAAwAAAABAAAABXm3tDTCPCPFi65K1Ua1XwAAAAAASAAACgAAAAEAAAABa2q9IRbqnvoKPnz01O8ROIAAAAkVo0rNHAB6QnMkmUiIXNMrBtUNNPKGX98pVrjavrde+NVQrxeyAAfglGozH9dB553KOvRcy/9Gyt+NFyHhsGqoiYknsXNWb1iUic0v+EtIeR1RNawnh4ksL4gdiNh4GYl4GD95tq5lBYhQaHfp5uHhq7efedWSi4Sir9ZPK8oLuMbYUnl/GIjhQAAACfUC3PxY41Q7w0H82Md8XHUsKi0g==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="DWH - Import Dim.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Stage - Import Fact.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Stage - Import Dim.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="SHRINK_STAGE.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="SHRINK_DWH.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH - ImportCrocs.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="populate_dispo.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Stage - Import Contabilità.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH - ImportFactContabilità.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="SHRINK_LOG_FILE_STAGE.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Stage - Import Fact_TEST.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Stage - Import Fact  step 2.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="DWH - ImportDeltaCosti.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="semaforo_progress.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="semaforo_success.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="semaforo_error.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="DWH_Import_FACT_PROC.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="DWH - ImportFact.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="SSAS_BISolution.conmgr" />
@@ -83,7 +78,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=10.0.0.6;User ID=artcrafts\powerbi02;Initial Catalog=SSAS_BI_Solution_2024;Provider=MSOLAP.8;Persist Security Info=False;Impersonation Level=Impersonate;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=10.0.0.252;User ID=artcrafts\powerbi02;Initial Catalog=SSAS_BI_Solution_2024;Provider=MSOLAP.8;Persist Security Info=False;Impersonation Level=Impersonate;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -157,7 +152,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=10.0.0.6;Initial Catalog=BI_Model_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-{01E748CB-DAFD-4EA7-920E-23E68DAB645E}BI_DWH;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=10.0.0.252;Initial Catalog=BI_Model_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-{01E748CB-DAFD-4EA7-920E-23E68DAB645E}BI_DWH;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -365,7 +360,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=10.0.0.6;Initial Catalog=BI_Model_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-{EBDC3EEE-A910-457C-95AF-2952194294D6}NEW_BI_Stage;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=10.0.0.252;Initial Catalog=BI_Model_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-{EBDC3EEE-A910-457C-95AF-2952194294D6}NEW_BI_Stage;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -483,7 +478,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=10.0.0.6;Initial Catalog=BI_Model_HIST;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-ETL_FULL_ACTUAL-{CF7C5D77-8095-4874-A417-37A23D590321}10.0.0.6.BI_Model_HIST;Auto Translate=False;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=10.0.0.252;Initial Catalog=BI_Model_HIST;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-ETL_FULL_ACTUAL-{CF7C5D77-8095-4874-A417-37A23D590321}10.0.0.6.BI_Model_HIST;Auto Translate=False;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -583,10 +578,10 @@
                 <SSIS:Property SSIS:Name="Name">DWH - Import Dim</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">161</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">177</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{5285284A-F660-41D8-BAEC-90DAFB539406}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{AC365060-FAD5-46CA-95C7-2DBCF9DD4E88}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -657,40 +652,6 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="SHRINK_STAGE.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{475849BA-3B0B-4341-BE1E-F09AAC5818F2}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">SHRINK_STAGE</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{0126EE1F-66EC-4E16-B506-FC0A7E45530A}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="SHRINK_DWH.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{B6E8A3DD-D87D-4A20-B318-10A9A88F5BB8}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">SHRINK_DWH</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{DE4E324A-9703-4AE9-BC34-23720D1789A3}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
             </SSIS:PackageMetaData>
             <SSIS:PackageMetaData SSIS:Name="DWH - ImportCrocs.dtsx">
               <SSIS:Properties>
@@ -775,55 +736,6 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="SHRINK_LOG_FILE_STAGE.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{CBEBFE01-0057-458D-874F-81CC167F6D2A}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">SHRINK_DWH</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">4</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{D998A935-E078-4665-BE22-EDE43C42E084}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Stage - Import Fact_TEST.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{622C8DD8-B865-4907-BFFA-C595ED26AD81}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Stage - Import Fact_TEST</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">142</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{5EA0DEA7-8E9C-45C5-9EE3-C17CBF669F14}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters>
-                <SSIS:Parameter SSIS:Name="ForeachLoopContainer_DelayValidation">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{3E2A4030-B601-4639-9442-7DA0464C6D51}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-              </SSIS:Parameters>
-            </SSIS:PackageMetaData>
             <SSIS:PackageMetaData SSIS:Name="Stage - Import Fact  step 2.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{194BD7A1-A0EE-4B0D-B209-3C5A8741565A}</SSIS:Property>
@@ -855,23 +767,6 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="DWH - ImportDeltaCosti.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{94AF03D9-C43B-4C8C-8CB3-4259817861F4}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">DWH - ImportDeltaCosti</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">77</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{509A5B19-A53D-46EA-8456-F348BDF78713}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
             </SSIS:PackageMetaData>
             <SSIS:PackageMetaData SSIS:Name="semaforo_progress.dtsx">
               <SSIS:Properties>
@@ -1130,16 +1025,16 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="DWH_Import_FACT_PROC.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="DWH - ImportFact.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{B5883727-8616-41D9-9320-17118D75D5C3}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">DWH_Import_FACT_PROC</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{9275018A-DB30-44F3-B491-55EC1BFE440B}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">DWH - ImportFact</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">16</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">41</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{9BC164E1-A33E-4CC6-92EA-B717B5E8791D}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{CDFDCC6E-082B-44B2-8385-896574F6BC32}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
