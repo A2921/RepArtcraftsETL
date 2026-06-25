@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="Process Cube fact_full"
   DTS:PackageType="5"
-  DTS:VersionBuild="130"
-  DTS:VersionGUID="{91DCAD86-AB0D-49F8-B83F-B09683F1E051}">
+  DTS:VersionBuild="131"
+  DTS:VersionGUID="{66BD4F97-2C03-483B-A475-C7FF070EDFD3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -39,7 +39,7 @@
       DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="DDL SSAS PARLALLELO 1 Step1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <ASDdlData
@@ -56,7 +56,7 @@
       DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="DDL SSAS PARLALLELO 1 Step2"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <ASDdlData
@@ -73,13 +73,13 @@
       DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="DDL SSAS PARLALLELO 2  Step1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ASDdlData
           ConnectionName="localhost"
           SourceType="DirectInput"
-          Source="{&#xA;&#xA;&quot;refresh&quot;: {&#xA;&#xA;&quot;type&quot;: &quot;full&quot;,&#xA;&#xA;&quot;objects&quot;: [&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Ordine Acquisto&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Ordine Vendita&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Precarico&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Resi&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Scontrino&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Spedizioni&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;DettaglioBollaAcquisto_perc_Consegnato&quot;&#xA;&#xA;},&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Giacenza Magazzini Fisici&quot;&#xA;&#xA;},&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;DettaglioGiacenzaArianna&quot;&#xA;&#xA;}&#xA;&#xA;]&#xA;&#xA;}&#xA;&#xA;}" />
+          Source="{&#xA;&#xA;&quot;refresh&quot;: {&#xA;&#xA;&quot;type&quot;: &quot;full&quot;,&#xA;&#xA;&quot;objects&quot;: [&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Ordine Acquisto&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Ordine Vendita&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Precarico&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Resi&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Scontrino&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Spedizioni&quot;&#xA;&#xA;},&#xA;&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;DettaglioBollaAcquisto_perc_Consegnato&quot;&#xA;&#xA;},&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Giacenza Magazzini Fisici&quot;&#xA;&#xA;},&#xA;{&#xA;&#xA;&quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;,&#xA;&#xA;&quot;table&quot;: &quot;Dettaglio Giacenza Negozi Arianna&quot;&#xA;&#xA;}&#xA;&#xA;]&#xA;&#xA;}&#xA;&#xA;}" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -113,19 +113,19 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="229,43"
+          Size="228.8,43.2"
           Id="Package\DDL SSAS PARLALLELO 1 Step1"
           TopLeft="40.1666662196319,21.0999997210503" />
         <NodeLayout
-          Size="229,43"
+          Size="228.8,43.2"
           Id="Package\DDL SSAS PARLALLELO 1 Step2"
           TopLeft="43.2916661730657,191.333333682021" />
         <NodeLayout
-          Size="233,43"
+          Size="232.8,43.2"
           Id="Package\DDL SSAS PARLALLELO 2  Step1"
           TopLeft="353.291661553706,24.3166681660218" />
         <NodeLayout
-          Size="233,43"
+          Size="232.8,43.2"
           Id="Package\DDL SSAS PARLALLELO 2  Step2"
           TopLeft="358.624994738028,186.750002266466" />
       </GraphLayout>
