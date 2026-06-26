@@ -5,21 +5,21 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="SRVPOWERBI"
   DTS:CreatorName="ARTCRAFTS\powerbi02"
-  DTS:DTSID="{C4C50CF7-4431-4B40-B1D3-00F65DC3009D}"
+  DTS:DTSID="{9B81DECC-9933-4C23-9241-CC4B11C71111}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
   DTS:LocaleID="1040"
-  DTS:ObjectName="semaforo_success"
+  DTS:ObjectName="End - Semaforo Progress"
   DTS:PackageType="5"
-  DTS:VersionBuild="30"
-  DTS:VersionGUID="{F94697DE-82BF-41C2-97A0-48D44A0BB45B}">
+  DTS:VersionBuild="32"
+  DTS:VersionGUID="{CBD521C3-6376-44BC-8CA1-F7D16F2D7AA5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[10.0.0.6]"
       DTS:CreationName="MSOLAP100"
-      DTS:DTSID="{B2F36457-A5D2-4152-8C1A-14E75D2A6157}"
+      DTS:DTSID="{F4A2AEEE-B666-48E2-98E5-58D83589C900}"
       DTS:ObjectName="10.0.0.6">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -32,7 +32,7 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{A13CA137-B1F0-462E-B4BD-7FBDA82FE398}"
+      DTS:DTSID="{846EB7E0-D4D2-4779-9136-B4941C4C2734}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="QUERY">
@@ -54,7 +54,7 @@
       DTS:refId="Package\Dettaglio Ordine Vendita - Process Full"
       DTS:CreationName="Microsoft.ASExecuteDDLTask"
       DTS:Description="Analysis Services Execute DDL Task"
-      DTS:DTSID="{B1DDF72E-CEA0-440D-90E5-976947459D95}"
+      DTS:DTSID="{4d4beab8-de35-46ef-8171-c974af9fcfda}"
       DTS:ExecutableType="Microsoft.ASExecuteDDLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Dettaglio Ordine Vendita - Process Full"
@@ -71,7 +71,7 @@
       DTS:refId="Package\truncate"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Attività Esegui SQL"
-      DTS:DTSID="{AFCE25F7-AA4C-4B55-84ED-5CD5C8363B2D}"
+      DTS:DTSID="{839ED5D2-286A-4925-B3F7-C1B0B2AC8C51}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="truncate"
@@ -81,7 +81,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{01E748CB-DAFD-4EA7-920E-23E68DAB645E}"
-          SQLTask:SqlStatementSource="UPDATE [BI_Model_DWH].[dbo].[Aggiornamento]&#xA;  SET Flag =0;&#xA;  &#xA;  UPDATE [BI_Model_DWH].[dbo].[Aggiornamento]&#xA;  SET Flag =1, [UltimoAggiornamento]= GETDATE()&#xA;  WHERE IdStato = 1" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="  UPDATE [BI_Model_DWH].[dbo].[Aggiornamento]&#xA;  SET Flag =0;&#xA;  &#xA;  UPDATE [BI_Model_DWH].[dbo].[Aggiornamento]&#xA;  SET Flag =1, [UltimoAggiornamento]= GETDATE()&#xA;  WHERE IdStato = 0" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -89,7 +89,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Vincolo]"
       DTS:CreationName=""
-      DTS:DTSID="{1EA35701-AA97-4C59-8382-428D597D474A}"
+      DTS:DTSID="{393CA43B-BED3-4D8A-A12A-20FAF661F06F}"
       DTS:From="Package\truncate"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Vincolo"
@@ -108,39 +108,39 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="166,42"
+          Size="166.4,41.6"
           Id="Package\Dettaglio Ordine Vendita - Process Full"
           TopLeft="233.888885357682,258.908588875741" />
         <NodeLayout
-          Size="118,42.6666666666667"
+          Size="118.4,42.4"
           Id="Package\truncate"
           TopLeft="233.888885357682,156.051446018598" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Vincolo]"
-          TopLeft="293.031742500539,198.908588875741">
+          TopLeft="292.888885357682,198.718112685265">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="23.7142857142857,60"
+              EndConnector="24,60.1904761904763"
               Start="0,0"
-              End="23.7142857142857,52.5">
+              End="24,52.6904761904763">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26" />
+                    End="0,26.0952380952381" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="4,30" />
+                    Point1="0,26.0952380952381"
+                    Point2="0,30.0952380952381"
+                    Point3="4,30.0952380952381" />
                   <mssgle:LineSegment
-                    End="19.7142857142857,30" />
+                    End="20,30.0952380952381" />
                   <mssgle:CubicBezierSegment
-                    Point1="19.7142857142857,30"
-                    Point2="23.7142857142857,30"
-                    Point3="23.7142857142857,34" />
+                    Point1="20,30.0952380952381"
+                    Point2="24,30.0952380952381"
+                    Point3="24,34.0952380952381" />
                   <mssgle:LineSegment
-                    End="23.7142857142857,52.5" />
+                    End="24,52.6904761904763" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

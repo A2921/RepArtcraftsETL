@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="SRVPOWERBI"
   DTS:CreatorName="ARTCRAFTS\powerbi02"
-  DTS:DTSID="{F6119F61-D879-41C9-AB7A-3255CA70E808}"
+  DTS:DTSID="{9B81DECC-9933-4C23-9241-CC4B11C71111}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
   DTS:LocaleID="1040"
-  DTS:ObjectName="test_MaxTimestamp"
+  DTS:ObjectName="End - Semaforo Progress"
   DTS:PackageType="5"
-  DTS:VersionBuild="30"
-  DTS:VersionGUID="{98088C5D-0A51-44FE-A1D4-025C87707C68}">
+  DTS:VersionBuild="32"
+  DTS:VersionGUID="{CBD521C3-6376-44BC-8CA1-F7D16F2D7AA5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -108,11 +108,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="166,42"
+          Size="166.4,41.6"
           Id="Package\Dettaglio Ordine Vendita - Process Full"
           TopLeft="233.888885357682,258.908588875741" />
         <NodeLayout
-          Size="118,42.6666666666667"
+          Size="118.4,42.4"
           Id="Package\truncate"
           TopLeft="233.888885357682,156.051446018598" />
         <EdgeLayout

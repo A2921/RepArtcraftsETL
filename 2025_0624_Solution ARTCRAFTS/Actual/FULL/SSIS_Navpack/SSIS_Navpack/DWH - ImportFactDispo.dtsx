@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="SRVPOWERBI"
   DTS:CreatorName="ARTCRAFTS\powerbi02"
-  DTS:DTSID="{0C5B450F-CC57-4BAD-A15D-89C3427C2557}"
+  DTS:DTSID="{6339F383-1A8A-46C5-BAAE-1EB9F458BE34}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
   DTS:LocaleID="1040"
-  DTS:ObjectName="populate_dispo"
+  DTS:ObjectName="DWH - ImportFactDispo"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{D2AD807B-8F15-48C6-B9B6-7B83E4976CC9}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{27976BCE-7AA8-446E-A5A0-7D3D30996DE1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -82,17 +82,17 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="208,42.6666666666667"
+          Size="208,42.4"
           Id="Package\ACTUAL_DISPO_MAIN_002"
-          TopLeft="12.3749998975545,83.4666671083371" />
+          TopLeft="65.2321436548492,83.4666671083371" />
         <NodeLayout
-          Size="208,42.6666666666667"
+          Size="208,42.4"
           Id="Package\ACTUAL_DISPO_MAIN_003"
           TopLeft="298.624995632097,83.4666671083371" />
         <NodeLayout
-          Size="208,42.6666666666667"
+          Size="208,42.4"
           Id="Package\ACTUAL_DISPO_MAIN_004"
-          TopLeft="567.37499162741,83.4666671083371" />
+          TopLeft="551.660705645512,85.7607847875701" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
