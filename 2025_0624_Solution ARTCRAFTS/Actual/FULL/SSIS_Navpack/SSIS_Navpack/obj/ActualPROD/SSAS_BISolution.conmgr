@@ -11,10 +11,6 @@
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="0"
       DTS:ConnectRetryInterval="0"
-      DTS:ConnectionString="Data Source=10.0.0.252;User ID=artcrafts\powerbi02;Initial Catalog=SSAS_BI_Solution_2024;Provider=MSOLAP.8;Persist Security Info=False;Impersonation Level=Impersonate;">
-      <DTS:Password
-        DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAby5qJydrSUGj//N34klXLQAAAAACAAAAAAADZgAAwAAAABAAAADWR3Ml71c/4exMVyZSqWP/AAAAAASAAACgAAAAEAAAANpad0hEBI5eFZyhmLKCmJyAAAAAS9jL/BvBzB09WxLxM9ANPAV1y+E8B5PSdFR6IIu04RdjhaM9WO5c8hK16q7NFKUnJUP9r/mrVIFR7q/lD3ZWNC3c6zqmmPRc52LRWcqqOnZH+Yv/5hL91/PqU0dJQcTr2KaUR8dXbVv+RmhvWj7oOM4ErClApfaTv8pJHz4VAZQUAAAAKT98OVucrW/IoVELBvbqwB37K1Q=</DTS:Password>
-    </DTS:ConnectionManager>
+      DTS:ConnectionString="Data Source=10.0.0.252;User ID=artcrafts\powerbi02;Initial Catalog=SSAS_BI_Solution_2024;Provider=MSOLAP.8;Persist Security Info=False;Impersonation Level=Impersonate;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>
