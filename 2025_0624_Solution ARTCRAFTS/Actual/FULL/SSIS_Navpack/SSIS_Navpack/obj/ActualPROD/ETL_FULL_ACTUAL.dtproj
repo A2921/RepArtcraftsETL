@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LIT004005</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWwBklLlSDkucbuqmApxjWgAAAAACAAAAAAADZgAAwAAAABAAAADw0M/ZoyY08JPEtEMjVG3DAAAAAASAAACgAAAAEAAAAOqDtAmv7syTy8AdTBV1zsCIAAAAF/htj8US3h9f1bY7Ir4XOCKsEdXPw4ahUs4QnOa8+7hpSVU2H+Xr4E/W1khGMD5YJfHVkCEewMKUQS23Xg0Y16jA45pIvilBPtiONW73jzoY9VYnLoOiAbtt6xv91/lVt+KYQ3fMEjhcoNvMLdfzxupM51l3XUOYMDYohhrpoPVe+IJkLPyBlRQAAACBo7CLI3a1pKiViDKhW4rEdLUdhA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWwBklLlSDkucbuqmApxjWgAAAAACAAAAAAADZgAAwAAAABAAAABdvpkjOyC69zXn4fgRRF7wAAAAAASAAACgAAAAEAAAAHsb+DFFfe/jwAcUFMBrEvyIAAAAHkGpyhQZa1AjJENJ4p9Tq7WfrE1RCvQFKQRKesI9ad7BqNtZSv+h38OVYLoBX3qaqwNapwqnNGnt35uXD4/Kkyyzti+bm8jI96pRNUM3WNwR/8XBg7qBHTJzuCpxbvDqlvACFONIvgqU11ClTmZE22jW0OrKhhRafSP2FID2fUi15L39mjS1uBQAAAB49dbxoEIwhYPHc8SCtikt00Tgxw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -43,6 +43,7 @@
           <SSIS:Package SSIS:Name="semaforo_error.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH - ImportFact.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="SSAS - ProcessFull.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Initial - MaxTimestamp.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="SSAS_BISolution.conmgr" />
@@ -1164,6 +1165,23 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Initial - MaxTimestamp.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{6D0A9487-F3C9-4745-A49E-FBA54F5665D1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Initial - MaxTimestamp</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">41</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{4921423F-59B0-424F-90D7-166B34FA495C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>

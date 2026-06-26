@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>ETL_FULL_ACTUAL</Name>
-    <LastWriteTime>2026-06-26T08:50:37.2564491Z</LastWriteTime>
+    <LastWriteTime>2026-06-26T09:11:41.494804Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -69,6 +69,11 @@
     <ProjectBuildItemInfo>
       <Name>SSAS - ProcessFull.dtsx</Name>
       <LastWriteTime>2026-06-26T08:50:37.2314372Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Initial - MaxTimestamp.dtsx</Name>
+      <LastWriteTime>2026-06-26T09:11:41.4537997Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
