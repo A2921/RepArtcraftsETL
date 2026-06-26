@@ -26,15 +26,13 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LIT004005</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWwBklLlSDkucbuqmApxjWgAAAAACAAAAAAADZgAAwAAAABAAAACCKEO8ydZFLGwX1lTyJsbEAAAAAASAAACgAAAAEAAAAKVwV1G2zVTOg17Xy1X9c1WIAAAAOy1a2bl4Kk2ksmrk6U3wn0jL+X+yI1oEuzAqVbW4ADAfrvuFa1+pFHCR2d5QgK09rcQGHG4t5Gf9+imb9QaT5p1gLDanuXMnLah00JefjRWB3RmwPSL3ocfUNFFLm6vxbU3oDfNpmLdGs/pqBqAkawp0lMooJMvR8XBXlYhEVB2zujCCz3hkjhQAAAD6SGguoGfCgRgL9gt4eEyR/FIT5w==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWwBklLlSDkucbuqmApxjWgAAAAACAAAAAAADZgAAwAAAABAAAADB/qtDIQE40F8Za1dfn7SfAAAAAASAAACgAAAAEAAAAAXjJk3xpp6HmQzi6iDi88iIAAAAFNdwd7CCd6LaIouk5Z/uDw8Am0NPDh4TSStO2PnrdmWP1Emefifgk/GBLSTlc++9vFhAPQd3eXUrZPJrhqTa+HPd4trALyzNUV/O8qe/5ITFYSUmOJgFsG6nENZ5B2pGWaxDhlMwOJC87mL0xYoa9ezsb/aNj3Kp3shTF2ByEeTcfyxxCs4pgBQAAACQw66YtKhO0qLg6RjylGCRNQPu2w==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
-          <SSIS:Package SSIS:Name="Avg_margini_populate.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Process Cube fact_full.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Process Cube dispo full.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Process Cube dim.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Stage - ImportDelta.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="SSAS_BISolution.conmgr" />
@@ -417,23 +415,6 @@
             </SSIS:Parameter>
           </SSIS:ProjectConnectionParameters>
           <SSIS:PackageInfo>
-            <SSIS:PackageMetaData SSIS:Name="Avg_margini_populate.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{CB70ABE1-1D72-4DBF-A81C-E90928677B9B}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Avg_margini_populate</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">38</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{5EBEBCDF-F085-410C-AE0C-781BED442748}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
             <SSIS:PackageMetaData SSIS:Name="Process Cube fact_full.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{84F83BEC-1315-4E72-9128-2CBC23F491B6}</SSIS:Property>
@@ -790,38 +771,6 @@
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-              </SSIS:Parameters>
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Stage - ImportDelta.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{A8E7890B-4907-4648-AB3A-1A6D65389590}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Stage - ImportDelta</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">289</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{FCB5BB38-C607-46E0-8137-5895431581B3}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters>
-                <SSIS:Parameter SSIS:Name="ForeachLoopContainer_DelayValidation">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{E0B70124-597B-4E98-8866-C7EB93CE5F45}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
