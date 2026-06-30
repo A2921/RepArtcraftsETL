@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LIT004005</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWwBklLlSDkucbuqmApxjWgAAAAACAAAAAAADZgAAwAAAABAAAAD2Hg5CuUGESyX6CkPWyRQKAAAAAASAAACgAAAAEAAAANTMH/FxXg7JngrgeeNkoqqIAAAA2iCZST6D3xm+J2G6giTWQ5646ljcvQ8IZhxPHJ/5pBHe1xuA1zSlkfAjCdtuZCBd2EDe8PUw+akM+mzbu4rJtPqgTE3pGBSq8PDo98m9NZ3vLetr5DNJXDUEaxB8QYCUSC4MnX2xOIUUT9RsVpphK2Nt6jwHEVB5TLwHlPTlrArtcvP952PiPBQAAAA6pf4qzWYyzW0Zdkx6fbalvC4zjg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAby5qJydrSUGj//N34klXLQAAAAACAAAAAAADZgAAwAAAABAAAABn8OCC+fCrVzLFMT2yEocRAAAAAASAAACgAAAAEAAAALFirNW8Yrs4UWdCxnWASDuIAAAAnQcRTRYWSib7EY+j1Nw6TXuAqutY1AaDtiM/Y89TCb93Y/iwReebxHjjndMhWAwhoa96gq0qDZEkafz1yRGPFeb26BGtEy87K99wlgkzQT4pj366rK88cfhDrlynvLc6yjjHJWbMF2auRKOQp3laTZ7BUzjv0pwFKItuON1zOgIFfqVq8ygazhQAAABN1BnSFI1nSzkX8H91feMS3lZfnQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -35,14 +35,12 @@
           <SSIS:Package SSIS:Name="Stage - Import Dim.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH - ImportCrocs.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Stage - Import Contabilità.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="DWH - ImportFactContabilità.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Stage - Import Fact  step 2.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH - ImportFact.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="SSAS - ProcessFull.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Initial - MaxTimestamp.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Stage - Import Delta.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH - Avg Margini.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="DWH - ImportFactDispo.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="End - Semaforo Success.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="End - Semaforo Progress.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="End - Semaforo Error.dtsx" SSIS:EntryPoint="1" />
@@ -706,23 +704,6 @@
                 </SSIS:Parameter>
               </SSIS:Parameters>
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="DWH - ImportFactContabilità.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{49285ACC-24E2-4609-A67A-2C98435D0FE8}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">DWH - Import Dim</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">90</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{DD83BCFE-7C35-4E08-A2C4-C5DE3DD0E692}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
             <SSIS:PackageMetaData SSIS:Name="Stage - Import Fact  step 2.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{194BD7A1-A0EE-4B0D-B209-3C5A8741565A}</SSIS:Property>
@@ -761,10 +742,10 @@
                 <SSIS:Property SSIS:Name="Name">DWH - ImportFact</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">41</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">44</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{CDFDCC6E-082B-44B2-8385-896574F6BC32}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{6A726BEB-8231-48E6-8CCA-6F1E0B795F70}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -953,23 +934,6 @@
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{129A176D-7C53-4D99-BBC2-6BD6B54B36BE}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="DWH - ImportFactDispo.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{6339F383-1A8A-46C5-BAAE-1EB9F458BE34}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">DWH - ImportFactDispo</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">14</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{27976BCE-7AA8-446E-A5A0-7D3D30996DE1}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
