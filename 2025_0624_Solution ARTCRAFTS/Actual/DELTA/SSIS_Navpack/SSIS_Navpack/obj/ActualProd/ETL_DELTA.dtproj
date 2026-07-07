@@ -26,17 +26,13 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LIT004005</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAby5qJydrSUGj//N34klXLQAAAAACAAAAAAADZgAAwAAAABAAAABbc+1UvIntzJC/aIe7qBKwAAAAAASAAACgAAAAEAAAAMZIgtfSG993E+GdUG1NJ0OIAAAAQPBAPNyWtLKvsnC3FV/XlJu5JKofpsUy9gicYO47rvdtwzrtHtcGNExJ7i9GRVlDbjCapoCWQX5ozuhOXxLnJgMYk3oYG634ZdX1P0clssuHDAiRn5beXEoceW7oLWeuQxGIQXPrR37XeFrv/DP4sK/O83M4ozlyjP7qoPsiivHAq8FgDgIlrRQAAABpMzW79V4zwvKZeDvKiFZT1rMeDQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAby5qJydrSUGj//N34klXLQAAAAACAAAAAAADZgAAwAAAABAAAACbiTu09ocXQoFOgQiFeCZdAAAAAASAAACgAAAAEAAAABXkK6sFWjC1WkynZtW0kAmIAAAAq38T07tC357xCegMHvDTfPUouSYOV9eP0THNlMjMeMl0/6pbBeMXrMKK54NZA4iviHgRntCZLaIZAkhVgafALjnxf+Y5KpuhDJW0LypSLgKCG+IiGRMk7JnMv6zF/Jh84eZDcA3FebBzmIAUQ3ORCfhdLVP0+HgJgqlhndoKvFkEx1eSNDpDnxQAAAAgXCDsMx1jJmy6FdbSbtEwxr161w==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
-          <SSIS:Package SSIS:Name="Avg_margini_populate.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Process Cube fact_full.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Process Cube dispo full.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="populate_stg_tables.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Process Cube dim.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="STG_MaxTimestamp.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Stage - ImportDelta.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="SSAS_BISolution.conmgr" />
@@ -419,33 +415,16 @@
             </SSIS:Parameter>
           </SSIS:ProjectConnectionParameters>
           <SSIS:PackageInfo>
-            <SSIS:PackageMetaData SSIS:Name="Avg_margini_populate.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{CB70ABE1-1D72-4DBF-A81C-E90928677B9B}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Avg_margini_populate</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">34</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{04485077-6B85-4A6E-A13F-E7E69F13827E}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
             <SSIS:PackageMetaData SSIS:Name="Process Cube fact_full.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{84F83BEC-1315-4E72-9128-2CBC23F491B6}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">Process Cube fact_full</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">128</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">132</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{49872236-4EB8-46B6-91B3-FECF98A60D5B}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{E3B456FD-D036-451F-8C84-9C5B72186671}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -676,23 +655,6 @@
                 </SSIS:Parameter>
               </SSIS:Parameters>
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="populate_stg_tables.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{00C0092F-1E49-4A7C-A194-B5551E26AE7E}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">populate_stg_tables</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">32</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{19996A3B-8163-466E-9F47-F53781144BF2}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
             <SSIS:PackageMetaData SSIS:Name="Process Cube dim.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{6DB0CB59-47E4-4259-82AD-12533145B090}</SSIS:Property>
@@ -809,55 +771,6 @@
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-              </SSIS:Parameters>
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="STG_MaxTimestamp.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{1B878466-D20B-43F8-B883-AE25681D875B}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">STG_MaxTimestamp</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">38</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{9BB08BFA-9773-46A1-8F21-EF6CA2BD8D1C}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Stage - ImportDelta.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{A8E7890B-4907-4648-AB3A-1A6D65389590}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Stage - ImportDelta</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">289</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{FCB5BB38-C607-46E0-8137-5895431581B3}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters>
-                <SSIS:Parameter SSIS:Name="ForeachLoopContainer_DelayValidation">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">{E0B70124-597B-4E98-8866-C7EB93CE5F45}</SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
