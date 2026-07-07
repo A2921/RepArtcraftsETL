@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="SSAS - ProcessFull"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{3CEB3D15-159F-4414-BF7E-C971EA89BDC8}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{D59EFE01-1533-4C82-AFCD-FCB3F7F3A63E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWwBklLlSDkucbuqmApxjWgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABZBmXs+pTGAwhgFTFYHESFAAAAAASAAACgAAAAEAAAAPwoi/XKDuIjgPC8xq89LiYgAAAAzwmmkKiwGRPS+AjCh4mgqNJTKmehiif24WV1ArKGEKMUAAAA4qi1bSaYpjpIdDUqsrv5PpSv8fw</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAWwBklLlSDkucbuqmApxjWgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAD7PDU+k9CTwqIbqNpIRsOCAAAAAASAAACgAAAAEAAAAKObmEDvfih6vaKp1Ok8N28gAAAAWWL6d74/EblZPpdxLlUltfVIIAR9UDpl2n2fG4ScjogUAAAAjAmDlU259dD4AKpvoShnXxuz68w</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -48,7 +48,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <ASProcessingData
-          ConnectionName="10.0.0.252.SSAS_BI_Solution_2024"
+          ConnectionName="SSAS_BI_Solution_2024"
           ProcessingCommands="{&#xA;  &quot;sequence&quot;: {&#xA;    &quot;operations&quot;: [&#xA;      {&#xA;        &quot;refresh&quot;: {&#xA;          &quot;type&quot;: &quot;full&quot;,&#xA;          &quot;objects&quot;: [&#xA;            {&#xA;              &quot;database&quot;: &quot;SSAS_BI_Solution_2024&quot;&#xA;            }&#xA;          ]&#xA;        }&#xA;      }&#xA;    ]&#xA;  }&#xA;}" />
       </DTS:ObjectData>
     </DTS:Executable>
