@@ -2,23 +2,23 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>ETL_DELTA</Name>
-    <LastWriteTime>2026-06-26T12:03:08.2706462Z</LastWriteTime>
+    <LastWriteTime>2026-08-05T14:56:56.0842059Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Process Cube fact_full.dtsx</Name>
-      <LastWriteTime>2026-07-07T14:25:05.3165209Z</LastWriteTime>
+      <LastWriteTime>2026-08-05T15:23:37.5829884Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Process Cube dispo full.dtsx</Name>
-      <LastWriteTime>2025-10-29T16:14:48.636924Z</LastWriteTime>
+      <LastWriteTime>2026-08-05T14:56:56.0842059Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Process Cube dim.dtsx</Name>
-      <LastWriteTime>2026-05-27T14:22:36.3881723Z</LastWriteTime>
+      <LastWriteTime>2026-08-05T14:56:56.0842059Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

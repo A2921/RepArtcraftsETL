@@ -2,78 +2,88 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>ETL_FULL_ACTUAL</Name>
-    <LastWriteTime>2026-07-07T15:06:33.5794308Z</LastWriteTime>
+    <LastWriteTime>2026-08-05T15:21:12.2359039Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>DWH - Import Dim.dtsx</Name>
-      <LastWriteTime>2026-07-07T15:06:33.5444517Z</LastWriteTime>
+      <LastWriteTime>2026-08-05T14:56:56.2092129Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Stage - Import Fact.dtsx</Name>
-      <LastWriteTime>2026-07-07T15:06:33.7094298Z</LastWriteTime>
+      <LastWriteTime>2026-08-05T14:56:56.3810795Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Stage - Import Dim.dtsx</Name>
-      <LastWriteTime>2026-07-07T15:06:33.6504276Z</LastWriteTime>
+      <LastWriteTime>2026-08-05T14:56:56.3187116Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DWH - ImportCrocs.dtsx</Name>
-      <LastWriteTime>2026-07-07T15:06:33.5754239Z</LastWriteTime>
+      <LastWriteTime>2026-08-05T14:56:56.2404468Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Stage - Import Contabilità.dtsx</Name>
-      <LastWriteTime>2026-07-07T15:06:33.6104265Z</LastWriteTime>
+      <LastWriteTime>2026-08-05T14:56:56.2716905Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Stage - Import Fact  step 2.dtsx</Name>
-      <LastWriteTime>2026-07-07T15:06:33.6714309Z</LastWriteTime>
+      <LastWriteTime>2026-08-05T14:56:56.3342142Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DWH - ImportFact.dtsx</Name>
-      <LastWriteTime>2026-07-07T15:06:33.5764349Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>SSAS - ProcessFull.dtsx</Name>
-      <LastWriteTime>2026-07-29T15:06:37.2525277Z</LastWriteTime>
+      <LastWriteTime>2026-08-05T14:56:56.2404468Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Initial - MaxTimestamp.dtsx</Name>
-      <LastWriteTime>2026-07-07T15:06:33.5834272Z</LastWriteTime>
+      <LastWriteTime>2026-08-05T14:56:56.2560672Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Stage - Import Delta.dtsx</Name>
-      <LastWriteTime>2026-07-07T15:06:33.617427Z</LastWriteTime>
+      <LastWriteTime>2026-08-05T14:56:56.2873742Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DWH - Avg Margini.dtsx</Name>
-      <LastWriteTime>2026-07-07T15:06:33.5224247Z</LastWriteTime>
+      <LastWriteTime>2026-08-05T14:56:56.1935883Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>End - Semaforo Success.dtsx</Name>
-      <LastWriteTime>2026-07-07T15:06:33.5804276Z</LastWriteTime>
+      <LastWriteTime>2026-08-05T14:56:56.2404468Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>End - Semaforo Progress.dtsx</Name>
-      <LastWriteTime>2026-07-07T15:06:33.5814274Z</LastWriteTime>
+      <LastWriteTime>2026-08-05T14:56:56.2404468Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>End - Semaforo Error.dtsx</Name>
-      <LastWriteTime>2026-07-07T15:06:33.5814274Z</LastWriteTime>
+      <LastWriteTime>2026-08-05T14:56:56.2404468Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>SSAS - ProcessFull - FactDispo.dtsx</Name>
+      <LastWriteTime>2026-08-05T15:20:35.8828052Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>SSAS - ProcessFull - Fact.dtsx</Name>
+      <LastWriteTime>2026-08-05T15:20:33.3407336Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>SSAS - ProcessFull - Dim.dtsx</Name>
+      <LastWriteTime>2026-08-05T15:20:30.6330607Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
