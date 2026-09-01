@@ -78,12 +78,12 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>SSAS - ProcessFull - Fact.dtsx</Name>
-      <LastWriteTime>2026-08-05T15:20:33.3407336Z</LastWriteTime>
+      <LastWriteTime>2026-09-01T13:13:38.26754Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>SSAS - ProcessFull - Dim.dtsx</Name>
-      <LastWriteTime>2026-08-05T15:20:30.6330607Z</LastWriteTime>
+      <LastWriteTime>2026-09-01T13:10:18.5042191Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

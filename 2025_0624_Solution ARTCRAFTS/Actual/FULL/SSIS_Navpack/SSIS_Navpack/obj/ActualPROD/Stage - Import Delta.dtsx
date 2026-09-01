@@ -11058,7 +11058,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Assortment Quantity"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11075,7 +11075,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="budget entry gl"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11092,7 +11092,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Cust_ Ledger Entry"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11109,7 +11109,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="DDT_Picking Header"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11126,7 +11126,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="DDT_Picking Line"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11143,7 +11143,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Detailed Cust_ Ledg_ Entry"
-          DTS:ThreadHint="34">
+          DTS:ThreadHint="23">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11160,7 +11160,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Detailed Vendor Ledg_ Entry"
-          DTS:ThreadHint="35">
+          DTS:ThreadHint="24">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11177,7 +11177,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="EXECUTE  LoadSTG_Sales Line_0"
-          DTS:ThreadHint="36">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11193,7 +11193,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="EXECUTE  LoadSTG_Sales Line_1"
-          DTS:ThreadHint="36">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11209,7 +11209,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="EXECUTE  LoadSTG_Sales_Shipment_HEADER"
-          DTS:ThreadHint="37">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11225,7 +11225,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="EXECUTE  LoadSTG_Sales_Shipment_Line"
-          DTS:ThreadHint="38">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11241,7 +11241,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="EXECUTE LoadSTG_Item_Ledger_Entry"
-          DTS:ThreadHint="30">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11257,7 +11257,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="EXECUTE LoadSTG_Sales_Invoice_Line"
-          DTS:ThreadHint="31">
+          DTS:ThreadHint="26">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11273,7 +11273,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="EXECUTE LoadSTG_Value_Entry"
-          DTS:ThreadHint="32">
+          DTS:ThreadHint="27">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11289,7 +11289,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Fields for Chart of Accounts"
-          DTS:ThreadHint="15">
+          DTS:ThreadHint="28">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11306,7 +11306,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Gen_ Journal Line Maint_ EAM"
-          DTS:ThreadHint="14">
+          DTS:ThreadHint="29">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11340,7 +11340,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="G_L Entry"
-          DTS:ThreadHint="26">
+          DTS:ThreadHint="31">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11357,7 +11357,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="G_L Entry EAM"
-          DTS:ThreadHint="13">
+          DTS:ThreadHint="32">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11374,7 +11374,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="LoadSTG_Item_Cross_Reference_FULL"
-          DTS:ThreadHint="27">
+          DTS:ThreadHint="33">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11390,7 +11390,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Order Type"
-          DTS:ThreadHint="16">
+          DTS:ThreadHint="34">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11407,7 +11407,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Purchase Header"
-          DTS:ThreadHint="28">
+          DTS:ThreadHint="30">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11424,7 +11424,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Purchase Line"
-          DTS:ThreadHint="29">
+          DTS:ThreadHint="35">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11441,7 +11441,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Purch_ Cr_ Memo Hdr_"
-          DTS:ThreadHint="20">
+          DTS:ThreadHint="10">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11458,7 +11458,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Purch_ Cr_ Memo Line"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="11">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11475,7 +11475,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Purch_ Inv_ Header"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="12">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11492,7 +11492,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Purch_ Inv_ Line"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="13">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11509,7 +11509,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Purch_ Logistic Line"
-          DTS:ThreadHint="8">
+          DTS:ThreadHint="14">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11526,7 +11526,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Purch_ Rcpt_ Line"
-          DTS:ThreadHint="9">
+          DTS:ThreadHint="15">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11543,7 +11543,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Purch_Rctp_Header"
-          DTS:ThreadHint="10">
+          DTS:ThreadHint="16">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11560,7 +11560,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Return Receipt Header"
-          DTS:ThreadHint="11">
+          DTS:ThreadHint="17">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11577,7 +11577,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Return Receipt Line"
-          DTS:ThreadHint="12">
+          DTS:ThreadHint="18">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11594,7 +11594,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Return Shipment Header"
-          DTS:ThreadHint="21">
+          DTS:ThreadHint="19">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11611,7 +11611,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Return Shipment Line"
-          DTS:ThreadHint="22">
+          DTS:ThreadHint="20">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11628,7 +11628,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Cr Memo Header"
-          DTS:ThreadHint="23">
+          DTS:ThreadHint="21">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11645,7 +11645,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Cr Memo Line"
-          DTS:ThreadHint="24">
+          DTS:ThreadHint="22">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11662,7 +11662,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Header"
-          DTS:ThreadHint="17">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11679,7 +11679,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Header Delta"
-          DTS:ThreadHint="17">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11696,7 +11696,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Header Extension"
-          DTS:ThreadHint="18">
+          DTS:ThreadHint="36">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11713,7 +11713,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Header Extension Delta"
-          DTS:ThreadHint="18">
+          DTS:ThreadHint="36">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11730,7 +11730,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Sales Invoice Header"
-          DTS:ThreadHint="19">
+          DTS:ThreadHint="37">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11747,7 +11747,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate"
-          DTS:ThreadHint="13">
+          DTS:ThreadHint="32">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11763,7 +11763,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate 1"
-          DTS:ThreadHint="14">
+          DTS:ThreadHint="29">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11779,7 +11779,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate 23"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="9">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11795,7 +11795,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate 24"
-          DTS:ThreadHint="15">
+          DTS:ThreadHint="28">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11811,7 +11811,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate 26"
-          DTS:ThreadHint="16">
+          DTS:ThreadHint="34">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11827,7 +11827,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate DDT Picking Header"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11843,7 +11843,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate DDT Picking Line"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11859,7 +11859,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate Sales Header"
-          DTS:ThreadHint="17">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11875,7 +11875,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="truncate Sales Header Extension"
-          DTS:ThreadHint="18">
+          DTS:ThreadHint="36">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11891,7 +11891,7 @@ FROM [SRVSQL].[ARTCRAFTS].[dbo].[Artcrafts$Value Entry] WITH (NOLOCK)where times
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Vendor Leadger Entry"
-          DTS:ThreadHint="33">
+          DTS:ThreadHint="38">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
